@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --zen-bg: #F7F3EA;
+    --zen-paper: #FAF7F2;
+    --zen-surface: #F0EAE1;
+    --zen-border: #E2D9CC;
+    --zen-moss: #8BA888;
+    --zen-moss-dark: #4F6F52;
+    --zen-lotus: #E8A0B4;
+    --zen-ochre: #D9A441;
+    --zen-wood: #6B4F3A;
+    --zen-ink: #2F3A32;
+    --zen-muted: #667769;
+  }
+
+  .dark {
+    --zen-bg: #1E2621;
+    --zen-paper: #26322B;
+    --zen-surface: #2E3C34;
+    --zen-border: #3A4C42;
+    --zen-moss: #8BA888;
+    --zen-moss-dark: #638A66;
+    --zen-lotus: #E8A0B4;
+    --zen-ochre: #E5B255;
+    --zen-wood: #8A6A52;
+    --zen-ink: #EDE8DC;
+    --zen-muted: #9BAEA0;
+  }
+
+  body {
+    background-color: var(--zen-bg);
+    color: var(--zen-ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Soft custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(79, 111, 82, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(79, 111, 82, 0.45);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
