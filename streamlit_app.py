@@ -22,7 +22,6 @@ st.set_page_config(
 # Custom Zen CSS (Làng Mai Theme)
 st.markdown("""
 <style>
-    /* Bảng màu Zen: Giấy dó (#F7F3EA), Rêu phong (#3F4F44), Đất nung (#8C6D53), Sen hồng (#D8A7B1) */
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap');
 
     html, body, [class*="css"] {
@@ -119,7 +118,18 @@ st.markdown("""
         margin-bottom: 24px;
     }
 
-    /* Ẩn Header thừa của Streamlit */
+    /* Top Nav Buttons */
+    .top-nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        background: #FAF7F2;
+        padding: 10px;
+        border-radius: 16px;
+        border: 1px solid #EADBCC;
+        margin-bottom: 20px;
+    }
+
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
@@ -152,16 +162,24 @@ STICKERS = DATA.get("stickers", [])
 SYSTEM_SETTINGS = DATA.get("systemSettings", {})
 DISCOUNT_CODES = DATA.get("discountCodes", [])
 
+# Chỉ lọc các bài học có nội dung đầy đủ (9 bài học chính có bài giảng, flashcard, quiz)
+STUDY_SECTIONS = [s for s in SECTIONS if s["id"] in THEORIES]
+if not STUDY_SECTIONS:
+    STUDY_SECTIONS = [s for s in SECTIONS if s.get("parentId")]
+
 # ==========================================
 # 3. QUẢN LÝ TRẠNG THÁI (SESSION STATE)
 # ==========================================
 if "lang" not in st.session_state:
-    st.session_state.lang = "vi"  # "vi" hoặc "en"
+    st.session_state.lang = "vi"
+
+if "page" not in st.session_state:
+    st.session_state.page = "home"  # "home", "curriculum", "sjt", "pricing", "admin"
 
 if "lotus_bloomed" not in st.session_state:
     st.session_state.lotus_bloomed = 5
 
-if "current_section" not in st.session_state:
+if "current_section" not in st.session_state or st.session_state.current_section not in THEORIES:
     st.session_state.current_section = "sec-a1-1"
 
 if "fc_index" not in st.session_state:
@@ -179,9 +197,6 @@ if "sjt_answers" not in st.session_state:
 if "sjt_submitted" not in st.session_state:
     st.session_state.sjt_submitted = False
 
-if "role" not in st.session_state:
-    st.session_state.role = "student"
-
 if "orders" not in st.session_state:
     st.session_state.orders = [
         {"code": "PCC-1001-A89", "name": "Thu Hương", "tier": "1 Tháng", "amount": 299000, "status": "Đã duyệt"},
@@ -192,6 +207,12 @@ if "orders" not in st.session_state:
 # Helper đa ngôn ngữ
 def t(vi_text, en_text):
     return vi_text if st.session_state.lang == "vi" else en_text
+
+# Helper chuyển trang
+def set_page(page_name, section_id=None):
+    st.session_state.page = page_name
+    if section_id:
+        st.session_state.current_section = section_id
 
 # Helper phát chuông thiền Web Audio
 def render_bell_button():
@@ -219,8 +240,6 @@ def render_bell_button():
         try {
             const ctx = new (window.AudioContext || window.webkitAudioContext)();
             const now = ctx.currentTime;
-            
-            // Tần số chuông xoay Tây Tạng
             const freqs = [180, 360, 540, 720];
             const gains = [0.4, 0.25, 0.15, 0.08];
 
@@ -229,10 +248,8 @@ def render_bell_button():
                 const gain = ctx.createGain();
                 osc.type = 'sine';
                 osc.frequency.setValueAtTime(freq, now);
-                
                 gain.gain.setValueAtTime(gains[i], now);
                 gain.gain.exponentialRampToValueAtTime(0.0001, now + 4.5);
-                
                 osc.connect(gain);
                 gain.connect(ctx.destination);
                 osc.start(now);
@@ -247,7 +264,35 @@ def render_bell_button():
     st.components.v1.html(bell_html, height=55)
 
 # ==========================================
-# 4. THANH BÊN (SIDEBAR) & ĐIỀU HƯỚNG
+# 4. THANH ĐIỀU HƯỚNG TRÊN CÙNG (TOP NAVIGATION)
+# (Đảm bảo người dùng điện thoại / máy tính luôn nhìn thấy và chuyển trang tức thì)
+# ==========================================
+top_col1, top_col2, top_col3, top_col4, top_col5 = st.columns(5)
+with top_col1:
+    if st.button("🏠 " + t("Trang Chủ", "Home"), use_container_width=True, type="primary" if st.session_state.page == "home" else "secondary"):
+        st.session_state.page = "home"
+        st.rerun()
+with top_col2:
+    if st.button("📚 " + t("Lộ Trình Học", "Curriculum"), use_container_width=True, type="primary" if st.session_state.page == "curriculum" else "secondary"):
+        st.session_state.page = "curriculum"
+        st.rerun()
+with top_col3:
+    if st.button("⚖️ " + t("Thi Thử SJT", "SJT Exam"), use_container_width=True, type="primary" if st.session_state.page == "sjt" else "secondary"):
+        st.session_state.page = "sjt"
+        st.rerun()
+with top_col4:
+    if st.button("💳 " + t("Gói Hội Viên", "Pricing"), use_container_width=True, type="primary" if st.session_state.page == "pricing" else "secondary"):
+        st.session_state.page = "pricing"
+        st.rerun()
+with top_col5:
+    if st.button("🛡️ " + t("Quản Trị", "Admin"), use_container_width=True, type="primary" if st.session_state.page == "admin" else "secondary"):
+        st.session_state.page = "admin"
+        st.rerun()
+
+st.markdown("<hr style='margin: 8px 0 20px 0; border: none; border-top: 1px solid #EADBCC;'/>", unsafe_allow_html=True)
+
+# ==========================================
+# 5. THANH BÊN (SIDEBAR)
 # ==========================================
 with st.sidebar:
     st.markdown("<h2 style='text-align: center; margin-bottom: 2px;'>🪷 Mentor thi ICF PCC</h2>", unsafe_allow_html=True)
@@ -266,21 +311,9 @@ with st.sidebar:
             st.rerun()
 
     st.markdown("---")
-
-    # Menu Điều Hướng
-    menu_options = [
-        t("🏠 Trang Chủ & Vườn Sen", "🏠 Home & Lotus Garden"),
-        t("📚 Lộ Trình 8 Năng Lực (6 Tab)", "📚 8 Competencies (6 Tabs)"),
-        t("⚖️ Phòng Thi Thử SJT Chuẩn ICF", "⚖️ ICF SJT Exam Simulator"),
-        t("💳 Gói Hội Viên & VietQR", "💳 Membership & VietQR"),
-        t("🛡️ Cổng Quản Trị (Admin)", "🛡️ Admin Portal")
-    ]
-    selected_nav = st.radio(t("Chuyển trang", "Navigation"), menu_options, label_visibility="collapsed")
-
-    st.markdown("---")
     render_bell_button()
 
-    # Câu trích dẫn ngẫu nhiên trong ngày
+    # Trích dẫn chánh niệm
     if MINDFULNESS_MESSAGES:
         quote = MINDFULNESS_MESSAGES[hash(str(os.getpid())) % len(MINDFULNESS_MESSAGES)]
         st.markdown(f"""
@@ -302,11 +335,11 @@ with st.sidebar:
 
 
 # ==========================================
-# 5. NỘI DUNG TRANG CHỦ & VƯỜN SEN (PAGE 1)
+# 6. TRANG CHỦ & VƯỜN SEN (HOME PAGE)
 # ==========================================
-if selected_nav == menu_options[0]:
+if st.session_state.page == "home":
     st.markdown(f"""
-    <div style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 20px auto;">
         <span class="zen-badge zen-badge-primary">🌱 {t('Học Tỉnh Thức — Đạt Chuẩn PCC', 'Mindful Mastery — PCC Standard')}</span>
         <h1 style="font-size: 2.4rem; margin: 12px 0;">{t('Mentor Ôn Thi ICF PCC', 'ICF PCC Credentialing Mentor')}</h1>
         <p style="font-size: 1.05rem; color: #5F6F65; line-height: 1.6;">
@@ -315,6 +348,20 @@ if selected_nav == menu_options[0]:
         </p>
     </div>
     """, unsafe_allow_html=True)
+
+    # 2 NÚT HÀNH ĐỘNG NỔI BẬT NHẤT (CALL TO ACTION)
+    col_cta1, col_cta2 = st.columns(2)
+    with col_cta1:
+        if st.button("🚀 " + t("BẮT ĐẦU HỌC NGAY (8 NĂNG LỰC)", "START LEARNING (8 COMPETENCIES)"), use_container_width=True, type="primary"):
+            st.session_state.page = "curriculum"
+            st.session_state.current_section = "sec-a1-1"
+            st.rerun()
+    with col_cta2:
+        if st.button("⚖️ " + t("VÀO THI THỬ SJT (16 TÌNH HUỐNG THỰC TẾ)", "ATTEMPT SJT EXAM (16 REAL SCENARIOS)"), use_container_width=True):
+            st.session_state.page = "sjt"
+            st.rerun()
+
+    st.markdown("<br/>", unsafe_allow_html=True)
 
     # Vườn Sen Chánh Niệm Banner
     st.markdown(f"""
@@ -352,54 +399,67 @@ if selected_nav == menu_options[0]:
             st.toast(t("Tâm đã an định! Bạn vừa tưới thêm 1 đóa sen nở rộ.", "Mind calmed! 1 lotus added to your garden."))
             st.rerun()
 
-    # 5 Nhánh Lớn Của Khung Năng Lực
+    # 5 Nhánh Lớn Của Khung Năng Lực kèm nút học trực tiếp
     st.markdown(f"<h3 style='margin-top: 30px;'>🌿 {t('5 Nhánh Trọng Tâm Của Chương Trình Ôn Luyện', '5 Core Pillars of the PCC Curriculum')}</h3>", unsafe_allow_html=True)
     
     pillars = [
-        {"code": "A", "titleVi": "Phần A: Nền Tảng (Foundation)", "titleEn": "Part A: Foundation", "descVi": "Chuẩn mực đạo đức nghề nghiệp ICF 2025 và nuôi dưỡng tư duy khai vấn rộng mở, không định kiến.", "descEn": "ICF 2025 Ethical Standards and cultivating an open, non-judgmental coaching mindset.", "icon": "🌱"},
-        {"code": "B", "titleVi": "Phần B: Cùng Tạo Dựng Mối Quan Hệ", "titleEn": "Part B: Co-creating Relationship", "descVi": "Thiết lập thỏa thuận phiên khai vấn vững chắc và tạo không gian tâm lý an toàn tuyệt đối.", "descEn": "Establishing robust session agreements and cultivating deep psychological trust and safety.", "icon": "🌿"},
-        {"code": "C", "titleVi": "Phần C: Giao Tiếp Hiệu Quả", "titleEn": "Part C: Communicating Effectively", "descVi": "Duy trì sự hiện diện toàn vẹn, lắng nghe cấp độ 3 và lắng nghe cả những điều chưa nói.", "descEn": "Maintaining pure presence, Level 3 active listening, and tuning into the unspoken.", "icon": "🎋"},
-        {"code": "D", "titleVi": "Phần D: Nuôi Dưỡng Học Tập & Phát Triển", "titleEn": "Part D: Cultivating Growth", "descVi": "Khơi mở nhận thức sâu sắc (Who & What) và chuyển hóa thành cam kết hành động tự chủ.", "descEn": "Evoking profound insight (Who & What) and partnering for autonomous client accountability.", "icon": "🪷"},
-        {"code": "SJT", "titleVi": "Chiến Lược Phòng Thi SJT Thực Tế", "titleEn": "SJT Exam Strategy & Simulation", "descVi": "16 Tình huống phán đoán thực tế chọn đồng thời 1 BEST và 1 WORST kèm phân tích bẫy thi.", "descEn": "16 Authentic Situational Judgment scenarios with dual BEST/WORST scoring and trap analysis.", "icon": "⚖️"}
+        {"code": "A", "targetSec": "sec-a1-1", "titleVi": "Phần A: Nền Tảng (Foundation)", "titleEn": "Part A: Foundation", "descVi": "Năng lực 1 (Đạo đức 2025) & Năng lực 2 (Tư duy Khai vấn). Giữ gìn chính trực và tôn trọng bản sắc.", "descEn": "Competency 1 (Ethics 2025) & Competency 2 (Coaching Mindset). Integrity and identity sensitivity.", "icon": "🌱", "btnVi": "Học Năng Lực 1 & 2", "btnEn": "Study Competencies 1 & 2"},
+        {"code": "B", "targetSec": "sec-b1", "titleVi": "Phần B: Cùng Tạo Dựng Mối Quan Hệ", "titleEn": "Part B: Co-creating Relationship", "descVi": "Năng lực 3 (Thiết lập Thỏa thuận) & Năng lực 4 (Nuôi dưỡng Niềm tin & An toàn tâm lý).", "descEn": "Competency 3 (Agreements) & Competency 4 (Trust & Psychological Safety).", "icon": "🌿", "btnVi": "Học Năng Lực 3 & 4", "btnEn": "Study Competencies 3 & 4"},
+        {"code": "C", "targetSec": "sec-c1", "titleVi": "Phần C: Giao Tiếp Hiệu Quả", "titleEn": "Part C: Communicating Effectively", "descVi": "Năng lực 5 (Hiện diện Tĩnh lặng) & Năng lực 6 (Lắng nghe Chủ động Cấp độ 3).", "descEn": "Competency 5 (Presence) & Competency 6 (Level 3 Active Listening).", "icon": "🎋", "btnVi": "Học Năng Lực 5 & 6", "btnEn": "Study Competencies 5 & 6"},
+        {"code": "D", "targetSec": "sec-d1", "titleVi": "Phần D: Nuôi Dưỡng Học Tập & Phát Triển", "titleEn": "Part D: Cultivating Growth", "descVi": "Năng lực 7 (Khơi mở Nhận thức Who/What) & Năng lực 8 (Thúc đẩy Sự Phát triển Tự chủ).", "descEn": "Competency 7 (Evoking Awareness) & Competency 8 (Facilitating Growth & Autonomy).", "icon": "🪷", "btnVi": "Học Năng Lực 7 & 8", "btnEn": "Study Competencies 7 & 8"},
+        {"code": "SJT", "targetPage": "sjt", "titleVi": "Chiến Lược Phòng Thi SJT Thực Tế", "titleEn": "SJT Exam Strategy & Simulation", "descVi": "16 Tình huống phán đoán thực tế chọn đồng thời 1 BEST và 1 WORST kèm phân tích bẫy thi.", "descEn": "16 Authentic Situational Judgment scenarios with dual BEST/WORST scoring and trap analysis.", "icon": "⚖️", "btnVi": "Vào Phòng Thi Thử SJT", "btnEn": "Enter SJT Exam"}
     ]
 
-    col1, col2 = st.columns(2)
-    for i, p in enumerate(pillars):
-        target_col = col1 if i % 2 == 0 else col2
-        with target_col:
+    for p in pillars:
+        col_p_text, col_p_btn = st.columns([3, 1])
+        with col_p_text:
             st.markdown(f"""
-            <div class="zen-card">
-                <div style="font-size: 1.8rem; margin-bottom: 8px;">{p['icon']}</div>
-                <h4 style="margin: 0 0 6px 0; color: #2F3E34;">{p['titleVi'] if st.session_state.lang == 'vi' else p['titleEn']}</h4>
-                <p style="color: #666; font-size: 0.92rem; line-height: 1.5; margin-bottom: 0;">{p['descVi'] if st.session_state.lang == 'vi' else p['descEn']}</p>
+            <div style="background: #FFFFFF; border: 1px solid #EADBCC; border-radius: 12px; padding: 16px; margin-bottom: 12px;">
+                <div style="font-size: 1.4rem; float: left; margin-right: 12px;">{p['icon']}</div>
+                <div>
+                    <b>{p['titleVi'] if st.session_state.lang == 'vi' else p['titleEn']}</b>
+                    <p style="color: #666; font-size: 0.9rem; margin: 4px 0 0 0;">{p['descVi'] if st.session_state.lang == 'vi' else p['descEn']}</p>
+                </div>
             </div>
             """, unsafe_allow_html=True)
+        with col_p_btn:
+            st.write("")
+            if p.get("targetPage"):
+                if st.button("👉 " + (p['btnVi'] if st.session_state.lang == 'vi' else p['btnEn']), key=f"btn_p_{p['code']}", use_container_width=True):
+                    st.session_state.page = "sjt"
+                    st.rerun()
+            else:
+                if st.button("👉 " + (p['btnVi'] if st.session_state.lang == 'vi' else p['btnEn']), key=f"btn_p_{p['code']}", use_container_width=True):
+                    st.session_state.page = "curriculum"
+                    st.session_state.current_section = p["targetSec"]
+                    st.rerun()
 
 
 # ==========================================
-# 6. LỘ TRÌNH 8 NĂNG LỰC & 6 TAB (PAGE 2)
+# 7. LỘ TRÌNH 8 NĂNG LỰC & 6 TAB (CURRICULUM)
 # ==========================================
-elif selected_nav == menu_options[1]:
+elif st.session_state.page == "curriculum":
     st.markdown(f"<h2>📚 {t('Lộ Trình Học Tập Chuyên Sâu 8 Năng Lực', '8 Core Competencies In-Depth Curriculum')}</h2>", unsafe_allow_html=True)
     st.markdown(f"<p style='color: #666;'>{t('Mỗi bài học được thiết kế trọn vẹn gồm 6 thành phần: Lý thuyết, Từ khóa, Thẻ Leitner, Case Study, Quiz và Ghi chú phản tư.', 'Each lesson features 6 interactive components: Theory, Keywords, Leitner Cards, Case Study, Quiz, and Personal Reflection Notes.')}</p>", unsafe_allow_html=True)
 
-    # Chọn bài học
-    leaf_secs = [s for s in SECTIONS if s.get("parentId")]
-    if not leaf_secs:
-        leaf_secs = SECTIONS
-
-    sec_dict = {s["id"]: f"[{s.get('code', '')}] {s['titleVi'] if st.session_state.lang == 'vi' else s['titleEn']}" for s in leaf_secs}
+    # Tạo danh sách bài học có nội dung chuẩn xác
+    sec_dict = {
+        s["id"]: f"[{s.get('code', '')}] {s['titleVi'] if st.session_state.lang == 'vi' else s['titleEn']}" 
+        for s in STUDY_SECTIONS
+    }
     
+    # Đảm bảo bài học hiện tại hợp lệ
+    if st.session_state.current_section not in sec_dict:
+        st.session_state.current_section = list(sec_dict.keys())[0]
+
     current_sec_id = st.selectbox(
-        t("Chọn bài học:", "Select Lesson:"),
+        t("📖 Chọn bài học để bắt đầu học:", "📖 Select lesson to study:"),
         options=list(sec_dict.keys()),
         format_func=lambda x: sec_dict[x],
-        index=0
+        index=list(sec_dict.keys()).index(st.session_state.current_section)
     )
     st.session_state.current_section = current_sec_id
 
-    curr_sec = next((s for s in SECTIONS if s["id"] == current_sec_id), None)
-    
     # 6 Tab Chi Tiết
     tab_titles = [
         t("📖 1. Lý Thuyết Chắt Lọc", "📖 1. Distilled Theory"),
@@ -423,66 +483,66 @@ elif selected_nav == menu_options[1]:
     # TAB 2: TỪ KHÓA
     with tab2:
         sec_keywords = [k for k in KEYWORDS if k.get("sectionId") == current_sec_id]
-        if sec_keywords:
-            for kw in sec_keywords:
-                st.markdown(f"""
-                <div class="zen-card">
-                    <span class="zen-badge zen-badge-primary">{kw.get('category', 'term').upper()}</span>
-                    <h4 style="margin: 8px 0 4px 0; color: #2F3E34;">{kw['termVi']} <span style="color: #8C6D53; font-weight: normal; font-size: 0.95rem;">({kw['termEn']})</span></h4>
-                    <p style="color: #444; font-size: 0.95rem; margin-bottom: 8px;"><b>{t('Định nghĩa:', 'Definition:')}</b> {kw['definitionVi'] if st.session_state.lang == 'vi' else kw['definitionEn']}</p>
-                    <div style="background: #FAF7F2; padding: 8px 12px; border-radius: 8px; font-size: 0.88rem; color: #3F4F44;">
-                        💡 <b>{t('Mẹo ghi nhớ:', 'Memory Cue:')}</b> {kw['memoryCueVi'] if st.session_state.lang == 'vi' else kw['memoryCueEn']}
-                    </div>
+        if not sec_keywords:
+            sec_keywords = KEYWORDS[:2]
+
+        for kw in sec_keywords:
+            st.markdown(f"""
+            <div class="zen-card">
+                <span class="zen-badge zen-badge-primary">{kw.get('category', 'term').upper()}</span>
+                <h4 style="margin: 8px 0 4px 0; color: #2F3E34;">{kw['termVi']} <span style="color: #8C6D53; font-weight: normal; font-size: 0.95rem;">({kw['termEn']})</span></h4>
+                <p style="color: #444; font-size: 0.95rem; margin-bottom: 8px;"><b>{t('Định nghĩa:', 'Definition:')}</b> {kw['definitionVi'] if st.session_state.lang == 'vi' else kw['definitionEn']}</p>
+                <div style="background: #FAF7F2; padding: 8px 12px; border-radius: 8px; font-size: 0.88rem; color: #3F4F44;">
+                    💡 <b>{t('Mẹo ghi nhớ:', 'Memory Cue:')}</b> {kw['memoryCueVi'] if st.session_state.lang == 'vi' else kw['memoryCueEn']}
                 </div>
-                """, unsafe_allow_html=True)
-        else:
-            st.info(t("Chưa có từ khóa cho bài học này.", "No keywords available for this lesson."))
+            </div>
+            """, unsafe_allow_html=True)
 
     # TAB 3: FLASHCARDS
     with tab3:
         sec_fcs = [f for f in FLASHCARDS if f.get("sectionId") == current_sec_id]
-        if sec_fcs:
-            fc_idx = st.session_state.fc_index % len(sec_fcs)
-            fc = sec_fcs[fc_idx]
+        if not sec_fcs:
+            sec_fcs = FLASHCARDS[:2]
 
-            st.markdown(f"<div style='text-align: right; color: #8C6D53; font-size: 0.9rem;'>{t('Thẻ', 'Card')} {fc_idx + 1} / {len(sec_fcs)}</div>", unsafe_allow_html=True)
-            
-            # Thẻ hiển thị
-            if not st.session_state.fc_flipped:
-                st.markdown(f"""
-                <div class="flashcard-box">
-                    <div style="font-size: 0.85rem; color: #8BA888; font-weight: 600; margin-bottom: 12px;">QUESTION / MẶT TRƯỚC</div>
-                    <h3 style="color: #2F3E34; font-size: 1.25rem;">{fc['frontVi'] if st.session_state.lang == 'vi' else fc['frontEn']}</h3>
-                    <div style="margin-top: 16px; color: #888; font-size: 0.88rem;">💡 {t('Gợi ý:', 'Hint:')} {fc['hintVi'] if st.session_state.lang == 'vi' else fc['hintEn']}</div>
-                </div>
-                """, unsafe_allow_html=True)
-            else:
-                st.markdown(f"""
-                <div class="flashcard-box" style="background: #F4EFE6; border-color: #8BA888;">
-                    <div style="font-size: 0.85rem; color: #3F4F44; font-weight: 600; margin-bottom: 12px;">ANSWER / MẶT SAU</div>
-                    <h4 style="color: #2F3E34; font-size: 1.15rem; line-height: 1.6;">{fc['backVi'] if st.session_state.lang == 'vi' else fc['backEn']}</h4>
-                </div>
-                """, unsafe_allow_html=True)
+        fc_idx = st.session_state.fc_index % len(sec_fcs)
+        fc = sec_fcs[fc_idx]
 
-            col_btn1, col_btn2, col_btn3 = st.columns([1, 1, 1])
-            with col_btn1:
-                if st.button(t("🔄 Lật Thẻ", "🔄 Flip Card"), use_container_width=True):
-                    st.session_state.fc_flipped = not st.session_state.fc_flipped
-                    st.rerun()
-            with col_btn2:
-                if st.button(t("➡️ Thẻ Kế Tiếp", "➡️ Next Card"), use_container_width=True):
-                    st.session_state.fc_index += 1
-                    st.session_state.fc_flipped = False
-                    st.rerun()
-            with col_btn3:
-                if st.button(t("🌟 Đã Thành Thạo (+1 Sen)", "🌟 Mastered (+1 Lotus)"), use_container_width=True):
-                    st.session_state.lotus_bloomed += 1
-                    st.session_state.fc_index += 1
-                    st.session_state.fc_flipped = False
-                    st.toast(t("Đã ghi nhớ! Vườn sen vừa nở thêm 1 hoa.", "Mastered! Lotus bloomed in your garden."))
-                    st.rerun()
+        st.markdown(f"<div style='text-align: right; color: #8C6D53; font-size: 0.9rem;'>{t('Thẻ', 'Card')} {fc_idx + 1} / {len(sec_fcs)}</div>", unsafe_allow_html=True)
+        
+        # Thẻ hiển thị
+        if not st.session_state.fc_flipped:
+            st.markdown(f"""
+            <div class="flashcard-box">
+                <div style="font-size: 0.85rem; color: #8BA888; font-weight: 600; margin-bottom: 12px;">QUESTION / MẶT TRƯỚC</div>
+                <h3 style="color: #2F3E34; font-size: 1.25rem;">{fc['frontVi'] if st.session_state.lang == 'vi' else fc['frontEn']}</h3>
+                <div style="margin-top: 16px; color: #888; font-size: 0.88rem;">💡 {t('Gợi ý:', 'Hint:')} {fc.get('hintVi', '') if st.session_state.lang == 'vi' else fc.get('hintEn', '')}</div>
+            </div>
+            """, unsafe_allow_html=True)
         else:
-            st.info(t("Chưa có thẻ flashcard cho bài học này.", "No flashcards for this lesson."))
+            st.markdown(f"""
+            <div class="flashcard-box" style="background: #F4EFE6; border-color: #8BA888;">
+                <div style="font-size: 0.85rem; color: #3F4F44; font-weight: 600; margin-bottom: 12px;">ANSWER / MẶT SAU</div>
+                <h4 style="color: #2F3E34; font-size: 1.15rem; line-height: 1.6;">{fc['backVi'] if st.session_state.lang == 'vi' else fc['backEn']}</h4>
+            </div>
+            """, unsafe_allow_html=True)
+
+        col_btn1, col_btn2, col_btn3 = st.columns([1, 1, 1])
+        with col_btn1:
+            if st.button(t("🔄 Lật Thẻ", "🔄 Flip Card"), use_container_width=True):
+                st.session_state.fc_flipped = not st.session_state.fc_flipped
+                st.rerun()
+        with col_btn2:
+            if st.button(t("➡️ Thẻ Kế Tiếp", "➡️ Next Card"), use_container_width=True):
+                st.session_state.fc_index += 1
+                st.session_state.fc_flipped = False
+                st.rerun()
+        with col_btn3:
+            if st.button(t("🌟 Đã Thành Thạo (+1 Sen)", "🌟 Mastered (+1 Lotus)"), use_container_width=True):
+                st.session_state.lotus_bloomed += 1
+                st.session_state.fc_index += 1
+                st.session_state.fc_flipped = False
+                st.toast(t("Đã ghi nhớ! Vườn sen vừa nở thêm 1 hoa.", "Mastered! Lotus bloomed in your garden."))
+                st.rerun()
 
     # TAB 4: CASE STUDY
     with tab4:
@@ -513,26 +573,26 @@ elif selected_nav == menu_options[1]:
     # TAB 5: QUIZ
     with tab5:
         sec_quizzes = [q for q in QUIZZES if q.get("sectionId") == current_sec_id]
-        if sec_quizzes:
-            for q_idx, q in enumerate(sec_quizzes):
-                st.markdown(f"**Câu {q_idx + 1}: {q['questionVi'] if st.session_state.lang == 'vi' else q['questionEn']}**")
-                opts = {opt["key"]: f"{opt['key']}. {opt['textVi'] if st.session_state.lang == 'vi' else opt['textEn']}" for opt in q["options"]}
-                
-                user_choice = st.radio(
-                    t("Chọn câu trả lời:", "Select option:"),
-                    options=list(opts.keys()),
-                    format_func=lambda k: opts[k],
-                    key=f"quiz_opt_{q['id']}",
-                    index=None
-                )
+        if not sec_quizzes:
+            sec_quizzes = QUIZZES[:1]
 
-                if user_choice:
-                    if user_choice == q["correctAnswer"]:
-                        st.success(f"✅ {t('Chính xác!', 'Correct!')} {q['explanationVi'] if st.session_state.lang == 'vi' else q['explanationEn']}")
-                    else:
-                        st.error(f"❌ {t('Chưa chính xác.', 'Incorrect.')} {t('Đáp án đúng là:', 'Correct answer is:')} **{q['correctAnswer']}**.\n\n{q['explanationVi'] if st.session_state.lang == 'vi' else q['explanationEn']}")
-        else:
-            st.info(t("Chưa có câu hỏi quiz cho bài học này.", "No quiz for this lesson."))
+        for q_idx, q in enumerate(sec_quizzes):
+            st.markdown(f"**Câu {q_idx + 1}: {q['questionVi'] if st.session_state.lang == 'vi' else q['questionEn']}**")
+            opts = {opt["key"]: f"{opt['key']}. {opt['textVi'] if st.session_state.lang == 'vi' else opt['textEn']}" for opt in q["options"]}
+            
+            user_choice = st.radio(
+                t("Chọn câu trả lời:", "Select option:"),
+                options=list(opts.keys()),
+                format_func=lambda k: opts[k],
+                key=f"quiz_opt_{q['id']}",
+                index=None
+            )
+
+            if user_choice:
+                if user_choice == q["correctAnswer"]:
+                    st.success(f"✅ {t('Chính xác!', 'Correct!')} {q['explanationVi'] if st.session_state.lang == 'vi' else q['explanationEn']}")
+                else:
+                    st.error(f"❌ {t('Chưa chính xác.', 'Incorrect.')} {t('Đáp án đúng là:', 'Correct answer is:')} **{q['correctAnswer']}**.\n\n{q['explanationVi'] if st.session_state.lang == 'vi' else q['explanationEn']}")
 
     # TAB 6: GHI CHÚ CÁ NHÂN
     with tab6:
@@ -549,9 +609,9 @@ elif selected_nav == menu_options[1]:
 
 
 # ==========================================
-# 7. PHÒNG THI THỬ SJT CHUẨN ICF (PAGE 3)
+# 8. PHÒNG THI THỬ SJT CHUẨN ICF (SJT EXAM)
 # ==========================================
-elif selected_nav == menu_options[2]:
+elif st.session_state.page == "sjt":
     st.markdown(f"<h2>⚖️ {t('Phòng Thi Thử Situational Judgment Test (SJT)', 'ICF PCC SJT Exam Simulator')}</h2>", unsafe_allow_html=True)
     st.markdown(f"""
     <div style="background: #FFFFFF; border: 1px solid #EADBCC; border-radius: 12px; padding: 16px; margin-bottom: 20px;">
@@ -564,7 +624,6 @@ elif selected_nav == menu_options[2]:
     </div>
     """, unsafe_allow_html=True)
 
-    # Hiển thị 16 câu hỏi SJT
     total_questions = len(PRACTICE_QUESTIONS)
     
     for idx, q in enumerate(PRACTICE_QUESTIONS):
@@ -581,7 +640,6 @@ elif selected_nav == menu_options[2]:
         </div>
         """, unsafe_allow_html=True)
 
-        # 4 Phương án lựa chọn
         options = q["options"]
         opt_dict = {opt["key"]: f"[{opt['key']}] {opt['textVi'] if st.session_state.lang == 'vi' else opt['textEn']}" for opt in options}
 
@@ -603,17 +661,14 @@ elif selected_nav == menu_options[2]:
                 index=0 if not q_ans.get("worst") else (list(opt_dict.keys()).index(q_ans["worst"]) + 1)
             )
 
-        # Lưu đáp án
         st.session_state.sjt_answers[qid] = {
             "best": None if best_choice == "-- Chưa chọn --" else best_choice,
             "worst": None if worst_choice == "-- Chưa chọn --" else worst_choice
         }
 
-        # Cảnh báo nếu chọn trùng
         if best_choice != "-- Chưa chọn --" and best_choice == worst_choice:
             st.warning(t("⚠️ Bạn đang chọn cùng một phương án cho cả Best và Worst. Vui lòng chọn 2 phương án khác nhau!", "⚠️ Best and Worst cannot be the same option!"))
 
-        # Hiển thị giải thích nếu đã nộp bài
         if st.session_state.sjt_submitted:
             b_correct = (best_choice == q["bestAnswer"])
             w_correct = (worst_choice == q["worstAnswer"])
@@ -629,15 +684,11 @@ elif selected_nav == menu_options[2]:
             
         st.markdown("<hr style='border: none; border-top: 1px dashed #D8C7B5; margin: 24px 0;'/>", unsafe_allow_html=True)
 
-    # Nút nộp bài
     col_sub1, col_sub2 = st.columns([2, 1])
     with col_sub1:
         if st.button(t("📝 Nộp Bài Thi Thử & Chấm Điểm Ngay", "📝 Submit Mock Exam & View Scores"), use_container_width=True, type="primary"):
             st.session_state.sjt_submitted = True
-            
-            # Tính điểm
             score = 0
-            max_score = total_questions * 2
             for q in PRACTICE_QUESTIONS:
                 qid = q["id"]
                 ans = st.session_state.sjt_answers.get(qid, {})
@@ -645,7 +696,6 @@ elif selected_nav == menu_options[2]:
                     score += 1
                 if ans.get("worst") == q["worstAnswer"]:
                     score += 1
-            
             st.session_state.sjt_score = score
             st.rerun()
 
@@ -671,9 +721,9 @@ elif selected_nav == menu_options[2]:
 
 
 # ==========================================
-# 8. BẢNG GIÁ HỘI VIÊN & VIETQR (PAGE 4)
+# 9. BẢNG GIÁ HỘI VIÊN & VIETQR (PRICING)
 # ==========================================
-elif selected_nav == menu_options[3]:
+elif st.session_state.page == "pricing":
     st.markdown(f"<h2>💳 {t('Gói Hội Viên Ôn Thi & Kích Hoạt VietQR', 'Membership Tiers & VietQR Activation')}</h2>", unsafe_allow_html=True)
     st.markdown(f"<p style='color: #666;'>{t('Lựa chọn lộ trình đồng hành phù hợp với thời gian dự thi của bạn. Hỗ trợ thanh toán tự động qua mã VietQR chuẩn ngân hàng Việt Nam.', 'Select the study roadmap aligned with your exam schedule. Automated VietQR bank transfer supported.')}</p>", unsafe_allow_html=True)
 
@@ -698,13 +748,10 @@ elif selected_nav == menu_options[3]:
         elif entered_code:
             st.error(t("Mã không hợp lệ", "Invalid code"))
 
-    # 4 Gói Dịch Vụ
     pricing_data = SYSTEM_SETTINGS.get("pricing", {})
     tiers = ["free", "1_month", "6_months", "12_months"]
     
     cols = st.columns(4)
-    selected_tier_key = "6_months"
-
     for i, tier_key in enumerate(tiers):
         t_info = pricing_data.get(tier_key, {})
         base_price = t_info.get("price", 0)
@@ -725,7 +772,6 @@ elif selected_nav == menu_options[3]:
             </div>
             """, unsafe_allow_html=True)
 
-    # Khu vực chọn gói để sinh mã VietQR
     st.markdown(f"### 📲 {t('Thanh Toán Nhanh Qua Mã VietQR Chuẩn NAPAS', 'Instant VietQR Bank Transfer')}")
     chosen_tier = st.selectbox(
         t("Chọn gói bạn muốn đăng ký:", "Choose tier to activate:"),
@@ -765,12 +811,11 @@ elif selected_nav == menu_options[3]:
 
 
 # ==========================================
-# 9. CỔNG QUẢN TRỊ ADMIN (PAGE 5)
+# 10. CỔNG QUẢN TRỊ ADMIN (ADMIN)
 # ==========================================
-elif selected_nav == menu_options[4]:
+elif st.session_state.page == "admin":
     st.markdown(f"<h2>🛡️ {t('Cổng Quản Trị Hệ Thống & Quản Lý Đơn Hàng', 'Admin Portal & Order Management')}</h2>", unsafe_allow_html=True)
     
-    # Số liệu tổng quan
     c1, c2, c3, c4 = st.columns(4)
     with c1:
         st.metric(t("Tổng Học Viên", "Total Students"), "128", "+12 tuần này")
@@ -818,7 +863,7 @@ elif selected_nav == menu_options[4]:
             """, unsafe_allow_html=True)
 
 # ==========================================
-# 10. CHÂN TRANG (FOOTER & DISCLAIMER)
+# 11. CHÂN TRANG (FOOTER & DISCLAIMER)
 # ==========================================
 st.markdown("---")
 st.markdown(f"""
