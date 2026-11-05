@@ -357,7 +357,7 @@ if st.session_state.page == "home":
             st.session_state.current_section = "sec-a1-1"
             st.rerun()
     with col_cta2:
-        if st.button("⚖️ " + t("VÀO THI THỬ SJT (16 TÌNH HUỐNG THỰC TẾ)", "ATTEMPT SJT EXAM (16 REAL SCENARIOS)"), use_container_width=True):
+        if st.button("⚖️ " + t(f"VÀO THI THỬ SJT ({len(PRACTICE_QUESTIONS)} TÌNH HUỐNG THỰC TẾ)", f"ATTEMPT SJT EXAM ({len(PRACTICE_QUESTIONS)} REAL SCENARIOS)"), use_container_width=True):
             st.session_state.page = "sjt"
             st.rerun()
 
@@ -407,7 +407,7 @@ if st.session_state.page == "home":
         {"code": "B", "targetSec": "sec-b1", "titleVi": "Phần B: Cùng Tạo Dựng Mối Quan Hệ", "titleEn": "Part B: Co-creating Relationship", "descVi": "Năng lực 3 (Thiết lập Thỏa thuận) & Năng lực 4 (Nuôi dưỡng Niềm tin & An toàn tâm lý).", "descEn": "Competency 3 (Agreements) & Competency 4 (Trust & Psychological Safety).", "icon": "🌿", "btnVi": "Học Năng Lực 3 & 4", "btnEn": "Study Competencies 3 & 4"},
         {"code": "C", "targetSec": "sec-c1", "titleVi": "Phần C: Giao Tiếp Hiệu Quả", "titleEn": "Part C: Communicating Effectively", "descVi": "Năng lực 5 (Hiện diện Tĩnh lặng) & Năng lực 6 (Lắng nghe Chủ động Cấp độ 3).", "descEn": "Competency 5 (Presence) & Competency 6 (Level 3 Active Listening).", "icon": "🎋", "btnVi": "Học Năng Lực 5 & 6", "btnEn": "Study Competencies 5 & 6"},
         {"code": "D", "targetSec": "sec-d1", "titleVi": "Phần D: Nuôi Dưỡng Học Tập & Phát Triển", "titleEn": "Part D: Cultivating Growth", "descVi": "Năng lực 7 (Khơi mở Nhận thức Who/What) & Năng lực 8 (Thúc đẩy Sự Phát triển Tự chủ).", "descEn": "Competency 7 (Evoking Awareness) & Competency 8 (Facilitating Growth & Autonomy).", "icon": "🪷", "btnVi": "Học Năng Lực 7 & 8", "btnEn": "Study Competencies 7 & 8"},
-        {"code": "SJT", "targetPage": "sjt", "titleVi": "Chiến Lược Phòng Thi SJT Thực Tế", "titleEn": "SJT Exam Strategy & Simulation", "descVi": "16 Tình huống phán đoán thực tế chọn đồng thời 1 BEST và 1 WORST kèm phân tích bẫy thi.", "descEn": "16 Authentic Situational Judgment scenarios with dual BEST/WORST scoring and trap analysis.", "icon": "⚖️", "btnVi": "Vào Phòng Thi Thử SJT", "btnEn": "Enter SJT Exam"}
+        {"code": "SJT", "targetPage": "sjt", "titleVi": "Chiến Lược Phòng Thi SJT Thực Tế", "titleEn": "SJT Exam Strategy & Simulation", "descVi": f"{len(PRACTICE_QUESTIONS)} Tình huống phán đoán thực tế chọn đồng thời 1 BEST và 1 WORST kèm phân tích bẫy thi.", "descEn": f"{len(PRACTICE_QUESTIONS)} Authentic Situational Judgment scenarios with dual BEST/WORST scoring and trap analysis.", "icon": "⚖️", "btnVi": "Vào Phòng Thi Thử SJT", "btnEn": "Enter SJT Exam"}
     ]
 
     for p in pillars:
@@ -507,7 +507,11 @@ elif st.session_state.page == "curriculum":
         fc_idx = st.session_state.fc_index % len(sec_fcs)
         fc = sec_fcs[fc_idx]
 
-        st.markdown(f"<div style='text-align: right; color: #8C6D53; font-size: 0.9rem;'>{t('Thẻ', 'Card')} {fc_idx + 1} / {len(sec_fcs)}</div>", unsafe_allow_html=True)
+        col_hdr1, col_hdr2 = st.columns([2, 1])
+        with col_hdr1:
+            st.markdown(f"<div style='color: #8C6D53; font-size: 0.95rem; font-weight: 600;'>{t('Bộ Thẻ Leitner:', 'Leitner Deck:')} {len(sec_fcs)} {t('thẻ phản xạ', 'mastery cards')}</div>", unsafe_allow_html=True)
+        with col_hdr2:
+            st.markdown(f"<div style='text-align: right; color: #3F4F44; font-weight: bold;'>{t('Thẻ', 'Card')} {fc_idx + 1} / {len(sec_fcs)}</div>", unsafe_allow_html=True)
         
         # Thẻ hiển thị
         if not st.session_state.fc_flipped:
@@ -526,18 +530,23 @@ elif st.session_state.page == "curriculum":
             </div>
             """, unsafe_allow_html=True)
 
-        col_btn1, col_btn2, col_btn3 = st.columns([1, 1, 1])
+        col_btn0, col_btn1, col_btn2, col_btn3 = st.columns([1, 1, 1, 1.2])
+        with col_btn0:
+            if st.button(t("⬅️ Trước", "⬅️ Prev"), use_container_width=True):
+                st.session_state.fc_index = max(0, st.session_state.fc_index - 1)
+                st.session_state.fc_flipped = False
+                st.rerun()
         with col_btn1:
             if st.button(t("🔄 Lật Thẻ", "🔄 Flip Card"), use_container_width=True):
                 st.session_state.fc_flipped = not st.session_state.fc_flipped
                 st.rerun()
         with col_btn2:
-            if st.button(t("➡️ Thẻ Kế Tiếp", "➡️ Next Card"), use_container_width=True):
+            if st.button(t("➡️ Sau", "➡️ Next"), use_container_width=True):
                 st.session_state.fc_index += 1
                 st.session_state.fc_flipped = False
                 st.rerun()
         with col_btn3:
-            if st.button(t("🌟 Đã Thành Thạo (+1 Sen)", "🌟 Mastered (+1 Lotus)"), use_container_width=True):
+            if st.button(t("🌟 Thuộc (+1 Sen)", "🌟 Master (+1)"), use_container_width=True):
                 st.session_state.lotus_bloomed += 1
                 st.session_state.fc_index += 1
                 st.session_state.fc_flipped = False
@@ -576,12 +585,21 @@ elif st.session_state.page == "curriculum":
         if not sec_quizzes:
             sec_quizzes = QUIZZES[:1]
 
+        st.markdown(f"#### ❓ {t(f'Bài Kiểm Tra Nhanh ({len(sec_quizzes)} Câu Hỏi Chẩn Đoán)', f'Diagnostic Mini Quiz ({len(sec_quizzes)} Questions)')}")
+
         for q_idx, q in enumerate(sec_quizzes):
-            st.markdown(f"**Câu {q_idx + 1}: {q['questionVi'] if st.session_state.lang == 'vi' else q['questionEn']}**")
+            st.markdown(f"""
+            <div style="background: #FFFFFF; border: 1px solid #EADBCC; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px;">
+                <span class="zen-badge zen-badge-primary">Câu {q_idx + 1} / {len(sec_quizzes)}</span>
+                <div style="font-weight: 600; color: #2F3E34; margin-top: 8px; font-size: 1rem; line-height: 1.5;">
+                    {q['questionVi'] if st.session_state.lang == 'vi' else q['questionEn']}
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
             opts = {opt["key"]: f"{opt['key']}. {opt['textVi'] if st.session_state.lang == 'vi' else opt['textEn']}" for opt in q["options"]}
             
             user_choice = st.radio(
-                t("Chọn câu trả lời:", "Select option:"),
+                t(f"Lựa chọn câu trả lời (Câu {q_idx + 1}):", f"Select answer (Question {q_idx + 1}):"),
                 options=list(opts.keys()),
                 format_func=lambda k: opts[k],
                 key=f"quiz_opt_{q['id']}",
@@ -593,6 +611,7 @@ elif st.session_state.page == "curriculum":
                     st.success(f"✅ {t('Chính xác!', 'Correct!')} {q['explanationVi'] if st.session_state.lang == 'vi' else q['explanationEn']}")
                 else:
                     st.error(f"❌ {t('Chưa chính xác.', 'Incorrect.')} {t('Đáp án đúng là:', 'Correct answer is:')} **{q['correctAnswer']}**.\n\n{q['explanationVi'] if st.session_state.lang == 'vi' else q['explanationEn']}")
+            st.markdown("<hr style='border: none; border-top: 1px dashed #E0D5C7; margin: 16px 0;'/>", unsafe_allow_html=True)
 
     # TAB 6: GHI CHÚ CÁ NHÂN
     with tab6:
@@ -625,6 +644,12 @@ elif st.session_state.page == "sjt":
     """, unsafe_allow_html=True)
 
     total_questions = len(PRACTICE_QUESTIONS)
+    answered_count = sum(
+        1 for q in PRACTICE_QUESTIONS 
+        if st.session_state.sjt_answers.get(q["id"], {}).get("best") and st.session_state.sjt_answers.get(q["id"], {}).get("worst")
+    )
+    st.progress(answered_count / total_questions if total_questions > 0 else 0)
+    st.markdown(f"<div style='margin-bottom: 16px; color: #3F4F44; font-size: 0.95rem; font-weight: 500;'>📊 {t(f'Tiến độ: {answered_count}/{total_questions} câu đã chọn đủ Best & Worst', f'Progress: {answered_count}/{total_questions} scenarios completed with both Best & Worst')}</div>", unsafe_allow_html=True)
     
     for idx, q in enumerate(PRACTICE_QUESTIONS):
         qid = q["id"]
@@ -697,6 +722,13 @@ elif st.session_state.page == "sjt":
                 if ans.get("worst") == q["worstAnswer"]:
                     score += 1
             st.session_state.sjt_score = score
+            st.rerun()
+    with col_sub2:
+        if st.button(t("🔄 Làm Lại Bài Thi", "🔄 Retake Mock Exam"), use_container_width=True):
+            st.session_state.sjt_answers = {}
+            st.session_state.sjt_submitted = False
+            if "sjt_score" in st.session_state:
+                del st.session_state.sjt_score
             st.rerun()
 
     if st.session_state.sjt_submitted and "sjt_score" in st.session_state:
