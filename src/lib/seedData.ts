@@ -46,7 +46,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "A1.1",
     "titleVi": "A1.1: Chính trực & Bảo mật thông tin (Integrity & Confidentiality)",
     "titleEn": "A1.1: Personal Integrity & Confidentiality",
-    "descriptionVi": "Giữ gìn ranh giới bảo mật với thân chủ và nhà tài trợ (sponsor), minh bạch xung đột lợi ích.",
+    "descriptionVi": "Giữ gìn ranh giới bảo mật với khách hàng và nhà tài trợ (sponsor), minh bạch xung đột lợi ích.",
     "descriptionEn": "Demonstrating integrity, confidentiality, and managing conflict of interest.",
     "natureIcon": "seed",
     "orderIndex": 1,
@@ -72,7 +72,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "A.2",
     "titleVi": "Năng lực 2: Thể hiện Tư duy Khai vấn (Coaching Mindset)",
     "titleEn": "Competency 2: Embodies a Coaching Mindset",
-    "descriptionVi": "Duy trì tư duy cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm; tự quản trị định kiến.",
+    "descriptionVi": "Duy trì tư duy cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm; tự quản trị định kiến.",
     "descriptionEn": "Develops and maintains an open, curious, flexible, and client-centered mindset.",
     "natureIcon": "sprout",
     "orderIndex": 2,
@@ -85,7 +85,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "B",
     "titleVi": "Phần B: Cùng Tạo dựng Mối quan hệ (Co-creating Relationship)",
     "titleEn": "Part B: Co-creating the Relationship",
-    "descriptionVi": "Đồng hành cùng thân chủ thiết lập mục tiêu phiên và nuôi dưỡng không gian an toàn tâm lý.",
+    "descriptionVi": "Đồng hành cùng khách hàng thiết lập mục tiêu phiên và nuôi dưỡng không gian an toàn tâm lý.",
     "descriptionEn": "Partnering with the client to establish clear agreements and deep psychological safety.",
     "natureIcon": "sprout",
     "orderIndex": 2,
@@ -98,7 +98,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "B.1",
     "titleVi": "Năng lực 3: Thiết lập & Duy trì Thỏa thuận (Agreements)",
     "titleEn": "Competency 3: Establishes & Maintains Agreements",
-    "descriptionVi": "Xác định mục tiêu tổng thể, tiêu chí đo lường thành công và giữ quyền sở hữu phiên cho thân chủ.",
+    "descriptionVi": "Xác định mục tiêu tổng thể, tiêu chí đo lường thành công và giữ quyền sở hữu phiên cho khách hàng.",
     "descriptionEn": "Partners with client to establish overall and session agreements, measures of success.",
     "natureIcon": "sprout",
     "orderIndex": 1,
@@ -111,7 +111,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "B.2",
     "titleVi": "Năng lực 4: Nuôi dưỡng Niềm tin & Sự An toàn (Trust & Safety)",
     "titleEn": "Competency 4: Cultivates Trust and Safety",
-    "descriptionVi": "Tạo môi trường an toàn, tôn trọng và hỗ trợ để thân chủ tự do chia sẻ điều sâu kín nhất.",
+    "descriptionVi": "Tạo môi trường an toàn, tôn trọng và hỗ trợ để khách hàng tự do chia sẻ điều sâu kín nhất.",
     "descriptionEn": "Creates a safe, supportive environment where the client shares freely without judgment.",
     "natureIcon": "sprout",
     "orderIndex": 2,
@@ -137,7 +137,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "C.1",
     "titleVi": "Năng lực 5: Duy trì Sự Hiện diện (Maintains Presence)",
     "titleEn": "Competency 5: Maintains Presence",
-    "descriptionVi": "Hoàn toàn ý thức và hiện diện với thân chủ, đón nhận sự im lặng và những điều bất định.",
+    "descriptionVi": "Hoàn toàn ý thức và hiện diện với khách hàng, đón nhận sự im lặng và những điều bất định.",
     "descriptionEn": "Remains fully conscious and present with client, comfortable with silence and uncertainty.",
     "natureIcon": "bamboo",
     "orderIndex": 1,
@@ -150,7 +150,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "C.2",
     "titleVi": "Năng lực 6: Lắng nghe Chủ động (Listens Actively)",
     "titleEn": "Competency 6: Listens Actively",
-    "descriptionVi": "Tập trung vào ngôn từ, giọng điệu, ngôn ngữ cơ thể, cảm xúc và bối cảnh toàn diện của thân chủ.",
+    "descriptionVi": "Tập trung vào ngôn từ, giọng điệu, ngôn ngữ cơ thể, cảm xúc và bối cảnh toàn diện của khách hàng.",
     "descriptionEn": "Focuses on verbal and non-verbal cues, tone, energy, and emotional resonance.",
     "natureIcon": "bamboo",
     "orderIndex": 2,
@@ -163,7 +163,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "D",
     "titleVi": "Phần D: Thúc đẩy Học tập & Phát triển (Cultivating Growth)",
     "titleEn": "Part D: Cultivating Learning and Growth",
-    "descriptionVi": "Khơi gợi góc nhìn mới và đồng hành để thân chủ chuyển hóa nhận thức thành hành động bền vững.",
+    "descriptionVi": "Khơi gợi góc nhìn mới và đồng hành để khách hàng chuyển hóa nhận thức thành hành động bền vững.",
     "descriptionEn": "Evoking deep insight and partnering to transform awareness into meaningful action.",
     "natureIcon": "lotus",
     "orderIndex": 4,
@@ -176,7 +176,7 @@ export const SEED_SECTIONS: Section[] = [
     "code": "D.1",
     "titleVi": "Năng lực 7: Khơi gợi Nhận thức (Evokes Awareness)",
     "titleEn": "Competency 7: Evokes Awareness",
-    "descriptionVi": "Tạo điều kiện để thân chủ tự khám phá thông qua câu hỏi gợi mở, ẩn dụ và phản chiếu tinh tế.",
+    "descriptionVi": "Tạo điều kiện để khách hàng tự khám phá thông qua câu hỏi gợi mở, ẩn dụ và phản chiếu tinh tế.",
     "descriptionEn": "Facilitates client insight and discovery using powerful questions, metaphors and silence.",
     "natureIcon": "lotus",
     "orderIndex": 1,
@@ -187,7 +187,7 @@ export const SEED_SECTIONS: Section[] = [
     "id": "sec-d2",
     "parentId": "sec-d",
     "code": "D.2",
-    "titleVi": "Năng lực 8: Thúc đẩy Sự Phát triển của Thân chủ (Growth)",
+    "titleVi": "Năng lực 8: Thúc đẩy Sự Phát triển của Khách hàng (Growth)",
     "titleEn": "Competency 8: Facilitates Client Growth",
     "descriptionVi": "Đồng hành chuyển hóa học hỏi thành mục tiêu hành động rõ ràng và trao quyền tự chịu trách nhiệm.",
     "descriptionEn": "Partners with the client to transform learning into action, autonomy and accountability.",
@@ -204,7 +204,7 @@ export const SEED_THEORIES: Theory[] = [
     "sectionId": "sec-a1-1",
     "titleVi": "Bài Giảng Chuyên Sâu: Thể hiện tư duy khai vấn",
     "titleEn": "In-Depth Lecture: Embodies a Coaching Mindset",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thể hiện tư duy khai vấn** thuộc miền `A. Nền tảng` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Tôi có đang cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm — hay đang bám vào kết quả mình mong muốn?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `QUẢN TRỊ CHÍNH MÌNH TRƯỚC`\n- **Bẫy thường gặp (Common Trap):** Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thể hiện tư duy khai vấn** thuộc miền `A. Nền tảng` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Tôi có đang cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm — hay đang bám vào kết quả mình mong muốn?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `QUẢN TRỊ CHÍNH MÌNH TRƯỚC`\n- **Bẫy thường gặp (Common Trap):** Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Embodies a Coaching Mindset** under `A. Foundation` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** Am I open, curious, flexible and client-centered — or attached to my preferred outcome?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `COACH YOURSELF FIRST`\n- **Common Trap:** Coach disappointment, bias, agenda or need to be right. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -228,7 +228,7 @@ export const SEED_THEORIES: Theory[] = [
     "sectionId": "sec-a1-2",
     "titleVi": "Bài Giảng Chuyên Sâu: Thiết lập và duy trì thỏa thuận",
     "titleEn": "In-Depth Lecture: Establishes and Maintains Agreements",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thiết lập và duy trì thỏa thuận** thuộc miền `B. Đồng kiến tạo mối quan hệ` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Thân chủ muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `THỎA THUẬN TRƯỚC, NỘI DUNG SAU`\n- **Bẫy thường gặp (Common Trap):** Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thiết lập và duy trì thỏa thuận** thuộc miền `B. Đồng kiến tạo mối quan hệ` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Khách hàng muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `THỎA THUẬN TRƯỚC, NỘI DUNG SAU`\n- **Bẫy thường gặp (Common Trap):** Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Establishes and Maintains Agreements** under `B. Co-Creating the Relationship` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** What does the client want from this engagement/session, and how will success be known?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `CONTRACT BEFORE CONTENT`\n- **Common Trap:** Coach selects topic or ignores a shift in focus. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -252,7 +252,7 @@ export const SEED_THEORIES: Theory[] = [
     "sectionId": "sec-a2",
     "titleVi": "Bài Giảng Chuyên Sâu: Nuôi dưỡng niềm tin và sự an toàn",
     "titleEn": "In-Depth Lecture: Cultivates Trust and Safety",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Nuôi dưỡng niềm tin và sự an toàn** thuộc miền `B. Đồng kiến tạo mối quan hệ` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Tôi có đang hiểu thân chủ trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `ĐI VÀO THẾ GIỚI CỦA THÂN CHỦ`\n- **Bẫy thường gặp (Common Trap):** Phán xét, giả định, xem nhẹ cảm xúc. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Nuôi dưỡng niềm tin và sự an toàn** thuộc miền `B. Đồng kiến tạo mối quan hệ` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Tôi có đang hiểu khách hàng trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG`\n- **Bẫy thường gặp (Common Trap):** Phán xét, giả định, xem nhẹ cảm xúc. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Cultivates Trust and Safety** under `B. Co-Creating the Relationship` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** Am I understanding the client from their context rather than imposing mine?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `ENTER THEIR WORLD`\n- **Common Trap:** Judgment, assumptions, minimizing emotion. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -276,7 +276,7 @@ export const SEED_THEORIES: Theory[] = [
     "sectionId": "sec-b1",
     "titleVi": "Bài Giảng Chuyên Sâu: Duy trì sự hiện diện",
     "titleEn": "In-Depth Lecture: Maintains Presence",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Duy trì sự hiện diện** thuộc miền `B. Đồng kiến tạo mối quan hệ` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Tôi có thể ở cùng cảm xúc, sự im lặng, điều chưa biết và điều đang xuất hiện ngay lúc này không?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `Ở LẠI VỚI ĐIỀU ĐANG HIỆN DIỆN`\n- **Bẫy thường gặp (Common Trap):** Sửa chữa, trấn an, vội vàng chuyển sang hành động. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Duy trì sự hiện diện** thuộc miền `B. Đồng kiến tạo mối quan hệ` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Tôi có thể ở cùng cảm xúc, sự im lặng, điều chưa biết và điều đang xuất hiện ngay lúc này không?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `Ở LẠI VỚI ĐIỀU ĐANG HIỆN DIỆN`\n- **Bẫy thường gặp (Common Trap):** Sửa chữa, trấn an, vội vàng chuyển sang hành động. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Maintains Presence** under `B. Co-Creating the Relationship` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** Can I stay with emotion, silence, uncertainty and what is emerging now?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `STAY WITH WHAT IS HERE`\n- **Common Trap:** Fixing, reassuring, rushing to action. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -300,7 +300,7 @@ export const SEED_THEORIES: Theory[] = [
     "sectionId": "sec-b2",
     "titleVi": "Bài Giảng Chuyên Sâu: Lắng nghe chủ động",
     "titleEn": "In-Depth Lecture: Listens Actively",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Lắng nghe chủ động** thuộc miền `C. Giao tiếp hiệu quả` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Thân chủ đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `NGHE VƯỢT RA NGOÀI CÂU CHỮ`\n- **Bẫy thường gặp (Common Trap):** Chỉ nghe nội dung bề mặt. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Lắng nghe chủ động** thuộc miền `C. Giao tiếp hiệu quả` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Khách hàng đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `NGHE VƯỢT RA NGOÀI CÂU CHỮ`\n- **Bẫy thường gặp (Common Trap):** Chỉ nghe nội dung bề mặt. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Listens Actively** under `C. Communicating Effectively` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** What is the client saying — and not saying — through words, tone, emotion, energy and patterns?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `HEAR BEYOND WORDS`\n- **Common Trap:** Listening only for content. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -324,7 +324,7 @@ export const SEED_THEORIES: Theory[] = [
     "sectionId": "sec-c1",
     "titleVi": "Bài Giảng Chuyên Sâu: Khơi gợi nhận thức",
     "titleEn": "In-Depth Lecture: Evokes Awareness",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Khơi gợi nhận thức** thuộc miền `C. Giao tiếp hiệu quả` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Điều gì có thể giúp thân chủ nhìn thấy, cảm nhận hoặc hiểu ra điều mới?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN`\n- **Bẫy thường gặp (Common Trap):** Cho lời khuyên, chẩn đoán, câu hỏi dẫn dắt, nhận định có bám chấp. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Khơi gợi nhận thức** thuộc miền `C. Giao tiếp hiệu quả` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Điều gì có thể giúp khách hàng nhìn thấy, cảm nhận hoặc hiểu ra điều mới?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN`\n- **Bẫy thường gặp (Common Trap):** Cho lời khuyên, chẩn đoán, câu hỏi dẫn dắt, nhận định có bám chấp. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Evokes Awareness** under `C. Communicating Effectively` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** What may help the client see, feel or understand something new?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `CREATE INSIGHT, NOT ANSWERS`\n- **Common Trap:** Advice, diagnosis, leading questions, attached observations. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -346,9 +346,9 @@ export const SEED_THEORIES: Theory[] = [
   {
     "id": "th-sec-c2",
     "sectionId": "sec-c2",
-    "titleVi": "Bài Giảng Chuyên Sâu: Thúc đẩy sự phát triển của thân chủ",
+    "titleVi": "Bài Giảng Chuyên Sâu: Thúc đẩy sự phát triển của khách hàng",
     "titleEn": "In-Depth Lecture: Facilitates Client Growth",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thúc đẩy sự phát triển của thân chủ** thuộc miền `D. Nuôi dưỡng học hỏi và phát triển` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Thân chủ sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `THÂN CHỦ SỞ HỮU HÀNH ĐỘNG`\n- **Bẫy thường gặp (Common Trap):** Coach áp đặt hành động/cơ chế chịu trách nhiệm. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thúc đẩy sự phát triển của khách hàng** thuộc miền `D. Nuôi dưỡng học hỏi và phát triển` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Khách hàng sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG`\n- **Bẫy thường gặp (Common Trap):** Coach áp đặt hành động/cơ chế chịu trách nhiệm. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Facilitates Client Growth** under `D. Cultivating Learning and Growth` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** How will the client integrate insight into client-designed action, learning and sustained progress?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `CLIENT OWNS THE ACTION`\n- **Common Trap:** Coach prescribes action/accountability. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -372,7 +372,7 @@ export const SEED_THEORIES: Theory[] = [
     "sectionId": "sec-d1",
     "titleVi": "Bài Giảng Chuyên Sâu: Thể hiện tư duy khai vấn",
     "titleEn": "In-Depth Lecture: Embodies a Coaching Mindset",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thể hiện tư duy khai vấn** thuộc miền `A. Nền tảng` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Tôi có đang cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm — hay đang bám vào kết quả mình mong muốn?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `QUẢN TRỊ CHÍNH MÌNH TRƯỚC`\n- **Bẫy thường gặp (Common Trap):** Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thể hiện tư duy khai vấn** thuộc miền `A. Nền tảng` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Tôi có đang cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm — hay đang bám vào kết quả mình mong muốn?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `QUẢN TRỊ CHÍNH MÌNH TRƯỚC`\n- **Bẫy thường gặp (Common Trap):** Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Embodies a Coaching Mindset** under `A. Foundation` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** Am I open, curious, flexible and client-centered — or attached to my preferred outcome?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `COACH YOURSELF FIRST`\n- **Common Trap:** Coach disappointment, bias, agenda or need to be right. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -396,7 +396,7 @@ export const SEED_THEORIES: Theory[] = [
     "sectionId": "sec-d2",
     "titleVi": "Bài Giảng Chuyên Sâu: Thiết lập và duy trì thỏa thuận",
     "titleEn": "In-Depth Lecture: Establishes and Maintains Agreements",
-    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thiết lập và duy trì thỏa thuận** thuộc miền `B. Đồng kiến tạo mối quan hệ` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Thân chủ muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `THỎA THUẬN TRƯỚC, NỘI DUNG SAU`\n- **Bẫy thường gặp (Common Trap):** Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
+    "contentVi": "### 1. Bản Chất Năng Lực Theo Chuẩn ICF 2025\nNăng lực **Thiết lập và duy trì thỏa thuận** thuộc miền `B. Đồng kiến tạo mối quan hệ` là một trong những cột trụ quyết định đánh giá cấp độ PCC.\n\n#### Định Nghĩa Cốt Lõi:\nCoach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.\n\n#### Góc Nhìn Khi Làm Bài Thi (Exam Lens):\n> **Tự hỏi bản thân:** Khách hàng muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?\n\n#### Gợi Ý Ghi Nhớ Nhanh (Memory Cue):\n- **Quy tắc vàng:** `THỎA THUẬN TRƯỚC, NỘI DUNG SAU`\n- **Bẫy thường gặp (Common Trap):** Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm. Khi gặp tình huống này, phương án chọn can thiệp trực tiếp hoặc áp đặt giải pháp luôn là phương án **WORST (Tệ nhất)**!\n\n#### Đối Chiếu Sơ Đồ Tư Duy (Mindmap):\nHọc viên có thể tham khảo trực tiếp sơ đồ tư duy năng lực tại file đính kèm: `ICF Core Competencies - Mindmap VN.pdf` trong tài liệu học viên.\n",
     "contentEn": "### 1. Essence of the Competency per ICF 2025 Standards\nCompetency **Establishes and Maintains Agreements** under `B. Co-Creating the Relationship` is a foundational pillar determining PCC credentialing success.\n\n#### Core Definition:\nThe coach demonstrates deep understanding and consistent application of professional coaching behaviors, honoring client ownership of session direction and outcomes.\n\n#### Exam Lens:\n> **Ask yourself:** What does the client want from this engagement/session, and how will success be known?\n\n#### Fast Memory Cue:\n- **Golden Rule:** `CONTRACT BEFORE CONTENT`\n- **Common Trap:** Coach selects topic or ignores a shift in focus. When faced with this scenario, choosing to direct or solve for the client is consistently the **WORST** response!\n\n#### Mindmap Reference:\nStudents can cross-reference the visual hierarchy in `ICF Core Competencies - Mindmap EN.pdf`.\n",
     "videoUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
     "attachments": [
@@ -423,7 +423,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-a1-1",
     "termVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC",
     "termEn": "COACH YOURSELF FIRST",
-    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thể hiện tư duy khai vấn: Tôi có đang cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
+    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thể hiện tư duy khai vấn: Tôi có đang cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
     "definitionEn": "Core mnemonic rule for Embodies a Coaching Mindset: Am I open, curious, flexible and client-centered — or attached to my preferred outcome?",
     "category": "mnemonic",
     "memoryCueVi": "Bẫy cần tránh: Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach",
@@ -449,7 +449,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-a1-2",
     "termVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU",
     "termEn": "CONTRACT BEFORE CONTENT",
-    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thiết lập và duy trì thỏa thuận: Thân chủ muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
+    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thiết lập và duy trì thỏa thuận: Khách hàng muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
     "definitionEn": "Core mnemonic rule for Establishes and Maintains Agreements: What does the client want from this engagement/session, and how will success be known?",
     "category": "mnemonic",
     "memoryCueVi": "Bẫy cần tránh: Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm",
@@ -462,7 +462,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-a1-2",
     "termVi": "Thỏa thuận",
     "termEn": "Agreement",
-    "definitionVi": "Văn bản chính thức giữa chuyên gia ICF và thân chủ/bên tài trợ, nêu điều khoản, kỳ vọng và điều kiện của mối quan hệ khai vấn.",
+    "definitionVi": "Văn bản chính thức giữa chuyên gia ICF và khách hàng/bên tài trợ, nêu điều khoản, kỳ vọng và điều kiện của mối quan hệ khai vấn.",
     "definitionEn": "A formal document established between an ICF professional and the client(s)/sponsor(s) outlining terms, expectations and conditions of the coaching relationship.",
     "category": "overview",
     "memoryCueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
@@ -473,9 +473,9 @@ export const SEED_KEYWORDS: Keyword[] = [
   {
     "id": "kw-sec-a2-1",
     "sectionId": "sec-a2",
-    "termVi": "ĐI VÀO THẾ GIỚI CỦA THÂN CHỦ",
+    "termVi": "ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG",
     "termEn": "ENTER THEIR WORLD",
-    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Nuôi dưỡng niềm tin và sự an toàn: Tôi có đang hiểu thân chủ trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?",
+    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Nuôi dưỡng niềm tin và sự an toàn: Tôi có đang hiểu khách hàng trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?",
     "definitionEn": "Core mnemonic rule for Cultivates Trust and Safety: Am I understanding the client from their context rather than imposing mine?",
     "category": "mnemonic",
     "memoryCueVi": "Bẫy cần tránh: Phán xét, giả định, xem nhẹ cảm xúc",
@@ -488,10 +488,10 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-a2",
     "termVi": "Quyền tự chủ",
     "termEn": "Autonomy",
-    "definitionVi": "Khả năng của thân chủ tự đưa ra quyết định và hành động dựa trên giá trị và niềm tin của chính mình.",
+    "definitionVi": "Khả năng của khách hàng tự đưa ra quyết định và hành động dựa trên giá trị và niềm tin của chính mình.",
     "definitionEn": "The client's ability to make independent decisions and take actions based on their own values and beliefs.",
     "category": "overview",
-    "memoryCueVi": "Thân chủ sở hữu quyết định và hành động.",
+    "memoryCueVi": "Khách hàng sở hữu quyết định và hành động.",
     "memoryCueEn": "Client owns decisions and actions.",
     "audioTermEnUrl": null,
     "orderIndex": 2
@@ -527,7 +527,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-b2",
     "termVi": "NGHE VƯỢT RA NGOÀI CÂU CHỮ",
     "termEn": "HEAR BEYOND WORDS",
-    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Lắng nghe chủ động: Thân chủ đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?",
+    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Lắng nghe chủ động: Khách hàng đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?",
     "definitionEn": "Core mnemonic rule for Listens Actively: What is the client saying — and not saying — through words, tone, emotion, energy and patterns?",
     "category": "mnemonic",
     "memoryCueVi": "Bẫy cần tránh: Chỉ nghe nội dung bề mặt",
@@ -538,9 +538,9 @@ export const SEED_KEYWORDS: Keyword[] = [
   {
     "id": "kw-sec-b2-2",
     "sectionId": "sec-b2",
-    "termVi": "Hệ thống của thân chủ",
+    "termVi": "Hệ thống của khách hàng",
     "termEn": "Client Systems",
-    "definitionVi": "Mạng lưới các mối quan hệ và môi trường ảnh hưởng đến cuộc sống và quyết định của thân chủ.",
+    "definitionVi": "Mạng lưới các mối quan hệ và môi trường ảnh hưởng đến cuộc sống và quyết định của khách hàng.",
     "definitionEn": "The network of relationships and environments that influence the client's life and decisions.",
     "category": "overview",
     "memoryCueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
@@ -553,7 +553,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-c1",
     "termVi": "TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN",
     "termEn": "CREATE INSIGHT, NOT ANSWERS",
-    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Khơi gợi nhận thức: Điều gì có thể giúp thân chủ nhìn thấy, cảm nhận hoặc hiểu ra điều mới?",
+    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Khơi gợi nhận thức: Điều gì có thể giúp khách hàng nhìn thấy, cảm nhận hoặc hiểu ra điều mới?",
     "definitionEn": "Core mnemonic rule for Evokes Awareness: What may help the client see, feel or understand something new?",
     "category": "mnemonic",
     "memoryCueVi": "Bẫy cần tránh: Cho lời khuyên, chẩn đoán, câu hỏi dẫn dắt, nhận định có bám chấp",
@@ -566,7 +566,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-c1",
     "termVi": "Cách tiếp cận khai vấn",
     "termEn": "Coaching Approach",
-    "definitionVi": "Các phương pháp và kỹ thuật cụ thể coach sử dụng để tạo điều kiện cho sự phát triển của thân chủ.",
+    "definitionVi": "Các phương pháp và kỹ thuật cụ thể coach sử dụng để tạo điều kiện cho sự phát triển của khách hàng.",
     "definitionEn": "The specific methods and techniques used by a coach to facilitate client growth and development.",
     "category": "overview",
     "memoryCueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
@@ -577,9 +577,9 @@ export const SEED_KEYWORDS: Keyword[] = [
   {
     "id": "kw-sec-c2-1",
     "sectionId": "sec-c2",
-    "termVi": "THÂN CHỦ SỞ HỮU HÀNH ĐỘNG",
+    "termVi": "KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG",
     "termEn": "CLIENT OWNS THE ACTION",
-    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thúc đẩy sự phát triển của thân chủ: Thân chủ sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?",
+    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thúc đẩy sự phát triển của khách hàng: Khách hàng sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?",
     "definitionEn": "Core mnemonic rule for Facilitates Client Growth: How will the client integrate insight into client-designed action, learning and sustained progress?",
     "category": "mnemonic",
     "memoryCueVi": "Bẫy cần tránh: Coach áp đặt hành động/cơ chế chịu trách nhiệm",
@@ -592,7 +592,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-c2",
     "termVi": "Quá trình khai vấn",
     "termEn": "Coaching Engagement",
-    "definitionVi": "Tương tác có cấu trúc giữa chuyên gia ICF và thân chủ/bên tài trợ, bao gồm toàn bộ quá trình khai vấn.",
+    "definitionVi": "Tương tác có cấu trúc giữa chuyên gia ICF và khách hàng/bên tài trợ, bao gồm toàn bộ quá trình khai vấn.",
     "definitionEn": "The structured interaction between an ICF professional and client(s)/sponsor(s), encompassing the entire coaching process.",
     "category": "overview",
     "memoryCueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
@@ -605,7 +605,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-d1",
     "termVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC",
     "termEn": "COACH YOURSELF FIRST",
-    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thể hiện tư duy khai vấn: Tôi có đang cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
+    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thể hiện tư duy khai vấn: Tôi có đang cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
     "definitionEn": "Core mnemonic rule for Embodies a Coaching Mindset: Am I open, curious, flexible and client-centered — or attached to my preferred outcome?",
     "category": "mnemonic",
     "memoryCueVi": "Bẫy cần tránh: Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach",
@@ -618,7 +618,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-d1",
     "termVi": "Triết lý khai vấn",
     "termEn": "Coaching Philosophy",
-    "definitionVi": "Lý thuyết, niềm tin và nguyên tắc nền tảng định hướng thực hành và tương tác của coach với thân chủ.",
+    "definitionVi": "Lý thuyết, niềm tin và nguyên tắc nền tảng định hướng thực hành và tương tác của coach với khách hàng.",
     "definitionEn": "The underlying theory, beliefs and principles that guide a coach's practice and interactions with clients.",
     "category": "overview",
     "memoryCueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
@@ -631,7 +631,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-d2",
     "termVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU",
     "termEn": "CONTRACT BEFORE CONTENT",
-    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thiết lập và duy trì thỏa thuận: Thân chủ muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
+    "definitionVi": "Quy tắc ghi nhớ trọng tâm cho năng lực Thiết lập và duy trì thỏa thuận: Khách hàng muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
     "definitionEn": "Core mnemonic rule for Establishes and Maintains Agreements: What does the client want from this engagement/session, and how will success be known?",
     "category": "mnemonic",
     "memoryCueVi": "Bẫy cần tránh: Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm",
@@ -644,7 +644,7 @@ export const SEED_KEYWORDS: Keyword[] = [
     "sectionId": "sec-d2",
     "termVi": "Mối quan hệ khai vấn",
     "termEn": "Coaching Relationship",
-    "definitionVi": "Mối quan hệ được thiết lập giữa chuyên gia ICF và thân chủ/bên tài trợ theo một thỏa thuận xác định trách nhiệm và kỳ vọng.",
+    "definitionVi": "Mối quan hệ được thiết lập giữa chuyên gia ICF và khách hàng/bên tài trợ theo một thỏa thuận xác định trách nhiệm và kỳ vọng.",
     "definitionEn": "A relationship established by the ICF professional and client(s)/sponsor(s) under an agreement defining responsibilities and expectations.",
     "category": "overview",
     "memoryCueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
@@ -660,7 +660,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-a1-1",
     "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Thể hiện tư duy khai vấn là gì?",
     "frontEn": "What is the reflex rule when encountering situations related to: Embodies a Coaching Mindset?",
-    "backVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC — Góc nhìn thi: Tôi có đang cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
+    "backVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC — Góc nhìn thi: Tôi có đang cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
     "backEn": "COACH YOURSELF FIRST — Exam Lens: Am I open, curious, flexible and client-centered — or attached to my preferred outcome?",
     "hintVi": "Cảnh giác với: Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach",
     "hintEn": "Beware of: Coach disappointment, bias, agenda or need to be right",
@@ -682,7 +682,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-a1-2",
     "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Thiết lập và duy trì thỏa thuận là gì?",
     "frontEn": "What is the reflex rule when encountering situations related to: Establishes and Maintains Agreements?",
-    "backVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU — Góc nhìn thi: Thân chủ muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
+    "backVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU — Góc nhìn thi: Khách hàng muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
     "backEn": "CONTRACT BEFORE CONTENT — Exam Lens: What does the client want from this engagement/session, and how will success be known?",
     "hintVi": "Cảnh giác với: Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm",
     "hintEn": "Beware of: Coach selects topic or ignores a shift in focus",
@@ -693,7 +693,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-a1-2",
     "frontVi": "Ý nghĩa chuẩn mực của thuật ngữ: \"Thỏa thuận\" là gì?",
     "frontEn": "What is the exact definition of: \"Agreement\"?",
-    "backVi": "Văn bản chính thức giữa chuyên gia ICF và thân chủ/bên tài trợ, nêu điều khoản, kỳ vọng và điều kiện của mối quan hệ khai vấn.",
+    "backVi": "Văn bản chính thức giữa chuyên gia ICF và khách hàng/bên tài trợ, nêu điều khoản, kỳ vọng và điều kiện của mối quan hệ khai vấn.",
     "backEn": "A formal document established between an ICF professional and the client(s)/sponsor(s) outlining terms, expectations and conditions of the coaching relationship.",
     "hintVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
     "hintEn": "Know the exact meaning and apply it to situational judgment.",
@@ -704,7 +704,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-a2",
     "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Nuôi dưỡng niềm tin và sự an toàn là gì?",
     "frontEn": "What is the reflex rule when encountering situations related to: Cultivates Trust and Safety?",
-    "backVi": "ĐI VÀO THẾ GIỚI CỦA THÂN CHỦ — Góc nhìn thi: Tôi có đang hiểu thân chủ trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?",
+    "backVi": "ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG — Góc nhìn thi: Tôi có đang hiểu khách hàng trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?",
     "backEn": "ENTER THEIR WORLD — Exam Lens: Am I understanding the client from their context rather than imposing mine?",
     "hintVi": "Cảnh giác với: Phán xét, giả định, xem nhẹ cảm xúc",
     "hintEn": "Beware of: Judgment, assumptions, minimizing emotion",
@@ -715,9 +715,9 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-a2",
     "frontVi": "Ý nghĩa chuẩn mực của thuật ngữ: \"Quyền tự chủ\" là gì?",
     "frontEn": "What is the exact definition of: \"Autonomy\"?",
-    "backVi": "Khả năng của thân chủ tự đưa ra quyết định và hành động dựa trên giá trị và niềm tin của chính mình.",
+    "backVi": "Khả năng của khách hàng tự đưa ra quyết định và hành động dựa trên giá trị và niềm tin của chính mình.",
     "backEn": "The client's ability to make independent decisions and take actions based on their own values and beliefs.",
-    "hintVi": "Thân chủ sở hữu quyết định và hành động.",
+    "hintVi": "Khách hàng sở hữu quyết định và hành động.",
     "hintEn": "Client owns decisions and actions.",
     "orderIndex": 2
   },
@@ -748,7 +748,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-b2",
     "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Lắng nghe chủ động là gì?",
     "frontEn": "What is the reflex rule when encountering situations related to: Listens Actively?",
-    "backVi": "NGHE VƯỢT RA NGOÀI CÂU CHỮ — Góc nhìn thi: Thân chủ đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?",
+    "backVi": "NGHE VƯỢT RA NGOÀI CÂU CHỮ — Góc nhìn thi: Khách hàng đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?",
     "backEn": "HEAR BEYOND WORDS — Exam Lens: What is the client saying — and not saying — through words, tone, emotion, energy and patterns?",
     "hintVi": "Cảnh giác với: Chỉ nghe nội dung bề mặt",
     "hintEn": "Beware of: Listening only for content",
@@ -757,9 +757,9 @@ export const SEED_FLASHCARDS: Flashcard[] = [
   {
     "id": "fc-sec-b2-2",
     "sectionId": "sec-b2",
-    "frontVi": "Ý nghĩa chuẩn mực của thuật ngữ: \"Hệ thống của thân chủ\" là gì?",
+    "frontVi": "Ý nghĩa chuẩn mực của thuật ngữ: \"Hệ thống của khách hàng\" là gì?",
     "frontEn": "What is the exact definition of: \"Client Systems\"?",
-    "backVi": "Mạng lưới các mối quan hệ và môi trường ảnh hưởng đến cuộc sống và quyết định của thân chủ.",
+    "backVi": "Mạng lưới các mối quan hệ và môi trường ảnh hưởng đến cuộc sống và quyết định của khách hàng.",
     "backEn": "The network of relationships and environments that influence the client's life and decisions.",
     "hintVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
     "hintEn": "Know the exact meaning and apply it to situational judgment.",
@@ -770,7 +770,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-c1",
     "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Khơi gợi nhận thức là gì?",
     "frontEn": "What is the reflex rule when encountering situations related to: Evokes Awareness?",
-    "backVi": "TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN — Góc nhìn thi: Điều gì có thể giúp thân chủ nhìn thấy, cảm nhận hoặc hiểu ra điều mới?",
+    "backVi": "TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN — Góc nhìn thi: Điều gì có thể giúp khách hàng nhìn thấy, cảm nhận hoặc hiểu ra điều mới?",
     "backEn": "CREATE INSIGHT, NOT ANSWERS — Exam Lens: What may help the client see, feel or understand something new?",
     "hintVi": "Cảnh giác với: Cho lời khuyên, chẩn đoán, câu hỏi dẫn dắt, nhận định có bám chấp",
     "hintEn": "Beware of: Advice, diagnosis, leading questions, attached observations",
@@ -781,7 +781,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-c1",
     "frontVi": "Ý nghĩa chuẩn mực của thuật ngữ: \"Cách tiếp cận khai vấn\" là gì?",
     "frontEn": "What is the exact definition of: \"Coaching Approach\"?",
-    "backVi": "Các phương pháp và kỹ thuật cụ thể coach sử dụng để tạo điều kiện cho sự phát triển của thân chủ.",
+    "backVi": "Các phương pháp và kỹ thuật cụ thể coach sử dụng để tạo điều kiện cho sự phát triển của khách hàng.",
     "backEn": "The specific methods and techniques used by a coach to facilitate client growth and development.",
     "hintVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
     "hintEn": "Know the exact meaning and apply it to situational judgment.",
@@ -790,9 +790,9 @@ export const SEED_FLASHCARDS: Flashcard[] = [
   {
     "id": "fc-sec-c2-1",
     "sectionId": "sec-c2",
-    "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Thúc đẩy sự phát triển của thân chủ là gì?",
+    "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Thúc đẩy sự phát triển của khách hàng là gì?",
     "frontEn": "What is the reflex rule when encountering situations related to: Facilitates Client Growth?",
-    "backVi": "THÂN CHỦ SỞ HỮU HÀNH ĐỘNG — Góc nhìn thi: Thân chủ sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?",
+    "backVi": "KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG — Góc nhìn thi: Khách hàng sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?",
     "backEn": "CLIENT OWNS THE ACTION — Exam Lens: How will the client integrate insight into client-designed action, learning and sustained progress?",
     "hintVi": "Cảnh giác với: Coach áp đặt hành động/cơ chế chịu trách nhiệm",
     "hintEn": "Beware of: Coach prescribes action/accountability",
@@ -803,7 +803,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-c2",
     "frontVi": "Ý nghĩa chuẩn mực của thuật ngữ: \"Quá trình khai vấn\" là gì?",
     "frontEn": "What is the exact definition of: \"Coaching Engagement\"?",
-    "backVi": "Tương tác có cấu trúc giữa chuyên gia ICF và thân chủ/bên tài trợ, bao gồm toàn bộ quá trình khai vấn.",
+    "backVi": "Tương tác có cấu trúc giữa chuyên gia ICF và khách hàng/bên tài trợ, bao gồm toàn bộ quá trình khai vấn.",
     "backEn": "The structured interaction between an ICF professional and client(s)/sponsor(s), encompassing the entire coaching process.",
     "hintVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
     "hintEn": "Know the exact meaning and apply it to situational judgment.",
@@ -814,7 +814,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-d1",
     "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Thể hiện tư duy khai vấn là gì?",
     "frontEn": "What is the reflex rule when encountering situations related to: Embodies a Coaching Mindset?",
-    "backVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC — Góc nhìn thi: Tôi có đang cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
+    "backVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC — Góc nhìn thi: Tôi có đang cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
     "backEn": "COACH YOURSELF FIRST — Exam Lens: Am I open, curious, flexible and client-centered — or attached to my preferred outcome?",
     "hintVi": "Cảnh giác với: Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach",
     "hintEn": "Beware of: Coach disappointment, bias, agenda or need to be right",
@@ -825,7 +825,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-d1",
     "frontVi": "Ý nghĩa chuẩn mực của thuật ngữ: \"Triết lý khai vấn\" là gì?",
     "frontEn": "What is the exact definition of: \"Coaching Philosophy\"?",
-    "backVi": "Lý thuyết, niềm tin và nguyên tắc nền tảng định hướng thực hành và tương tác của coach với thân chủ.",
+    "backVi": "Lý thuyết, niềm tin và nguyên tắc nền tảng định hướng thực hành và tương tác của coach với khách hàng.",
     "backEn": "The underlying theory, beliefs and principles that guide a coach's practice and interactions with clients.",
     "hintVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
     "hintEn": "Know the exact meaning and apply it to situational judgment.",
@@ -836,7 +836,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-d2",
     "frontVi": "Quy tắc phản xạ cốt lõi khi gặp tình huống liên quan đến: Thiết lập và duy trì thỏa thuận là gì?",
     "frontEn": "What is the reflex rule when encountering situations related to: Establishes and Maintains Agreements?",
-    "backVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU — Góc nhìn thi: Thân chủ muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
+    "backVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU — Góc nhìn thi: Khách hàng muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
     "backEn": "CONTRACT BEFORE CONTENT — Exam Lens: What does the client want from this engagement/session, and how will success be known?",
     "hintVi": "Cảnh giác với: Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm",
     "hintEn": "Beware of: Coach selects topic or ignores a shift in focus",
@@ -847,7 +847,7 @@ export const SEED_FLASHCARDS: Flashcard[] = [
     "sectionId": "sec-d2",
     "frontVi": "Ý nghĩa chuẩn mực của thuật ngữ: \"Mối quan hệ khai vấn\" là gì?",
     "frontEn": "What is the exact definition of: \"Coaching Relationship\"?",
-    "backVi": "Mối quan hệ được thiết lập giữa chuyên gia ICF và thân chủ/bên tài trợ theo một thỏa thuận xác định trách nhiệm và kỳ vọng.",
+    "backVi": "Mối quan hệ được thiết lập giữa chuyên gia ICF và khách hàng/bên tài trợ theo một thỏa thuận xác định trách nhiệm và kỳ vọng.",
     "backEn": "A relationship established by the ICF professional and client(s)/sponsor(s) under an agreement defining responsibilities and expectations.",
     "hintVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống.",
     "hintEn": "Know the exact meaning and apply it to situational judgment.",
@@ -861,11 +861,11 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
     "sectionId": "sec-a1-1",
     "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Thể hiện tư duy khai vấn",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Embodies a Coaching Mindset",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Embodies a Coaching Mindset & Ethics Standard 1",
     "pccMarkers": [
@@ -880,11 +880,11 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
     "sectionId": "sec-a1-2",
     "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Thiết lập và duy trì thỏa thuận",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Establishes and Maintains Agreements",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Establishes and Maintains Agreements & Ethics Standard 1",
     "pccMarkers": [
@@ -899,11 +899,11 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
     "sectionId": "sec-a2",
     "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Nuôi dưỡng niềm tin và sự an toàn",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Cultivates Trust and Safety",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Cultivates Trust and Safety & Ethics Standard 1",
     "pccMarkers": [
@@ -918,11 +918,11 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
     "sectionId": "sec-b1",
     "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Duy trì sự hiện diện",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Maintains Presence",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Maintains Presence & Ethics Standard 1",
     "pccMarkers": [
@@ -937,11 +937,11 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
     "sectionId": "sec-b2",
     "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Lắng nghe chủ động",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Listens Actively",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Listens Actively & Ethics Standard 1",
     "pccMarkers": [
@@ -956,11 +956,11 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
     "sectionId": "sec-c1",
     "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Khơi gợi nhận thức",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Evokes Awareness",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Evokes Awareness & Ethics Standard 1",
     "pccMarkers": [
@@ -973,13 +973,13 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
   {
     "id": "cs-sec-c2",
     "sectionId": "sec-c2",
-    "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Thúc đẩy sự phát triển của thân chủ",
+    "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Thúc đẩy sự phát triển của khách hàng",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Facilitates Client Growth",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Facilitates Client Growth & Ethics Standard 1",
     "pccMarkers": [
@@ -994,11 +994,11 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
     "sectionId": "sec-d1",
     "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Thể hiện tư duy khai vấn",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Embodies a Coaching Mindset",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Embodies a Coaching Mindset & Ethics Standard 1",
     "pccMarkers": [
@@ -1013,11 +1013,11 @@ export const SEED_CASE_STUDIES: CaseStudy[] = [
     "sectionId": "sec-d2",
     "titleVi": "Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong Thiết lập và duy trì thỏa thuận",
     "titleEn": "Practical Scenario: Navigating Boundaries & Empathy in Establishes and Maintains Agreements",
-    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**\n",
+    "scenarioDialogueVi": "**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:\n- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”\n- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**\n",
     "scenarioDialogueEn": "**Context:** During session 3, the client (a project director) shares with visible exhaustion:\n- **Client:** \"I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on...\"\n- **The coach observes with stillness, noticing the client's shallow breathing.**\n",
     "analysisQuestionsVi": "1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
     "analysisQuestionsEn": "1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
-    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
+    "suggestedAnswersVi": "**Đáp án phân tích gợi ý:**\n- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.\n- **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.",
     "suggestedAnswersEn": "**Suggested Analysis:**\n- **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.\n- **PCC Violation (WORST):** Coach acts as an advice-giver offering remedies for insomnia or guarantees everything will be fine, breaching professional boundaries.",
     "competencyMapping": "ICF Core Competency: Establishes and Maintains Agreements & Ethics Standard 1",
     "pccMarkers": [
@@ -1039,27 +1039,27 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'QUẢN TRỊ CHÍNH MÌNH TRƯỚC'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'QUẢN TRỊ CHÍNH MÌNH TRƯỚC'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'COACH YOURSELF FIRST'.",
     "primaryCompetency": "Embodies a Coaching Mindset",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1076,27 +1076,27 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'THỎA THUẬN TRƯỚC, NỘI DUNG SAU'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'THỎA THUẬN TRƯỚC, NỘI DUNG SAU'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'CONTRACT BEFORE CONTENT'.",
     "primaryCompetency": "Establishes and Maintains Agreements",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1113,27 +1113,27 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'ĐI VÀO THẾ GIỚI CỦA THÂN CHỦ'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'ENTER THEIR WORLD'.",
     "primaryCompetency": "Cultivates Trust and Safety",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1150,27 +1150,27 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'Ở LẠI VỚI ĐIỀU ĐANG HIỆN DIỆN'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'Ở LẠI VỚI ĐIỀU ĐANG HIỆN DIỆN'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'STAY WITH WHAT IS HERE'.",
     "primaryCompetency": "Maintains Presence",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1187,27 +1187,27 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'NGHE VƯỢT RA NGOÀI CÂU CHỮ'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'NGHE VƯỢT RA NGOÀI CÂU CHỮ'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'HEAR BEYOND WORDS'.",
     "primaryCompetency": "Listens Actively",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1224,27 +1224,27 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'CREATE INSIGHT, NOT ANSWERS'.",
     "primaryCompetency": "Evokes Awareness",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1256,32 +1256,32 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "id": "qz-sec-c2-1",
     "sectionId": "sec-c2",
     "type": "standard_mcq",
-    "questionVi": "Khi đánh giá câu hỏi thi về năng lực 'Thúc đẩy sự phát triển của thân chủ', dấu hiệu nào sau đây chỉ ra hành vi của coach đạt chuẩn cấp độ PCC?",
+    "questionVi": "Khi đánh giá câu hỏi thi về năng lực 'Thúc đẩy sự phát triển của khách hàng', dấu hiệu nào sau đây chỉ ra hành vi của coach đạt chuẩn cấp độ PCC?",
     "questionEn": "When assessing questions on 'Facilitates Client Growth', which behavior indicates PCC-level mastery?",
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'THÂN CHỦ SỞ HỮU HÀNH ĐỘNG'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'CLIENT OWNS THE ACTION'.",
     "primaryCompetency": "Facilitates Client Growth",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1298,27 +1298,27 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'QUẢN TRỊ CHÍNH MÌNH TRƯỚC'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'QUẢN TRỊ CHÍNH MÌNH TRƯỚC'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'COACH YOURSELF FIRST'.",
     "primaryCompetency": "Embodies a Coaching Mindset",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1335,27 +1335,27 @@ export const SEED_QUIZZES: QuizQuestion[] = [
     "options": [
       {
         "key": "A",
-        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.",
+        "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.",
         "textEn": "The coach proactively suggests solutions to save client time."
       },
       {
         "key": "B",
-        "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.",
+        "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.",
         "textEn": "The coach honors client autonomy and partners to reconfirm session direction."
       },
       {
         "key": "C",
-        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.",
+        "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.",
         "textEn": "The coach focuses on dissecting past mistakes of the client."
       },
       {
         "key": "D",
-        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.",
+        "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.",
         "textEn": "The coach shares personal success stories for the client to follow."
       }
     ],
     "correctAnswer": "B",
-    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: 'THỎA THUẬN TRƯỚC, NỘI DUNG SAU'.",
+    "explanationVi": "Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: 'THỎA THUẬN TRƯỚC, NỘI DUNG SAU'.",
     "explanationEn": "Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: 'CONTRACT BEFORE CONTENT'.",
     "primaryCompetency": "Establishes and Maintains Agreements",
     "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",
@@ -1370,7 +1370,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q01",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Một thân chủ tiềm năng là founder của một startup. Trong exploratory call, bạn nhận ra công ty này cạnh tranh trực tiếp với một doanh nghiệp mà bạn đang giữ một khoản đầu tư nhỏ. Thân chủ chưa biết điều này.",
+    "questionVi": "Một khách hàng tiềm năng là founder của một startup. Trong exploratory call, bạn nhận ra công ty này cạnh tranh trực tiếp với một doanh nghiệp mà bạn đang giữ một khoản đầu tư nhỏ. Khách hàng chưa biết điều này.",
     "questionEn": "A potential client is the founder of a startup. During the exploratory call, you realize the company directly competes with a business in which you hold a small investment. The client is unaware of this.",
     "options": [
       {
@@ -1380,12 +1380,12 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "B",
-        "textVi": "Đợi đến khi thân chủ ký hợp đồng coaching rồi mới nói.",
+        "textVi": "Đợi đến khi khách hàng ký hợp đồng coaching rồi mới nói.",
         "textEn": "Wait until the client signs a coaching contract before saying anything."
       },
       {
         "key": "C",
-        "textVi": "Công khai khoản đầu tư và cùng thân chủ xem xét xung đột lợi ích tiềm ẩn.",
+        "textVi": "Công khai khoản đầu tư và cùng khách hàng xem xét xung đột lợi ích tiềm ẩn.",
         "textEn": "Disclose the investment and explore the potential conflict of interest with the client."
       },
       {
@@ -1446,12 +1446,12 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q03",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Thân chủ mở đầu: “Em đang stress vì sếp, đang nghĩ đến đổi việc, và chuyện với chồng cũng đang khó khăn.”",
+    "questionVi": "Khách hàng mở đầu: “Em đang stress vì sếp, đang nghĩ đến đổi việc, và chuyện với chồng cũng đang khó khăn.”",
     "questionEn": "A client opens the session by saying, “I am stressed about my boss, thinking about changing jobs, and things with my husband are difficult too.”",
     "options": [
       {
         "key": "A",
-        "textVi": "Hỏi trong ba vấn đề, hôm nay thân chủ muốn tập trung vào điều nào.",
+        "textVi": "Hỏi trong ba vấn đề, hôm nay khách hàng muốn tập trung vào điều nào.",
         "textEn": "Ask which of the three issues the client wants to focus on today."
       },
       {
@@ -1461,7 +1461,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "C",
-        "textVi": "Hỏi thân chủ kể thêm về sếp.",
+        "textVi": "Hỏi khách hàng kể thêm về sếp.",
         "textEn": "Ask the client to tell you more about the boss."
       },
       {
@@ -1472,7 +1472,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     ],
     "bestAnswer": "A",
     "worstAnswer": "B",
-    "explanationVi": "Đồng hành để thân chủ tự chọn trọng tâm của phiên. Coach không nên tự chọn agenda dựa trên phán đoán cá nhân.",
+    "explanationVi": "Đồng hành để khách hàng tự chọn trọng tâm của phiên. Coach không nên tự chọn agenda dựa trên phán đoán cá nhân.",
     "explanationEn": "Partner with the client to choose the session focus. The coach should not select the agenda based on personal judgment.",
     "primaryCompetency": "3. Agreements",
     "keyClueVi": "Nhiều chủ đề; chưa rõ trọng tâm phiên",
@@ -1484,7 +1484,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q04",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Thân chủ rất hào hứng về cơ hội promotion. Khi nhắc rằng vai trò mới sẽ khiến họ phải quản lý một người bạn thân, họ nhìn xuống và im lặng.",
+    "questionVi": "Khách hàng rất hào hứng về cơ hội promotion. Khi nhắc rằng vai trò mới sẽ khiến họ phải quản lý một người bạn thân, họ nhìn xuống và im lặng.",
     "questionEn": "A client is excited about a promotion. When they mention that the new role would require managing a close friend, they look down and become quiet.",
     "options": [
       {
@@ -1522,7 +1522,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q05",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Bạn từng là HR Director. Thân chủ hỏi: “Nếu là chị, chị sẽ yêu cầu mức lương bao nhiêu?”",
+    "questionVi": "Bạn từng là HR Director. Khách hàng hỏi: “Nếu là chị, chị sẽ yêu cầu mức lương bao nhiêu?”",
     "questionEn": "You previously worked as an HR Director. A client asks, “If you were me, how much salary would you ask for?”",
     "options": [
       {
@@ -1537,7 +1537,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "C",
-        "textVi": "Khám phá điều thân chủ đang cân nhắc; nếu chia sẻ chuyên môn có ích, làm rõ việc chuyển vai trò và xin phép trước khi cung cấp thông tin.",
+        "textVi": "Khám phá điều khách hàng đang cân nhắc; nếu chia sẻ chuyên môn có ích, làm rõ việc chuyển vai trò và xin phép trước khi cung cấp thông tin.",
         "textEn": "Explore what the client is considering and, if expertise would be useful, clarify the role shift and ask permission before sharing information."
       },
       {
@@ -1548,7 +1548,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     ],
     "bestAnswer": "C",
     "worstAnswer": "A",
-    "explanationVi": "Coach có thể chia sẻ kiến thức, nhưng nên làm rõ việc chuyển vai trò, xin phép và không bám chấp vào lời khuyên. Cho lời khuyên trực tiếp làm giảm quyền sở hữu của thân chủ.",
+    "explanationVi": "Coach có thể chia sẻ kiến thức, nhưng nên làm rõ việc chuyển vai trò, xin phép và không bám chấp vào lời khuyên. Cho lời khuyên trực tiếp làm giảm quyền sở hữu của khách hàng.",
     "explanationEn": "A coach may share knowledge, but should clarify the role shift, obtain permission, and remain non-attached. Direct advice removes client ownership.",
     "primaryCompetency": "1. Ethics / 7. Awareness",
     "keyClueVi": "Coach có chuyên môn liên quan",
@@ -1560,7 +1560,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q06",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Một thân chủ sắp rời tổ chức sau 20 năm. Khi nói: “Tuần sau là ngày cuối cùng của tôi,” họ bắt đầu khóc.",
+    "questionVi": "Một khách hàng sắp rời tổ chức sau 20 năm. Khi nói: “Tuần sau là ngày cuối cùng của tôi,” họ bắt đầu khóc.",
     "questionEn": "A client is leaving an organization after 20 years. When they say, “Next week is my last day,” they begin to cry.",
     "options": [
       {
@@ -1570,7 +1570,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "B",
-        "textVi": "Cho phép một khoảng im lặng, ghi nhận điều đang xuất hiện và hỏi thân chủ muốn ở lại khám phá cảm xúc hay quay lại trọng tâm ban đầu.",
+        "textVi": "Cho phép một khoảng im lặng, ghi nhận điều đang xuất hiện và hỏi khách hàng muốn ở lại khám phá cảm xúc hay quay lại trọng tâm ban đầu.",
         "textEn": "Allow some silence, acknowledge what is emerging, and ask whether the client wants to stay with the emotion or return to the original focus."
       },
       {
@@ -1580,13 +1580,13 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "D",
-        "textVi": "Chuyển thẳng sang action plan để thân chủ không bị mắc kẹt trong cảm xúc.",
+        "textVi": "Chuyển thẳng sang action plan để khách hàng không bị mắc kẹt trong cảm xúc.",
         "textEn": "Move directly to an action plan so the client does not get stuck in emotion."
       }
     ],
     "bestAnswer": "B",
     "worstAnswer": "C",
-    "explanationVi": "Ở lại hiện diện với cảm xúc mạnh và đồng hành để quyết định bước tiếp theo. Chất vấn quyết định của thân chủ đưa agenda của coach vào đúng lúc thân chủ dễ tổn thương.",
+    "explanationVi": "Ở lại hiện diện với cảm xúc mạnh và đồng hành để quyết định bước tiếp theo. Chất vấn quyết định của khách hàng đưa agenda của coach vào đúng lúc khách hàng dễ tổn thương.",
     "explanationEn": "Stay present with strong emotion and partner on where to go next. Questioning the client’s decision inserts the coach’s agenda at a vulnerable moment.",
     "primaryCompetency": "5. Presence / 4. Trust",
     "keyClueVi": "Cảm xúc mạnh",
@@ -1598,17 +1598,17 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q07",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Phiên trước thân chủ tự chọn hành động là nói chuyện thẳng thắn với manager. Tuần này họ nói: “Tôi không làm. Tôi quyết định chưa phải lúc.” Bạn nhận thấy mình hơi thất vọng.",
+    "questionVi": "Phiên trước khách hàng tự chọn hành động là nói chuyện thẳng thắn với manager. Tuần này họ nói: “Tôi không làm. Tôi quyết định chưa phải lúc.” Bạn nhận thấy mình hơi thất vọng.",
     "questionEn": "Last session, a client chose to have a direct conversation with their manager. This week they say, “I didn’t do it. I decided it was not the right time.” You notice you feel disappointed.",
     "options": [
       {
         "key": "A",
-        "textVi": "Nhắc thân chủ rằng họ đã cam kết.",
+        "textVi": "Nhắc khách hàng rằng họ đã cam kết.",
         "textEn": "Remind the client that they made a commitment."
       },
       {
         "key": "B",
-        "textVi": "Nhận diện và quản trị phản ứng của bản thân, nhớ rằng thân chủ sở hữu lựa chọn, và tiếp tục tò mò về điều họ mang tới hôm nay.",
+        "textVi": "Nhận diện và quản trị phản ứng của bản thân, nhớ rằng khách hàng sở hữu lựa chọn, và tiếp tục tò mò về điều họ mang tới hôm nay.",
         "textEn": "Notice and manage your own reaction, remember the client owns their choices, and stay curious about what they are bringing now."
       },
       {
@@ -1624,10 +1624,10 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     ],
     "bestAnswer": "B",
     "worstAnswer": "C",
-    "explanationVi": "Thân chủ sở hữu lựa chọn của mình. Coach quản trị sự thất vọng cá nhân và duy trì tò mò. Gọi đó là 'thất bại' mang tính phán xét và làm giảm an toàn.",
+    "explanationVi": "Khách hàng sở hữu lựa chọn của mình. Coach quản trị sự thất vọng cá nhân và duy trì tò mò. Gọi đó là 'thất bại' mang tính phán xét và làm giảm an toàn.",
     "explanationEn": "The client owns their choices. The coach manages personal disappointment and remains curious. Calling it a failure is judgmental and damages safety.",
     "primaryCompetency": "2. Coaching Mindset",
-    "keyClueVi": "Thân chủ không hoàn thành hành động",
+    "keyClueVi": "Khách hàng không hoàn thành hành động",
     "keyClueEn": "Client did not complete an action",
     "difficulty": "medium",
     "orderIndex": 7
@@ -1646,12 +1646,12 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "B",
-        "textVi": "Xóa tên thân chủ rồi upload bản ghi mà không cần trao đổi thêm.",
+        "textVi": "Xóa tên khách hàng rồi upload bản ghi mà không cần trao đổi thêm.",
         "textEn": "Remove the client’s name and upload the recording without further discussion."
       },
       {
         "key": "C",
-        "textVi": "Xem xét quyền riêng tư, bảo mật, pháp lý, thỏa thuận và informed consent phù hợp trước khi dùng với thông tin thân chủ.",
+        "textVi": "Xem xét quyền riêng tư, bảo mật, pháp lý, thỏa thuận và informed consent phù hợp trước khi dùng với thông tin khách hàng.",
         "textEn": "Review privacy, security, legal implications, agreements and appropriate informed consent before using it with client information."
       },
       {
@@ -1665,7 +1665,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "explanationVi": "Việc sử dụng công nghệ/AI phải tôn trọng bảo mật, an ninh, thỏa thuận và nghĩa vụ pháp lý/đạo đức. Công cụ hành chính không tự động được miễn các yêu cầu này.",
     "explanationEn": "Technology and AI use must honor confidentiality, security, agreements and legal/ethical obligations. Administrative use is not automatically exempt.",
     "primaryCompetency": "1. Ethics / Ethics 2.4–2.5",
-    "keyClueVi": "AI bên thứ ba + dữ liệu thân chủ",
+    "keyClueVi": "AI bên thứ ba + dữ liệu khách hàng",
     "keyClueEn": "Third-party AI + client data",
     "difficulty": "medium",
     "orderIndex": 8
@@ -1674,7 +1674,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q09",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Giữa phiên, thân chủ ban đầu muốn nói về delegation bỗng nói: “Thực ra tôi nhận ra vấn đề thật sự là tôi không tin đội ngũ của mình.”",
+    "questionVi": "Giữa phiên, khách hàng ban đầu muốn nói về delegation bỗng nói: “Thực ra tôi nhận ra vấn đề thật sự là tôi không tin đội ngũ của mình.”",
     "questionEn": "Halfway through a session, a client who originally wanted to discuss delegation says, “Actually, I realize the real issue is that I do not trust my team.”",
     "options": [
       {
@@ -1684,26 +1684,26 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "B",
-        "textVi": "Nói với thân chủ rằng trust quan trọng hơn delegation.",
+        "textVi": "Nói với khách hàng rằng trust quan trọng hơn delegation.",
         "textEn": "Tell the client that trust is a more important issue than delegation."
       },
       {
         "key": "C",
-        "textVi": "Ghi nhận sự thay đổi và đồng hành với thân chủ để xác nhận lại trọng tâm/kết quả mong muốn cho phần còn lại của phiên.",
+        "textVi": "Ghi nhận sự thay đổi và đồng hành với khách hàng để xác nhận lại trọng tâm/kết quả mong muốn cho phần còn lại của phiên.",
         "textEn": "Acknowledge the shift and partner with the client to reconfirm the desired focus and outcome for the rest of the session."
       },
       {
         "key": "D",
-        "textVi": "Lập tức hỏi vì sao thân chủ không tin đội ngũ.",
+        "textVi": "Lập tức hỏi vì sao khách hàng không tin đội ngũ.",
         "textEn": "Immediately ask why the client does not trust the team."
       }
     ],
     "bestAnswer": "C",
     "worstAnswer": "A",
-    "explanationVi": "Khi trọng tâm có ý nghĩa thay đổi, cần xem lại thỏa thuận. Ép giữ chủ đề ban đầu ưu tiên hợp đồng hơn nhu cầu đang xuất hiện của thân chủ.",
+    "explanationVi": "Khi trọng tâm có ý nghĩa thay đổi, cần xem lại thỏa thuận. Ép giữ chủ đề ban đầu ưu tiên hợp đồng hơn nhu cầu đang xuất hiện của khách hàng.",
     "explanationEn": "When the meaningful focus shifts, revisit the agreement. Forcing the original topic prioritizes the contract over the client’s emerging need.",
     "primaryCompetency": "3. Agreements",
-    "keyClueVi": "Thân chủ thay đổi trọng tâm",
+    "keyClueVi": "Khách hàng thay đổi trọng tâm",
     "keyClueEn": "Client changes the focus",
     "difficulty": "medium",
     "orderIndex": 9
@@ -1712,12 +1712,12 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q10",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Thân chủ nói: “Tôi cứ nói mình muốn nghỉ việc, nhưng cứ gần đến lúc quyết định thì tôi lại tạo thêm một lý do để ở lại.”",
+    "questionVi": "Khách hàng nói: “Tôi cứ nói mình muốn nghỉ việc, nhưng cứ gần đến lúc quyết định thì tôi lại tạo thêm một lý do để ở lại.”",
     "questionEn": "A client says, “I keep saying I want to leave my job, but every time I get close to deciding, I create another reason to stay.”",
     "options": [
       {
         "key": "A",
-        "textVi": "Nói với thân chủ rằng họ sợ thay đổi.",
+        "textVi": "Nói với khách hàng rằng họ sợ thay đổi.",
         "textEn": "Tell the client they are afraid of change."
       },
       {
@@ -1732,13 +1732,13 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "D",
-        "textVi": "Liệt kê các rủi ro tài chính của việc nghỉ để thân chủ thực tế hơn.",
+        "textVi": "Liệt kê các rủi ro tài chính của việc nghỉ để khách hàng thực tế hơn.",
         "textEn": "List the financial risks of leaving so the client can be realistic."
       }
     ],
     "bestAnswer": "B",
     "worstAnswer": "A",
-    "explanationVi": "Khám phá mô thức và ý nghĩa của thân chủ thay vì chẩn đoán. Coach tạo điều kiện cho nhận thức thay vì dán nhãn thân chủ.",
+    "explanationVi": "Khám phá mô thức và ý nghĩa của khách hàng thay vì chẩn đoán. Coach tạo điều kiện cho nhận thức thay vì dán nhãn khách hàng.",
     "explanationEn": "Explore the client’s pattern and meaning rather than diagnose it. The coach facilitates awareness instead of labeling the client.",
     "primaryCompetency": "7. Evokes Awareness",
     "keyClueVi": "Mô thức lặp lại",
@@ -1750,7 +1750,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q11",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Một thân chủ hiện tại bắt đầu gửi tin nhắn mang tính cá nhân và hỏi bạn có muốn hẹn hò không.",
+    "questionVi": "Một khách hàng hiện tại bắt đầu gửi tin nhắn mang tính cá nhân và hỏi bạn có muốn hẹn hò không.",
     "questionEn": "A current coaching client begins sending personal messages and asks whether you would like to go on a date.",
     "options": [
       {
@@ -1770,13 +1770,13 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "D",
-        "textVi": "Hỏi thân chủ có nghiêm túc không rồi mới quyết định.",
+        "textVi": "Hỏi khách hàng có nghiêm túc không rồi mới quyết định.",
         "textEn": "Ask the client whether they are serious before deciding."
       }
     ],
     "bestAnswer": "C",
     "worstAnswer": "B",
-    "explanationVi": "Chuyên gia ICF không tham gia quan hệ tình dục/lãng mạn với thân chủ hoặc sponsor hiện tại. Sự dịch chuyển ranh giới phải được xử lý trực tiếp.",
+    "explanationVi": "Chuyên gia ICF không tham gia quan hệ tình dục/lãng mạn với khách hàng hoặc sponsor hiện tại. Sự dịch chuyển ranh giới phải được xử lý trực tiếp.",
     "explanationEn": "ICF professionals do not participate in sexual or romantic relationships with current clients or sponsors. The boundary shift must be addressed.",
     "primaryCompetency": "1. Ethics / Ethics 3.6",
     "keyClueVi": "Ranh giới tình cảm",
@@ -1814,7 +1814,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     ],
     "bestAnswer": "B",
     "worstAnswer": "D",
-    "explanationVi": "Chủ động quản lý chênh lệch quyền lực/địa vị và bảo vệ quyền lựa chọn của thân chủ. Sponsor trả phí không biến agenda của sponsor thành agenda của thân chủ.",
+    "explanationVi": "Chủ động quản lý chênh lệch quyền lực/địa vị và bảo vệ quyền lựa chọn của khách hàng. Sponsor trả phí không biến agenda của sponsor thành agenda của khách hàng.",
     "explanationEn": "Actively manage power/status dynamics and protect client choice. Sponsor payment does not make the sponsor’s agenda the client’s agenda.",
     "primaryCompetency": "4. Trust & Safety / Ethics 4.1",
     "keyClueVi": "Coaching do sponsor khởi xướng",
@@ -1826,7 +1826,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q13",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Sau một câu hỏi mạnh, thân chủ im lặng 25 giây và trông đang suy nghĩ.",
+    "questionVi": "Sau một câu hỏi mạnh, khách hàng im lặng 25 giây và trông đang suy nghĩ.",
     "questionEn": "After a powerful question, the client becomes silent for 25 seconds and looks thoughtful.",
     "options": [
       {
@@ -1836,23 +1836,23 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "B",
-        "textVi": "Cho phép sự im lặng và duy trì hiện diện, tạo không gian để thân chủ suy ngẫm.",
+        "textVi": "Cho phép sự im lặng và duy trì hiện diện, tạo không gian để khách hàng suy ngẫm.",
         "textEn": "Allow the silence and remain present, giving the client space to reflect."
       },
       {
         "key": "C",
-        "textVi": "Tóm tắt diễn giải của bạn về điều thân chủ có lẽ đang nghĩ.",
+        "textVi": "Tóm tắt diễn giải của bạn về điều khách hàng có lẽ đang nghĩ.",
         "textEn": "Summarize your interpretation of what the client is probably thinking."
       },
       {
         "key": "D",
-        "textVi": "Đưa ví dụ từ một thân chủ khác để giúp họ trả lời.",
+        "textVi": "Đưa ví dụ từ một khách hàng khác để giúp họ trả lời.",
         "textEn": "Offer an example from another client to help them respond."
       }
     ],
     "bestAnswer": "B",
     "worstAnswer": "A",
-    "explanationVi": "Im lặng có thể hỗ trợ suy ngẫm và nhận thức. Lấp khoảng trống vì coach khó chịu làm giảm sự hiện diện và quá trình xử lý của thân chủ.",
+    "explanationVi": "Im lặng có thể hỗ trợ suy ngẫm và nhận thức. Lấp khoảng trống vì coach khó chịu làm giảm sự hiện diện và quá trình xử lý của khách hàng.",
     "explanationEn": "Silence can support reflection and awareness. Filling the space because of coach discomfort reduces presence and client processing.",
     "primaryCompetency": "5. Presence",
     "keyClueVi": "Khoảng im lặng suy ngẫm dài",
@@ -1864,7 +1864,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q14",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Thân chủ nói: “Cảm giác như tôi đang lái xe với kính chắn gió phủ sương.”",
+    "questionVi": "Khách hàng nói: “Cảm giác như tôi đang lái xe với kính chắn gió phủ sương.”",
     "questionEn": "A client says, “It feels like I am driving with a foggy windshield.”",
     "options": [
       {
@@ -1890,10 +1890,10 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     ],
     "bestAnswer": "A",
     "worstAnswer": "B",
-    "explanationVi": "Dùng chính ngôn ngữ và ẩn dụ của thân chủ để đào sâu khám phá. Không áp diễn giải của coach lên ý nghĩa của ẩn dụ.",
+    "explanationVi": "Dùng chính ngôn ngữ và ẩn dụ của khách hàng để đào sâu khám phá. Không áp diễn giải của coach lên ý nghĩa của ẩn dụ.",
     "explanationEn": "Use the client’s language and metaphor to deepen exploration. Do not impose your own interpretation of what the metaphor means.",
     "primaryCompetency": "6. Listening / 7. Awareness",
-    "keyClueVi": "Ẩn dụ do thân chủ tạo ra",
+    "keyClueVi": "Ẩn dụ do khách hàng tạo ra",
     "keyClueEn": "Client-generated metaphor",
     "difficulty": "medium",
     "orderIndex": 14
@@ -1902,12 +1902,12 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q15",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Gần cuối phiên, thân chủ có một insight rõ ràng về việc thiết lập ranh giới với đồng nghiệp.",
+    "questionVi": "Gần cuối phiên, khách hàng có một insight rõ ràng về việc thiết lập ranh giới với đồng nghiệp.",
     "questionEn": "Near the end of a session, a client has a clear insight about setting boundaries with colleagues.",
     "options": [
       {
         "key": "A",
-        "textVi": "Bảo thân chủ chặn hai giờ trên lịch mỗi ngày.",
+        "textVi": "Bảo khách hàng chặn hai giờ trên lịch mỗi ngày.",
         "textEn": "Tell the client to block two hours on their calendar every day."
       },
       {
@@ -1928,7 +1928,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     ],
     "bestAnswer": "B",
     "worstAnswer": "A",
-    "explanationVi": "Đồng hành với thân chủ để chuyển insight thành hành động do chính họ thiết kế, cùng nguồn hỗ trợ và accountability. Kê đơn hành động làm giảm quyền tự chủ.",
+    "explanationVi": "Đồng hành với khách hàng để chuyển insight thành hành động do chính họ thiết kế, cùng nguồn hỗ trợ và accountability. Kê đơn hành động làm giảm quyền tự chủ.",
     "explanationEn": "Partner with the client to translate insight into client-designed action, support and accountability. Prescribing the action reduces autonomy.",
     "primaryCompetency": "8. Facilitates Growth",
     "keyClueVi": "Insight đã sẵn sàng để tích hợp",
@@ -1940,7 +1940,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
     "id": "Q16",
     "sectionId": null,
     "type": "icf_sjt",
-    "questionVi": "Thân chủ yêu cầu bạn chẩn đoán xem họ có trầm cảm lâm sàng hay không và nói rằng họ muốn coaching thay vì gặp chuyên gia sức khỏe tâm thần.",
+    "questionVi": "Khách hàng yêu cầu bạn chẩn đoán xem họ có trầm cảm lâm sàng hay không và nói rằng họ muốn coaching thay vì gặp chuyên gia sức khỏe tâm thần.",
     "questionEn": "A client asks you to diagnose whether they have clinical depression and says they want coaching instead of seeing a mental-health professional.",
     "options": [
       {
@@ -1955,7 +1955,7 @@ export const SEED_FULL_MOCK_EXAM: QuizQuestion[] = [
       },
       {
         "key": "C",
-        "textVi": "Tiếp tục coaching vì thân chủ đã nói rõ họ thích coaching hơn.",
+        "textVi": "Tiếp tục coaching vì khách hàng đã nói rõ họ thích coaching hơn.",
         "textEn": "Continue coaching because the client explicitly prefers coaching."
       },
       {
@@ -1987,7 +1987,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-02",
-    "textVi": "Hãy để sự im lặng làm việc. Trong khoảng lặng sâu, thân chủ tìm thấy câu trả lời chân thật nhất của chính họ.",
+    "textVi": "Hãy để sự im lặng làm việc. Trong khoảng lặng sâu, khách hàng tìm thấy câu trả lời chân thật nhất của chính họ.",
     "textEn": "Let silence do the heavy lifting. In deep stillness, clients discover their own truest answers.",
     "theme": "Khoảng lặng",
     "author": "Zen Coaching Wisdom",
@@ -1995,7 +1995,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-03",
-    "textVi": "Coach không cần phải là người sửa chữa. Thân chủ tự thân đã trọn vẹn, sáng tạo và đủ đầy nguồn lực.",
+    "textVi": "Coach không cần phải là người sửa chữa. Khách hàng tự thân đã trọn vẹn, sáng tạo và đủ đầy nguồn lực.",
     "textEn": "A coach is not a fixer. The client is naturally whole, creative, and fully resourceful.",
     "theme": "Tin tưởng",
     "author": "ICF Principle",
@@ -2003,7 +2003,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-04",
-    "textVi": "Khi buông bỏ nhu cầu chứng minh năng lực, ta mới thực sự trao trọn không gian cho thân chủ tỏa sáng.",
+    "textVi": "Khi buông bỏ nhu cầu chứng minh năng lực, ta mới thực sự trao trọn không gian cho khách hàng tỏa sáng.",
     "textEn": "When you surrender the need to prove your capability, you truly offer the space for the client to shine.",
     "theme": "Vô ngã",
     "author": "Zen Mind",
@@ -2035,7 +2035,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-08",
-    "textVi": "Đừng vội vàng đi tìm giải pháp. Hãy cùng thân chủ khám phá vẻ đẹp của câu hỏi đúng.",
+    "textVi": "Đừng vội vàng đi tìm giải pháp. Hãy cùng khách hàng khám phá vẻ đẹp của câu hỏi đúng.",
     "textEn": "Do not rush toward solutions. Walk alongside the client into the profound beauty of the right question.",
     "theme": "Tò mò",
     "author": "Inquiry",
@@ -2075,7 +2075,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-13",
-    "textVi": "Khi thân chủ im lặng sau một câu hỏi, đó là lúc điều kỳ diệu đang nở hoa trong tâm trí họ.",
+    "textVi": "Khi khách hàng im lặng sau một câu hỏi, đó là lúc điều kỳ diệu đang nở hoa trong tâm trí họ.",
     "textEn": "When a client pauses in silence after a question, magic is gently blooming in their mind.",
     "theme": "Khoảng lặng",
     "author": "PCC Marker 5.4",
@@ -2083,7 +2083,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-14",
-    "textVi": "Tôn trọng thế giới quan của thân chủ, ngay cả khi nó hoàn toàn khác biệt với trải nghiệm của bạn.",
+    "textVi": "Tôn trọng thế giới quan của khách hàng, ngay cả khi nó hoàn toàn khác biệt với trải nghiệm của bạn.",
     "textEn": "Honor the client’s worldview, even when it differs completely from your own lived experience.",
     "theme": "Tôn trọng",
     "author": "ICF Marker 4",
@@ -2099,7 +2099,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-16",
-    "textVi": "Hãy để thân chủ dẫn đường về chủ đề, và coach giữ ngọn đèn chiếu sáng cho con đường ấy.",
+    "textVi": "Hãy để khách hàng dẫn đường về chủ đề, và coach giữ ngọn đèn chiếu sáng cho con đường ấy.",
     "textEn": "Let the client choose the path, while the coach gently holds the lantern to light the way.",
     "theme": "Đồng hành",
     "author": "ICF Marker 3",
@@ -2107,7 +2107,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-17",
-    "textVi": "Phản chiếu lại cảm xúc và ngôn từ của thân chủ mà không thêm bớt lời phán xét hay phân tích cá nhân.",
+    "textVi": "Phản chiếu lại cảm xúc và ngôn từ của khách hàng mà không thêm bớt lời phán xét hay phân tích cá nhân.",
     "textEn": "Mirror back the client’s emotion and language without adding personal judgment or unsolicited analysis.",
     "theme": "Phản chiếu",
     "author": "Active Listening",
@@ -2115,7 +2115,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-18",
-    "textVi": "Khám phá cả cái 'Ai' (Who) sâu sắc của thân chủ, không chỉ dừng lại ở vấn đề 'Cái gì' (What).",
+    "textVi": "Khám phá cả cái 'Ai' (Who) sâu sắc của khách hàng, không chỉ dừng lại ở vấn đề 'Cái gì' (What).",
     "textEn": "Explore the deep 'Who' of the client, rather than merely fixing the surface 'What'.",
     "theme": "Chiều sâu",
     "author": "PCC Marker 7",
@@ -2163,7 +2163,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-24",
-    "textVi": "Quan sát năng lượng và sự thay đổi trong nhịp thở của thân chủ — đó là nơi sự thật đang lên tiếng.",
+    "textVi": "Quan sát năng lượng và sự thay đổi trong nhịp thở của khách hàng — đó là nơi sự thật đang lên tiếng.",
     "textEn": "Notice the client's energy shifts and rhythm of breath — that is where deep truth speaks.",
     "theme": "Quan sát",
     "author": "Presence",
@@ -2179,7 +2179,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-26",
-    "textVi": "Một câu hỏi sắc bén có sức mạnh mở toang những giới hạn mà thân chủ đã tự dựng lên suốt nhiều năm.",
+    "textVi": "Một câu hỏi sắc bén có sức mạnh mở toang những giới hạn mà khách hàng đã tự dựng lên suốt nhiều năm.",
     "textEn": "A poignant question has the power to dissolve the boundaries a client built for years.",
     "theme": "Gợi mở",
     "author": "Evoking Awareness",
@@ -2187,7 +2187,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-27",
-    "textVi": "Trao quyền cho thân chủ tự xác định kế hoạch hành động và phương thức họ muốn tự cam kết.",
+    "textVi": "Trao quyền cho khách hàng tự xác định kế hoạch hành động và phương thức họ muốn tự cam kết.",
     "textEn": "Empower the client to design their own action plan and choose how they will hold themselves accountable.",
     "theme": "Trao quyền",
     "author": "Client Growth",
@@ -2195,7 +2195,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-28",
-    "textVi": "Biết rõ ranh giới chuyên môn và dũng cảm giới thiệu thân chủ khi vấn đề vượt ngoài phạm vi khai vấn.",
+    "textVi": "Biết rõ ranh giới chuyên môn và dũng cảm giới thiệu khách hàng khi vấn đề vượt ngoài phạm vi khai vấn.",
     "textEn": "Know professional boundaries clearly and refer bravely when matters lie beyond coaching scope.",
     "theme": "Ranh giới",
     "author": "Ethics Referral",
@@ -2203,7 +2203,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-29",
-    "textVi": "Trong bài thi phán đoán tình huống (SJT), phương án BEST luôn lấy thân chủ làm trung tâm và tôn trọng thỏa thuận.",
+    "textVi": "Trong bài thi phán đoán tình huống (SJT), phương án BEST luôn lấy khách hàng làm trung tâm và tôn trọng thỏa thuận.",
     "textEn": "In Situational Judgment tests, the BEST response consistently honors client autonomy and agreements.",
     "theme": "Mẹo thi",
     "author": "PCC Playbook",
@@ -2211,7 +2211,7 @@ export const SEED_MINDFULNESS_MESSAGES: MindfulnessMessage[] = [
   },
   {
     "id": "mm-30",
-    "textVi": "Dưới bóng mát của sự hiện diện, hạt giống nhận thức của thân chủ tự khắc đâm chồi nảy lộc.",
+    "textVi": "Dưới bóng mát của sự hiện diện, hạt giống nhận thức của khách hàng tự khắc đâm chồi nảy lộc.",
     "textEn": "Beneath the soothing shade of your presence, the client’s seeds of insight blossom naturally.",
     "theme": "Hoa sen nở",
     "author": "Zen Presence",

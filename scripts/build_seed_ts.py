@@ -20,7 +20,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-02",
-        "textVi": "Hãy để sự im lặng làm việc. Trong khoảng lặng sâu, thân chủ tìm thấy câu trả lời chân thật nhất của chính họ.",
+        "textVi": "Hãy để sự im lặng làm việc. Trong khoảng lặng sâu, khách hàng tìm thấy câu trả lời chân thật nhất của chính họ.",
         "textEn": "Let silence do the heavy lifting. In deep stillness, clients discover their own truest answers.",
         "theme": "Khoảng lặng",
         "author": "Zen Coaching Wisdom",
@@ -28,7 +28,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-03",
-        "textVi": "Coach không cần phải là người sửa chữa. Thân chủ tự thân đã trọn vẹn, sáng tạo và đủ đầy nguồn lực.",
+        "textVi": "Coach không cần phải là người sửa chữa. Khách hàng tự thân đã trọn vẹn, sáng tạo và đủ đầy nguồn lực.",
         "textEn": "A coach is not a fixer. The client is naturally whole, creative, and fully resourceful.",
         "theme": "Tin tưởng",
         "author": "ICF Principle",
@@ -36,7 +36,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-04",
-        "textVi": "Khi buông bỏ nhu cầu chứng minh năng lực, ta mới thực sự trao trọn không gian cho thân chủ tỏa sáng.",
+        "textVi": "Khi buông bỏ nhu cầu chứng minh năng lực, ta mới thực sự trao trọn không gian cho khách hàng tỏa sáng.",
         "textEn": "When you surrender the need to prove your capability, you truly offer the space for the client to shine.",
         "theme": "Vô ngã",
         "author": "Zen Mind",
@@ -68,7 +68,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-08",
-        "textVi": "Đừng vội vàng đi tìm giải pháp. Hãy cùng thân chủ khám phá vẻ đẹp của câu hỏi đúng.",
+        "textVi": "Đừng vội vàng đi tìm giải pháp. Hãy cùng khách hàng khám phá vẻ đẹp của câu hỏi đúng.",
         "textEn": "Do not rush toward solutions. Walk alongside the client into the profound beauty of the right question.",
         "theme": "Tò mò",
         "author": "Inquiry",
@@ -108,7 +108,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-13",
-        "textVi": "Khi thân chủ im lặng sau một câu hỏi, đó là lúc điều kỳ diệu đang nở hoa trong tâm trí họ.",
+        "textVi": "Khi khách hàng im lặng sau một câu hỏi, đó là lúc điều kỳ diệu đang nở hoa trong tâm trí họ.",
         "textEn": "When a client pauses in silence after a question, magic is gently blooming in their mind.",
         "theme": "Khoảng lặng",
         "author": "PCC Marker 5.4",
@@ -116,7 +116,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-14",
-        "textVi": "Tôn trọng thế giới quan của thân chủ, ngay cả khi nó hoàn toàn khác biệt với trải nghiệm của bạn.",
+        "textVi": "Tôn trọng thế giới quan của khách hàng, ngay cả khi nó hoàn toàn khác biệt với trải nghiệm của bạn.",
         "textEn": "Honor the client’s worldview, even when it differs completely from your own lived experience.",
         "theme": "Tôn trọng",
         "author": "ICF Marker 4",
@@ -132,7 +132,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-16",
-        "textVi": "Hãy để thân chủ dẫn đường về chủ đề, và coach giữ ngọn đèn chiếu sáng cho con đường ấy.",
+        "textVi": "Hãy để khách hàng dẫn đường về chủ đề, và coach giữ ngọn đèn chiếu sáng cho con đường ấy.",
         "textEn": "Let the client choose the path, while the coach gently holds the lantern to light the way.",
         "theme": "Đồng hành",
         "author": "ICF Marker 3",
@@ -140,7 +140,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-17",
-        "textVi": "Phản chiếu lại cảm xúc và ngôn từ của thân chủ mà không thêm bớt lời phán xét hay phân tích cá nhân.",
+        "textVi": "Phản chiếu lại cảm xúc và ngôn từ của khách hàng mà không thêm bớt lời phán xét hay phân tích cá nhân.",
         "textEn": "Mirror back the client’s emotion and language without adding personal judgment or unsolicited analysis.",
         "theme": "Phản chiếu",
         "author": "Active Listening",
@@ -148,7 +148,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-18",
-        "textVi": "Khám phá cả cái 'Ai' (Who) sâu sắc của thân chủ, không chỉ dừng lại ở vấn đề 'Cái gì' (What).",
+        "textVi": "Khám phá cả cái 'Ai' (Who) sâu sắc của khách hàng, không chỉ dừng lại ở vấn đề 'Cái gì' (What).",
         "textEn": "Explore the deep 'Who' of the client, rather than merely fixing the surface 'What'.",
         "theme": "Chiều sâu",
         "author": "PCC Marker 7",
@@ -196,7 +196,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-24",
-        "textVi": "Quan sát năng lượng và sự thay đổi trong nhịp thở của thân chủ — đó là nơi sự thật đang lên tiếng.",
+        "textVi": "Quan sát năng lượng và sự thay đổi trong nhịp thở của khách hàng — đó là nơi sự thật đang lên tiếng.",
         "textEn": "Notice the client's energy shifts and rhythm of breath — that is where deep truth speaks.",
         "theme": "Quan sát",
         "author": "Presence",
@@ -212,7 +212,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-26",
-        "textVi": "Một câu hỏi sắc bén có sức mạnh mở toang những giới hạn mà thân chủ đã tự dựng lên suốt nhiều năm.",
+        "textVi": "Một câu hỏi sắc bén có sức mạnh mở toang những giới hạn mà khách hàng đã tự dựng lên suốt nhiều năm.",
         "textEn": "A poignant question has the power to dissolve the boundaries a client built for years.",
         "theme": "Gợi mở",
         "author": "Evoking Awareness",
@@ -220,7 +220,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-27",
-        "textVi": "Trao quyền cho thân chủ tự xác định kế hoạch hành động và phương thức họ muốn tự cam kết.",
+        "textVi": "Trao quyền cho khách hàng tự xác định kế hoạch hành động và phương thức họ muốn tự cam kết.",
         "textEn": "Empower the client to design their own action plan and choose how they will hold themselves accountable.",
         "theme": "Trao quyền",
         "author": "Client Growth",
@@ -228,7 +228,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-28",
-        "textVi": "Biết rõ ranh giới chuyên môn và dũng cảm giới thiệu thân chủ khi vấn đề vượt ngoài phạm vi khai vấn.",
+        "textVi": "Biết rõ ranh giới chuyên môn và dũng cảm giới thiệu khách hàng khi vấn đề vượt ngoài phạm vi khai vấn.",
         "textEn": "Know professional boundaries clearly and refer bravely when matters lie beyond coaching scope.",
         "theme": "Ranh giới",
         "author": "Ethics Referral",
@@ -236,7 +236,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-29",
-        "textVi": "Trong bài thi phán đoán tình huống (SJT), phương án BEST luôn lấy thân chủ làm trung tâm và tôn trọng thỏa thuận.",
+        "textVi": "Trong bài thi phán đoán tình huống (SJT), phương án BEST luôn lấy khách hàng làm trung tâm và tôn trọng thỏa thuận.",
         "textEn": "In Situational Judgment tests, the BEST response consistently honors client autonomy and agreements.",
         "theme": "Mẹo thi",
         "author": "PCC Playbook",
@@ -244,7 +244,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-30",
-        "textVi": "Dưới bóng mát của sự hiện diện, hạt giống nhận thức của thân chủ tự khắc đâm chồi nảy lộc.",
+        "textVi": "Dưới bóng mát của sự hiện diện, hạt giống nhận thức của khách hàng tự khắc đâm chồi nảy lộc.",
         "textEn": "Beneath the soothing shade of your presence, the client’s seeds of insight blossom naturally.",
         "theme": "Hoa sen nở",
         "author": "Zen Presence",
@@ -593,7 +593,7 @@ for idx, sec_id in enumerate(leaf_sections):
 Năng lực **{comp['compVi']}** thuộc miền `{comp['domainVi']}` là một trong những cột trụ quyết định đánh giá cấp độ PCC.
 
 #### Định Nghĩa Cốt Lõi:
-Coach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.
+Coach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.
 
 #### Góc Nhìn Khi Làm Bài Thi (Exam Lens):
 > **Tự hỏi bản thân:** {comp['lensVi']}
@@ -689,9 +689,9 @@ Students can cross-reference the visual hierarchy in `ICF Core Competencies - Mi
         "sectionId": sec_id,
         "titleVi": f"Tình Huống Thực Tế: Xử Lý Ranh Giới & Thấu Cảm trong {comp['compVi']}",
         "titleEn": f"Practical Scenario: Navigating Boundaries & Empathy in {comp['compEn']}",
-        "scenarioDialogueVi": f"""**Bối cảnh:** Trong phiên khai vấn thứ 3, thân chủ (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:
-- **Thân chủ:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”
-- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của thân chủ.**
+        "scenarioDialogueVi": f"""**Bối cảnh:** Trong phiên khai vấn thứ 3, khách hàng (Giám đốc dự án) chia sẻ với vẻ mệt mỏi cùng cực:
+- **Khách hàng:** “Tôi cảm thấy bế tắc hoàn toàn. Cả team đều chống lại tôi, ban giám đốc thì ép tiến độ. Tôi không ngủ được suốt 2 tuần qua và không biết mình có thể trụ thêm được bao lâu nữa...”
+- **Coach lắng nghe trong tĩnh lặng và nhận thấy nhịp thở dồn dập của khách hàng.**
 """,
         "scenarioDialogueEn": f"""**Context:** During session 3, the client (a project director) shares with visible exhaustion:
 - **Client:** "I feel utterly stuck. The team resists my decisions, and executive leadership demands aggressive deadlines. I haven't slept properly for 2 weeks and don't know how much longer I can hold on..."
@@ -700,7 +700,7 @@ Students can cross-reference the visual hierarchy in `ICF Core Competencies - Mi
         "analysisQuestionsVi": f"1. Coach nên phản hồi như thế nào để vừa duy trì sự an toàn tâm lý (Năng lực 4), vừa tôn trọng ranh giới đạo đức và thẩm định nguy cơ?\n2. Đâu là hành vi vi phạm chuẩn mực PCC Markers nếu coach vội vàng can thiệp?",
         "analysisQuestionsEn": f"1. How should the coach respond to maintain psychological safety while honoring ethical scope and evaluating potential referral needs?\n2. What action would violate PCC markers if the coach rushes to advise?",
         "suggestedAnswersVi": f"""**Đáp án phân tích gợi ý:**
-- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của thân chủ một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi thân chủ muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.
+- **Hành động phù hợp chuẩn PCC (BEST):** Coach thừa nhận cảm xúc và sự quá tải của khách hàng một cách chân thành, hiện diện trọn vẹn mà không vội vàng tìm giải pháp khắc phục. Sau đó kiểm tra mức độ an toàn sức khỏe và hỏi khách hàng muốn dành phiên này để chăm sóc bản thân hay cần tìm kiếm sự hỗ trợ chuyên môn y tế.
 - **Hành động vi phạm (WORST):** Coach tự đưa ra lời khuyên về phương pháp quản lý căng thẳng hoặc cam đoan hứa hẹn mọi chuyện sẽ ổn, vượt quá phạm vi thẩm quyền của một Coach chuyên nghiệp.""",
         "suggestedAnswersEn": f"""**Suggested Analysis:**
 - **PCC-Aligned Behavior (BEST):** Coach warmly acknowledges the client's felt distress and emotional weight without rushing to troubleshoot. Then gently explores what support the client needs right now, including checking whether professional medical/therapy support is needed.
@@ -718,13 +718,13 @@ Students can cross-reference the visual hierarchy in `ICF Core Competencies - Mi
         "questionVi": f"Khi đánh giá câu hỏi thi về năng lực '{comp['compVi']}', dấu hiệu nào sau đây chỉ ra hành vi của coach đạt chuẩn cấp độ PCC?",
         "questionEn": f"When assessing questions on '{comp['compEn']}', which behavior indicates PCC-level mastery?",
         "options": [
-            {"key": "A", "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho thân chủ.", "textEn": "The coach proactively suggests solutions to save client time."},
-            {"key": "B", "textVi": "Coach tôn trọng quyền tự quyết của thân chủ và cùng xác nhận lại hướng đi của phiên.", "textEn": "The coach honors client autonomy and partners to reconfirm session direction."},
-            {"key": "C", "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của thân chủ.", "textEn": "The coach focuses on dissecting past mistakes of the client."},
-            {"key": "D", "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để thân chủ noi theo.", "textEn": "The coach shares personal success stories for the client to follow."}
+            {"key": "A", "textVi": "Coach chủ động gợi ý sẵn các giải pháp để tiết kiệm thời gian cho khách hàng.", "textEn": "The coach proactively suggests solutions to save client time."},
+            {"key": "B", "textVi": "Coach tôn trọng quyền tự quyết của khách hàng và cùng xác nhận lại hướng đi của phiên.", "textEn": "The coach honors client autonomy and partners to reconfirm session direction."},
+            {"key": "C", "textVi": "Coach tập trung phân tích nguồn gốc sai lầm trong quá khứ của khách hàng.", "textEn": "The coach focuses on dissecting past mistakes of the client."},
+            {"key": "D", "textVi": "Coach chia sẻ kinh nghiệm thành công của chính mình để khách hàng noi theo.", "textEn": "The coach shares personal success stories for the client to follow."}
         ],
         "correctAnswer": "B",
-        "explanationVi": f"Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên thân chủ. Quy tắc nhanh: '{comp['cueVi']}'.",
+        "explanationVi": f"Theo chuẩn ICF PCC, coach luôn giữ vai trò đồng hành bình đẳng (Partnering), không chọn giải pháp hay áp đặt agenda lên khách hàng. Quy tắc nhanh: '{comp['cueVi']}'.",
         "explanationEn": f"Under ICF PCC standards, the coach maintains an equal partnership and never imposes an agenda or fixes solutions. Fast rule: '{comp['cueEn']}'.",
         "primaryCompetency": comp['compEn'],
         "keyClueVi": "Tôn trọng quyền tự quyết và đồng hành bình đẳng",

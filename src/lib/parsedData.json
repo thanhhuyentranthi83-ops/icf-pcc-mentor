@@ -32,7 +32,7 @@
       "code": "A1.1",
       "titleVi": "A1.1: Chính trực & Bảo mật thông tin (Integrity & Confidentiality)",
       "titleEn": "A1.1: Personal Integrity & Confidentiality",
-      "descriptionVi": "Giữ gìn ranh giới bảo mật với thân chủ và nhà tài trợ (sponsor), minh bạch xung đột lợi ích.",
+      "descriptionVi": "Giữ gìn ranh giới bảo mật với khách hàng và nhà tài trợ (sponsor), minh bạch xung đột lợi ích.",
       "descriptionEn": "Demonstrating integrity, confidentiality, and managing conflict of interest.",
       "natureIcon": "seed",
       "orderIndex": 1,
@@ -58,7 +58,7 @@
       "code": "A.2",
       "titleVi": "Năng lực 2: Thể hiện Tư duy Khai vấn (Coaching Mindset)",
       "titleEn": "Competency 2: Embodies a Coaching Mindset",
-      "descriptionVi": "Duy trì tư duy cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm; tự quản trị định kiến.",
+      "descriptionVi": "Duy trì tư duy cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm; tự quản trị định kiến.",
       "descriptionEn": "Develops and maintains an open, curious, flexible, and client-centered mindset.",
       "natureIcon": "sprout",
       "orderIndex": 2,
@@ -71,7 +71,7 @@
       "code": "B",
       "titleVi": "Phần B: Cùng Tạo dựng Mối quan hệ (Co-creating Relationship)",
       "titleEn": "Part B: Co-creating the Relationship",
-      "descriptionVi": "Đồng hành cùng thân chủ thiết lập mục tiêu phiên và nuôi dưỡng không gian an toàn tâm lý.",
+      "descriptionVi": "Đồng hành cùng khách hàng thiết lập mục tiêu phiên và nuôi dưỡng không gian an toàn tâm lý.",
       "descriptionEn": "Partnering with the client to establish clear agreements and deep psychological safety.",
       "natureIcon": "sprout",
       "orderIndex": 2,
@@ -84,7 +84,7 @@
       "code": "B.1",
       "titleVi": "Năng lực 3: Thiết lập & Duy trì Thỏa thuận (Agreements)",
       "titleEn": "Competency 3: Establishes & Maintains Agreements",
-      "descriptionVi": "Xác định mục tiêu tổng thể, tiêu chí đo lường thành công và giữ quyền sở hữu phiên cho thân chủ.",
+      "descriptionVi": "Xác định mục tiêu tổng thể, tiêu chí đo lường thành công và giữ quyền sở hữu phiên cho khách hàng.",
       "descriptionEn": "Partners with client to establish overall and session agreements, measures of success.",
       "natureIcon": "sprout",
       "orderIndex": 1,
@@ -97,7 +97,7 @@
       "code": "B.2",
       "titleVi": "Năng lực 4: Nuôi dưỡng Niềm tin & Sự An toàn (Trust & Safety)",
       "titleEn": "Competency 4: Cultivates Trust and Safety",
-      "descriptionVi": "Tạo môi trường an toàn, tôn trọng và hỗ trợ để thân chủ tự do chia sẻ điều sâu kín nhất.",
+      "descriptionVi": "Tạo môi trường an toàn, tôn trọng và hỗ trợ để khách hàng tự do chia sẻ điều sâu kín nhất.",
       "descriptionEn": "Creates a safe, supportive environment where the client shares freely without judgment.",
       "natureIcon": "sprout",
       "orderIndex": 2,
@@ -123,7 +123,7 @@
       "code": "C.1",
       "titleVi": "Năng lực 5: Duy trì Sự Hiện diện (Maintains Presence)",
       "titleEn": "Competency 5: Maintains Presence",
-      "descriptionVi": "Hoàn toàn ý thức và hiện diện với thân chủ, đón nhận sự im lặng và những điều bất định.",
+      "descriptionVi": "Hoàn toàn ý thức và hiện diện với khách hàng, đón nhận sự im lặng và những điều bất định.",
       "descriptionEn": "Remains fully conscious and present with client, comfortable with silence and uncertainty.",
       "natureIcon": "bamboo",
       "orderIndex": 1,
@@ -136,7 +136,7 @@
       "code": "C.2",
       "titleVi": "Năng lực 6: Lắng nghe Chủ động (Listens Actively)",
       "titleEn": "Competency 6: Listens Actively",
-      "descriptionVi": "Tập trung vào ngôn từ, giọng điệu, ngôn ngữ cơ thể, cảm xúc và bối cảnh toàn diện của thân chủ.",
+      "descriptionVi": "Tập trung vào ngôn từ, giọng điệu, ngôn ngữ cơ thể, cảm xúc và bối cảnh toàn diện của khách hàng.",
       "descriptionEn": "Focuses on verbal and non-verbal cues, tone, energy, and emotional resonance.",
       "natureIcon": "bamboo",
       "orderIndex": 2,
@@ -149,7 +149,7 @@
       "code": "D",
       "titleVi": "Phần D: Thúc đẩy Học tập & Phát triển (Cultivating Growth)",
       "titleEn": "Part D: Cultivating Learning and Growth",
-      "descriptionVi": "Khơi gợi góc nhìn mới và đồng hành để thân chủ chuyển hóa nhận thức thành hành động bền vững.",
+      "descriptionVi": "Khơi gợi góc nhìn mới và đồng hành để khách hàng chuyển hóa nhận thức thành hành động bền vững.",
       "descriptionEn": "Evoking deep insight and partnering to transform awareness into meaningful action.",
       "natureIcon": "lotus",
       "orderIndex": 4,
@@ -162,7 +162,7 @@
       "code": "D.1",
       "titleVi": "Năng lực 7: Khơi gợi Nhận thức (Evokes Awareness)",
       "titleEn": "Competency 7: Evokes Awareness",
-      "descriptionVi": "Tạo điều kiện để thân chủ tự khám phá thông qua câu hỏi gợi mở, ẩn dụ và phản chiếu tinh tế.",
+      "descriptionVi": "Tạo điều kiện để khách hàng tự khám phá thông qua câu hỏi gợi mở, ẩn dụ và phản chiếu tinh tế.",
       "descriptionEn": "Facilitates client insight and discovery using powerful questions, metaphors and silence.",
       "natureIcon": "lotus",
       "orderIndex": 1,
@@ -173,7 +173,7 @@
       "id": "sec-d2",
       "parentId": "sec-d",
       "code": "D.2",
-      "titleVi": "Năng lực 8: Thúc đẩy Sự Phát triển của Thân chủ (Growth)",
+      "titleVi": "Năng lực 8: Thúc đẩy Sự Phát triển của Khách hàng (Growth)",
       "titleEn": "Competency 8: Facilitates Client Growth",
       "descriptionVi": "Đồng hành chuyển hóa học hỏi thành mục tiêu hành động rõ ràng và trao quyền tự chịu trách nhiệm.",
       "descriptionEn": "Partners with the client to transform learning into action, autonomy and accountability.",
@@ -196,7 +196,7 @@
       "termEn": "Agreement",
       "termVi": "Thỏa thuận",
       "definitionEn": "A formal document established between an ICF professional and the client(s)/sponsor(s) outlining terms, expectations and conditions of the coaching relationship.",
-      "definitionVi": "Văn bản chính thức giữa chuyên gia ICF và thân chủ/bên tài trợ, nêu điều khoản, kỳ vọng và điều kiện của mối quan hệ khai vấn.",
+      "definitionVi": "Văn bản chính thức giữa chuyên gia ICF và khách hàng/bên tài trợ, nêu điều khoản, kỳ vọng và điều kiện của mối quan hệ khai vấn.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -204,9 +204,9 @@
       "termEn": "Autonomy",
       "termVi": "Quyền tự chủ",
       "definitionEn": "The client's ability to make independent decisions and take actions based on their own values and beliefs.",
-      "definitionVi": "Khả năng của thân chủ tự đưa ra quyết định và hành động dựa trên giá trị và niềm tin của chính mình.",
+      "definitionVi": "Khả năng của khách hàng tự đưa ra quyết định và hành động dựa trên giá trị và niềm tin của chính mình.",
       "cueEn": "Client owns decisions and actions.",
-      "cueVi": "Thân chủ sở hữu quyết định và hành động."
+      "cueVi": "Khách hàng sở hữu quyết định và hành động."
     },
     {
       "termEn": "Bias",
@@ -218,9 +218,9 @@
     },
     {
       "termEn": "Client Systems",
-      "termVi": "Hệ thống của thân chủ",
+      "termVi": "Hệ thống của khách hàng",
       "definitionEn": "The network of relationships and environments that influence the client's life and decisions.",
-      "definitionVi": "Mạng lưới các mối quan hệ và môi trường ảnh hưởng đến cuộc sống và quyết định của thân chủ.",
+      "definitionVi": "Mạng lưới các mối quan hệ và môi trường ảnh hưởng đến cuộc sống và quyết định của khách hàng.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -228,7 +228,7 @@
       "termEn": "Coaching Approach",
       "termVi": "Cách tiếp cận khai vấn",
       "definitionEn": "The specific methods and techniques used by a coach to facilitate client growth and development.",
-      "definitionVi": "Các phương pháp và kỹ thuật cụ thể coach sử dụng để tạo điều kiện cho sự phát triển của thân chủ.",
+      "definitionVi": "Các phương pháp và kỹ thuật cụ thể coach sử dụng để tạo điều kiện cho sự phát triển của khách hàng.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -236,7 +236,7 @@
       "termEn": "Coaching Engagement",
       "termVi": "Quá trình khai vấn",
       "definitionEn": "The structured interaction between an ICF professional and client(s)/sponsor(s), encompassing the entire coaching process.",
-      "definitionVi": "Tương tác có cấu trúc giữa chuyên gia ICF và thân chủ/bên tài trợ, bao gồm toàn bộ quá trình khai vấn.",
+      "definitionVi": "Tương tác có cấu trúc giữa chuyên gia ICF và khách hàng/bên tài trợ, bao gồm toàn bộ quá trình khai vấn.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -244,7 +244,7 @@
       "termEn": "Coaching Philosophy",
       "termVi": "Triết lý khai vấn",
       "definitionEn": "The underlying theory, beliefs and principles that guide a coach's practice and interactions with clients.",
-      "definitionVi": "Lý thuyết, niềm tin và nguyên tắc nền tảng định hướng thực hành và tương tác của coach với thân chủ.",
+      "definitionVi": "Lý thuyết, niềm tin và nguyên tắc nền tảng định hướng thực hành và tương tác của coach với khách hàng.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -252,7 +252,7 @@
       "termEn": "Coaching Relationship",
       "termVi": "Mối quan hệ khai vấn",
       "definitionEn": "A relationship established by the ICF professional and client(s)/sponsor(s) under an agreement defining responsibilities and expectations.",
-      "definitionVi": "Mối quan hệ được thiết lập giữa chuyên gia ICF và thân chủ/bên tài trợ theo một thỏa thuận xác định trách nhiệm và kỳ vọng.",
+      "definitionVi": "Mối quan hệ được thiết lập giữa chuyên gia ICF và khách hàng/bên tài trợ theo một thỏa thuận xác định trách nhiệm và kỳ vọng.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -260,7 +260,7 @@
       "termEn": "Confidentiality",
       "termVi": "Bảo mật",
       "definitionEn": "Protection of information obtained in or around the coaching relationship unless there is a legal reason or requirement, a threat of harm, or written client consent to release it.",
-      "definitionVi": "Bảo vệ mọi thông tin có được trong hoặc quanh mối quan hệ khai vấn, trừ khi có lý do/yêu cầu pháp lý, nguy cơ gây hại hoặc sự đồng ý bằng văn bản của thân chủ.",
+      "definitionVi": "Bảo vệ mọi thông tin có được trong hoặc quanh mối quan hệ khai vấn, trừ khi có lý do/yêu cầu pháp lý, nguy cơ gây hại hoặc sự đồng ý bằng văn bản của khách hàng.",
       "cueEn": "Agreement + law + risk of harm + written consent.",
       "cueVi": "Thỏa thuận + pháp luật + nguy cơ gây hại + sự đồng ý bằng văn bản."
     },
@@ -278,7 +278,7 @@
       "definitionEn": "The unique combination of circumstances, experiences, culture, identity, environment and worldview that shapes how a person understands self, others and the world.",
       "definitionVi": "Tổ hợp hoàn cảnh, trải nghiệm, văn hóa, bản sắc, môi trường và thế giới quan định hình cách một người hiểu mình, người khác và thế giới.",
       "cueEn": "Understand the client within their world, not yours.",
-      "cueVi": "Hiểu thân chủ trong thế giới của họ, không phải của bạn."
+      "cueVi": "Hiểu khách hàng trong thế giới của họ, không phải của bạn."
     },
     {
       "termEn": "Culture",
@@ -300,7 +300,7 @@
       "termEn": "Energy Shifts",
       "termVi": "Sự thay đổi năng lượng",
       "definitionEn": "Changes in a client's emotional or physical energy levels that can affect engagement and progress.",
-      "definitionVi": "Những thay đổi trong năng lượng cảm xúc hoặc thể chất của thân chủ có thể ảnh hưởng đến sự tham gia và tiến bộ.",
+      "definitionVi": "Những thay đổi trong năng lượng cảm xúc hoặc thể chất của khách hàng có thể ảnh hưởng đến sự tham gia và tiến bộ.",
       "cueEn": "Notice and explore rather than interpret.",
       "cueVi": "Nhận diện và khám phá thay vì diễn giải."
     },
@@ -308,7 +308,7 @@
       "termEn": "Identity",
       "termVi": "Bản sắc",
       "definitionEn": "The client's sense of self, including values, beliefs, cultural background, roles, lived experiences, personality and ways of self-definition.",
-      "definitionVi": "Cảm nhận của thân chủ về chính mình, bao gồm giá trị, niềm tin, nền tảng văn hóa, vai trò, trải nghiệm sống, tính cách và cách họ định nghĩa bản thân.",
+      "definitionVi": "Cảm nhận của khách hàng về chính mình, bao gồm giá trị, niềm tin, nền tảng văn hóa, vai trò, trải nghiệm sống, tính cách và cách họ định nghĩa bản thân.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -318,7 +318,7 @@
       "definitionEn": "Criteria used to evaluate the effectiveness and outcomes of the coaching process.",
       "definitionVi": "Tiêu chí dùng để đánh giá hiệu quả và kết quả của quá trình khai vấn.",
       "cueEn": "How the client will know the session/engagement was useful.",
-      "cueVi": "Cách thân chủ biết phiên/quá trình đã hữu ích."
+      "cueVi": "Cách khách hàng biết phiên/quá trình đã hữu ích."
     },
     {
       "termEn": "Mentor Coach",
@@ -332,7 +332,7 @@
       "termEn": "Observation",
       "termVi": "Quan sát",
       "definitionEn": "The act of noticing and interpreting behaviors and patterns in a client's actions and interactions.",
-      "definitionVi": "Hành động nhận ra và diễn giải hành vi cùng mô thức trong hành động và tương tác của thân chủ.",
+      "definitionVi": "Hành động nhận ra và diễn giải hành vi cùng mô thức trong hành động và tương tác của khách hàng.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -340,9 +340,9 @@
       "termEn": "Partnering",
       "termVi": "Đồng hành",
       "definitionEn": "Coach and client working collaboratively toward a common, client-centered goal that honors client autonomy.",
-      "definitionVi": "Coach và thân chủ làm việc cộng tác hướng tới mục tiêu chung lấy thân chủ làm trung tâm và tôn trọng quyền tự chủ.",
+      "definitionVi": "Coach và khách hàng làm việc cộng tác hướng tới mục tiêu chung lấy khách hàng làm trung tâm và tôn trọng quyền tự chủ.",
       "cueEn": "Collaborative, client-centered, non-prescriptive.",
-      "cueVi": "Cộng tác, lấy thân chủ làm trung tâm, không kê đơn."
+      "cueVi": "Cộng tác, lấy khách hàng làm trung tâm, không kê đơn."
     },
     {
       "termEn": "Powerful Questioning",
@@ -356,7 +356,7 @@
       "termEn": "Presence",
       "termVi": "Sự hiện diện",
       "definitionEn": "The coach's ability to be fully attentive and engaged with the client during sessions.",
-      "definitionVi": "Khả năng của coach hoàn toàn chú tâm và tham gia cùng thân chủ trong phiên.",
+      "definitionVi": "Khả năng của coach hoàn toàn chú tâm và tham gia cùng khách hàng trong phiên.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -372,7 +372,7 @@
       "termEn": "Reframing Perspective",
       "termVi": "Tái định khung góc nhìn",
       "definitionEn": "Supporting the client to see a situation, belief or experience in a new way so they can discover new meaning, insight or possibilities.",
-      "definitionVi": "Hỗ trợ thân chủ nhìn một tình huống, niềm tin hoặc trải nghiệm theo cách mới để khám phá ý nghĩa, insight hoặc khả năng mới.",
+      "definitionVi": "Hỗ trợ khách hàng nhìn một tình huống, niềm tin hoặc trải nghiệm theo cách mới để khám phá ý nghĩa, insight hoặc khả năng mới.",
       "cueEn": "Support a new view; do not force the coach’s view.",
       "cueVi": "Hỗ trợ góc nhìn mới; không ép góc nhìn của coach."
     },
@@ -388,15 +388,15 @@
       "termEn": "Stakeholder",
       "termVi": "Bên liên quan",
       "definitionEn": "An individual, usually within an organization, who has an interest in a client’s progress through coaching.",
-      "definitionVi": "Một cá nhân, thường trong tổ chức, có lợi ích liên quan đến tiến bộ của thân chủ thông qua coaching.",
+      "definitionVi": "Một cá nhân, thường trong tổ chức, có lợi ích liên quan đến tiến bộ của khách hàng thông qua coaching.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
     {
       "termEn": "Strong Client Emotion",
-      "termVi": "Cảm xúc mạnh của thân chủ",
+      "termVi": "Cảm xúc mạnh của khách hàng",
       "definitionEn": "Intense emotional responses or experiences expressed by the client during a coaching session.",
-      "definitionVi": "Phản ứng hoặc trải nghiệm cảm xúc mãnh liệt được thân chủ biểu hiện trong phiên.",
+      "definitionVi": "Phản ứng hoặc trải nghiệm cảm xúc mãnh liệt được khách hàng biểu hiện trong phiên.",
       "cueEn": "Know the exact meaning and apply it to situational judgment.",
       "cueVi": "Nắm chính xác ý nghĩa và áp dụng vào câu hỏi phán đoán tình huống."
     },
@@ -406,7 +406,7 @@
       "definitionEn": "Engaging in the coaching process without being overly invested in specific outcomes, allowing flexibility and openness.",
       "definitionVi": "Tham gia quá trình coaching mà không quá gắn với một kết quả cụ thể, cho phép sự linh hoạt và cởi mở.",
       "cueEn": "Offer observations/knowledge without needing client to agree.",
-      "cueVi": "Đưa quan sát/kiến thức mà không cần thân chủ phải đồng ý."
+      "cueVi": "Đưa quan sát/kiến thức mà không cần khách hàng phải đồng ý."
     },
     {
       "termEn": "Worldview",
@@ -425,7 +425,7 @@
       "compEn": "Embodies a Coaching Mindset",
       "compVi": "Thể hiện tư duy khai vấn",
       "lensEn": "Am I open, curious, flexible and client-centered — or attached to my preferred outcome?",
-      "lensVi": "Tôi có đang cởi mở, tò mò, linh hoạt và lấy thân chủ làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
+      "lensVi": "Tôi có đang cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
       "cueEn": "COACH YOURSELF FIRST",
       "cueVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC",
       "trapEn": "Coach disappointment, bias, agenda or need to be right",
@@ -438,7 +438,7 @@
       "compEn": "Establishes and Maintains Agreements",
       "compVi": "Thiết lập và duy trì thỏa thuận",
       "lensEn": "What does the client want from this engagement/session, and how will success be known?",
-      "lensVi": "Thân chủ muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
+      "lensVi": "Khách hàng muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
       "cueEn": "CONTRACT BEFORE CONTENT",
       "cueVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU",
       "trapEn": "Coach selects topic or ignores a shift in focus",
@@ -451,9 +451,9 @@
       "compEn": "Cultivates Trust and Safety",
       "compVi": "Nuôi dưỡng niềm tin và sự an toàn",
       "lensEn": "Am I understanding the client from their context rather than imposing mine?",
-      "lensVi": "Tôi có đang hiểu thân chủ trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?",
+      "lensVi": "Tôi có đang hiểu khách hàng trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?",
       "cueEn": "ENTER THEIR WORLD",
-      "cueVi": "ĐI VÀO THẾ GIỚI CỦA THÂN CHỦ",
+      "cueVi": "ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG",
       "trapEn": "Judgment, assumptions, minimizing emotion",
       "trapVi": "Phán xét, giả định, xem nhẹ cảm xúc"
     },
@@ -477,7 +477,7 @@
       "compEn": "Listens Actively",
       "compVi": "Lắng nghe chủ động",
       "lensEn": "What is the client saying — and not saying — through words, tone, emotion, energy and patterns?",
-      "lensVi": "Thân chủ đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?",
+      "lensVi": "Khách hàng đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?",
       "cueEn": "HEAR BEYOND WORDS",
       "cueVi": "NGHE VƯỢT RA NGOÀI CÂU CHỮ",
       "trapEn": "Listening only for content",
@@ -490,7 +490,7 @@
       "compEn": "Evokes Awareness",
       "compVi": "Khơi gợi nhận thức",
       "lensEn": "What may help the client see, feel or understand something new?",
-      "lensVi": "Điều gì có thể giúp thân chủ nhìn thấy, cảm nhận hoặc hiểu ra điều mới?",
+      "lensVi": "Điều gì có thể giúp khách hàng nhìn thấy, cảm nhận hoặc hiểu ra điều mới?",
       "cueEn": "CREATE INSIGHT, NOT ANSWERS",
       "cueVi": "TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN",
       "trapEn": "Advice, diagnosis, leading questions, attached observations",
@@ -501,11 +501,11 @@
       "domainVi": "D. Nuôi dưỡng học hỏi và phát triển",
       "number": "8.0",
       "compEn": "Facilitates Client Growth",
-      "compVi": "Thúc đẩy sự phát triển của thân chủ",
+      "compVi": "Thúc đẩy sự phát triển của khách hàng",
       "lensEn": "How will the client integrate insight into client-designed action, learning and sustained progress?",
-      "lensVi": "Thân chủ sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?",
+      "lensVi": "Khách hàng sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?",
       "cueEn": "CLIENT OWNS THE ACTION",
-      "cueVi": "THÂN CHỦ SỞ HỮU HÀNH ĐỘNG",
+      "cueVi": "KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG",
       "trapEn": "Coach prescribes action/accountability",
       "trapVi": "Coach áp đặt hành động/cơ chế chịu trách nhiệm"
     }
@@ -515,7 +515,7 @@
       "id": "Q01",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Một thân chủ tiềm năng là founder của một startup. Trong exploratory call, bạn nhận ra công ty này cạnh tranh trực tiếp với một doanh nghiệp mà bạn đang giữ một khoản đầu tư nhỏ. Thân chủ chưa biết điều này.",
+      "questionVi": "Một khách hàng tiềm năng là founder của một startup. Trong exploratory call, bạn nhận ra công ty này cạnh tranh trực tiếp với một doanh nghiệp mà bạn đang giữ một khoản đầu tư nhỏ. Khách hàng chưa biết điều này.",
       "questionEn": "A potential client is the founder of a startup. During the exploratory call, you realize the company directly competes with a business in which you hold a small investment. The client is unaware of this.",
       "options": [
         {
@@ -525,12 +525,12 @@
         },
         {
           "key": "B",
-          "textVi": "Đợi đến khi thân chủ ký hợp đồng coaching rồi mới nói.",
+          "textVi": "Đợi đến khi khách hàng ký hợp đồng coaching rồi mới nói.",
           "textEn": "Wait until the client signs a coaching contract before saying anything."
         },
         {
           "key": "C",
-          "textVi": "Công khai khoản đầu tư và cùng thân chủ xem xét xung đột lợi ích tiềm ẩn.",
+          "textVi": "Công khai khoản đầu tư và cùng khách hàng xem xét xung đột lợi ích tiềm ẩn.",
           "textEn": "Disclose the investment and explore the potential conflict of interest with the client."
         },
         {
@@ -591,12 +591,12 @@
       "id": "Q03",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Thân chủ mở đầu: “Em đang stress vì sếp, đang nghĩ đến đổi việc, và chuyện với chồng cũng đang khó khăn.”",
+      "questionVi": "Khách hàng mở đầu: “Em đang stress vì sếp, đang nghĩ đến đổi việc, và chuyện với chồng cũng đang khó khăn.”",
       "questionEn": "A client opens the session by saying, “I am stressed about my boss, thinking about changing jobs, and things with my husband are difficult too.”",
       "options": [
         {
           "key": "A",
-          "textVi": "Hỏi trong ba vấn đề, hôm nay thân chủ muốn tập trung vào điều nào.",
+          "textVi": "Hỏi trong ba vấn đề, hôm nay khách hàng muốn tập trung vào điều nào.",
           "textEn": "Ask which of the three issues the client wants to focus on today."
         },
         {
@@ -606,7 +606,7 @@
         },
         {
           "key": "C",
-          "textVi": "Hỏi thân chủ kể thêm về sếp.",
+          "textVi": "Hỏi khách hàng kể thêm về sếp.",
           "textEn": "Ask the client to tell you more about the boss."
         },
         {
@@ -617,7 +617,7 @@
       ],
       "bestAnswer": "A",
       "worstAnswer": "B",
-      "explanationVi": "Đồng hành để thân chủ tự chọn trọng tâm của phiên. Coach không nên tự chọn agenda dựa trên phán đoán cá nhân.",
+      "explanationVi": "Đồng hành để khách hàng tự chọn trọng tâm của phiên. Coach không nên tự chọn agenda dựa trên phán đoán cá nhân.",
       "explanationEn": "Partner with the client to choose the session focus. The coach should not select the agenda based on personal judgment.",
       "primaryCompetency": "3. Agreements",
       "keyClueVi": "Nhiều chủ đề; chưa rõ trọng tâm phiên",
@@ -629,7 +629,7 @@
       "id": "Q04",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Thân chủ rất hào hứng về cơ hội promotion. Khi nhắc rằng vai trò mới sẽ khiến họ phải quản lý một người bạn thân, họ nhìn xuống và im lặng.",
+      "questionVi": "Khách hàng rất hào hứng về cơ hội promotion. Khi nhắc rằng vai trò mới sẽ khiến họ phải quản lý một người bạn thân, họ nhìn xuống và im lặng.",
       "questionEn": "A client is excited about a promotion. When they mention that the new role would require managing a close friend, they look down and become quiet.",
       "options": [
         {
@@ -667,7 +667,7 @@
       "id": "Q05",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Bạn từng là HR Director. Thân chủ hỏi: “Nếu là chị, chị sẽ yêu cầu mức lương bao nhiêu?”",
+      "questionVi": "Bạn từng là HR Director. Khách hàng hỏi: “Nếu là chị, chị sẽ yêu cầu mức lương bao nhiêu?”",
       "questionEn": "You previously worked as an HR Director. A client asks, “If you were me, how much salary would you ask for?”",
       "options": [
         {
@@ -682,7 +682,7 @@
         },
         {
           "key": "C",
-          "textVi": "Khám phá điều thân chủ đang cân nhắc; nếu chia sẻ chuyên môn có ích, làm rõ việc chuyển vai trò và xin phép trước khi cung cấp thông tin.",
+          "textVi": "Khám phá điều khách hàng đang cân nhắc; nếu chia sẻ chuyên môn có ích, làm rõ việc chuyển vai trò và xin phép trước khi cung cấp thông tin.",
           "textEn": "Explore what the client is considering and, if expertise would be useful, clarify the role shift and ask permission before sharing information."
         },
         {
@@ -693,7 +693,7 @@
       ],
       "bestAnswer": "C",
       "worstAnswer": "A",
-      "explanationVi": "Coach có thể chia sẻ kiến thức, nhưng nên làm rõ việc chuyển vai trò, xin phép và không bám chấp vào lời khuyên. Cho lời khuyên trực tiếp làm giảm quyền sở hữu của thân chủ.",
+      "explanationVi": "Coach có thể chia sẻ kiến thức, nhưng nên làm rõ việc chuyển vai trò, xin phép và không bám chấp vào lời khuyên. Cho lời khuyên trực tiếp làm giảm quyền sở hữu của khách hàng.",
       "explanationEn": "A coach may share knowledge, but should clarify the role shift, obtain permission, and remain non-attached. Direct advice removes client ownership.",
       "primaryCompetency": "1. Ethics / 7. Awareness",
       "keyClueVi": "Coach có chuyên môn liên quan",
@@ -705,7 +705,7 @@
       "id": "Q06",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Một thân chủ sắp rời tổ chức sau 20 năm. Khi nói: “Tuần sau là ngày cuối cùng của tôi,” họ bắt đầu khóc.",
+      "questionVi": "Một khách hàng sắp rời tổ chức sau 20 năm. Khi nói: “Tuần sau là ngày cuối cùng của tôi,” họ bắt đầu khóc.",
       "questionEn": "A client is leaving an organization after 20 years. When they say, “Next week is my last day,” they begin to cry.",
       "options": [
         {
@@ -715,7 +715,7 @@
         },
         {
           "key": "B",
-          "textVi": "Cho phép một khoảng im lặng, ghi nhận điều đang xuất hiện và hỏi thân chủ muốn ở lại khám phá cảm xúc hay quay lại trọng tâm ban đầu.",
+          "textVi": "Cho phép một khoảng im lặng, ghi nhận điều đang xuất hiện và hỏi khách hàng muốn ở lại khám phá cảm xúc hay quay lại trọng tâm ban đầu.",
           "textEn": "Allow some silence, acknowledge what is emerging, and ask whether the client wants to stay with the emotion or return to the original focus."
         },
         {
@@ -725,13 +725,13 @@
         },
         {
           "key": "D",
-          "textVi": "Chuyển thẳng sang action plan để thân chủ không bị mắc kẹt trong cảm xúc.",
+          "textVi": "Chuyển thẳng sang action plan để khách hàng không bị mắc kẹt trong cảm xúc.",
           "textEn": "Move directly to an action plan so the client does not get stuck in emotion."
         }
       ],
       "bestAnswer": "B",
       "worstAnswer": "C",
-      "explanationVi": "Ở lại hiện diện với cảm xúc mạnh và đồng hành để quyết định bước tiếp theo. Chất vấn quyết định của thân chủ đưa agenda của coach vào đúng lúc thân chủ dễ tổn thương.",
+      "explanationVi": "Ở lại hiện diện với cảm xúc mạnh và đồng hành để quyết định bước tiếp theo. Chất vấn quyết định của khách hàng đưa agenda của coach vào đúng lúc khách hàng dễ tổn thương.",
       "explanationEn": "Stay present with strong emotion and partner on where to go next. Questioning the client’s decision inserts the coach’s agenda at a vulnerable moment.",
       "primaryCompetency": "5. Presence / 4. Trust",
       "keyClueVi": "Cảm xúc mạnh",
@@ -743,17 +743,17 @@
       "id": "Q07",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Phiên trước thân chủ tự chọn hành động là nói chuyện thẳng thắn với manager. Tuần này họ nói: “Tôi không làm. Tôi quyết định chưa phải lúc.” Bạn nhận thấy mình hơi thất vọng.",
+      "questionVi": "Phiên trước khách hàng tự chọn hành động là nói chuyện thẳng thắn với manager. Tuần này họ nói: “Tôi không làm. Tôi quyết định chưa phải lúc.” Bạn nhận thấy mình hơi thất vọng.",
       "questionEn": "Last session, a client chose to have a direct conversation with their manager. This week they say, “I didn’t do it. I decided it was not the right time.” You notice you feel disappointed.",
       "options": [
         {
           "key": "A",
-          "textVi": "Nhắc thân chủ rằng họ đã cam kết.",
+          "textVi": "Nhắc khách hàng rằng họ đã cam kết.",
           "textEn": "Remind the client that they made a commitment."
         },
         {
           "key": "B",
-          "textVi": "Nhận diện và quản trị phản ứng của bản thân, nhớ rằng thân chủ sở hữu lựa chọn, và tiếp tục tò mò về điều họ mang tới hôm nay.",
+          "textVi": "Nhận diện và quản trị phản ứng của bản thân, nhớ rằng khách hàng sở hữu lựa chọn, và tiếp tục tò mò về điều họ mang tới hôm nay.",
           "textEn": "Notice and manage your own reaction, remember the client owns their choices, and stay curious about what they are bringing now."
         },
         {
@@ -769,10 +769,10 @@
       ],
       "bestAnswer": "B",
       "worstAnswer": "C",
-      "explanationVi": "Thân chủ sở hữu lựa chọn của mình. Coach quản trị sự thất vọng cá nhân và duy trì tò mò. Gọi đó là 'thất bại' mang tính phán xét và làm giảm an toàn.",
+      "explanationVi": "Khách hàng sở hữu lựa chọn của mình. Coach quản trị sự thất vọng cá nhân và duy trì tò mò. Gọi đó là 'thất bại' mang tính phán xét và làm giảm an toàn.",
       "explanationEn": "The client owns their choices. The coach manages personal disappointment and remains curious. Calling it a failure is judgmental and damages safety.",
       "primaryCompetency": "2. Coaching Mindset",
-      "keyClueVi": "Thân chủ không hoàn thành hành động",
+      "keyClueVi": "Khách hàng không hoàn thành hành động",
       "keyClueEn": "Client did not complete an action",
       "difficulty": "medium",
       "orderIndex": 7
@@ -791,12 +791,12 @@
         },
         {
           "key": "B",
-          "textVi": "Xóa tên thân chủ rồi upload bản ghi mà không cần trao đổi thêm.",
+          "textVi": "Xóa tên khách hàng rồi upload bản ghi mà không cần trao đổi thêm.",
           "textEn": "Remove the client’s name and upload the recording without further discussion."
         },
         {
           "key": "C",
-          "textVi": "Xem xét quyền riêng tư, bảo mật, pháp lý, thỏa thuận và informed consent phù hợp trước khi dùng với thông tin thân chủ.",
+          "textVi": "Xem xét quyền riêng tư, bảo mật, pháp lý, thỏa thuận và informed consent phù hợp trước khi dùng với thông tin khách hàng.",
           "textEn": "Review privacy, security, legal implications, agreements and appropriate informed consent before using it with client information."
         },
         {
@@ -810,7 +810,7 @@
       "explanationVi": "Việc sử dụng công nghệ/AI phải tôn trọng bảo mật, an ninh, thỏa thuận và nghĩa vụ pháp lý/đạo đức. Công cụ hành chính không tự động được miễn các yêu cầu này.",
       "explanationEn": "Technology and AI use must honor confidentiality, security, agreements and legal/ethical obligations. Administrative use is not automatically exempt.",
       "primaryCompetency": "1. Ethics / Ethics 2.4–2.5",
-      "keyClueVi": "AI bên thứ ba + dữ liệu thân chủ",
+      "keyClueVi": "AI bên thứ ba + dữ liệu khách hàng",
       "keyClueEn": "Third-party AI + client data",
       "difficulty": "medium",
       "orderIndex": 8
@@ -819,7 +819,7 @@
       "id": "Q09",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Giữa phiên, thân chủ ban đầu muốn nói về delegation bỗng nói: “Thực ra tôi nhận ra vấn đề thật sự là tôi không tin đội ngũ của mình.”",
+      "questionVi": "Giữa phiên, khách hàng ban đầu muốn nói về delegation bỗng nói: “Thực ra tôi nhận ra vấn đề thật sự là tôi không tin đội ngũ của mình.”",
       "questionEn": "Halfway through a session, a client who originally wanted to discuss delegation says, “Actually, I realize the real issue is that I do not trust my team.”",
       "options": [
         {
@@ -829,26 +829,26 @@
         },
         {
           "key": "B",
-          "textVi": "Nói với thân chủ rằng trust quan trọng hơn delegation.",
+          "textVi": "Nói với khách hàng rằng trust quan trọng hơn delegation.",
           "textEn": "Tell the client that trust is a more important issue than delegation."
         },
         {
           "key": "C",
-          "textVi": "Ghi nhận sự thay đổi và đồng hành với thân chủ để xác nhận lại trọng tâm/kết quả mong muốn cho phần còn lại của phiên.",
+          "textVi": "Ghi nhận sự thay đổi và đồng hành với khách hàng để xác nhận lại trọng tâm/kết quả mong muốn cho phần còn lại của phiên.",
           "textEn": "Acknowledge the shift and partner with the client to reconfirm the desired focus and outcome for the rest of the session."
         },
         {
           "key": "D",
-          "textVi": "Lập tức hỏi vì sao thân chủ không tin đội ngũ.",
+          "textVi": "Lập tức hỏi vì sao khách hàng không tin đội ngũ.",
           "textEn": "Immediately ask why the client does not trust the team."
         }
       ],
       "bestAnswer": "C",
       "worstAnswer": "A",
-      "explanationVi": "Khi trọng tâm có ý nghĩa thay đổi, cần xem lại thỏa thuận. Ép giữ chủ đề ban đầu ưu tiên hợp đồng hơn nhu cầu đang xuất hiện của thân chủ.",
+      "explanationVi": "Khi trọng tâm có ý nghĩa thay đổi, cần xem lại thỏa thuận. Ép giữ chủ đề ban đầu ưu tiên hợp đồng hơn nhu cầu đang xuất hiện của khách hàng.",
       "explanationEn": "When the meaningful focus shifts, revisit the agreement. Forcing the original topic prioritizes the contract over the client’s emerging need.",
       "primaryCompetency": "3. Agreements",
-      "keyClueVi": "Thân chủ thay đổi trọng tâm",
+      "keyClueVi": "Khách hàng thay đổi trọng tâm",
       "keyClueEn": "Client changes the focus",
       "difficulty": "medium",
       "orderIndex": 9
@@ -857,12 +857,12 @@
       "id": "Q10",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Thân chủ nói: “Tôi cứ nói mình muốn nghỉ việc, nhưng cứ gần đến lúc quyết định thì tôi lại tạo thêm một lý do để ở lại.”",
+      "questionVi": "Khách hàng nói: “Tôi cứ nói mình muốn nghỉ việc, nhưng cứ gần đến lúc quyết định thì tôi lại tạo thêm một lý do để ở lại.”",
       "questionEn": "A client says, “I keep saying I want to leave my job, but every time I get close to deciding, I create another reason to stay.”",
       "options": [
         {
           "key": "A",
-          "textVi": "Nói với thân chủ rằng họ sợ thay đổi.",
+          "textVi": "Nói với khách hàng rằng họ sợ thay đổi.",
           "textEn": "Tell the client they are afraid of change."
         },
         {
@@ -877,13 +877,13 @@
         },
         {
           "key": "D",
-          "textVi": "Liệt kê các rủi ro tài chính của việc nghỉ để thân chủ thực tế hơn.",
+          "textVi": "Liệt kê các rủi ro tài chính của việc nghỉ để khách hàng thực tế hơn.",
           "textEn": "List the financial risks of leaving so the client can be realistic."
         }
       ],
       "bestAnswer": "B",
       "worstAnswer": "A",
-      "explanationVi": "Khám phá mô thức và ý nghĩa của thân chủ thay vì chẩn đoán. Coach tạo điều kiện cho nhận thức thay vì dán nhãn thân chủ.",
+      "explanationVi": "Khám phá mô thức và ý nghĩa của khách hàng thay vì chẩn đoán. Coach tạo điều kiện cho nhận thức thay vì dán nhãn khách hàng.",
       "explanationEn": "Explore the client’s pattern and meaning rather than diagnose it. The coach facilitates awareness instead of labeling the client.",
       "primaryCompetency": "7. Evokes Awareness",
       "keyClueVi": "Mô thức lặp lại",
@@ -895,7 +895,7 @@
       "id": "Q11",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Một thân chủ hiện tại bắt đầu gửi tin nhắn mang tính cá nhân và hỏi bạn có muốn hẹn hò không.",
+      "questionVi": "Một khách hàng hiện tại bắt đầu gửi tin nhắn mang tính cá nhân và hỏi bạn có muốn hẹn hò không.",
       "questionEn": "A current coaching client begins sending personal messages and asks whether you would like to go on a date.",
       "options": [
         {
@@ -915,13 +915,13 @@
         },
         {
           "key": "D",
-          "textVi": "Hỏi thân chủ có nghiêm túc không rồi mới quyết định.",
+          "textVi": "Hỏi khách hàng có nghiêm túc không rồi mới quyết định.",
           "textEn": "Ask the client whether they are serious before deciding."
         }
       ],
       "bestAnswer": "C",
       "worstAnswer": "B",
-      "explanationVi": "Chuyên gia ICF không tham gia quan hệ tình dục/lãng mạn với thân chủ hoặc sponsor hiện tại. Sự dịch chuyển ranh giới phải được xử lý trực tiếp.",
+      "explanationVi": "Chuyên gia ICF không tham gia quan hệ tình dục/lãng mạn với khách hàng hoặc sponsor hiện tại. Sự dịch chuyển ranh giới phải được xử lý trực tiếp.",
       "explanationEn": "ICF professionals do not participate in sexual or romantic relationships with current clients or sponsors. The boundary shift must be addressed.",
       "primaryCompetency": "1. Ethics / Ethics 3.6",
       "keyClueVi": "Ranh giới tình cảm",
@@ -959,7 +959,7 @@
       ],
       "bestAnswer": "B",
       "worstAnswer": "D",
-      "explanationVi": "Chủ động quản lý chênh lệch quyền lực/địa vị và bảo vệ quyền lựa chọn của thân chủ. Sponsor trả phí không biến agenda của sponsor thành agenda của thân chủ.",
+      "explanationVi": "Chủ động quản lý chênh lệch quyền lực/địa vị và bảo vệ quyền lựa chọn của khách hàng. Sponsor trả phí không biến agenda của sponsor thành agenda của khách hàng.",
       "explanationEn": "Actively manage power/status dynamics and protect client choice. Sponsor payment does not make the sponsor’s agenda the client’s agenda.",
       "primaryCompetency": "4. Trust & Safety / Ethics 4.1",
       "keyClueVi": "Coaching do sponsor khởi xướng",
@@ -971,7 +971,7 @@
       "id": "Q13",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Sau một câu hỏi mạnh, thân chủ im lặng 25 giây và trông đang suy nghĩ.",
+      "questionVi": "Sau một câu hỏi mạnh, khách hàng im lặng 25 giây và trông đang suy nghĩ.",
       "questionEn": "After a powerful question, the client becomes silent for 25 seconds and looks thoughtful.",
       "options": [
         {
@@ -981,23 +981,23 @@
         },
         {
           "key": "B",
-          "textVi": "Cho phép sự im lặng và duy trì hiện diện, tạo không gian để thân chủ suy ngẫm.",
+          "textVi": "Cho phép sự im lặng và duy trì hiện diện, tạo không gian để khách hàng suy ngẫm.",
           "textEn": "Allow the silence and remain present, giving the client space to reflect."
         },
         {
           "key": "C",
-          "textVi": "Tóm tắt diễn giải của bạn về điều thân chủ có lẽ đang nghĩ.",
+          "textVi": "Tóm tắt diễn giải của bạn về điều khách hàng có lẽ đang nghĩ.",
           "textEn": "Summarize your interpretation of what the client is probably thinking."
         },
         {
           "key": "D",
-          "textVi": "Đưa ví dụ từ một thân chủ khác để giúp họ trả lời.",
+          "textVi": "Đưa ví dụ từ một khách hàng khác để giúp họ trả lời.",
           "textEn": "Offer an example from another client to help them respond."
         }
       ],
       "bestAnswer": "B",
       "worstAnswer": "A",
-      "explanationVi": "Im lặng có thể hỗ trợ suy ngẫm và nhận thức. Lấp khoảng trống vì coach khó chịu làm giảm sự hiện diện và quá trình xử lý của thân chủ.",
+      "explanationVi": "Im lặng có thể hỗ trợ suy ngẫm và nhận thức. Lấp khoảng trống vì coach khó chịu làm giảm sự hiện diện và quá trình xử lý của khách hàng.",
       "explanationEn": "Silence can support reflection and awareness. Filling the space because of coach discomfort reduces presence and client processing.",
       "primaryCompetency": "5. Presence",
       "keyClueVi": "Khoảng im lặng suy ngẫm dài",
@@ -1009,7 +1009,7 @@
       "id": "Q14",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Thân chủ nói: “Cảm giác như tôi đang lái xe với kính chắn gió phủ sương.”",
+      "questionVi": "Khách hàng nói: “Cảm giác như tôi đang lái xe với kính chắn gió phủ sương.”",
       "questionEn": "A client says, “It feels like I am driving with a foggy windshield.”",
       "options": [
         {
@@ -1035,10 +1035,10 @@
       ],
       "bestAnswer": "A",
       "worstAnswer": "B",
-      "explanationVi": "Dùng chính ngôn ngữ và ẩn dụ của thân chủ để đào sâu khám phá. Không áp diễn giải của coach lên ý nghĩa của ẩn dụ.",
+      "explanationVi": "Dùng chính ngôn ngữ và ẩn dụ của khách hàng để đào sâu khám phá. Không áp diễn giải của coach lên ý nghĩa của ẩn dụ.",
       "explanationEn": "Use the client’s language and metaphor to deepen exploration. Do not impose your own interpretation of what the metaphor means.",
       "primaryCompetency": "6. Listening / 7. Awareness",
-      "keyClueVi": "Ẩn dụ do thân chủ tạo ra",
+      "keyClueVi": "Ẩn dụ do khách hàng tạo ra",
       "keyClueEn": "Client-generated metaphor",
       "difficulty": "medium",
       "orderIndex": 14
@@ -1047,12 +1047,12 @@
       "id": "Q15",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Gần cuối phiên, thân chủ có một insight rõ ràng về việc thiết lập ranh giới với đồng nghiệp.",
+      "questionVi": "Gần cuối phiên, khách hàng có một insight rõ ràng về việc thiết lập ranh giới với đồng nghiệp.",
       "questionEn": "Near the end of a session, a client has a clear insight about setting boundaries with colleagues.",
       "options": [
         {
           "key": "A",
-          "textVi": "Bảo thân chủ chặn hai giờ trên lịch mỗi ngày.",
+          "textVi": "Bảo khách hàng chặn hai giờ trên lịch mỗi ngày.",
           "textEn": "Tell the client to block two hours on their calendar every day."
         },
         {
@@ -1073,7 +1073,7 @@
       ],
       "bestAnswer": "B",
       "worstAnswer": "A",
-      "explanationVi": "Đồng hành với thân chủ để chuyển insight thành hành động do chính họ thiết kế, cùng nguồn hỗ trợ và accountability. Kê đơn hành động làm giảm quyền tự chủ.",
+      "explanationVi": "Đồng hành với khách hàng để chuyển insight thành hành động do chính họ thiết kế, cùng nguồn hỗ trợ và accountability. Kê đơn hành động làm giảm quyền tự chủ.",
       "explanationEn": "Partner with the client to translate insight into client-designed action, support and accountability. Prescribing the action reduces autonomy.",
       "primaryCompetency": "8. Facilitates Growth",
       "keyClueVi": "Insight đã sẵn sàng để tích hợp",
@@ -1085,7 +1085,7 @@
       "id": "Q16",
       "sectionId": null,
       "type": "icf_sjt",
-      "questionVi": "Thân chủ yêu cầu bạn chẩn đoán xem họ có trầm cảm lâm sàng hay không và nói rằng họ muốn coaching thay vì gặp chuyên gia sức khỏe tâm thần.",
+      "questionVi": "Khách hàng yêu cầu bạn chẩn đoán xem họ có trầm cảm lâm sàng hay không và nói rằng họ muốn coaching thay vì gặp chuyên gia sức khỏe tâm thần.",
       "questionEn": "A client asks you to diagnose whether they have clinical depression and says they want coaching instead of seeing a mental-health professional.",
       "options": [
         {
@@ -1100,7 +1100,7 @@
         },
         {
           "key": "C",
-          "textVi": "Tiếp tục coaching vì thân chủ đã nói rõ họ thích coaching hơn.",
+          "textVi": "Tiếp tục coaching vì khách hàng đã nói rõ họ thích coaching hơn.",
           "textEn": "Continue coaching because the client explicitly prefers coaching."
         },
         {

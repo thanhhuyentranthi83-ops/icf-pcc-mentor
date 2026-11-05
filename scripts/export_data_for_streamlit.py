@@ -25,7 +25,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-02",
-        "textVi": "Hãy để sự im lặng làm việc. Trong khoảng lặng sâu, thân chủ tìm thấy câu trả lời chân thật nhất của chính họ.",
+        "textVi": "Hãy để sự im lặng làm việc. Trong khoảng lặng sâu, khách hàng tìm thấy câu trả lời chân thật nhất của chính họ.",
         "textEn": "Let silence do the heavy lifting. In deep stillness, clients discover their own truest answers.",
         "theme": "Khoảng lặng",
         "author": "Zen Coaching Wisdom",
@@ -33,7 +33,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-03",
-        "textVi": "Coach không cần phải là người sửa chữa. Thân chủ tự thân đã trọn vẹn, sáng tạo và đủ đầy nguồn lực.",
+        "textVi": "Coach không cần phải là người sửa chữa. Khách hàng tự thân đã trọn vẹn, sáng tạo và đủ đầy nguồn lực.",
         "textEn": "A coach is not a fixer. The client is naturally whole, creative, and fully resourceful.",
         "theme": "Tin tưởng",
         "author": "ICF Principle",
@@ -41,7 +41,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-04",
-        "textVi": "Khi buông bỏ nhu cầu chứng minh năng lực, ta mới thực sự trao trọn không gian cho thân chủ tỏa sáng.",
+        "textVi": "Khi buông bỏ nhu cầu chứng minh năng lực, ta mới thực sự trao trọn không gian cho khách hàng tỏa sáng.",
         "textEn": "When you surrender the need to prove your capability, you truly offer the space for the client to shine.",
         "theme": "Vô ngã",
         "author": "Zen Mind",
@@ -73,7 +73,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-08",
-        "textVi": "Đừng vội vàng đi tìm giải pháp. Hãy cùng thân chủ khám phá vẻ đẹp của câu hỏi đúng.",
+        "textVi": "Đừng vội vàng đi tìm giải pháp. Hãy cùng khách hàng khám phá vẻ đẹp của câu hỏi đúng.",
         "textEn": "Do not rush toward solutions. Walk alongside the client into the profound beauty of the right question.",
         "theme": "Tò mò",
         "author": "Inquiry",
@@ -113,7 +113,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-13",
-        "textVi": "Khi thân chủ im lặng sau một câu hỏi, đó là lúc điều kỳ diệu đang nở hoa trong tâm trí họ.",
+        "textVi": "Khi khách hàng im lặng sau một câu hỏi, đó là lúc điều kỳ diệu đang nở hoa trong tâm trí họ.",
         "textEn": "When a client pauses in silence after a question, magic is gently blooming in their mind.",
         "theme": "Khoảng lặng",
         "author": "PCC Marker 5.4",
@@ -121,7 +121,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-14",
-        "textVi": "Tôn trọng thế giới quan của thân chủ, ngay cả khi nó hoàn toàn khác biệt với trải nghiệm của bạn.",
+        "textVi": "Tôn trọng thế giới quan của khách hàng, ngay cả khi nó hoàn toàn khác biệt với trải nghiệm của bạn.",
         "textEn": "Honor the client’s worldview, even when it differs completely from your own lived experience.",
         "theme": "Tôn trọng",
         "author": "ICF Marker 4",
@@ -137,7 +137,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-16",
-        "textVi": "Hãy để thân chủ dẫn đường về chủ đề, và coach giữ ngọn đèn chiếu sáng cho con đường ấy.",
+        "textVi": "Hãy để khách hàng dẫn đường về chủ đề, và coach giữ ngọn đèn chiếu sáng cho con đường ấy.",
         "textEn": "Let the client choose the path, while the coach gently holds the lantern to light the way.",
         "theme": "Đồng hành",
         "author": "ICF Marker 3",
@@ -145,7 +145,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-17",
-        "textVi": "Phản chiếu lại cảm xúc và ngôn từ của thân chủ mà không thêm bớt lời phán xét hay phân tích cá nhân.",
+        "textVi": "Phản chiếu lại cảm xúc và ngôn từ của khách hàng mà không thêm bớt lời phán xét hay phân tích cá nhân.",
         "textEn": "Mirror back the client’s emotion and language without adding personal judgment or unsolicited analysis.",
         "theme": "Phản chiếu",
         "author": "Active Listening",
@@ -153,7 +153,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-18",
-        "textVi": "Khám phá cả cái 'Ai' (Who) sâu sắc của thân chủ, không chỉ dừng lại ở vấn đề 'Cái gì' (What).",
+        "textVi": "Khám phá cả cái 'Ai' (Who) sâu sắc của khách hàng, không chỉ dừng lại ở vấn đề 'Cái gì' (What).",
         "textEn": "Explore the deep 'Who' of the client, rather than merely fixing the surface 'What'.",
         "theme": "Chiều sâu",
         "author": "PCC Marker 7",
@@ -201,7 +201,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-24",
-        "textVi": "Quan sát năng lượng và sự thay đổi trong nhịp thở của thân chủ — đó là nơi sự thật đang lên tiếng.",
+        "textVi": "Quan sát năng lượng và sự thay đổi trong nhịp thở của khách hàng — đó là nơi sự thật đang lên tiếng.",
         "textEn": "Notice the client's energy shifts and rhythm of breath — that is where deep truth speaks.",
         "theme": "Quan sát",
         "author": "Presence",
@@ -217,7 +217,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-26",
-        "textVi": "Một câu hỏi sắc bén có sức mạnh mở toang những giới hạn mà thân chủ đã tự dựng lên suốt nhiều năm.",
+        "textVi": "Một câu hỏi sắc bén có sức mạnh mở toang những giới hạn mà khách hàng đã tự dựng lên suốt nhiều năm.",
         "textEn": "A poignant question has the power to dissolve the boundaries a client built for years.",
         "theme": "Gợi mở",
         "author": "Evoking Awareness",
@@ -225,7 +225,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-27",
-        "textVi": "Trao quyền cho thân chủ tự xác định kế hoạch hành động và phương thức họ muốn tự cam kết.",
+        "textVi": "Trao quyền cho khách hàng tự xác định kế hoạch hành động và phương thức họ muốn tự cam kết.",
         "textEn": "Empower the client to design their own action plan and choose how they will hold themselves accountable.",
         "theme": "Trao quyền",
         "author": "Client Growth",
@@ -233,7 +233,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-28",
-        "textVi": "Biết rõ ranh giới chuyên môn và dũng cảm giới thiệu thân chủ khi vấn đề vượt ngoài phạm vi khai vấn.",
+        "textVi": "Biết rõ ranh giới chuyên môn và dũng cảm giới thiệu khách hàng khi vấn đề vượt ngoài phạm vi khai vấn.",
         "textEn": "Know professional boundaries clearly and refer bravely when matters lie beyond coaching scope.",
         "theme": "Ranh giới",
         "author": "Ethics Referral",
@@ -241,7 +241,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-29",
-        "textVi": "Trong bài thi phán đoán tình huống (SJT), phương án BEST luôn lấy thân chủ làm trung tâm và tôn trọng thỏa thuận.",
+        "textVi": "Trong bài thi phán đoán tình huống (SJT), phương án BEST luôn lấy khách hàng làm trung tâm và tôn trọng thỏa thuận.",
         "textEn": "In Situational Judgment tests, the BEST response consistently honors client autonomy and agreements.",
         "theme": "Mẹo thi",
         "author": "PCC Playbook",
@@ -249,7 +249,7 @@ mindfulness_messages = [
     },
     {
         "id": "mm-30",
-        "textVi": "Dưới bóng mát của sự hiện diện, hạt giống nhận thức của thân chủ tự khắc đâm chồi nảy lộc.",
+        "textVi": "Dưới bóng mát của sự hiện diện, hạt giống nhận thức của khách hàng tự khắc đâm chồi nảy lộc.",
         "textEn": "Beneath the soothing shade of your presence, the client’s seeds of insight blossom naturally.",
         "theme": "Hoa sen nở",
         "author": "Zen Presence",
@@ -489,7 +489,7 @@ for idx, sec_id in enumerate(leaf_sections):
 Năng lực **{comp['compVi']}** thuộc miền `{comp['domainVi']}` là một trong những cột trụ quyết định đánh giá cấp độ PCC.
 
 #### Định Nghĩa Cốt Lõi:
-Coach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi thân chủ là người làm chủ mục tiêu và kết quả phiên khai vấn.
+Coach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán các quy chuẩn hành vi chuyên nghiệp, coi khách hàng là người làm chủ mục tiêu và kết quả phiên khai vấn.
 
 #### Góc Nhìn Khi Làm Bài Thi (Exam Lens):
 > **Tự hỏi bản thân:** {comp['lensVi']}
@@ -500,7 +500,7 @@ Coach thể hiện sự hiểu biết sâu sắc và áp dụng nhất quán cá
 
 #### Bảng So Sánh ACC vs PCC vs MCC:
 - **ACC:** Tập trung vào làm đúng quy trình đặt câu hỏi, đôi khi còn nặng tính tư vấn nhẹ hoặc bám vào giải pháp bề mặt (What).
-- **PCC:** Đồng hành bình đẳng (Partnership), khơi mở thế giới quan và con người thân chủ (Who), đón nhận khoảng lặng và chuyển hóa nhận thức sâu sắc.
+- **PCC:** Đồng hành bình đẳng (Partnership), khơi mở thế giới quan và con người khách hàng (Who), đón nhận khoảng lặng và chuyển hóa nhận thức sâu sắc.
 - **MCC:** Thuần khiết hiện diện, không bận tâm đến việc chứng minh kỹ năng, phiên khai vấn chảy trôi tự nhiên như dòng nước.
 """,
         "contentEn": f"""### 1. Essence of the Competency per ICF 2025 Standards
@@ -582,7 +582,7 @@ The coach demonstrates deep understanding and consistent application of professi
         "sectionId": sec_id,
         "titleVi": f"Tình huống thực tế: Vấn đề trong {comp['compVi']}",
         "titleEn": f"Case Study: Dilemma in {comp['compEn']}",
-        "scenarioVi": f"Thân chủ là giám đốc điều hành gặp khó khăn khi phân bổ quyền lực cho đội ngũ. Trong phiên khai vấn, thân chủ liên tục yêu cầu Coach chia sẻ kinh nghiệm lãnh đạo từ doanh nghiệp cũ của Coach.",
+        "scenarioVi": f"Khách hàng là giám đốc điều hành gặp khó khăn khi phân bổ quyền lực cho đội ngũ. Trong phiên khai vấn, khách hàng liên tục yêu cầu Coach chia sẻ kinh nghiệm lãnh đạo từ doanh nghiệp cũ của Coach.",
         "scenarioEn": f"The client is an executive struggling with delegating power. During the session, the client repeatedly asks the Coach to share past leadership experiences from the Coach's previous corporate career.",
         "dialogue": [
             {"speaker": "Client", "textVi": "Tôi thực sự bế tắc với nhân sự cấp dưới. Coach từng lãnh đạo tập đoàn lớn, Coach hãy cho tôi biết trong trường hợp này tôi phải làm gì?", "textEn": "I am truly stuck with my direct reports. Coach, you led large corporations before, can you tell me what to do in this scenario?", "markerTag": None},
@@ -592,8 +592,8 @@ The coach demonstrates deep understanding and consistent application of professi
         ],
         "reflectionQuestionsVi": [
             "Tại sao Coach từ chối đưa ra lời khuyên trực tiếp?",
-            "Khoảng lặng của Coach mang lại tác động gì cho sự chuyển biến của thân chủ?",
-            "Làm thế nào để duy trì tính đồng hành (Partnership) khi thân chủ liên tục 'nhờ vả' giải pháp?"
+            "Khoảng lặng của Coach mang lại tác động gì cho sự chuyển biến của khách hàng?",
+            "Làm thế nào để duy trì tính đồng hành (Partnership) khi khách hàng liên tục 'nhờ vả' giải pháp?"
         ],
         "reflectionQuestionsEn": [
             "Why did the Coach refrain from offering direct advice?",
@@ -613,9 +613,9 @@ The coach demonstrates deep understanding and consistent application of professi
         "questionEn": f"According to the lens of {comp['compEn']}, which behavior best demonstrates PCC mastery?",
         "options": [
             {"key": "A", "textVi": "Đưa ra lời khuyên dựa trên kinh nghiệm thành công của chính coach.", "textEn": "Giving direct advice based on the coach's own successful experience."},
-            {"key": "B", "textVi": "Đồng hành khám phá góc nhìn của thân chủ và tôn trọng quyền tự quyết định của họ.", "textEn": "Partnering to explore the client's perspective and honoring their autonomy to choose."},
+            {"key": "B", "textVi": "Đồng hành khám phá góc nhìn của khách hàng và tôn trọng quyền tự quyết định của họ.", "textEn": "Partnering to explore the client's perspective and honoring their autonomy to choose."},
             {"key": "C", "textVi": "Chuyển buổi coaching thành buổi đào tạo kỹ năng ngắn hạn.", "textEn": "Switching the coaching session into a short skills training tutorial."},
-            {"key": "D", "textVi": "Yêu cầu thân chủ thực hiện đúng bài tập do coach chỉ định.", "textEn": "Mandating the client to execute specific assignments determined by the coach."}
+            {"key": "D", "textVi": "Yêu cầu khách hàng thực hiện đúng bài tập do coach chỉ định.", "textEn": "Mandating the client to execute specific assignments determined by the coach."}
         ],
         "correctAnswer": "B",
         "explanationVi": f"Ở cấp độ PCC, coach duy trì tính đồng hành bình đẳng (Partnership) và khơi gợi nhận thức thay vì áp đặt giải pháp. {comp['cueVi']}",

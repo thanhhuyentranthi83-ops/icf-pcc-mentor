@@ -12,7 +12,7 @@
      1. **Lý thuyết**: Bài giảng phân đoạn rõ ràng, sơ đồ tư duy đính kèm.
      2. **Keyword**: Mẹo ghi nhớ (Mnemonics) & Tổng quát (Glossary) + phát âm tiếng Anh.
      3. **Flashcard**: Thẻ lật 2 mặt kèm hệ thống lặp lại ngắt quãng (Leitner 3 cấp độ: Biết / Chưa chắc / Chưa biết) và đánh dấu yêu thích.
-     4. **Case Study**: Hội thoại thực tế giữa Coach và Thân chủ, đối chiếu trực tiếp với PCC Markers.
+     4. **Case Study**: Hội thoại thực tế giữa Coach và Khách hàng, đối chiếu trực tiếp với PCC Markers.
      5. **Quiz**: Trắc nghiệm bài học, giải thích chi tiết tức thì.
      6. **Thi thử theo phần (Chuẩn ICF)**: Câu hỏi phán đoán tình huống (SJT) chọn 1 BEST và 1 WORST, đồng hồ đếm ngược, phân tích bẫy tư duy.
 2. **Thi thử tổng PCC (Full PCC Mock Exam)**:
