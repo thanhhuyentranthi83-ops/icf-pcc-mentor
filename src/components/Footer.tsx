@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         <p className="text-[11px] text-zen-muted/80">
-          © {new Date().getFullYear()} Mentor thi ICF PCC • Vì ước mơ 500 PCC tại Việt Nam.
+          © {new Date().getFullYear()} Mentor thi ICF PCC • {t("Vì ước mơ đưa Coaching thành lối sống.", "Making Coaching a Way of Life.")}
         </p>
       </div>
     </footer>

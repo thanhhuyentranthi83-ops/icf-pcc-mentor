@@ -296,7 +296,7 @@ st.markdown("<hr style='margin: 8px 0 20px 0; border: none; border-top: 1px soli
 # ==========================================
 with st.sidebar:
     st.markdown("<h2 style='text-align: center; margin-bottom: 2px;'>🪷 Mentor thi ICF PCC</h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: #8C6D53; font-size: 0.9rem; margin-top: 0;'>Vì ước mơ 500 PCC tại Việt Nam</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='text-align: center; color: #8C6D53; font-size: 0.9rem; margin-top: 0;'>{t('Vì ước mơ đưa Coaching thành lối sống', 'Making Coaching a Way of Life')}</p>", unsafe_allow_html=True)
     st.markdown("---")
 
     # Ngôn ngữ
@@ -868,7 +868,7 @@ elif st.session_state.page == "admin":
 st.markdown("---")
 st.markdown(f"""
 <div style="text-align: center; color: #7F8C8D; font-size: 0.85rem; padding: 20px 0;">
-    <p>🪷 <b>Mentor thi ICF PCC</b> — {t('Vì ước mơ 500 PCC tại Việt Nam', 'For the dream of 500 PCCs in Vietnam')}</p>
+    <p>🪷 <b>Mentor thi ICF PCC</b> — {t('Vì ước mơ đưa Coaching thành lối sống', 'Making Coaching a Way of Life')}</p>
     <p style="font-size: 0.78rem; max-width: 800px; margin: 0 auto; color: #95A5A6; line-height: 1.5;">
         {t('Tuyên bố miễn trừ: Giao diện và trải nghiệm được lấy cảm hứng từ triết lý Thiền Làng Mai. Ứng dụng này là một nền tảng giáo dục độc lập nhằm hỗ trợ học viên ôn luyện theo Khung Năng lực ICF PCC, không phải là sản phẩm chính thức hoặc có liên kết pháp lý trực tiếp với International Coaching Federation (ICF).',
            'Disclaimer: UI/UX inspired by Plum Village Zen philosophy. This is an independent educational platform built to mentor candidates following the ICF PCC Core Competencies, and is not an official product of or affiliated with the International Coaching Federation (ICF).')}
