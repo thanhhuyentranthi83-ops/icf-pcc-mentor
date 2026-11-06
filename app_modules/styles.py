@@ -5,6 +5,48 @@ Plum Village (Làng Mai) Aesthetic
 """
 import streamlit as st
 
+def install_safe_markdown():
+    """
+    Globally patches Streamlit markdown rendering (both st.markdown and DeltaGenerator.markdown)
+    to prevent CommonMark from treating indented HTML blocks (>= 4 leading spaces or HTML after blank lines)
+    as <pre><code> code blocks.
+    """
+    try:
+        from streamlit.delta_generator import DeltaGenerator
+        if not getattr(DeltaGenerator, "_safe_markdown_installed", False):
+            _orig_dg_markdown = DeltaGenerator.markdown
+
+            def _safe_dg_markdown(self, body, *args, **kwargs):
+                if isinstance(body, str) and not body.strip().startswith("```"):
+                    tags = ("<div", "<span", "<h1", "<h2", "<h3", "<h4", "<h5", "<h6", "<p", "<table", "<a ", "<b", "<i", "<style", "<hr", "<ul", "<ol", "<li", "<button", "<section", "<article", "</")
+                    if any(tag in body for tag in tags):
+                        lines = [line.strip() for line in body.splitlines() if line.strip()]
+                        body = "\n".join(lines)
+                        kwargs["unsafe_allow_html"] = True
+                return _orig_dg_markdown(self, body, *args, **kwargs)
+
+            DeltaGenerator.markdown = _safe_dg_markdown
+            DeltaGenerator._safe_markdown_installed = True
+    except Exception:
+        pass
+
+    if not getattr(st, "_safe_markdown_installed", False):
+        _orig_st_markdown = getattr(st, "markdown", None)
+        if _orig_st_markdown:
+            def _safe_st_markdown(body, *args, **kwargs):
+                if isinstance(body, str) and not body.strip().startswith("```"):
+                    tags = ("<div", "<span", "<h1", "<h2", "<h3", "<h4", "<h5", "<h6", "<p", "<table", "<a ", "<b", "<i", "<style", "<hr", "<ul", "<ol", "<li", "<button", "<section", "<article", "</")
+                    if any(tag in body for tag in tags):
+                        lines = [line.strip() for line in body.splitlines() if line.strip()]
+                        body = "\n".join(lines)
+                        kwargs["unsafe_allow_html"] = True
+                return _orig_st_markdown(body, *args, **kwargs)
+            st.markdown = _safe_st_markdown
+            st._safe_markdown_installed = True
+
+# Install patch immediately
+install_safe_markdown()
+
 CUSTOM_CSS = """
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap');

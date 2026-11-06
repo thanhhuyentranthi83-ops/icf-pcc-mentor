@@ -64,7 +64,6 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
         <div style="margin: 14px 0 10px 0; background: #EADBCC; height: 8px; border-radius: 4px; overflow: hidden;">
             <div style="background: #2F3E34; height: 100%; width: {overall_pct}%;"></div>
         </div>
-
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 12px;">
             <div>
                 <div style="font-size: 0.85rem; color: #5F6F65; text-transform: uppercase; font-weight: 600;">

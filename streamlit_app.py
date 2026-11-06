@@ -23,7 +23,8 @@ import json
 import streamlit as st
 
 # Import app modules
-from app_modules.styles import CUSTOM_CSS, render_bell_button
+from app_modules.styles import CUSTOM_CSS, render_bell_button, install_safe_markdown
+install_safe_markdown()
 from app_modules.state import init_session_state, t, set_page
 from app_modules.page_home import render_home_page
 from app_modules.page_library import render_library_page
