@@ -821,8 +821,10 @@ MODULE_3_WRAPUP = {
 # ==============================================================================
 # HỌC PHẦN 4: WHITE PAPER VỀ CHUYỂN GỬI KHÁCH HÀNG (REFERRING CLIENT TO THERAPY)
 # ==============================================================================
-# Imports the 7 comprehensive lessons grounded in Hullinger & DiGirolamo (2018)
-from referral_guidelines_data import REFERRAL_THEORIES, REFERRAL_FLASHCARDS, REFERRAL_QUIZZES, REFERRAL_PRACTICE_QUESTIONS
+try:
+    from scripts.referral_guidelines_data import REFERRAL_THEORIES, REFERRAL_FLASHCARDS, REFERRAL_QUIZZES, REFERRAL_PRACTICE_QUESTIONS
+except ImportError:
+    from referral_guidelines_data import REFERRAL_THEORIES, REFERRAL_FLASHCARDS, REFERRAL_QUIZZES, REFERRAL_PRACTICE_QUESTIONS
 
 MODULE_4_LESSONS = []
 for idx, th in enumerate(REFERRAL_THEORIES):
