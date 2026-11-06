@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Home Page for PCC Learning & Practice
+Home Page for Mentor Thi (PCC Learning & Practice)
 """
 import streamlit as st
 from app_modules.styles import render_breathing_widget, render_disclaimer_banner
@@ -12,9 +12,12 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
     st.markdown(f"""
     <div style="text-align: center; max-width: 860px; margin: 0 auto 16px auto;">
         <span class="zen-badge zen-badge-primary">🌱 {t('Tự Học Tỉnh Thức — Chuẩn Hóa Phán Đoán', 'Mindful Mastery — Verifiable Standards')}</span>
-        <h1 style="font-size: 2.3rem; margin: 10px 0; color: #2F3E34;">PCC Learning & Practice</h1>
-        <div style="font-size: 1.15rem; color: #8C6D53; font-weight: 500; margin-bottom: 8px;">
+        <h1 style="font-size: 2.4rem; margin: 10px 0; color: #2F3E34;">🪷 Mentor Thi</h1>
+        <div style="font-size: 1.15rem; color: #8C6D53; font-weight: 500; margin-bottom: 4px;">
             {t('Hiểu chuẩn — Luyện phán đoán — Phát triển năng lực coaching', 'Master Standards — Hone Judgment — Elevate Coaching Mastery')}
+        </div>
+        <div style="font-size: 0.95rem; color: #5F6F65; font-style: italic; margin-bottom: 12px;">
+            "{t('Vì ước mơ đưa Coaching thành lối sống', 'Making Coaching a Way of Life')}"
         </div>
         <p style="font-size: 0.95rem; color: #5F6F65; line-height: 1.6;">
             {t('Môi trường tự học và rèn luyện phán đoán tình huống độc lập, bồi đắp 8 Năng lực Cốt lõi và Bộ Quy tắc Đạo đức theo đúng các chuẩn mực đã được kiểm chứng trực tiếp từ ICF.',
@@ -68,38 +71,38 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
 
     st.markdown("<hr style='border: none; border-top: 1px solid #EADBCC; margin: 16px 0 24px 0;'/>", unsafe_allow_html=True)
 
-    # 4 Quick Actions (2x2 grid)
-    col_act1, col_act2 = st.columns(2)
+    # Quick Actions (5 key features)
+    col_act1, col_act2, col_act3 = st.columns(3)
     with col_act1:
         st.markdown(f"""
-        <div class="zen-card" style="height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="zen-card" style="height: 195px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
                 <span class="zen-badge zen-badge-primary">📑 {t('Khảo Sát Đề Gốc', 'Official Samples')}</span>
-                <h3 style="margin: 8px 0; font-size: 1.15rem; color: #2F3E34;">
-                    {t('8 Câu Mẫu Chuẩn ICF Công Khai', '8 Official Public ICF Samples')}
+                <h3 style="margin: 8px 0; font-size: 1.1rem; color: #2F3E34;">
+                    {t('8 Câu Mẫu Chuẩn ICF', '8 Official ICF Samples')}
                 </h3>
-                <p style="font-size: 0.88rem; color: #666; line-height: 1.5;">
-                    {t('8 tình huống nguyên bản tiếng Anh có đáp án công bố trên trang chính thức của ICF, dịch nghĩa chuẩn xác và phân tích đa chiều.',
-                       '8 authentic English scenarios with official answer key published on the ICF website, paired with verified Vietnamese translation.')}
+                <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">
+                    {t('8 tình huống nguyên bản tiếng Anh có đáp án công bố trên website ICF, dịch nghĩa và phân tích đa chiều.',
+                       '8 authentic English scenarios with official answer key published on the ICF website.')}
                 </p>
             </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("👉 " + t("Xem 8 Câu Mẫu ICF", "Explore Official Samples"), key="btn_go_official", use_container_width=True):
+        if st.button("👉 " + t("Xem 8 Câu Mẫu", "View 8 Samples"), key="btn_go_official", use_container_width=True):
             set_page("official_samples")
             st.rerun()
 
     with col_act2:
         st.markdown(f"""
-        <div class="zen-card" style="height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="zen-card" style="height: 195px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
                 <span class="zen-badge zen-badge-gold">⚡ {t('Rèn Phán Đoán', 'Daily Drill')}</span>
-                <h3 style="margin: 8px 0; font-size: 1.15rem; color: #2F3E34;">
-                    {t('Luyện Tập 10 Câu / Ngày', 'Daily 10-Question Targeted Drill')}
+                <h3 style="margin: 8px 0; font-size: 1.1rem; color: #2F3E34;">
+                    {t('Luyện 10 Câu / Ngày', 'Daily 10 Drill')}
                 </h3>
-                <p style="font-size: 0.88rem; color: #666; line-height: 1.5;">
-                    {t('Luyện đều đặn mỗi ngày: 10 câu tình huống Best/Worst, câu hỏi kiến thức hoặc ôn tập câu đã đánh dấu. Kèm phản hồi tức thì.',
-                       'Consistent daily discipline: 10 Best/Worst SJT items, Knowledge MCQs, or review bookmarked questions with immediate feedback.')}
+                <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">
+                    {t('Luyện tập không lặp lại tình huống: 10 câu Best/Worst hoặc câu hỏi kiến thức kèm phản hồi tức thì.',
+                       'Non-repeating drill: 10 Best/Worst SJT items or Knowledge MCQs with immediate feedback.')}
                 </p>
             </div>
         </div>
@@ -108,18 +111,17 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
             set_page("daily_practice")
             st.rerun()
 
-    col_act3, col_act4 = st.columns(2)
     with col_act3:
         st.markdown(f"""
-        <div class="zen-card" style="height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="zen-card" style="height: 195px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
                 <span class="zen-badge zen-badge-pink">⚖️ {t('Mô Phỏng Thực Tế', 'Exam Simulator')}</span>
-                <h3 style="margin: 8px 0; font-size: 1.15rem; color: #2F3E34;">
-                    {t('Phòng Thi Thử Mô Phỏng Động', 'Dynamic Mock Exam Simulator')}
+                <h3 style="margin: 8px 0; font-size: 1.1rem; color: #2F3E34;">
+                    {t('Phòng Thi Thử Mô Phỏng', 'Mock Exam Simulator')}
                 </h3>
-                <p style="font-size: 0.88rem; color: #666; line-height: 1.5;">
-                    {t('Tự động thích ứng theo cấu hình: Kỳ thi hiện hành (78 SJT, 180p) hoặc Kỳ thi cập nhật (80 câu 4 phần, 150p). Bấm giờ, chấm 4 mức điểm.',
-                       'Dynamically adapts to active profile: Current Exam (78 SJT, 180m) or Updated Exam (80 items 4 sections, 150m). Timed, 4-tier grading.')}
+                <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">
+                    {t('Thích ứng động theo cấu hình 78 câu (180p) hoặc 80 câu 4 phần (150p). Chấm 4 mức điểm quy đổi 200–600.',
+                       'Dynamically adapts to active profile: 78 SJT (180m) or 80 items (150m). Timed, 4-tier grading.')}
                 </p>
             </div>
         </div>
@@ -128,23 +130,43 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
             set_page("sjt")
             st.rerun()
 
+    col_act4, col_act5 = st.columns(2)
     with col_act4:
         st.markdown(f"""
-        <div class="zen-card" style="height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="zen-card" style="height: 180px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
                 <span class="zen-badge zen-badge-blue">🏛️ {t('Chuẩn Mực & Bằng Chứng', 'Evidence Library')}</span>
-                <h3 style="margin: 8px 0; font-size: 1.15rem; color: #2F3E34;">
-                    {t('Thư Viện Chuẩn ICF & Nguồn Kiểm Chứng', 'ICF Standards & Verified Sources')}
+                <h3 style="margin: 8px 0; font-size: 1.1rem; color: #2F3E34;">
+                    {t('Thư Viện Chuẩn ICF & 7 Nguồn Kiểm Chứng', 'ICF Standards & 7 Verified Sources')}
                 </h3>
-                <p style="font-size: 0.88rem; color: #666; line-height: 1.5;">
-                    {t('Bảng 7 nguồn chính thức đã kiểm chứng trực tiếp từ coachingfederation.org, phân định rõ Đạo đức 2020 vs 2025, Năng lực cốt lõi và PCC Markers.',
-                       'Directly verified 7 official sources from coachingfederation.org, delineating 2020 vs 2025 Ethics, Core Competencies, and PCC Markers.')}
+                <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">
+                    {t('Tra cứu 7 nguồn chính thức từ coachingfederation.org, phân định rõ Đạo đức 2020 vs 2025, Năng lực cốt lõi và PCC Markers.',
+                       'Directly verified 7 official sources, delineating 2020 vs 2025 Ethics, Core Competencies, and PCC Markers.')}
                 </p>
             </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("👉 " + t("Tra Cứu Thư Viện", "Explore Standards Library"), key="btn_go_library", use_container_width=True):
+        if st.button("👉 " + t("Tra Cứu Thư Viện", "Explore Standards"), key="btn_go_library", use_container_width=True):
             set_page("library")
+            st.rerun()
+
+    with col_act5:
+        st.markdown(f"""
+        <div class="zen-card" style="height: 180px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <span class="zen-badge zen-badge-primary">🤖 {t('Trợ Lý Tỉnh Thức', 'Socratic Assistant')}</span>
+                <h3 style="margin: 8px 0; font-size: 1.1rem; color: #2F3E34;">
+                    {t('Trợ Lý Học Tập Dẫn Nguồn Kiểm Chứng', 'Socratic Study Assistant (Verified Citations)')}
+                </h3>
+                <p style="font-size: 0.85rem; color: #666; line-height: 1.5;">
+                    {t('Hỏi đáp các tình huống đạo đức, ranh giới chuyển tuyến, và nguyên lý phân tích Best/Worst dựa trên tài liệu gốc ICF.',
+                       'Ask ethical dilemmas, referral boundaries, and Best/Worst rationale grounded in official ICF publications.')}
+                </p>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        if st.button("👉 " + t("Hỏi Trợ Lý Học Tập", "Ask Study Assistant"), key="btn_go_assistant", use_container_width=True):
+            set_page("assistant")
             st.rerun()
 
     st.write("")

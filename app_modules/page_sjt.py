@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Mock Exam Simulator for PCC Learning & Practice
+Mock Exam Simulator for PCC Learning & Practice (Mentor Thi)
 Dynamically adapts to active Exam Profile (Legacy 78 SJT vs Updated 80 Items vs Mini-Mock)
-Includes timer simulation, question flags, Best != Worst validation, 4-tier scoring, and real history logging.
+Features full option-by-option (A-D) analysis and official ICF source citations.
 """
 import streamlit as st
 import datetime
+from app_modules.question_helpers import format_ad_analysis, get_source_anchor
 
 def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFICIAL_SAMPLES, t):
     prof_id = st.session_state.exam_profile_id
@@ -16,8 +17,8 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
         <span class="zen-badge zen-badge-pink">⚖️ {t('Phòng Thi Thử Mô Phỏng', 'Mock Exam Simulator')}</span>
         <h2 style="margin: 6px 0; color: #2F3E34;">{t('Mô Phỏng Kỳ Thi ICF Credentialing Exam', 'ICF Credentialing Mock Simulator')}</h2>
         <div style="font-size: 0.9rem; color: #5F6F65;">
-            {t('Hệ thống mô phỏng sát thực tế giao diện Pearson VUE: Hỗ trợ đánh dấu cờ (Flag), kiểm tra trùng lặp Best/Worst, và bảng điểm 4 mức quy đổi theo chuẩn 200–600.',
-               'Realistic Pearson VUE exam simulation: Flag for review, Best/Worst duplicate validation, and official 4-tier 200–600 scaled scoring.')}
+            {t('Hệ thống mô phỏng sát thực tế giao diện Pearson VUE: Cắm cờ (Flag), chặn chọn trùng Best/Worst, chấm 4 mức điểm và phân tích đầy đủ A–D kèm nguồn dẫn.',
+               'Realistic Pearson VUE exam simulation: Flag for review, duplicate validation, 4-tier grading, and complete A-D analysis with verified source citations.')}
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -62,14 +63,12 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
     else:
         # Full Profile
         if prof_id == "updated_80_items":
-            # 36 knowledge + 44 sjt
             exam_items = KNOWLEDGE_QUESTIONS[:36] + PRACTICE_QUESTIONS[:44]
         else:
-            # Legacy 78 SJT (using available 50 + 8 official samples + repeat to reach 78)
             base_sjt = PRACTICE_QUESTIONS + OFFICIAL_SAMPLES
             exam_items = (base_sjt * 2)[:78]
 
-    # IF ALREADY SUBMITTED: RENDER SCORE REPORT
+    # IF ALREADY SUBMITTED: RENDER SCORE REPORT WITH FULL A-D ANALYSIS
     if st.session_state.sjt_submitted and st.session_state.sjt_last_result:
         res = st.session_state.sjt_last_result
         st.markdown(f"""
@@ -83,17 +82,18 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
                 <b>{t('Ngưỡng chuẩn đỗ:', 'Passing Benchmark:')}</b> 460 / 600
             </div>
             <p style="font-size: 0.9rem; color: #666; max-width: 600px; margin: 0 auto;">
-                {t('Điểm số đã được tự động lưu vào Sổ Học Tập & Lịch Sử của bạn. Hãy xem lại chi tiết từng câu hỏi bên dưới để nhận diện khoảng trống năng lực.',
-                   'Score has been saved to your Learning Journal. Review question-level feedback below to pinpoint competency gaps.')}
+                {t('Điểm số đã được lưu vào Sổ Học Tập. Hãy xem lại kỹ lưỡng phân tích chi tiết từng lựa chọn A, B, C, D và nguồn chuẩn bên dưới.',
+                   'Score saved to Learning Journal. Carefully review the full A-D analysis and verified citations below.')}
             </p>
         </div>
         """, unsafe_allow_html=True)
 
-        st.markdown(f"### 📋 {t('Chi Tiết Từng Câu Hỏi & Đối Chiếu Đáp Án Chuẩn', 'Question-by-Question Detailed Review')}")
+        st.markdown(f"### 📋 {t('Chi Tiết Từng Câu Hỏi — Phân Tích A–D & Dẫn Nguồn Chuẩn', 'Question-by-Question Review — Full A-D Analysis & Sources')}")
         for idx, item in enumerate(exam_items):
             qid = item["id"]
             user_ans = st.session_state.sjt_answers.get(qid, {})
             is_k = (item.get("type") != "icf_sjt" and "correctAnswer" in item)
+            ad_info = format_ad_analysis(item, lang=st.session_state.lang)
 
             if is_k:
                 u_pick = user_ans.get("pick")
@@ -102,17 +102,22 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
                 pts_q = 1 if q_ok else 0
 
                 st.markdown(f"""
-                <div class="zen-card" style="padding: 16px; margin-bottom: 12px; border-left: 4px solid {'#8BA888' if q_ok else '#C62828'};">
-                    <div style="display: flex; justify-content: space-between;">
-                        <b>Câu {idx + 1} ({qid}) - Kiến thức:</b>
+                <div class="zen-card" style="padding: 18px; margin-bottom: 16px; border-left: 4px solid {'#8BA888' if q_ok else '#C62828'};">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                        <b>Câu {idx + 1} ({qid}) — Kiến thức chuẩn mực:</b>
                         <span class="zen-badge {'zen-badge-primary' if q_ok else 'zen-badge-pink'}">{pts_q}/1 Điểm</span>
                     </div>
-                    <div style="margin: 6px 0; font-size: 0.95rem;">{item['questionVi'] if st.session_state.lang == 'vi' else item['questionEn']}</div>
-                    <div style="font-size: 0.88rem; color: #444;">
-                        <b>{t('Bạn chọn:', 'Your pick:')}</b> {u_pick or '--'} &nbsp;|&nbsp; <b>{t('Đáp án đúng:', 'Correct key:')}</b> {c_pick}
+                    <div style="margin: 8px 0; font-size: 0.98rem; color: #2F3E34; font-weight: 500;">
+                        {item['questionVi'] if st.session_state.lang == 'vi' else item['questionEn']}
                     </div>
-                    <div style="font-size: 0.85rem; color: #666; margin-top: 4px;">
-                        <b>{t('Lý giải:', 'Explanation:')}</b> {item.get('explanationVi', '') if st.session_state.lang == 'vi' else item.get('explanationEn', '')}
+                    <div style="background: #FAF7F2; padding: 10px 14px; border-radius: 8px; font-size: 0.88rem; margin: 8px 0;">
+                        <b>{t('Bạn chọn:', 'Your pick:')}</b> {u_pick or '--'} &nbsp;|&nbsp; <b>{t('Đáp án đúng:', 'Correct key:')}</b> <b style="color: green;">{c_pick}</b>
+                    </div>
+                    <div style="font-size: 0.9rem; line-height: 1.6; color: #444;">
+                        <b>📖 {t('Lý giải chuyên môn:', 'Rationale:')}</b> {item.get('explanationVi', '') if st.session_state.lang == 'vi' else item.get('explanationEn', '')}
+                    </div>
+                    <div style="margin-top: 10px; font-size: 0.82rem; color: #1E4E79; background: #EBF3FA; padding: 6px 12px; border-radius: 6px;">
+                        📌 <b>{t('Dẫn nguồn:', 'Source:')}</b> {ad_info['source']['sourceCode']} — {ad_info['source']['referenceStandard']}
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -127,18 +132,34 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
                 badge_cls = "zen-badge-primary" if pts_q == 2 else ("zen-badge-gold" if pts_q == 1 else "zen-badge-pink")
 
                 st.markdown(f"""
-                <div class="zen-card" style="padding: 16px; margin-bottom: 12px; border-left: 4px solid {'#8BA888' if pts_q == 2 else ('#EADBCC' if pts_q == 1 else '#C62828')};">
-                    <div style="display: flex; justify-content: space-between;">
-                        <b>Câu {idx + 1} ({qid}) - Tình huống phán đoán:</b>
+                <div class="zen-card" style="padding: 18px; margin-bottom: 16px; border-left: 4px solid {'#8BA888' if pts_q == 2 else ('#EADBCC' if pts_q == 1 else '#C62828')};">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                        <b>Câu {idx + 1} ({qid}) — Tình huống phán đoán:</b>
                         <span class="zen-badge {badge_cls}">{pts_q}/2 Điểm</span>
                     </div>
-                    <div style="margin: 6px 0; font-size: 0.95rem;">{item['questionVi'] if st.session_state.lang == 'vi' else item['questionEn']}</div>
-                    <div style="font-size: 0.88rem; color: #444;">
-                        <b>BEST:</b> {t('Bạn chọn', 'You picked')} <b style="color: {'green' if b_ok else 'red'};">{u_b or '--'}</b> ({t('Chuẩn', 'Key')}: {c_b}) &nbsp;|&nbsp;
-                        <b>WORST:</b> {t('Bạn chọn', 'You picked')} <b style="color: {'green' if w_ok else 'red'};">{u_w or '--'}</b> ({t('Chuẩn', 'Key')}: {c_w})
+                    <div style="margin: 8px 0; font-size: 0.98rem; color: #2F3E34; font-weight: 500;">
+                        {item['questionVi'] if st.session_state.lang == 'vi' else item['questionEn']}
                     </div>
-                    <div style="font-size: 0.85rem; color: #666; margin-top: 4px;">
-                        <b>{t('Lý giải:', 'Explanation:')}</b> {item.get('explanationVi', '') if st.session_state.lang == 'vi' else item.get('explanationEn', '')}
+                    <div style="background: #FAF7F2; padding: 10px 14px; border-radius: 8px; font-size: 0.88rem; margin: 8px 0;">
+                        <b>BEST:</b> {t('Bạn chọn', 'You picked')} <b style="color: {'green' if b_ok else 'red'};">{u_b or '--'}</b> ({t('Chuẩn', 'Key')}: <b style="color: green;">{c_b}</b>) &nbsp;|&nbsp;
+                        <b>WORST:</b> {t('Bạn chọn', 'You picked')} <b style="color: {'green' if w_ok else 'red'};">{u_w or '--'}</b> ({t('Chuẩn', 'Key')}: <b style="color: red;">{c_w}</b>)
+                    </div>
+                    <div style="margin-top: 10px; font-size: 0.9rem; font-weight: 600; color: #2F3E34;">
+                        🔍 {t('Phân tích chi tiết từng phương án A, B, C, D:', 'Option-by-Option (A-D) Analysis:')}
+                    </div>
+                """, unsafe_allow_html=True)
+
+                for opt_block in ad_info["options"]:
+                    st.markdown(f"""
+                    <div style="margin: 6px 0; padding: 8px 12px; border-radius: 8px; background: #FFFFFF; border: 1px solid #EADBCC; font-size: 0.88rem; line-height: 1.5;">
+                        <b style="color: {opt_block['tagColor']};">{opt_block['tag']} Phương án [{opt_block['key']}]:</b> {opt_block['text']}<br/>
+                        <span style="color: #555;">👉 <b>{t('Lý giải:', 'Why:')}</b> {opt_block['why']}</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+                st.markdown(f"""
+                    <div style="margin-top: 10px; font-size: 0.82rem; color: #1E4E79; background: #EBF3FA; padding: 6px 12px; border-radius: 6px;">
+                        📌 <b>{t('Dẫn nguồn kiểm chứng:', 'Verified Citation:')}</b> <a href="{ad_info['source']['verifiedUrl']}" target="_blank" style="color: #1E4E79; text-decoration: underline;">{ad_info['source']['sourceCode']}</a> — {ad_info['source']['referenceStandard']}
                     </div>
                 </div>
                 """, unsafe_allow_html=True)

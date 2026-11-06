@@ -1,20 +1,24 @@
 # -*- coding: utf-8 -*-
 """
-Daily 10-Question Targeted Practice for PCC Learning & Practice
+Daily 10-Question Targeted Practice for PCC Learning & Practice (Mentor Thi)
 Supports 10 Situational Judgment questions, 10 Knowledge MCQs, or 10 Bookmarked questions
-Features immediate feedback mode, dual Best/Worst validation, bookmarking, and dispute reporting.
+Features spaced repetition / de-duplication (hạn chế lặp lại tình huống), full A-D analysis, citations, and dispute reporting.
 """
 import streamlit as st
 import datetime
+from app_modules.question_helpers import format_ad_analysis, get_source_anchor
 
 def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
+    if "daily_seen_qids" not in st.session_state:
+        st.session_state.daily_seen_qids = []
+
     st.markdown(f"""
     <div style="margin-bottom: 20px;">
         <span class="zen-badge zen-badge-gold">⚡ {t('Rèn Phán Đoán Hàng Ngày', 'Daily Discipline')}</span>
-        <h2 style="margin: 8px 0; color: #2F3E34;">{t('Luyện Tập 10 Câu / Ngày (Targeted Drill)', 'Daily 10-Question Targeted Drill')}</h2>
+        <h2 style="margin: 8px 0; color: #2F3E34;">{t('Luyện Tập 10 Câu / Ngày (Hạn Chế Lặp Tình Huống)', 'Daily 10-Question Targeted Drill (Non-Repeating)')}</h2>
         <p style="font-size: 0.95rem; color: #5F6F65; line-height: 1.6;">
-            {t('Rèn luyện kỷ luật phán đoán tình huống: Mỗi ngày thực hành 10 câu hỏi để củng cố tư duy chánh niệm, nhận diện hành vi đạo đức và giữ trọn sự tự chủ của khách hàng.',
-               'Hone your situational judgment daily: Practice 10 curated questions to reinforce mindful coaching presence, ethical boundaries, and client autonomy.')}
+            {t('Rèn luyện kỷ luật phán đoán tình huống: Hệ thống tự động ưu tiên các tình huống bạn chưa làm để hạn chế lặp lại, cung cấp phân tích đa chiều A–D và trích dẫn chuẩn mực kiểm chứng.',
+               'Daily situational judgment practice: The system prioritizes unseen scenarios to avoid repetition, delivering in-depth A-D rationales and verified ICF citations.')}
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -45,29 +49,43 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
 
     is_study_mode = ("Học tập" in selected_mode or "Study" in selected_mode)
 
-    # Determine question pool
+    # Filter candidates based on pool
     if "đánh dấu" in selected_pool.lower() or "bookmarked" in selected_pool.lower():
         bm_ids = set(st.session_state.bookmarked_qids)
-        all_pool = [q for q in (PRACTICE_QUESTIONS + KNOWLEDGE_QUESTIONS) if q["id"] in bm_ids]
-        if not all_pool:
+        candidate_pool = [q for q in (PRACTICE_QUESTIONS + KNOWLEDGE_QUESTIONS) if q["id"] in bm_ids]
+        if not candidate_pool:
             st.info(t("Bạn chưa có câu hỏi nào trong danh sách Đánh dấu. Hãy bấm '☆ Đánh dấu' ở các câu hỏi để đưa vào đây!",
                       "No bookmarked questions yet. Click '☆ Bookmark' on any question to add it here!"))
-            target_questions = PRACTICE_QUESTIONS[:10]
-        else:
-            target_questions = all_pool[:10]
+            candidate_pool = PRACTICE_QUESTIONS
     elif "kiến thức" in selected_pool.lower() or "knowledge" in selected_pool.lower():
-        target_questions = KNOWLEDGE_QUESTIONS[:10]
+        candidate_pool = KNOWLEDGE_QUESTIONS
     else:
-        target_questions = PRACTICE_QUESTIONS[:10]
+        candidate_pool = PRACTICE_QUESTIONS
 
-    st.markdown(f"**{t('Đang làm bài:', 'Practicing:')}** {len(target_questions)} {t('câu hỏi', 'items')}")
-    st.markdown("<hr style='border: none; border-top: 1px solid #EADBCC; margin: 12px 0 20px 0;'/>", unsafe_allow_html=True)
+    # De-duplication logic (hạn chế lặp lại tình huống)
+    seen_set = set(st.session_state.daily_seen_qids)
+    unseen_candidates = [q for q in candidate_pool if q["id"] not in seen_set]
+    if len(unseen_candidates) < 10:
+        # Reset cycle if exhausted so user can practice again
+        unseen_candidates = candidate_pool
+        st.session_state.daily_seen_qids = []
+
+    target_questions = unseen_candidates[:10]
+
+    # De-duplication status banner
+    st.markdown(f"""
+    <div style="background: #FAF7F2; border: 1px solid #EADBCC; border-radius: 8px; padding: 8px 14px; margin-bottom: 16px; font-size: 0.85rem; color: #5F6F65; display: flex; justify-content: space-between;">
+        <span>🔄 <b>{t('Chống lặp câu:', 'Non-repeating drill:')}</b> {t('Đã ưu tiên 10 câu mới nhất trong kho dữ liệu.', 'Selected 10 fresh scenarios from question pool.')}</span>
+        <span>📊 {t('Số câu đã rèn luyện:', 'Total practiced:')} {len(st.session_state.daily_seen_qids)} / {len(candidate_pool)}</span>
+    </div>
+    """, unsafe_allow_html=True)
 
     # Question list
     for idx, q in enumerate(target_questions):
         qid = q["id"]
         is_knowledge = (q.get("type") != "icf_sjt" and "correctAnswer" in q)
         is_bm = qid in st.session_state.bookmarked_qids
+        ad_info = format_ad_analysis(q, lang=st.session_state.lang)
 
         st.markdown(f"""
         <div class="zen-card" style="border-left: 4px solid #8BA888; margin-bottom: 20px;">
@@ -100,6 +118,12 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
                     st.success(f"✅ {t('Chính xác!', 'Correct!')} {q['explanationVi'] if st.session_state.lang == 'vi' else q['explanationEn']}")
                 else:
                     st.error(f"❌ {t('Chưa chính xác.', 'Incorrect.')} {t('Đáp án đúng là:', 'Correct answer is:')} **{q['correctAnswer']}**.\n\n{q['explanationVi'] if st.session_state.lang == 'vi' else q['explanationEn']}")
+
+                st.markdown(f"""
+                <div style="font-size: 0.82rem; color: #1E4E79; background: #EBF3FA; padding: 6px 12px; border-radius: 6px; margin-top: 6px;">
+                    📌 <b>{t('Dẫn nguồn:', 'Source:')}</b> {ad_info['source']['sourceCode']} — {ad_info['source']['referenceStandard']}
+                </div>
+                """, unsafe_allow_html=True)
         else:
             # Situational Judgment Question (Best and Worst)
             col_b, col_w = st.columns(2)
@@ -144,6 +168,23 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
                     <div style="font-size: 0.85rem; color: #8C6D53; margin-top: 4px;">
                         <b>💡 {t('Dấu hiệu nhận diện:', 'Key Clue:')}</b> {q.get('keyClueVi', '') if st.session_state.lang == 'vi' else q.get('keyClueEn', '')}
                     </div>
+                    <div style="margin-top: 10px; font-size: 0.88rem; font-weight: 600;">
+                        🔍 {t('Phân tích A–D:', 'A-D Option Breakdown:')}
+                    </div>
+                """, unsafe_allow_html=True)
+
+                for opt_block in ad_info["options"]:
+                    st.markdown(f"""
+                    <div style="margin: 4px 0; padding: 6px 10px; border-radius: 6px; background: #FFFFFF; font-size: 0.85rem;">
+                        <b style="color: {opt_block['tagColor']};">{opt_block['tag']} [{opt_block['key']}]:</b> {opt_block['text']}<br/>
+                        <span style="color: #666;">👉 {opt_block['why']}</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+                st.markdown(f"""
+                    <div style="font-size: 0.82rem; color: #1E4E79; background: #EBF3FA; padding: 6px 10px; border-radius: 6px; margin-top: 8px;">
+                        📌 <b>{t('Dẫn nguồn:', 'Citation:')}</b> {ad_info['source']['sourceCode']} — {ad_info['source']['referenceStandard']}
+                    </div>
                 </div>
                 """, unsafe_allow_html=True)
 
@@ -159,13 +200,12 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
                 st.rerun()
 
         # Dispute / Feedback Expander
-        with st.expander("🚩 " + t("Phản ánh / Góp ý về câu hỏi này", "Flag / Dispute this question")):
+        with st.expander("🚩 " + t("Phản biện đáp án / Báo lỗi câu này", "Dispute Answer / Flag this Question")):
             dispute_text = st.text_input(
-                t("Nội dung phản ánh (Ví dụ: dịch chưa sát, phân vân giữa 2 đáp án...):",
-                  "Feedback / Dispute reason:"),
+                t("Nội dung phản biện hoặc góp ý:", "Your counter-argument or feedback:"),
                 key=f"disp_in_{qid}"
             )
-            if st.button("📨 " + t("Gửi Phản Hồi", "Submit Feedback"), key=f"btn_disp_sub_{qid}"):
+            if st.button("📨 " + t("Gửi Phản Biện Cho Ban Quản Trị", "Submit Dispute to Reviewers"), key=f"btn_disp_sub_{qid}"):
                 if dispute_text.strip():
                     log_entry = {
                         "id": f"DISP-{len(st.session_state.dispute_logs) + 1:04d}",
@@ -176,8 +216,8 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
                         "status": "Đang xem xét"
                     }
                     st.session_state.dispute_logs.append(log_entry)
-                    st.success(t("Cảm ơn bạn! Phản hồi đã được ghi nhận vào nhật ký quản trị.",
-                                 "Thank you! Your feedback has been recorded in the review log."))
+                    st.success(t("Cảm ơn bạn! Phản biện đã được ghi nhận vào nhật ký kiểm duyệt.",
+                                 "Thank you! Your dispute has been recorded in the review log."))
                 else:
                     st.warning(t("Vui lòng nhập nội dung trước khi gửi.", "Please enter your comments."))
 
@@ -189,6 +229,10 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
         max_pts = 0
         for q in target_questions:
             qid = q["id"]
+            # Add to de-duplication tracker
+            if qid not in st.session_state.daily_seen_qids:
+                st.session_state.daily_seen_qids.append(qid)
+
             ans = st.session_state.daily_answers.get(qid, {})
             if q.get("type") != "icf_sjt" and "correctAnswer" in q:
                 max_pts += 1
@@ -212,7 +256,7 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
             "profile": selected_pool,
             "rawScore": f"{total_pts}/{max_pts} ({pct}%)",
             "scaledScore": scaled_score,
-            "status": "Đạt" if scaled_score >= 460 else "Cần rèn thêm",
+            "status": "Đạt (Pass)" if scaled_score >= 460 else "Cần rèn thêm",
             "totalQuestions": len(target_questions)
         }
         st.session_state.exam_history.insert(0, history_entry)
@@ -223,5 +267,5 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
         ### 🎉 {t('Kết Quả Lượt Luyện Tập:', 'Drill Completed:')}
         - **{t('Điểm thô:', 'Raw Score:')}** {total_pts} / {max_pts} ({pct}%)
         - **{t('Điểm quy đổi ước tính (200-600):', 'Estimated Scaled Score:')}** {scaled_score} / 600 ({'ĐẠT CHUẨN 460' if scaled_score >= 460 else 'CẦN BỒI ĐẮP THÊM'})
-        - {t('Kết quả đã được ghi vào **Sổ Học Tập & Lịch Sử**.', 'Attempt logged to **Learning Journal & History**.')}
+        - {t('Đã tự động cập nhật hệ thống chống lặp để lượt thi sau xuất hiện các câu hỏi mới.', 'Anti-repetition system updated for subsequent practice sessions.')}
         """)

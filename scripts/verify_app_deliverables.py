@@ -4,10 +4,15 @@ Verification Script for PCC Learning & Practice
 Validates all data structures, requirements, constraints, and page modules.
 """
 import os
+import sys
 import json
 import re
 
-DATA_PATH = "data/mentor_data.json"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
+DATA_PATH = os.path.join(BASE_DIR, "data", "mentor_data.json")
 assert os.path.exists(DATA_PATH), f"Missing {DATA_PATH}"
 
 with open(DATA_PATH, "r", encoding="utf-8") as f:
@@ -92,6 +97,17 @@ py_compile.compile("app_modules/page_sjt.py", doraise=True)
 py_compile.compile("app_modules/page_journal.py", doraise=True)
 py_compile.compile("app_modules/page_admin.py", doraise=True)
 py_compile.compile("app_modules/page_pricing.py", doraise=True)
-print("✅ PASSED: All 12 Python modules compiled cleanly with zero syntax errors.")
+py_compile.compile("app_modules/question_helpers.py", doraise=True)
+py_compile.compile("app_modules/page_assistant.py", doraise=True)
+print("✅ PASSED: All 14 Python modules compiled cleanly with zero syntax errors.")
+
+# 8. Test A-D option analysis & source anchors
+from app_modules.question_helpers import format_ad_analysis, get_source_anchor
+test_q = sjt_q[0]
+ad_res = format_ad_analysis(test_q, lang="vi")
+assert len(ad_res["options"]) == 4, "Expected 4 options in A-D analysis"
+assert ad_res["source"]["sourceCode"], "Missing source code in citation"
+print("✅ PASSED: Full A-D option analysis and verified source citations verified.")
 
 print("\n🚀 ALL APP DELIVERABLES & INTEGRITY TESTS PASSED SUCCESSFULLY!")
+

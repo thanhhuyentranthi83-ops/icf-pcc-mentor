@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-PCC Learning & Practice
+Mentor Thi — PCC Learning & Practice
 Phụ đề: Hiểu chuẩn — Luyện phán đoán — Phát triển năng lực coaching.
+Vì ước mơ đưa Coaching thành lối sống.
 Ứng dụng độc lập phục vụ học tập; không tự nhận được ICF bảo trợ, chứng nhận hoặc phê duyệt. Không sử dụng logo ICF nếu chưa được phép.
 Triết lý thiết kế: Thiền Làng Mai (Plum Village Zen) — Tĩnh tại, mộc mạc, không hối thúc.
 Triển khai: Streamlit Community Cloud (share.streamlit.io) & GitHub Ready.
@@ -20,6 +21,7 @@ from app_modules.page_official_samples import render_official_samples_page
 from app_modules.page_curriculum import render_curriculum_page
 from app_modules.page_daily_practice import render_daily_practice_page
 from app_modules.page_sjt import render_sjt_page
+from app_modules.page_assistant import render_assistant_page
 from app_modules.page_journal import render_journal_page
 from app_modules.page_admin import render_admin_page
 from app_modules.page_pricing import render_pricing_page
@@ -28,7 +30,7 @@ from app_modules.page_pricing import render_pricing_page
 # 1. STREAMLIT PAGE CONFIG & ZEN CSS
 # ==========================================
 st.set_page_config(
-    page_title="PCC Learning & Practice 🪷",
+    page_title="Mentor Thi 🪷",
     page_icon="🪷",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -79,7 +81,7 @@ init_session_state(DATA)
 # 4. SIDEBAR (PLUM VILLAGE ZEN)
 # ==========================================
 with st.sidebar:
-    st.markdown("<h2 style='text-align: center; margin-bottom: 2px;'>🪷 PCC Learning & Practice</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; margin-bottom: 2px;'>🪷 Mentor Thi</h2>", unsafe_allow_html=True)
     st.markdown(f"<p style='text-align: center; color: #8C6D53; font-size: 0.85rem; margin-top: 0; font-weight: 500;'>{t('Hiểu chuẩn — Luyện phán đoán — Phát triển năng lực coaching', 'Master Standards — Hone Judgment — Elevate Coaching')}</p>", unsafe_allow_html=True)
     st.markdown(f"<p style='text-align: center; color: #5F6F65; font-size: 0.8rem; margin-top: -6px;'>{t('Vì ước mơ đưa Coaching thành lối sống', 'Making Coaching a Way of Life')}</p>", unsafe_allow_html=True)
     st.markdown("---")
@@ -139,28 +141,32 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
 # ==========================================
-# 5. TOP NAVIGATION BAR (2 ROWS FOR CLARITY)
+# 5. TOP NAVIGATION BAR (CLEAR CATEGORIES)
 # ==========================================
-# Row 1: Core Navigation
-r1_c1, r1_c2, r1_c3, r1_c4 = st.columns(4)
+# Row 1: Core Navigation (Home, Library, Official Samples, Curriculum, Assistant)
+r1_c1, r1_c2, r1_c3, r1_c4, r1_c5 = st.columns(5)
 with r1_c1:
     if st.button("🏠 " + t("Trang Chủ", "Home"), use_container_width=True, type="primary" if st.session_state.page == "home" else "secondary"):
         set_page("home")
         st.rerun()
 with r1_c2:
-    if st.button("🏛️ " + t("Thư Viện Chuẩn ICF", "Standards Library"), use_container_width=True, type="primary" if st.session_state.page == "library" else "secondary"):
+    if st.button("🏛️ " + t("Thư Viện Chuẩn", "Library"), use_container_width=True, type="primary" if st.session_state.page == "library" else "secondary"):
         set_page("library")
         st.rerun()
 with r1_c3:
-    if st.button("📑 " + t("8 Câu Mẫu ICF", "8 Official Samples"), use_container_width=True, type="primary" if st.session_state.page == "official_samples" else "secondary"):
+    if st.button("📑 " + t("8 Câu Mẫu ICF", "8 Samples"), use_container_width=True, type="primary" if st.session_state.page == "official_samples" else "secondary"):
         set_page("official_samples")
         st.rerun()
 with r1_c4:
     if st.button("📚 " + t("Lộ Trình Học", "Curriculum"), use_container_width=True, type="primary" if st.session_state.page == "curriculum" else "secondary"):
         set_page("curriculum")
         st.rerun()
+with r1_c5:
+    if st.button("🤖 " + t("Trợ Lý Học Tập", "AI Assistant"), use_container_width=True, type="primary" if st.session_state.page == "assistant" else "secondary"):
+        set_page("assistant")
+        st.rerun()
 
-# Row 2: Practice, Mock, Journal, Admin, Pricing
+# Row 2: Practice, Mock Simulator, Learning Journal, Admin, Pricing
 r2_c1, r2_c2, r2_c3, r2_c4, r2_c5 = st.columns(5)
 with r2_c1:
     if st.button("⚡ " + t("Luyện 10 Câu/Ngày", "Daily 10 Drill"), use_container_width=True, type="primary" if st.session_state.page == "daily_practice" else "secondary"):
@@ -201,6 +207,9 @@ elif cur_page == "official_samples":
 
 elif cur_page == "curriculum":
     render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS, CASE_STUDIES, QUIZZES, t)
+
+elif cur_page == "assistant":
+    render_assistant_page(t)
 
 elif cur_page == "daily_practice":
     render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t)
