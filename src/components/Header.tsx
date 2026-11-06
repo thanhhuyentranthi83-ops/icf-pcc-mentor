@@ -49,6 +49,14 @@ export default function Header() {
             {t("Trang chủ", "Home")}
           </Link>
           <Link
+            href="/curriculum"
+            className={`hover:text-zen-moss-dark transition-colors ${
+              pathname.startsWith("/curriculum") ? "text-zen-moss-dark font-semibold" : ""
+            }`}
+          >
+            {t("Lộ trình học", "Curriculum")}
+          </Link>
+          <Link
             href="/mock-exam"
             className={`hover:text-zen-moss-dark transition-colors ${
               pathname === "/mock-exam" ? "text-zen-moss-dark font-semibold" : ""

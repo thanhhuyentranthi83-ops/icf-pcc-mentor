@@ -844,7 +844,7 @@ for idx, th in enumerate(REFERRAL_THEORIES):
             "Apply accurately to real-world dilemmas with PDF citations."
         ],
         "sourceDocument": "Referring a Client to Therapy: A Set of Guidelines for Coaches (White Paper)",
-        "sourceVersion": "Tác giả: Angela M. Hullinger & Joel A. DiGirolamo (2018; Cập nhật trang web: 13/08/2026)",
+        "sourceVersion": "Tác giả: Alicia M. Hullinger & Joel A. DiGirolamo (2018; Cập nhật trang web: 13/08/2026)",
         "sourceLink": "https://coachingfederation.org/resource/referring-a-client-to-therapy/",
         "originalExcerptEn": f"Location in White Paper: {th['pdfLocation']}\n{th['contentEn'][:400]}...",
         "translationVi": th["contentVi"],

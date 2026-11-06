@@ -277,6 +277,152 @@ export const STICKERS = {json.dumps(stickers, indent=2, ensure_ascii=False)};
 export const SYSTEM_SETTINGS = {json.dumps(system_settings, indent=2, ensure_ascii=False)};
 
 export const DISCOUNT_CODES = {json.dumps(discount_codes, indent=2, ensure_ascii=False)};
+
+// Seed Aliases for Backward Compatibility
+export const SEED_SECTIONS: any = SECTIONS;
+export const SEED_THEORIES: any = THEORIES;
+export const SEED_KEYWORDS: any = KEYWORDS;
+export const SEED_FLASHCARDS: any = FLASHCARDS;
+export const SEED_CASE_STUDIES: any = CASE_STUDIES;
+export const SEED_QUIZZES: any = QUIZZES;
+export const SEED_FULL_MOCK_EXAM: any = PRACTICE_QUESTIONS;
+export const SEED_MINDFULNESS_MESSAGES: any = MINDFULNESS_MESSAGES;
+export const SEED_STICKERS: any = STICKERS;
+export const SEED_SYSTEM_SETTINGS: any = SYSTEM_SETTINGS;
+
+export const SEED_USERS: any = [
+  {{
+    id: "usr-admin",
+    email: "admin@pcc.vn",
+    fullName: "Super Admin Tâm An",
+    role: "super_admin",
+    tier: "12_months",
+    tierExpiresAt: "2027-12-31T23:59:59Z",
+    streakCount: 28,
+    lastActiveDate: "2026-11-03",
+    selectedStickerPack: "monk_welcome",
+    minimalMode: false,
+    soundEnabled: true
+  }},
+  {{
+    id: "usr-editor",
+    email: "editor@pcc.vn",
+    fullName: "Biên Tập Viên Tuệ Minh",
+    role: "editor",
+    tier: "12_months",
+    tierExpiresAt: "2027-12-31T23:59:59Z",
+    streakCount: 14,
+    lastActiveDate: "2026-11-03",
+    selectedStickerPack: "lotus_blooming",
+    minimalMode: false,
+    soundEnabled: true
+  }},
+  {{
+    id: "usr-billing",
+    email: "billing@pcc.vn",
+    fullName: "Thu Ngân Diệu Thiện",
+    role: "billing",
+    tier: "12_months",
+    tierExpiresAt: "2027-12-31T23:59:59Z",
+    streakCount: 7,
+    lastActiveDate: "2026-11-03",
+    selectedStickerPack: "cat_zen",
+    minimalMode: false,
+    soundEnabled: true
+  }},
+  {{
+    id: "usr-free",
+    email: "student.free@pcc.vn",
+    fullName: "Học Viên Minh Đức (Gói Free)",
+    role: "student",
+    tier: "free",
+    tierExpiresAt: null,
+    streakCount: 3,
+    lastActiveDate: "2026-11-03",
+    selectedStickerPack: "sprout_seed",
+    minimalMode: false,
+    soundEnabled: true
+  }},
+  {{
+    id: "usr-1m",
+    email: "student.1m@pcc.vn",
+    fullName: "Học Viên Thu Hương (Gói 1 Tháng)",
+    role: "student",
+    tier: "1_month",
+    tierExpiresAt: "2026-11-30T23:59:59Z",
+    streakCount: 9,
+    lastActiveDate: "2026-11-03",
+    selectedStickerPack: "streak_7days",
+    minimalMode: false,
+    soundEnabled: true
+  }},
+  {{
+    id: "usr-6m",
+    email: "student.6m@pcc.vn",
+    fullName: "Học Viên Bảo Nam (Gói 6 Tháng)",
+    role: "student",
+    tier: "6_months",
+    tierExpiresAt: "2027-04-30T23:59:59Z",
+    streakCount: 18,
+    lastActiveDate: "2026-11-03",
+    selectedStickerPack: "lotus_blooming",
+    minimalMode: false,
+    soundEnabled: true
+  }},
+  {{
+    id: "usr-12m",
+    email: "student.12m@pcc.vn",
+    fullName: "Học Viên Trọng Nghĩa (Gói 12 Tháng)",
+    role: "student",
+    tier: "12_months",
+    tierExpiresAt: "2027-10-31T23:59:59Z",
+    streakCount: 45,
+    lastActiveDate: "2026-11-03",
+    selectedStickerPack: "streak_30days",
+    minimalMode: false,
+    soundEnabled: true
+  }}
+];
+
+export const SEED_ORDERS: any = [
+  {{
+    id: "ord-demo-01",
+    userId: "usr-1m",
+    orderCode: "PCC-1001-A89",
+    tierId: "1_month",
+    amount: 299000,
+    status: "approved",
+    receiptUrl: "/receipts/receipt-demo-1.png",
+    approvedBy: "usr-billing",
+    approvedAt: "2026-11-01T10:30:00Z",
+    createdAt: "2026-11-01T10:15:00Z",
+    updatedAt: "2026-11-01T10:30:00Z"
+  }},
+  {{
+    id: "ord-demo-02",
+    userId: "usr-6m",
+    orderCode: "PCC-1002-B72",
+    tierId: "6_months",
+    amount: 1190000,
+    status: "approved",
+    receiptUrl: "/receipts/receipt-demo-2.png",
+    approvedBy: "usr-billing",
+    approvedAt: "2026-10-31T15:20:00Z",
+    createdAt: "2026-10-31T15:00:00Z",
+    updatedAt: "2026-10-31T15:20:00Z"
+  }},
+  {{
+    id: "ord-demo-03",
+    userId: "usr-free",
+    orderCode: "PCC-1003-C34",
+    tierId: "6_months",
+    amount: 1190000,
+    status: "pending_approval",
+    receiptUrl: "/receipts/receipt-demo-3.png",
+    createdAt: "2026-11-03T14:30:00Z",
+    updatedAt: "2026-11-03T14:30:00Z"
+  }}
+];
 """
 
 with open(SEED_TS_PATH, "w", encoding="utf-8") as f:

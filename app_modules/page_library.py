@@ -177,7 +177,7 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
             </div>
             <h3 style="color: #2F3E34; margin: 8px 0 4px 0;">🚪 {t('Chuyên Đề: Chuyển Gửi Khách Hàng Sang Trị Liệu & Ranh Giới Coaching', 'Special Topic: Referring a Client to Therapy & Boundaries')}</h3>
             <p style="font-size: 0.85rem; color: #8C6D53; margin: 0 0 10px 0;">
-                <b>{t('Tác giả:', 'Authors:')}</b> Angela M. Hullinger, MS, ACC & Joel A. DiGirolamo, MS, PCC (2018).<br/>
+                <b>{t('Tác giả:', 'Authors:')}</b> Alicia M. Hullinger, PhD, ACC & Joel A. DiGirolamo, MS, PCC (2018).<br/>
                 <i>* {t('Bản dịch phục vụ học tập, không phải bản dịch chính thức của ICF. Quyền sử dụng phi thương mại kèm ghi nhận tác quyền ICF.', 'Educational study translation; not an official ICF translation. Non-commercial reference with ICF attribution.')}</i>
             </p>
             <div style="font-size: 0.85rem; margin-bottom: 12px;">

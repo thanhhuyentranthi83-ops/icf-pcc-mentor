@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { useSound } from "@/context/SoundContext";
@@ -8,9 +8,15 @@ import { useAuth } from "@/context/AuthContext";
 import {
   getSections,
   getDailyMindfulnessMessage,
-  getLotusGarden,
   LotusGardenState
 } from "@/lib/db";
+import {
+  ICF_7_MODULES,
+  getCurriculumProgress,
+  computeModuleProgress,
+  computeOverallProgress,
+  UserLessonProgress
+} from "@/lib/curriculumData";
 import { Section, MindfulnessMessage } from "@/types";
 import LotusGarden from "@/components/LotusGarden";
 import NatureIcon from "@/components/NatureIcon";
@@ -22,30 +28,53 @@ import {
   Lock,
   CheckCircle2,
   Mountain,
-  Compass
+  Compass,
+  GraduationCap,
+  BookOpen,
+  ArrowRight
 } from "lucide-react";
 
 export default function HomePage() {
   const { t } = useLanguage();
   const { ringBell } = useSound();
-  const { user, canAccessSection, canAccessPaidContent } = useAuth();
+  const { user, canAccessSection } = useAuth();
 
   const [sections, setSections] = useState<Section[]>([]);
   const [dailyMsg, setDailyMsg] = useState<MindfulnessMessage | null>(null);
+  const [curriculumProg, setCurriculumProg] = useState<Record<string, UserLessonProgress>>({});
   const [garden, setGarden] = useState<LotusGardenState>({
-    seedsPlanted: 12,
-    sproutsGrown: 8,
-    lotusesBloomed: 4,
-    butterfliesUnlocked: 2,
-    dragonfliesUnlocked: 1
+    seedsPlanted: 0,
+    sproutsGrown: 0,
+    lotusesBloomed: 0,
+    butterfliesUnlocked: 0,
+    dragonfliesUnlocked: 0
   });
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     setSections(getSections());
     setDailyMsg(getDailyMindfulnessMessage());
-    setGarden(getLotusGarden(user.id));
+    
+    // Load real curriculum progress
+    const cProg = getCurriculumProgress();
+    setCurriculumProg(cProg);
+
+    // Compute genuine lotus blooms from real study progress (Zero fake streaks / numbers)
+    const passedQuizzes = Object.values(cProg).filter((p) => p.status === "quiz_passed").length;
+    const readLessons = Object.values(cProg).filter((p) => p.status === "read" || p.status === "quiz_passed").length;
+    const realBloomed = passedQuizzes + Math.floor(readLessons / 2);
+
+    setGarden({
+      seedsPlanted: Math.max(0, 26 - readLessons),
+      sproutsGrown: readLessons,
+      lotusesBloomed: realBloomed,
+      butterfliesUnlocked: Math.floor(realBloomed / 2),
+      dragonfliesUnlocked: Math.floor(realBloomed / 4)
+    });
   }, [user.id]);
+
+  // Overall stats for 7 ICF modules
+  const overallStats = useMemo(() => computeOverallProgress(curriculumProg), [curriculumProg]);
 
   // Root sections
   const rootSections = sections.filter((s) => !s.parentId).sort((a, b) => a.orderIndex - b.orderIndex);
@@ -97,7 +126,147 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Quick Search & Micro-Learning Bar */}
+      {/* 2. KHỐI LỘ TRÌNH HỌC TÀI LIỆU ICF (7 HỌC PHẦN THEO ĐÚNG THỨ TỰ) */}
+      <section className="space-y-4">
+        <div className="rounded-3xl border border-zen-border bg-zen-paper p-6 sm:p-8 shadow-zen-card space-y-6">
+          {/* Header & Overall Progress */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-zen-border/60 pb-6">
+            <div className="space-y-2 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zen-moss/15 text-zen-moss-dark text-xs font-semibold">
+                <GraduationCap className="w-3.5 h-3.5 text-zen-moss-dark" />
+                <span>{t("Lộ Trình Học Tập Tỉnh Thức Chuẩn ICF", "Official ICF Document Pathway")}</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-zen-ink">
+                {t("Lộ trình học tài liệu ICF", "ICF Document Curriculum Pathway")}
+              </h2>
+              <p className="text-xs sm:text-sm text-zen-muted leading-relaxed">
+                {t(
+                  "Học tuần tự 7 nhóm tài liệu chuẩn hóa từ ICF. Hiểu sâu chuẩn mực — Vững vàng phán đoán — Phát triển năng lực coaching.",
+                  "Master all 7 official ICF document sets in strict sequence. Master standards — Hone judgment — Elevate coaching."
+                )}
+              </p>
+              <p className="text-[11px] text-zen-wood italic">
+                * {t(
+                  "Bản dịch phục vụ học tập, không phải bản dịch chính thức của ICF. Phân định rõ ràng giữa quy chuẩn chính thức và phần diễn giải học tập.",
+                  "Educational study translation; not an official ICF translation. Clear distinction between official standards and pedagogical commentary."
+                )}
+              </p>
+            </div>
+
+            {/* Overall Progress Box */}
+            <div className="bg-white/90 border border-zen-border rounded-2xl p-5 shrink-0 min-w-[240px] text-center shadow-zen-subtle space-y-2.5">
+              <span className="text-xs text-zen-muted font-medium block">
+                {t("Tiến độ tổng thể 7 học phần", "Overall 7-Module Progress")}
+              </span>
+              <div className="flex items-center justify-center gap-2">
+                <span className="font-serif text-3xl font-bold text-zen-moss-dark">
+                  {overallStats.overallPercent}%
+                </span>
+                <span className="text-xs text-zen-ink/70">
+                  ({overallStats.completedLessons}/{overallStats.totalLessons} {t("bài xong", "done")})
+                </span>
+              </div>
+              <div className="w-full h-2 rounded-full bg-zen-surface overflow-hidden">
+                <div
+                  className="h-full bg-zen-moss-dark transition-all duration-300"
+                  style={{ width: `${overallStats.overallPercent}%` }}
+                />
+              </div>
+              <Link
+                href="/curriculum"
+                className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-xl bg-zen-moss-dark hover:bg-zen-moss-dark/90 text-white text-xs font-semibold shadow-zen-subtle transition-all mt-1"
+              >
+                {overallStats.completedLessons > 0
+                  ? t("Tiếp tục học lộ trình →", "Continue Pathway →")
+                  : t("Bắt đầu học từ Bài 1 →", "Start from Lesson 1 →")}
+              </Link>
+            </div>
+          </div>
+
+          {/* 7 Modules Grid in Exact Strict Order */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {ICF_7_MODULES.map((mod, index) => {
+              const stats = computeModuleProgress(mod.id, curriculumProg);
+              const hasStarted = stats.completed > 0;
+              const isCompleted = stats.percent === 100;
+
+              return (
+                <div
+                  key={mod.id}
+                  className="rounded-2xl border border-zen-border/80 bg-white p-5 flex flex-col justify-between hover:shadow-zen-floating transition-all group"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="w-7 h-7 rounded-lg bg-zen-moss/10 text-zen-moss-dark font-mono font-bold text-xs flex items-center justify-center">
+                          0{index + 1}
+                        </span>
+                        <span className="text-xl">{mod.icon}</span>
+                      </div>
+                      <span
+                        className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                          isCompleted
+                            ? "bg-emerald-100 text-emerald-800"
+                            : hasStarted
+                            ? "bg-amber-100 text-amber-800"
+                            : "bg-zen-surface text-zen-muted"
+                        }`}
+                      >
+                        {isCompleted
+                          ? t("Đã xong", "Completed")
+                          : hasStarted
+                          ? t("Đang học", "In Progress")
+                          : t("Chưa học", "Not Started")}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h3 className="font-serif text-base font-bold text-zen-ink group-hover:text-zen-moss-dark transition-colors line-clamp-1">
+                        {t(
+                          mod.titleVi.split(":")[1]?.trim() || mod.titleVi,
+                          mod.titleEn.split(":")[1]?.trim() || mod.titleEn
+                        )}
+                      </h3>
+                      <p className="text-xs text-zen-muted line-clamp-2 mt-1 leading-relaxed">
+                        {t(mod.summaryVi, mod.summaryEn)}
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5 pt-2 border-t border-zen-border/50 text-[11px]">
+                      <div className="flex items-center justify-between text-zen-wood">
+                        <span className="font-medium">
+                          {mod.id === "mod-7"
+                            ? t("12 Thuật ngữ + Flashcard + Bài tập", "12 Terms + Flashcards + Drills")
+                            : t(`${mod.lessons.length} bài học có nội dung`, `${mod.lessons.length} lessons with content`)}
+                        </span>
+                        <span className="font-bold text-zen-moss-dark">{stats.percent}%</span>
+                      </div>
+                      <div className="w-full h-1.5 rounded-full bg-zen-surface overflow-hidden">
+                        <div
+                          className="h-full bg-zen-moss transition-all duration-300"
+                          style={{ width: `${stats.percent}%` }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 mt-2">
+                    <Link
+                      href={`/curriculum?module=${mod.id}`}
+                      className="w-full py-2 px-3 rounded-xl border border-zen-border bg-zen-surface/60 hover:bg-zen-moss-dark hover:text-white hover:border-zen-moss-dark text-zen-ink text-xs font-semibold flex items-center justify-center gap-1.5 transition-all shadow-zen-subtle"
+                    >
+                      <span>{hasStarted ? t("Tiếp tục học", "Continue") : t("Bắt đầu học", "Start Learning")}</span>
+                      <ChevronRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Quick Search & Micro-Learning Bar */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Quick Search */}
         <div className="md:col-span-2 relative">
@@ -132,7 +301,7 @@ export default function HomePage() {
 
         {/* Micro-learning: "Một tách trà học" */}
         <Link
-          href="/sections/sec-a1-1"
+          href="/curriculum?module=mod-1"
           className="flex items-center justify-between p-3.5 rounded-2xl border border-zen-border bg-zen-surface hover:bg-zen-surface/80 text-zen-ink transition-all shadow-zen-subtle group"
         >
           <div className="flex items-center gap-2.5">
@@ -152,12 +321,12 @@ export default function HomePage() {
         </Link>
       </section>
 
-      {/* 3. Lotus Garden Progress */}
+      {/* 4. Lotus Garden Progress (Connected to Genuine Accomplishments) */}
       <section>
         <LotusGarden garden={garden} streakCount={user.streakCount} />
       </section>
 
-      {/* 4. Full PCC Mock Exam Highlight Card */}
+      {/* 5. Full PCC Mock Exam Highlight Card */}
       <section className="relative overflow-hidden rounded-3xl border-2 border-zen-ochre/40 bg-gradient-to-r from-amber-50/70 via-zen-paper to-amber-50/50 p-6 sm:p-8 shadow-zen-card">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="space-y-2 max-w-xl">
@@ -186,7 +355,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Nature-Themed Sections Tree */}
+      {/* 6. Nature-Themed Sections Tree */}
       <section className="space-y-4">
         <div className="flex items-center justify-between">
           <div>

@@ -4,17 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
-import { Home, BookOpen, Search, Sparkles, User } from "lucide-react";
+import { Home, BookOpen, GraduationCap, Search, Sparkles, User } from "lucide-react";
 
 export default function MobileNav() {
   const pathname = usePathname();
   const { t } = useLanguage();
 
   const navItems = [
-    { href: "/", label: t("Home", "Home"), icon: Home },
-    { href: "/mock-exam", label: t("Học & Thi", "Learn"), icon: BookOpen },
+    { href: "/", label: t("Trang chủ", "Home"), icon: Home },
+    { href: "/curriculum", label: t("Lộ trình", "Curriculum"), icon: GraduationCap },
+    { href: "/mock-exam", label: t("Thi thử", "Exam"), icon: BookOpen },
     { href: "/search", label: t("Tra cứu", "Search"), icon: Search },
-    { href: "/pricing", label: t("Gói học", "Tiers"), icon: Sparkles },
     { href: "/profile", label: t("Tài khoản", "Account"), icon: User }
   ];
 
