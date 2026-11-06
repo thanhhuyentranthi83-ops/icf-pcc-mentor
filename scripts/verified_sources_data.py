@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Verified official ICF sources metadata checked on 2026-11-06.
+Includes 9 directly verified authoritative documents from ICF and Pearson VUE.
 """
 
 VERIFIED_SOURCES = [
@@ -79,7 +80,7 @@ VERIFIED_SOURCES = [
         "titleVi": "Tiêu Chí Đánh Giá Thực Hành Cấp Độ PCC (PCC Markers)",
         "titleEn": "Criteria for Assessing Coaching at the PCC Credential Level (PCC Minimum Skills Requirements)",
         "issuingBody": "ICF Credentials and Standards",
-        "url": "https://coachingfederation.org/credentialing/performance-evaluations/criteria-for-assessing-pcc/ ",
+        "url": "https://coachingfederation.org/credentialing/performance-evaluations/criteria-for-assessing-pcc/",
         "versionEffectiveDate": "Chuẩn đánh giá hiện hành cho Performance Evaluation",
         "lastVerifiedDate": "2026-11-06",
         "scope": "Đánh giá băng ghi âm phiên khai vấn thực tế (KHÔNG PHẢI đáp án máy móc cho bài thi trắc nghiệm)",
@@ -101,6 +102,44 @@ VERIFIED_SOURCES = [
         "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
         "summaryVi": "Quy chế phòng thi, hướng dẫn làm quen giao diện (Tutorial), điều kiện an ninh phòng thi và quy định đổi lịch/hủy lịch trước ít nhất 48 giờ.",
         "summaryEn": "Delivery platform specifications, exam interface tutorial, candidate security agreement, and 48-hour reschedule/cancelation policies."
+    },
+    {
+        "id": "src-08",
+        "titleVi": "Hướng Dẫn Chuyển Gửi Khách Hàng Sang Trị Liệu (White Paper Đầy Đủ)",
+        "titleEn": "Referring a Client to Therapy: A Set of Guidelines for Coaches",
+        "authors": "Angela M. Hullinger, MS, ACC & Joel A. DiGirolamo, MS, PCC",
+        "publicationYear": 2018,
+        "issuingBody": "International Coaching Federation (ICF Research)",
+        "url": "https://coachingfederation.org/resource/referring-a-client-to-therapy/",
+        "pdfUrl": "https://coachingfederation.org/wp-content/uploads/2024/12/icf-research-guide-referring-client-to-therapy.pdf",
+        "webPublishDate": "13/11/2024",
+        "webRevisionDate": "13/08/2026",
+        "lastVerifiedDate": "2026-11-06",
+        "contentVersion": "Bản hướng dẫn nghiên cứu xuất bản năm 2018 (Hullinger & DiGirolamo, 2018; cập nhật trang 13/08/2026)",
+        "scope": "Chuyên đề chuyên môn về ranh giới giữa coaching và trị liệu, dấu hiệu nhận diện, quy trình trao đổi chuyển gửi không gán nhãn, và xử lý bảo mật/khẩn cấp",
+        "languageStatus": "Tiếng Anh (Bản dịch tiếng Việt phục vụ học tập)",
+        "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
+        "usageRights": "Cho phép sao chép/sử dụng phi thương mại kèm ghi nhận bản quyền ICF; không mặc định bao hàm quyền thương mại hoặc toàn quyền phái sinh.",
+        "summaryVi": "Tài liệu hướng dẫn chuyên sâu của ICF Research hỗ trợ coach nhận biết giới hạn năng lực, không tự ý chẩn đoán tâm lý, không tự động chuyển gửi chỉ vì khách buồn/khóc, phân biệt chuyển gửi thông thường với tình huống cấp cứu, và quy trình theo dõi/coaching song song hợp đạo đức.",
+        "summaryEn": "Comprehensive ICF Research white paper guiding coaches on recognizing competence limits, avoiding diagnostic labeling, maintaining presence with strong emotions, distinguishing routine referrals from crises, and ethical follow-up or parallel coaching."
+    },
+    {
+        "id": "src-09",
+        "titleVi": "Tổng Quan Quy Trình Chuyển Gửi Khách Hàng (Tài Liệu 1 Trang)",
+        "titleEn": "One-Page Client Referral Overview",
+        "issuingBody": "International Coaching Federation (ICF)",
+        "url": "https://coachingfederation.org/resource/client-referral/",
+        "pdfUrl": "https://coachingfederation.org/wp-content/uploads/2024/12/icf-research-client-referral-overview.pdf",
+        "webPublishDate": "13/11/2024",
+        "webRevisionDate": "19/12/2024",
+        "lastVerifiedDate": "2026-11-06",
+        "contentVersion": "Bản tóm tắt 1 trang (cập nhật trang 19/12/2024)",
+        "scope": "Tóm tắt nhanh quy trình chuyển gửi, trách nhiệm đạo đức và trao đổi cởi mở với khách hàng",
+        "languageStatus": "Tiếng Anh (Bản dịch tiếng Việt phục vụ học tập)",
+        "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
+        "usageRights": "Tài liệu tham khảo mở phi thương mại từ ICF",
+        "summaryVi": "Bản cô đọng 1 trang tóm tắt các bước cốt lõi khi coach cần cân nhắc chuyển gửi khách hàng sang chuyên gia trợ giúp khác mà vẫn duy trì sự tôn trọng và đồng thuận của khách hàng.",
+        "summaryEn": "One-page executive overview outlining core referral considerations, ethical duties, and supportive dialog with clients."
     }
 ]
 

@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Curriculum Page for PCC Learning & Practice
-9 Leaf Study Units with 6 Tabs (Theory, Keywords, 10 Flashcards, Case Study, 10 Quizzes, Notes)
+Curriculum Page for Mentor Thi (PCC Learning & Practice)
+10 Leaf Study Units (9 Core Competencies Units + 1 Special Referral Topic Unit)
+Features 6 Tabs: Theory (with 7 sub-lessons for special topic), Keywords, 10 Flashcards, Case Study, 10 Quizzes, Notes.
 """
 import streamlit as st
 
@@ -12,7 +13,10 @@ def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS,
         sec_id = STUDY_SECTIONS[0]["id"]
         st.session_state.current_section = sec_id
 
-    curr_sec = sec_dict.get(sec_id, STUDY_SECTIONS[0])
+    curr_sec = sec_dict.get(sec_id, STUDY_SECTIONS[0] if STUDY_SECTIONS else {})
+    if not curr_sec:
+        st.info("Chưa có dữ liệu bài học.")
+        return
 
     st.markdown(f"""
     <div style="margin-bottom: 16px;">
@@ -28,10 +32,11 @@ def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS,
     sec_options = [s["id"] for s in STUDY_SECTIONS]
     def format_sec(sid):
         s = sec_dict[sid]
-        return f"[{s['id']}] {s['titleVi'] if st.session_state.lang == 'vi' else s['titleEn']}"
+        prefix = "🌟 [CHUYÊN ĐỀ] " if "referral" in sid else f"[{s['id']}] "
+        return f"{prefix}{s['titleVi'] if st.session_state.lang == 'vi' else s['titleEn']}"
 
     chosen_sec = st.selectbox(
-        "🌿 " + t("Chọn bài học năng lực:", "Select study unit:"),
+        "🌿 " + t("Chọn bài học năng lực hoặc chuyên đề:", "Select study unit or special topic:"),
         options=sec_options,
         index=sec_options.index(sec_id) if sec_id in sec_options else 0,
         format_func=format_sec
@@ -49,9 +54,22 @@ def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS,
     sec_case = CASE_STUDIES.get(sec_id, {})
     sec_quizzes = [qz for qz in QUIZZES if qz.get("sectionId") == sec_id]
 
+    # If referral section, dynamically harvest terms from the 7 lessons if sec_keywords is empty
+    if sec_id == "sec-referral-special" and not sec_keywords and theory.get("lessons"):
+        for les in theory.get("lessons", []):
+            for tm in les.get("terms", []):
+                sec_keywords.append({
+                    "sectionId": "sec-referral-special",
+                    "termVi": tm["vi"],
+                    "termEn": tm["en"],
+                    "definitionVi": tm["desc"],
+                    "definitionEn": tm["desc"],
+                    "contextVi": f"Trích xuất từ {les['titleVi']} ({les.get('pdfLocation', '')})"
+                })
+
     tab_th, tab_kw, tab_fc, tab_cs, tab_qz, tab_note = st.tabs([
         "📖 " + t("Lý Thuyết Chuẩn", "Theory"),
-        "🏷️ " + t("Từ Vựng & Khái Niệm", "Keywords"),
+        f"🏷️ {t('Từ Vựng & Khái Niệm', 'Keywords')} ({len(sec_keywords)})",
         f"🗂️ {t('10 Thẻ Flashcard', '10 Flashcards')} ({len(sec_flashcards)})",
         "🎭 " + t("Tình Huống Thực Tế", "Case Study"),
         f"📝 {t('10 Mini Quiz', '10 Mini Quizzes')} ({len(sec_quizzes)})",
@@ -61,14 +79,55 @@ def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS,
     # TAB 1: THEORY
     with tab_th:
         if theory:
-            st.markdown(f"""
-            <div class="zen-card">
-                <h3 style="color: #2F3E34; margin-top: 0;">{theory.get('titleVi', '') if st.session_state.lang == 'vi' else theory.get('titleEn', '')}</h3>
-                <div style="font-size: 0.95rem; line-height: 1.7; color: #2C3E50;">
-                    {theory.get('contentVi', '') if st.session_state.lang == 'vi' else theory.get('contentEn', '')}
+            # If the theory has structured lessons (like the 7 referral lessons)
+            if theory.get("lessons"):
+                st.markdown(f"""
+                <div class="zen-card" style="margin-bottom: 14px; border-left: 4px solid #9C4158;">
+                    <h3 style="color: #2F3E34; margin: 0 0 6px 0;">{theory.get('titleVi', '') if st.session_state.lang == 'vi' else theory.get('titleEn', '')}</h3>
+                    <p style="font-size: 0.85rem; color: #8C6D53; margin: 0;">
+                        <i>* Căn cứ nghiên cứu: Hullinger & DiGirolamo (2018). Bản dịch phục vụ học tập, không phải bản dịch chính thức của ICF.</i>
+                    </p>
                 </div>
-            </div>
-            """, unsafe_allow_html=True)
+                """, unsafe_allow_html=True)
+
+                lesson_titles = [f"{les['titleVi']} ({les.get('pdfLocation', '')})" for les in theory["lessons"]]
+                chosen_lesson_idx = st.selectbox(
+                    "📑 " + t("Chọn bài học trong chuyên đề (1–7):", "Select lesson in special topic (1–7):"),
+                    options=range(len(lesson_titles)),
+                    format_func=lambda idx: lesson_titles[idx]
+                )
+                selected_lesson = theory["lessons"][chosen_lesson_idx]
+
+                st.markdown(f"""
+                <div class="zen-card" style="border-left: 3px solid #8BA888;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span class="zen-badge zen-badge-primary">Bài {selected_lesson.get('lessonNumber', chosen_lesson_idx + 1)} / 7</span>
+                        <span class="zen-badge zen-badge-gold">{selected_lesson.get('pdfLocation', '')}</span>
+                    </div>
+                    <h4 style="color: #2F3E34; margin-top: 0;">
+                        {selected_lesson.get('titleVi', '') if st.session_state.lang == 'vi' else selected_lesson.get('titleEn', '')}
+                    </h4>
+                    <div style="font-size: 0.95rem; line-height: 1.7; color: #2C3E50;">
+                        {selected_lesson.get('contentVi', '') if st.session_state.lang == 'vi' else selected_lesson.get('contentEn', '')}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+                if selected_lesson.get("terms"):
+                    st.markdown(f"##### 🏷️ {t('Thuật ngữ then chốt bài này:', 'Key Terms in this Lesson:')}")
+                    for tm in selected_lesson["terms"]:
+                        st.markdown(f"- **{tm['vi']}** *({tm['en']})*: {tm['desc']}")
+
+            else:
+                st.markdown(f"""
+                <div class="zen-card">
+                    <h3 style="color: #2F3E34; margin-top: 0;">{theory.get('titleVi', '') if st.session_state.lang == 'vi' else theory.get('titleEn', '')}</h3>
+                    <div style="font-size: 0.95rem; line-height: 1.7; color: #2C3E50;">
+                        {theory.get('contentVi', '') if st.session_state.lang == 'vi' else theory.get('contentEn', '')}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
             if theory.get("keyPointsVi") or theory.get("keyPointsEn"):
                 points = theory.get("keyPointsVi", []) if st.session_state.lang == "vi" else theory.get("keyPointsEn", [])
                 st.markdown(f"#### 💡 {t('Các điểm cốt lõi cần nhớ:', 'Essential Key Takeaways:')}")
@@ -106,6 +165,7 @@ def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS,
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
                 <span class="zen-badge zen-badge-primary">{t('Thẻ', 'Card')} {fc_idx + 1} / {len(sec_flashcards)}</span>
                 <span class="zen-badge zen-badge-gold">{t('Hộp Leitner', 'Leitner Box')}: {card.get('box', 1)}</span>
+                {f'<span class="zen-badge zen-badge-blue">Nguồn: {card["source"]}</span>' if card.get("source") else ''}
             </div>
             """, unsafe_allow_html=True)
 
@@ -159,24 +219,65 @@ def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS,
     # TAB 4: CASE STUDY
     with tab_cs:
         if sec_case:
+            sc_text = sec_case.get('scenarioVi', sec_case.get('contextVi', '')) if st.session_state.lang == 'vi' else sec_case.get('scenarioEn', sec_case.get('contextEn', ''))
+            
             st.markdown(f"""
             <div class="zen-card">
                 <span class="zen-badge zen-badge-pink">🎭 {t('Tình Huống Thực Tế & Luyện Tư Duy Phán Đoán', 'Real Case Study & Judgment Drill')}</span>
                 <h3 style="color: #2F3E34; margin: 10px 0;">{sec_case.get('titleVi', '') if st.session_state.lang == 'vi' else sec_case.get('titleEn', '')}</h3>
                 <div style="background: #FAF7F2; padding: 16px; border-radius: 10px; margin-bottom: 14px; border-left: 3px solid #8BA888;">
                     <b>{t('Bối cảnh khách hàng:', 'Client Scenario:')}</b><br/>
-                    {sec_case.get('scenarioVi', '') if st.session_state.lang == 'vi' else sec_case.get('scenarioEn', '')}
-                </div>
-                <div style="font-size: 0.92rem; line-height: 1.6; color: #333; margin-bottom: 12px;">
-                    <b>{t('Phản hồi mẫu của Coach (Tôn trọng tự chủ, không suy diễn):', 'Exemplary Coach Response (Objective, No Projection):')}</b><br/>
-                    <i>"{sec_case.get('coachResponseVi', '') if st.session_state.lang == 'vi' else sec_case.get('coachResponseEn', '')}"</i>
-                </div>
-                <div style="background: #FFFFFF; border: 1px dashed #D8C7B5; padding: 14px; border-radius: 8px; font-size: 0.88rem; color: #5F6F65;">
-                    <b>💡 {t('Phân tích phản hồi & Lăng kính năng lực:', 'Analysis & Competency Lens:')}</b><br/>
-                    {sec_case.get('analysisVi', '') if st.session_state.lang == 'vi' else sec_case.get('analysisEn', '')}
+                    {sc_text}
                 </div>
             </div>
             """, unsafe_allow_html=True)
+
+            # If dialogue exists (interactive conversation format)
+            if sec_case.get("dialogue"):
+                st.markdown(f"#### 🎙️ {t('Đoạn Hội Thoại Thực Tế Giữa Coach & Khách Hàng:', 'Authentic Dialogue Between Coach & Client:')}")
+                for turn in sec_case["dialogue"]:
+                    spk = turn.get("speaker", "Coach")
+                    is_coach = (spk == "Coach")
+                    bg_col = "#EBF3ED" if is_coach else "#FAF7F2"
+                    border_col = "#8BA888" if is_coach else "#D8C7B5"
+                    txt = turn.get("textVi", "") if st.session_state.lang == "vi" else turn.get("textEn", "")
+                    tag = turn.get("markerTag")
+
+                    st.markdown(f"""
+                    <div style="background: {bg_col}; border-left: 4px solid {border_col}; padding: 12px 16px; border-radius: 8px; margin-bottom: 10px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <b>{spk}:</b>
+                            {f'<span class="zen-badge zen-badge-primary">{tag}</span>' if tag else ''}
+                        </div>
+                        <div style="font-size: 0.92rem; color: #2C3E50; line-height: 1.55;">
+                            "{txt}"
+                        </div>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+            # If coach response exists (direct model answer format)
+            elif sec_case.get("coachResponseVi"):
+                st.markdown(f"""
+                <div class="zen-card" style="border-left: 3px solid #8BA888;">
+                    <b>{t('Phản hồi mẫu của Coach (Tôn trọng tự chủ, không suy diễn):', 'Exemplary Coach Response (Objective, No Projection):')}</b><br/>
+                    <div style="font-size: 0.95rem; line-height: 1.6; color: #2C3E50; margin-top: 6px;">
+                        <i>"{sec_case.get('coachResponseVi', '') if st.session_state.lang == 'vi' else sec_case.get('coachResponseEn', '')}"</i>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+            # Reflection questions
+            ref_q = sec_case.get("reflectionQuestionsVi", []) if st.session_state.lang == "vi" else sec_case.get("reflectionQuestionsEn", [])
+            if ref_q:
+                st.markdown(f"""
+                <div class="zen-quote-box" style="margin-top: 14px;">
+                    <b>💡 {t('Câu hỏi suy ngẫm đạo đức & năng lực:', 'Reflective Questions:')}</b>
+                    <ul style="margin: 6px 0 0 20px;">
+                        {"".join([f"<li>{q}</li>" for q in ref_q])}
+                    </ul>
+                </div>
+                """, unsafe_allow_html=True)
+
         else:
             st.info(t("Tình huống thực tế đang được biên soạn.", "Case study is being compiled."))
 

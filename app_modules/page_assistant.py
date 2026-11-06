@@ -1,28 +1,76 @@
 # -*- coding: utf-8 -*-
 """
-Socratic AI Learning Assistant for PCC Learning & Practice
-Grounded strictly in the 7 directly verified official ICF sources and core competency standards.
+Socratic AI Learning Assistant for Mentor Thi (PCC Learning & Practice)
+Grounded strictly in 9 directly verified official ICF sources and core competency standards.
 """
 import streamlit as st
 
 VERIFIED_KNOWLEDGE_BASE = [
     {
-        "keywords": ["chuyển tuyến", "bác sĩ", "tâm lý", "trị liệu", "referral", "therapy", "ranh giới"],
-        "question": "Khi nào Coach bắt buộc phải dừng phiên và chuyển tuyến chuyên gia y tế / tâm lý?",
-        "shortSummary": "Khi vấn đề của khách hàng vượt khỏi phạm vi phát triển hiện tại và tương lai, chạm vào chấn thương quá khứ, trầm cảm nặng hoặc ý định tự hại.",
+        "keywords": ["chuyển gửi", "chuyển tuyến", "bác sĩ", "tâm lý", "trị liệu", "referral", "therapy", "hullinger", "digirolamo", "white paper", "ranh giới"],
+        "question": "Hướng dẫn nghiên cứu ICF (Hullinger & DiGirolamo, 2018) về việc chuyển gửi khách hàng sang trị liệu quy định những điểm cốt lõi nào?",
+        "shortSummary": "Coach tuyệt đối không chẩn đoán y tế; không tự động chuyển chỉ vì khách khóc; đánh giá theo 3 trụ cột (suy giảm chức năng, tiến triển, ranh giới); mở lời không gán nhãn; coaching song song khả thi; cấp cứu khẩn cấp là ngoại lệ bảo mật.",
         "detailedAnswer": """
-**1. Các dấu hiệu nhận diện chuyển tuyến bắt buộc (Referral Indicators):**
-- Khách hàng biểu hiện các triệu chứng rối loạn cảm xúc trầm trọng, mất khả năng sinh hoạt hoặc làm việc bình thường.
-- Có ý nghĩ, lời nói hoặc kế hoạch tự gây hại bản thân hoặc người khác (Duty to warn / bảo vệ sự an toàn).
-- Vấn đề cốt lõi bắt nguồn từ sang chấn tâm lý quá khứ (trauma, PTSD) cần liệu pháp phân tâm hoặc phục hồi chuyên khoa.
-- Khách hàng có dấu hiệu nghiện ngập, lạm dụng chất kích thích làm suy giảm năng lực nhận thức.
+**1. Phạm vi phân định cốt lõi (Trang 1–3):**
+- **Coaching:** Hợp tác khơi mở tiềm năng phát triển cho cá nhân có chức năng tâm lý bình thường.
+- **Therapy:** Bác sĩ/chuyên gia tâm lý chẩn đoán và điều trị bệnh lý tâm thần, chữa lành chấn thương quá khứ.
+- **Tránh cái bẫy giản lược:** Tuyệt đối không quy chụp *"Coaching chỉ tương lai, Trị liệu chỉ quá khứ"*. Coaching vẫn phản tư quá khứ để hiểu hiện tại và tương lai.
 
-**2. Nguyên tắc hành động chuẩn mực của Coach:**
-- Không chẩn đoán bệnh lý tâm thần (Coach không đóng vai bác sĩ hay nhà tâm lý học).
-- Tổ chức một cuộc trò chuyện tôn trọng, ấm áp, ghi nhận sự dũng cảm của khách hàng và giải thích rõ ranh giới chuyên môn của Coaching.
-- Khuyến nghị khách hàng tìm kiếm sự trợ giúp chuyên khoa phù hợp và có thể tạm hoãn hoặc chấm dứt hợp đồng coaching nếu việc tiếp tục có thể gây tổn thương cho khách hàng.
+**2. Ba trụ cột cân nhắc chuyển gửi (The 3 Referral Pillars - Trang 3–5):**
+- *Trụ cột 1:* Mức độ suy giảm chức năng sinh hoạt hằng ngày (Impairment in Daily Functioning - công việc, giấc ngủ, tự chăm sóc).
+- *Trụ cột 2:* Khả năng hưởng lợi từ coaching (Coachability & chronic lack of progress).
+- *Trụ cột 3:* Ngưỡng năng lực và ranh giới an toàn của Coach.
+
+**3. Nguyên tắc vàng về cảm xúc (Trang 3–5):**
+- **KHÔNG tự động chuyển gửi chỉ vì khách hàng khóc hoặc có cảm xúc mạnh!** Khóc là phản ứng tự nhiên của con người. Coach PCC phải có năng lực *Holding Space* (dung chứa không gian cảm xúc tĩnh lặng). Chỉ chuyển gửi khi cảm xúc tiêu cực kéo dài triền miên gây tê liệt chức năng sống.
+
+**4. Nguyên tắc chống tự chẩn đoán (Trang 4–6):**
+- Coach tuyệt đối KHÔNG dùng bảng dấu hiệu như một cẩm nang chẩn đoán tâm thần (Diagnostic Checklist). Không được dán nhãn khách hàng bị trầm cảm hay rối loạn lưỡng cực.
+
+**5. Đối thoại chuyển gửi không gán nhãn (Trang 7–9):**
+- Xin phép trước khi chia sẻ quan sát thực tế khách quan (mất ngủ, kiệt sức), bình thường hóa việc gặp chuyên gia y tế như vận động viên gặp bác sĩ thể thao.
+
+**6. Coaching song song (Concurrent Coaching - Trang 10–11):**
+- Chuyển gửi không đồng nghĩa với hủy hợp đồng! Coaching có thể diễn ra song song nếu mục tiêu rạch ròi, khách hàng đồng ý và nhà trị liệu nhất trí.
+
+**7. Bảo mật & Cấp cứu khẩn cấp (Trang 6, 11–13):**
+- Nguy cơ tự sát hoặc đe dọa tính mạng cận kề (Imminent Harm) là ngoại lệ bắt buộc phải kích hoạt cấp cứu. Khi chuyển gửi thường quy, chỉ liên hệ với nhà trị liệu khi có Giấy ủy quyền chia sẻ thông tin (Release of Information Form) có chữ ký của khách hàng.
         """,
-        "sourceCitation": "SRC-04 (ICF Code of Ethics Tiêu chuẩn 1.4 & 1.18) & SRC-05 (Insights and Considerations for Ethics)"
+        "sourceCitation": "SRC-08 (Hullinger & DiGirolamo 2018 White Paper, Trang 1–14) & SRC-09 (ICF One-Page Client Referral Overview)"
+    },
+    {
+        "keywords": ["song song", "concurrent", "vừa coach vừa trị liệu", "hợp tác trị liệu", "đồng thời"],
+        "question": "Khi nào việc vừa Coaching vừa Trị liệu (Concurrent Coaching) được coi là hợp chuẩn đạo đức?",
+        "shortSummary": "Khi mục tiêu phân định rạch ròi (trị liệu chữa lành, coach phát triển), khách hàng hoàn toàn đồng thuận, nhà trị liệu nhất trí, và có văn bản ủy quyền nếu cần trao đổi.",
+        "detailedAnswer": """
+**1. Ba điều kiện tiên quyết để Coaching song song (Concurrent Coaching):**
+- **Điều kiện 1:** Khách hàng thấy thoải mái và hoàn toàn đồng thuận với việc tiếp tục coaching.
+- **Điều kiện 2:** Nhà trị liệu tâm lý được biết và đồng ý rằng coaching đang hỗ trợ tích cực, không gây xung đột với quá trình điều trị y khoa.
+- **Điều kiện 3:** Phân định mục tiêu cực kỳ rạch ròi: Trị liệu giải quyết bệnh lý, chấn thương hoặc lo âu lâm sàng; Coaching tập trung vào mục tiêu hành động tương lai (kỹ năng lãnh đạo, quản lý thời gian, định hướng công việc).
+
+**2. Quy tắc bảo mật tối thượng:**
+- Coach không được tự ý gọi điện thoại hay gửi email cho nhà trị liệu của khách hàng.
+- Việc trao đổi trực tiếp giữa Coach và Therapist chỉ được phép diễn ra khi có **Văn bản ủy quyền chia sẻ thông tin (Written Release of Information Form)** do chính khách hàng ký xác nhận phạm vi thông tin.
+        """,
+        "sourceCitation": "SRC-08 (Hullinger & DiGirolamo, 2018, Trang 10–12)"
+    },
+    {
+        "keywords": ["cấp cứu", "khẩn cấp", "tự sát", "tự hại", "emergency", "crisis", "imminent harm", "ngoại lệ bảo mật"],
+        "question": "Khi khách hàng có dấu hiệu tự hại hoặc nguy cơ cận kề, coach phải xử lý thế nào để tuân thủ đạo đức?",
+        "shortSummary": "Nguy cơ cận kề đe dọa tính mạng (Imminent harm) là ngoại lệ đạo đức bắt buộc của bảo mật; coach lập tức kích hoạt dịch vụ khẩn cấp/hotline và liên hệ người liên hệ khẩn cấp trong hợp đồng.",
+        "detailedAnswer": """
+**1. Nhận diện tình huống cấp cứu (Emergency Crisis):**
+- Khách hàng bày tỏ ý định, kế hoạch tự sát hoặc gây hại nghiêm trọng cho người khác cận kề (imminent risk).
+- Đây là tình huống đe dọa trực tiếp đến tính mạng con người.
+
+**2. Ngoại lệ đạo đức của bảo mật (Ethical Confidentiality Exception):**
+- Theo Chuẩn mực Đạo đức ICF (Code 2020 Tiêu chuẩn 23; Code 2025 Tiêu chuẩn 2.4; 2018 White Paper Trang 6): Trách nhiệm bảo vệ tính mạng con người cao hơn nghĩa vụ giữ bí mật thông tin.
+- **Hành động tức thì:**
+  1. Giữ bình tĩnh, không ngắt kết nối đột ngột nếu đang nói chuyện.
+  2. Kích hoạt dịch vụ cấp cứu địa phương hoặc đường dây nóng khủng hoảng (Crisis Hotline).
+  3. Liên hệ với Người liên hệ khẩn cấp (Emergency Contact) đã được ghi rõ trong Hợp đồng Khai vấn ban đầu.
+        """,
+        "sourceCitation": "SRC-08 (Hullinger & DiGirolamo, 2018, Trang 6) & SRC-04 (ICF Code of Ethics)"
     },
     {
         "keywords": ["2020", "2025", "đạo đức", "ethics", "cập nhật", "khác biệt"],
@@ -106,17 +154,28 @@ def render_assistant_page(t):
         <span class="zen-badge zen-badge-primary">🤖 {t('Trí Tuệ Tỉnh Thức — Dẫn Nguồn Kiểm Chứng', 'Socratic Study Guide — Verified Citations')}</span>
         <h2 style="margin: 8px 0; color: #2F3E34;">{t('Trợ Lý Học Tập Tỉnh Thức (Socratic Study Assistant)', 'ICF Socratic Study Assistant')}</h2>
         <p style="font-size: 0.95rem; color: #5F6F65; line-height: 1.6;">
-            {t('Trợ lý học tập được xây dựng trên nền tảng 7 tài liệu gốc đã kiểm chứng từ ICF. Mọi giải đáp đều có căn cứ chuẩn mực, dẫn chứng điều khoản và làm rõ tư duy phán đoán tình huống.',
-               'A dedicated study companion grounded strictly in the 7 verified ICF source documents. Every insight is paired with explicit ethical standards and situational judgment rationales.')}
+            {t('Trợ lý học tập được xây dựng trên nền tảng 9 tài liệu gốc đã kiểm chứng từ ICF (bao gồm Hướng dẫn chuyển gửi khách hàng của Hullinger & DiGirolamo, 2018). Mọi giải đáp đều có căn cứ chuẩn mực, dẫn chứng điều khoản và làm rõ tư duy phán đoán tình huống.',
+               'A dedicated study companion grounded strictly in the 9 verified ICF source documents (including Hullinger & DiGirolamo 2018 Referral Guidelines). Every insight is paired with explicit ethical standards and situational judgment rationales.')}
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     st.markdown(f"#### 💡 {t('Các Chủ Đề Thắc Mắc Phổ Biến:', 'Frequently Explored Inquiries:')}")
-    cols = st.columns(len(VERIFIED_KNOWLEDGE_BASE))
-    for i, item in enumerate(VERIFIED_KNOWLEDGE_BASE):
-        with cols[i % len(cols)]:
-            if st.button(f"📌 {item['question'][:32]}...", key=f"btn_ask_preset_{i}", use_container_width=True):
+    
+    # 2 rows of query buttons for cleaner layout
+    row1 = VERIFIED_KNOWLEDGE_BASE[:4]
+    row2 = VERIFIED_KNOWLEDGE_BASE[4:]
+
+    cols1 = st.columns(len(row1))
+    for i, item in enumerate(row1):
+        with cols1[i]:
+            if st.button(f"📌 {item['question'][:28]}...", key=f"btn_ask_r1_{i}", use_container_width=True):
+                st.session_state["active_assistant_query"] = item["question"]
+
+    cols2 = st.columns(len(row2))
+    for i, item in enumerate(row2):
+        with cols2[i]:
+            if st.button(f"📌 {item['question'][:28]}...", key=f"btn_ask_r2_{i}", use_container_width=True):
                 st.session_state["active_assistant_query"] = item["question"]
 
     st.markdown("<hr style='border: none; border-top: 1px solid #EADBCC; margin: 16px 0;'/>", unsafe_allow_html=True)
@@ -125,8 +184,8 @@ def render_assistant_page(t):
     user_query = st.text_input(
         "🔍 " + t("Nhập câu hỏi hoặc từ khóa bạn muốn giải đáp chuẩn mực:", "Enter your question or keyword to explore:"),
         value=st.session_state.get("active_assistant_query", ""),
-        placeholder=t("Ví dụ: ranh giới chuyển tuyến, đạo đức 2025, suy diễn áp đặt, nguyên lý chọn Best/Worst...",
-                      "e.g., referral boundaries, ethics 2025, coach projection, best/worst principles...")
+        placeholder=t("Ví dụ: ranh giới chuyển gửi, hullinger 2018, coaching song song, cấp cứu tự hại, đạo đức 2025, suy diễn áp đặt...",
+                      "e.g., referral boundaries, hullinger 2018, concurrent coaching, emergency self-harm, ethics 2025, coach projection...")
     )
 
     if user_query.strip():
@@ -135,7 +194,7 @@ def render_assistant_page(t):
         matched_items = []
         for item in VERIFIED_KNOWLEDGE_BASE:
             match_score = 0
-            if any(kw in q_lower for kw in item["keywords"]): match_score += 3
+            if any(kw in q_lower for kw in item["keywords"]): match_score += 4
             if any(word in item["question"].lower() for word in q_lower.split()): match_score += 2
             if any(word in item["shortSummary"].lower() for word in q_lower.split()): match_score += 1
             if match_score > 0:
@@ -169,8 +228,8 @@ def render_assistant_page(t):
                        'Under the ICF Core Competencies and Code of Ethics, every coaching action must honor client autonomy, safeguard confidentiality, and maintain objective presence.')}
                 </p>
                 <div style="font-size: 0.85rem; color: #8C6D53;">
-                    {t('Gợi ý: Hãy thử chọn một trong các câu hỏi gợi ý bên trên hoặc nhập từ khóa liên quan đến đạo đức, năng lực, hoặc tình huống.',
-                       'Tip: Try clicking one of the preset inquiries above or enter keywords related to ethics, competencies, or situational dilemmas.')}
+                    {t('Gợi ý: Hãy thử chọn một trong các câu hỏi gợi ý bên trên hoặc nhập từ khóa liên quan đến đạo đức, chuyển gửi, năng lực, hoặc tình huống.',
+                       'Tip: Try clicking one of the preset inquiries above or enter keywords related to ethics, referral, competencies, or situational dilemmas.')}
                 </div>
             </div>
             """, unsafe_allow_html=True)
