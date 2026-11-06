@@ -1,16 +1,54 @@
 # -*- coding: utf-8 -*-
 """
 Session State Management & Multi-language helpers
+Includes verified real tracking of curriculum progress, tea-cup micro lessons, and genuine lotus blossoms.
 """
 import streamlit as st
 
 def t(vi_text, en_text):
     return vi_text if st.session_state.get("lang", "vi") == "vi" else en_text
 
-def set_page(page_name, section_id=None):
+def set_page(page_name, section_id=None, module_id=None, lesson_id=None):
     st.session_state.page = page_name
     if section_id:
         st.session_state.current_section = section_id
+    if module_id:
+        st.session_state.active_module_id = module_id
+    if lesson_id:
+        st.session_state.active_lesson_id = lesson_id
+
+def compute_real_lotus_bloomed(progress_dict=None):
+    """Computes genuine lotus bloom count from real study achievements (no fabricated streak)"""
+    if progress_dict is None:
+        progress_dict = st.session_state.get("curriculum_progress", {})
+    passed_quizzes = sum(1 for p in progress_dict.values() if p.get("status") == "quiz_passed")
+    read_lessons = sum(1 for p in progress_dict.values() if p.get("status") in ["read", "quiz_passed"])
+    return passed_quizzes + (read_lessons // 2)
+
+def update_lesson_progress(lesson_id, status=None, score=None, note=None, needs_review=None):
+    if "curriculum_progress" not in st.session_state:
+        st.session_state.curriculum_progress = {}
+    
+    current = st.session_state.curriculum_progress.get(lesson_id, {
+        "status": "unread",
+        "score": 0,
+        "note": "",
+        "needs_review": False
+    })
+    
+    if status is not None:
+        # Don't downgrade quiz_passed to read
+        if not (current.get("status") == "quiz_passed" and status == "read"):
+            current["status"] = status
+    if score is not None:
+        current["score"] = score
+    if note is not None:
+        current["note"] = note
+    if needs_review is not None:
+        current["needs_review"] = needs_review
+
+    st.session_state.curriculum_progress[lesson_id] = current
+    st.session_state.lotus_bloomed = compute_real_lotus_bloomed()
 
 def init_session_state(DATA):
     if "lang" not in st.session_state:
@@ -22,8 +60,25 @@ def init_session_state(DATA):
     if "exam_profile_id" not in st.session_state:
         st.session_state.exam_profile_id = "legacy_78_sjt"
 
+    # Real Curriculum Pathway state
+    if "active_module_id" not in st.session_state:
+        st.session_state.active_module_id = "mod-1"
+
+    if "active_lesson_id" not in st.session_state:
+        st.session_state.active_lesson_id = "mod1-les1"
+
+    if "active_tea_lesson_id" not in st.session_state:
+        st.session_state.active_tea_lesson_id = "tea-01"
+
+    if "curriculum_progress" not in st.session_state:
+        # Real progress dictionary: {lesson_id: {"status": "unread"|"read"|"quiz_passed", "score": 0, "note": "", "needs_review": False}}
+        st.session_state.curriculum_progress = {}
+
+    if "curriculum_lang_mode" not in st.session_state:
+        st.session_state.curriculum_lang_mode = "bilingual" # "vi", "en", "bilingual"
+
     if "lotus_bloomed" not in st.session_state:
-        st.session_state.lotus_bloomed = 5
+        st.session_state.lotus_bloomed = compute_real_lotus_bloomed()
 
     theories = {th["sectionId"]: th for th in DATA.get("theories", [])}
     if "current_section" not in st.session_state or st.session_state.current_section not in theories:
@@ -76,7 +131,6 @@ def init_session_state(DATA):
         st.session_state.sjt_last_result = None
 
     if "content_status" not in st.session_state:
-        # Default all questions to Approved
         st.session_state.content_status = {}
 
     if "orders" not in st.session_state:
