@@ -9,7 +9,7 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
     st.markdown(f"""
     <div style="margin-bottom: 20px;">
         <span class="zen-badge zen-badge-blue">🏛️ {t('Căn Cứ Chính Thức Đã Kiểm Chứng', 'Directly Verified Official Evidence')}</span>
-        <h2 style="margin: 8px 0; color: #2F3E34;">{t('Thư Viện Chuẩn ICF & 9 Nguồn Kiểm Chứng', 'ICF Standards & 9 Verified Sources Library')}</h2>
+        <h2 style="margin: 8px 0; color: #2F3E34;">{t(f'Thư Viện Chuẩn ICF & {len(VERIFIED_SOURCES)} Nguồn Kiểm Chứng', f'ICF Standards & {len(VERIFIED_SOURCES)} Verified Sources Library')}</h2>
         <p style="font-size: 0.95rem; color: #5F6F65; line-height: 1.6;">
             {t('Toàn bộ cấu trúc đề thi, chuẩn mực đạo đức, năng lực cốt lõi, chuyên đề chuyển gửi khách hàng và phương pháp thẩm định được tổng hợp và kiểm chứng trực tiếp từ các văn bản chính thức của International Coaching Federation (ICF).',
                'All exam blueprints, ethical standards, core competencies, client referral guidelines, and evaluation methodologies are directly aggregated and verified from official International Coaching Federation (ICF) publications.')}
@@ -20,24 +20,27 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
     tab_sources, tab_domains, tab_comps, tab_boundaries = st.tabs([
         "📜 " + t(f"Bảng {len(VERIFIED_SOURCES)} Nguồn Kiểm Chứng", f"{len(VERIFIED_SOURCES)} Verified Sources"),
         "⚖️ " + t("Phân Định 3 Miền Chuẩn Mực", "3 Standards Domains"),
-        "🎯 " + t("8 Năng Lực Cốt Lõi (2019)", "8 Core Competencies"),
-        "🚪 " + t("Ranh Giới Nghề & Chuyển Giới Thiệu (Hullinger & DiGirolamo, 2018)", "Referral Boundaries (ICF Research Guidelines)")
+        "🎯 " + t("8 Năng lực cốt lõi (2025)", "8 Core Competencies (2025)"),
+        "🚪 " + t("Ranh Giới Nghề & Giới Thiệu Khách Hàng (Hullinger & DiGirolamo, 2018)", "Referral Boundaries (ICF Research Guidelines)")
     ])
 
     # TAB 1: 9 VERIFIED SOURCES
     with tab_sources:
         st.markdown(f"""
         <div class="zen-card">
-            <h4 style="margin-top: 0; color: #2F3E34;">📋 {t('Bảng Tra Cứu 9 Nguồn Chính Thức Từ ICF & Pearson VUE', 'Official ICF & Pearson VUE 9 Verification Table')}</h4>
+            <h4 style="margin-top: 0; color: #2F3E34;">📋 {t(f'Bảng Tra Cứu {len(VERIFIED_SOURCES)} Nguồn Chính Thức Từ ICF & Pearson VUE', 'Official ICF & Pearson VUE 9 Verification Table')}</h4>
             <p style="font-size: 0.88rem; color: #666;">
-                {t('Dưới đây là 9 nguồn dữ liệu chính thống đã được truy xuất trực tiếp để thiết lập cấu trúc cho ứng dụng này. Mọi thông tin đều ghi rõ phiên bản, ngày xuất bản, ngày cập nhật trang web và liên kết PDF gốc:',
+                {t(f'Dưới đây là {len(VERIFIED_SOURCES)} nguồn dữ liệu chính thống đã được truy xuất trực tiếp để thiết lập cấu trúc cho ứng dụng này. Mọi thông tin đều ghi rõ phiên bản, ngày xuất bản, ngày cập nhật trang web và liên kết PDF gốc:',
                    'Below are the 9 authoritative sources directly retrieved to structure this application. Each records exact version, publication date, web revision date, and direct PDF links:')}
             </p>
         </div>
         """, unsafe_allow_html=True)
 
         for src in VERIFIED_SOURCES:
-            date_ver = src.get("lastVerifiedDate", src.get("dateVerified", "2026-11-06"))
+            date_ver = src.get("lastVerifiedDate", "2026-11-07")
+            app_update = src.get("appUpdateDate", "2026-11-07")
+            effective_date = src.get("effectiveDate") or src.get("versionEffectiveDate", "Hiện hành")
+            doc_ver = src.get("documentVersion") or f"Phiên bản năm {src.get('publicationYear', '2025')}"
             summary = src.get("summaryVi", "") if st.session_state.lang == "vi" else src.get("summaryEn", "")
             scope_desc = src.get("scope", "")
             authors = src.get("authors")
@@ -49,14 +52,13 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
 
             st.markdown(f"""
             <div class="zen-card" style="padding: 16px 20px; margin-bottom: 14px; border-left: 4px solid #8BA888;">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 6px;">
                     <div>
                         <span class="zen-badge zen-badge-primary">ID: {src['id']}</span>
-                        <span class="zen-badge zen-badge-gold">{t('Xác minh:', 'Verified:')} {date_ver}</span>
                         <span class="zen-badge zen-badge-blue">✅ {src.get('verificationStatus', 'Đã xác minh')}</span>
-                        {f'<span class="zen-badge zen-badge-pink">Năm công bố: {pub_year}</span>' if pub_year else ''}
+                        {f'<span class="zen-badge zen-badge-pink">Năm ban hành: {pub_year}</span>' if pub_year else ''}
                     </div>
-                    <div style="font-size: 0.85rem; color: #8C6D53; margin-top: 4px;">
+                    <div style="font-size: 0.85rem; color: #8C6D53;">
                         🔗 <a href="{src['url']}" target="_blank" style="color: #1E4E79; text-decoration: underline; font-weight: 500;">
                             {t('Trang web ICF', 'Official ICF Web')} ↗
                         </a>
@@ -67,7 +69,16 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
                     {src['titleVi'] if st.session_state.lang == 'vi' else src['titleEn']}
                 </h4>
                 {f'<div style="font-size: 0.85rem; color: #7A5C43; margin-bottom: 4px;"><b>{t("Tác giả:", "Authors:")}</b> {authors} ({pub_year})</div>' if authors else ''}
-                {f'<div style="font-size: 0.82rem; color: #888; margin-bottom: 6px;"><b>{t("Thời gian trang web:", "Web Metadata:")}</b> Đăng: {web_pub} | Sửa đổi trên web: {web_rev} <i>({t("Lưu ý: Ngày sửa đổi trên web không suy diễn nội dung nghiên cứu 2018 bị thay đổi", "Web revision date does not imply modification of the 2018 research text")})</i></div>' if web_rev else ''}
+                
+                <!-- 4 METADATA DATES BREAKDOWN -->
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; font-size: 0.8rem; background: #F8FAF7; padding: 8px 12px; border-radius: 6px; border: 1px solid #E2EADF;">
+                    <div style="color: #2F3E34;"><b>📅 {t('Phiên bản / Năm:', 'Version/Year:')}</b> {doc_ver}</div>
+                    <div style="color: #8A6112;"><b>⚡ {t('Ngày có hiệu lực:', 'Effective Date:')}</b> {effective_date}</div>
+                    <div style="color: #1E4E79;"><b>🔍 {t('Ngày xác minh nguồn:', 'Source Verified:')}</b> {date_ver}</div>
+                    <div style="color: #5F6F65;"><b>📱 {t('Cập nhật ứng dụng:', 'App Updated:')}</b> {app_update}</div>
+                </div>
+
+                {f'<div style="font-size: 0.82rem; color: #888; margin-bottom: 6px;"><b>{t("Thời gian trang web:", "Web Metadata:")}</b> Đăng: {web_pub} | Sửa đổi trên web: {web_rev} <i>({t("Lưu ý: Ngày sửa đổi trên web không suy diễn nội dung nghiên cứu bị thay đổi", "Web revision date does not imply modification of research text")})</i></div>' if web_rev else ''}
                 <div style="font-size: 0.88rem; color: #444; line-height: 1.6; margin: 10px 0; background: #FAFDF9; padding: 12px 14px; border-radius: 8px; border: 1px solid #EADBCC;">
                     <div style="margin-bottom: 8px;">
                         <span style="color: #2F3E34; font-weight: 600;">📌 {t('Phạm vi & Ý nghĩa:', 'Scope & Significance:')}</span>
@@ -110,16 +121,14 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
             st.markdown(f"""
             <div class="zen-card" style="height: 100%; border-top: 4px solid #9C4158;">
                 <span class="zen-badge zen-badge-pink">Miền 1</span>
-                <h4 style="color: #2F3E34; margin: 8px 0;">{t('Bộ Quy Tắc Đạo Đức', 'ICF Code of Ethics')}</h4>
+                <h4 style="color: #2F3E34; margin: 8px 0;">{t('Bộ Quy Tắc Đạo Đức (Bản 2025)', 'ICF Code of Ethics (2025)')}</h4>
                 <div style="font-size: 0.85rem; color: #555; line-height: 1.5;">
-                    <b>📅 {t('Bản thực hành hiện hành:', 'Current Practice Edition:')}</b><br/>
-                    {t('Bản 2025 (Hiệu lực từ 01/04/2025). Đã cập nhật định nghĩa coaching, xung đột lợi ích và hướng dẫn ứng dụng công nghệ/AI.',
-                       '2025 Code (Effective April 1, 2025). Updates coaching definition, conflicts of interest, and AI/tech guidance.')}<br/><br/>
-                    <b>📝 {t('Đề thi viết hiện hành:', 'Current Written Exam:')}</b><br/>
-                    {t('Dùng bản 2020 cho đến trước khi kỳ thi cập nhật chính thức áp dụng.',
-                       'Uses 2020 Code baseline until updated exam takes effect.')}<br/><br/>
-                    <b>🚀 {t('Đề thi cập nhật:', 'Updated Exam (Nov 2026):')}</b><br/>
-                    {t('Tích hợp đầy đủ bản 2025.', 'Fully integrates 2025 revisions.')}
+                    <b>⚡ {t('Bản thực hành hiện hành:', 'Current Practice Edition:')}</b><br/>
+                    {t('Bản 2025 (Hiệu lực: <b>01/04/2025</b>). Gồm 4 Giá trị cốt lõi, 5 Phần với 24 chuẩn mực thực hành, quy định an toàn AI / công nghệ số và áp dụng cho toàn bộ hệ sinh thái ICF.',
+                       '2025 Code (Effective: <b>01/04/2025</b>). Features 4 Core Values, 5 Sections with 24 standards, AI safeguards, applying across the whole ICF ecosystem.')}<br/><br/>
+                    <b>📝 {t('Đề thi viết Pearson VUE hiện hành:', 'Current Written Exam Baseline:')}</b><br/>
+                    {t('Đang chấm theo Bộ Đạo đức 2020 (Tiêu chuẩn 1–28) cho đến khi kỳ thi mới chính thức áp dụng. Ứng dụng cung cấp kho lưu trữ 2020 để đối chiếu.',
+                       'Scores against 2020 Code (Standards 1–28) until updated exam rolls out. 2020 archive is available in-app for comparison.')}
                 </div>
             </div>
             """, unsafe_allow_html=True)
@@ -128,16 +137,14 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
             st.markdown(f"""
             <div class="zen-card" style="height: 100%; border-top: 4px solid #8BA888;">
                 <span class="zen-badge zen-badge-primary">Miền 2</span>
-                <h4 style="color: #2F3E34; margin: 8px 0;">{t('8 Năng Lực Cốt Lõi (2019)', '8 Core Competencies')}</h4>
+                <h4 style="color: #2F3E34; margin: 8px 0;">{t('8 Năng Lực Cốt Lõi (Bản 2025)', '8 Core Competencies (2025)')}</h4>
                 <div style="font-size: 0.85rem; color: #555; line-height: 1.5;">
-                    <b>🎯 {t('Vai trò:', 'Role:')}</b><br/>
-                    {t('Khung tư duy năng lực nền tảng cho TẤT CẢ các cấp chứng chỉ ICF (ACC, PCC, MCC) và mọi định dạng bài thi.',
-                       'Foundational competency framework underpinning ALL ICF credentials (ACC, PCC, MCC) across all exam formats.')}<br/><br/>
-                    <b>🧱 {t('Cấu trúc 4 Trụ cột:', '4 Pillars Structure:')}</b><br/>
-                    1. Foundation (Đạo đức & Tư duy)<br/>
-                    2. Co-Creating Relationship (Hợp đồng & Tin cậy)<br/>
-                    3. Communicating Effectively (Hiện diện & Lắng nghe)<br/>
-                    4. Cultivating Learning & Growth (Khơi gợi & Phát triển)
+                    <b>🎯 {t('Khung thực hành mới nhất:', 'Latest Practice Framework:')}</b><br/>
+                    {t('Công bố tháng 09/2025 sau Job Analysis toàn cầu với gần 3,000 coach. Giữ nguyên 4 Miền & 8 Năng lực; bổ sung 5 chỉ dấu mới, 11 chỉ dấu sửa đổi và Phụ lục thuật ngữ (Glossary).',
+                       'Published September 2025 following global Job Analysis. Retains 4 Domains & 8 Competencies; adds 5 new indicators, 11 revisions, and standardized Glossary.')}<br/><br/>
+                    <b>🧱 {t('Đối chiếu đề thi viết:', 'Written Exam Alignment:')}</b><br/>
+                    {t('Đề thi viết hiện hành tại Pearson VUE chấm theo tiêu chí 2019. Cả 2 bản đều nhất quán 100% về tôn trọng sự tự quyết của khách hàng và phi phán xét.',
+                       'Current Pearson VUE exams score against 2019 criteria. Both models are 100% aligned on client autonomy and zero judgment.')}
                 </div>
             </div>
             """, unsafe_allow_html=True)
@@ -158,20 +165,133 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
             </div>
             """, unsafe_allow_html=True)
 
-    # TAB 3: 8 CORE COMPETENCIES
+    # TAB 3: 8 CORE COMPETENCIES (2025 DEFAULT & 2019 EXAM COMPARISON)
     with tab_comps:
-        st.markdown(f"### {t('Tra Cứu Nhanh 8 Năng Lực Cốt Lõi ICF (2019)', 'ICF Core Competencies Quick Reference')}")
-        for comp in COMPETENCIES:
-            with st.expander(f"{comp['code']}: {comp['nameVi'] if st.session_state.lang == 'vi' else comp['nameEn']}"):
-                st.markdown(f"""
-                <div style="font-size: 0.92rem; line-height: 1.6;">
-                    <p><b>{t('Mô tả chuẩn:', 'Definition:')}</b> {comp['descVi'] if st.session_state.lang == 'vi' else comp['descEn']}</p>
-                    <p style="color: #8C6D53;"><b>💡 {t('Trọng tâm phán đoán trong đề thi:', 'Exam Judgment Focus:')}</b><br/>
-                    {t('Coach phải luôn tôn trọng sự tự chủ của khách hàng, không áp đặt giải pháp, không suy diễn võ đoán, và giữ vững ranh giới đạo đức nghề nghiệp.',
-                       'The coach must consistently honor client autonomy, avoid imposing solutions or unsolicited interpretations, and safeguard professional ethical boundaries.')}
-                    </p>
-                </div>
-                """, unsafe_allow_html=True)
+        st.markdown(f"### {t('Tra cứu 8 Năng lực cốt lõi ICF (2025)', 'ICF Core Competencies (2025 Edition)')}")
+
+        st.markdown(f"""
+        <div class="zen-quote-box" style="margin-bottom: 16px;">
+            <b>📌 {t('Lưu ý then chốt từ ICF về Chuẩn Thực Hành vs. Chuẩn Kỳ Thi:', 'ICF Key Clarification on Practice vs. Exam Frameworks:')}</b><br/>
+            {t('Khung Năng Lực Cốt Lõi 2025 (ban hành tháng 09/2025) là chuẩn mực thực hành khai vấn mới nhất do ICF ban hành, bổ sung 5 năng lực thành phần mới và 11 năng lực thành phần sửa đổi. Đối với kỳ thi viết trắc nghiệm tình huống (SJT) trên Pearson VUE, ngân hàng đề thi hiện hành đang được chuẩn hóa trên khung năng lực 2019 cho đến khi ICF công bố thời điểm áp dụng bài thi mới. Dưới đây là khung 2025 mặc định kèm chế độ đối chiếu khung 2019 để học viên ôn luyện song song.',
+               'The 2025 ICF Core Competencies framework (released Sept 2025) is the authoritative practice standard worldwide, adding 5 new sub-competencies and 11 revisions. Current written exams at Pearson VUE score against the 2019 benchmark until the new exam transition date. Below is the 2025 model with full 2019 comparison.')}
+        </div>
+        """, unsafe_allow_html=True)
+
+        subtab_2025, subtab_2019 = st.tabs([
+            "🌟 " + t("Khung Năng Lực 2025 (Mặc Định Thực Hành)", "2025 Framework (Current Practice)"),
+            "🔄 " + t("Khung Năng Lực 2019 (Đối Chiếu Thi Viết)", "2019 Framework (Exam Baseline)")
+        ])
+
+        with subtab_2025:
+            st.markdown(f"""
+            <div style="font-size: 0.88rem; color: #555; margin-bottom: 12px;">
+                {t('Hiển thị đầy đủ 8 năng lực cốt lõi và các chỉ dấu hành vi thành phần chuẩn 2025, kèm điểm cập nhật mới và góc nhìn của giám khảo (Assessor):',
+                   'Displaying all 8 core competencies and 2025 behavioral sub-competencies, highlighting updates and assessor evaluation criteria:')}
+            </div>
+            """, unsafe_allow_html=True)
+
+            for idx, comp in enumerate(COMPETENCIES):
+                comp_no = comp.get('number', f"{idx+1}.0")
+                comp_code = comp.get('code') or (f"Năng lực {comp_no}" if st.session_state.lang == 'vi' else f"Competency {comp_no}")
+                name_vi = comp.get('nameVi') or comp.get('compVi') or comp.get('titleVi', '')
+                name_en = comp.get('nameEn') or comp.get('compEn') or comp.get('titleEn', '')
+                name_disp = name_vi if st.session_state.lang == 'vi' else name_en
+                desc_vi = comp.get('descVi') or comp.get('definitionVi') or comp.get('lensVi', '')
+                desc_en = comp.get('descEn') or comp.get('definitionEn') or comp.get('lensEn', '')
+                desc_disp = desc_vi if st.session_state.lang == 'vi' else desc_en
+                domain_disp = comp.get('domainVi', '') if st.session_state.lang == 'vi' else comp.get('domainEn', '')
+                changes_disp = comp.get('changes2025Vi', '') if st.session_state.lang == 'vi' else comp.get('changes2025En', '')
+                cue_disp = (comp.get('studyCueVi') or comp.get('cueVi', '')) if st.session_state.lang == 'vi' else (comp.get('studyCueEn') or comp.get('cueEn', ''))
+                trigger_disp = comp.get('examTriggerVi', '') if st.session_state.lang == 'vi' else comp.get('examTriggerEn', '')
+                assessor_disp = comp.get('assessorPerspectiveVi', '') if st.session_state.lang == 'vi' else comp.get('assessorPerspectiveEn', '')
+                traps_disp = (comp.get('commonTrapsVi') or comp.get('trapVi', '')) if st.session_state.lang == 'vi' else (comp.get('commonTrapsEn') or comp.get('trapEn', ''))
+                subs = comp.get('subCompetencies2025', [])
+
+                with st.expander(f"{comp_code}: {name_disp}"):
+                    st.markdown(f"""
+                    <div style="font-size: 0.92rem; line-height: 1.65; color: #2C3E50;">
+                        <div style="margin-bottom: 8px;">
+                            <span class="zen-badge zen-badge-primary">{domain_disp}</span>
+                            <span class="zen-badge zen-badge-gold">Bản chuẩn 2025</span>
+                            <span class="zen-badge zen-badge-blue">{len(subs)} hành vi thành phần</span>
+                        </div>
+                        <p><b>{t('Định nghĩa chuẩn 2025:', 'Official 2025 Definition:')}</b><br/>{desc_disp}</p>
+                    """, unsafe_allow_html=True)
+
+                    if changes_disp:
+                        st.markdown(f"""
+                        <div style="background: #FAF7F2; border-left: 3px solid #8A6112; padding: 10px 14px; border-radius: 6px; margin: 10px 0;">
+                            <b>✨ {t('Điểm mới & Sửa đổi trong Bản 2025:', '2025 Revisions & Additions:')}</b><br/>
+                            {changes_disp}
+                        </div>
+                        """, unsafe_allow_html=True)
+
+                    if subs:
+                        st.markdown(f"<b>📋 {t('Các hành vi thành phần chính thức (Sub-Competencies 2025):', 'Official 2025 Behavioral Indicators:')}</b>", unsafe_allow_html=True)
+                        for sub in subs:
+                            sub_id = sub.get('subId', '')
+                            beh_disp = sub.get('behaviorVi', '') if st.session_state.lang == 'vi' else sub.get('behaviorEn', '')
+                            st.markdown(f"• <b>{sub_id}</b>: {beh_disp}", unsafe_allow_html=True)
+
+                    if cue_disp or trigger_disp or assessor_disp or traps_disp:
+                        st.markdown(f"""
+                        <div style="background: #FAFDF9; border: 1px solid #EADBCC; border-radius: 8px; padding: 12px; margin: 12px 0;">
+                            {f'<p style="margin: 0 0 6px 0; color: #2F3E34;"><b>💡 {t("Gợi ý học tập & Dấu hiệu trong đề:", "Study Cue & Exam Triggers:")}</b> {cue_disp} | {trigger_disp}</p>' if cue_disp or trigger_disp else ''}
+                            {f'<p style="margin: 6px 0 0 0; color: #8A6112;"><b>🎯 {t("Góc nhìn của Giám Khảo (Assessor):", "Assessor Perspective:")}</b><br/>{assessor_disp}</p>' if assessor_disp else ''}
+                            {f'<p style="margin: 6px 0 0 0; color: #C4785A;"><b>⚠️ {t("Bẫy thường gặp làm mất điểm:", "Common Pitfalls & Traps:")}</b><br/>{traps_disp}</p>' if traps_disp else ''}
+                        </div>
+                        """, unsafe_allow_html=True)
+
+                    st.markdown("</div>", unsafe_allow_html=True)
+
+        with subtab_2019:
+            st.markdown(f"""
+            <div style="font-size: 0.88rem; color: #555; margin-bottom: 12px;">
+                {t('Khu vực đối chiếu bản Khung Năng Lực 2019 — căn cứ đang được Pearson VUE sử dụng cho kỳ thi trắc nghiệm tình huống PCC/MCC hiện hành:',
+                   'Archive & comparison area for the 2019 Framework — the baseline currently evaluated in Pearson VUE credentialing exams:')}
+            </div>
+            """, unsafe_allow_html=True)
+
+            for idx, comp in enumerate(COMPETENCIES):
+                comp_no = comp.get('number', f"{idx+1}.0")
+                comp_code = comp.get('code') or (f"Năng lực {comp_no}" if st.session_state.lang == 'vi' else f"Competency {comp_no}")
+                name_vi = comp.get('nameVi') or comp.get('compVi') or comp.get('titleVi', '')
+                name_en = comp.get('nameEn') or comp.get('compEn') or comp.get('titleEn', '')
+                name_disp = name_vi if st.session_state.lang == 'vi' else name_en
+                desc_vi = comp.get('descVi') or comp.get('definitionVi') or comp.get('lensVi', '')
+                desc_en = comp.get('descEn') or comp.get('definitionEn') or comp.get('lensEn', '')
+                desc_disp = desc_vi if st.session_state.lang == 'vi' else desc_en
+                subs_2019 = comp.get('subCompetencies2019', [])
+                changes_disp = comp.get('changes2025Vi', '') if st.session_state.lang == 'vi' else comp.get('changes2025En', '')
+
+                with st.expander(f"{comp_code} (Bản 2019): {name_disp}"):
+                    st.markdown(f"""
+                    <div style="font-size: 0.92rem; line-height: 1.65; color: #2C3E50;">
+                        <span class="zen-badge zen-badge-gold">Khung 2019 (Chuẩn thi Pearson VUE hiện hành)</span>
+                        <p style="margin-top: 8px;"><b>{t('Định nghĩa bản 2019:', '2019 Baseline Definition:')}</b><br/>{desc_disp}</p>
+                        
+                        <div style="background: #FAF7F2; border-left: 3px solid #8BA888; padding: 10px; border-radius: 6px; margin: 8px 0;">
+                            <b>📌 {t('Lưu ý thi trắc nghiệm Pearson VUE:', 'Pearson VUE Exam Insight:')}</b><br/>
+                            {t('Trong các câu hỏi trắc nghiệm tình huống, đáp án BEST luôn luôn là phương án tôn trọng quyền tự quyết của khách hàng, lắng nghe không phán xét và làm rõ thỏa thuận.',
+                               'In situational judgment questions, the BEST option consistently protects client autonomy, active non-judgmental listening, and contract clarity.')}
+                        </div>
+                    """, unsafe_allow_html=True)
+
+                    if subs_2019:
+                        st.markdown(f"<b>📋 {t('Các chỉ dấu hành vi bản 2019 đối chiếu:', '2019 Sub-Competencies Comparison:')}</b>", unsafe_allow_html=True)
+                        for sub in subs_2019:
+                            sub_id = sub.get('subId', '')
+                            beh_disp = sub.get('behaviorVi', '') if st.session_state.lang == 'vi' else sub.get('behaviorEn', '')
+                            st.markdown(f"• <b>{sub_id}</b>: {beh_disp}", unsafe_allow_html=True)
+
+                    if changes_disp:
+                        st.markdown(f"""
+                        <div style="font-size: 0.85rem; color: #8A6112; margin-top: 8px;">
+                            <b>🔄 {t('Chuyển giao sang bản 2025:', 'Transition to 2025:')}</b> {changes_disp}
+                        </div>
+                        """, unsafe_allow_html=True)
+
+                    st.markdown("</div>", unsafe_allow_html=True)
 
     # TAB 4: REFERRAL BOUNDARIES & SPECIAL TOPIC (HULLINGER & DIGIROLAMO, 2018)
     with tab_boundaries:

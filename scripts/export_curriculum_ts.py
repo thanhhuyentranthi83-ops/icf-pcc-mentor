@@ -86,9 +86,13 @@ export interface Lesson {{
   exampleType?: string;
   exampleContentVi?: string;
   exampleContentEn?: string;
+  pdfLink?: string;
+  comparison2019Vi?: string;
+  comparison2019En?: string;
   quiz?: LessonQuiz;
   caseWorkflow?: CaseWorkflow;
   faqs?: FaqItem[];
+  [key: string]: any;
 }}
 
 export interface GlossaryTerm {{

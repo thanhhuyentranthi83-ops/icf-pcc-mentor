@@ -103,8 +103,12 @@
       "titleEn": "ICF PCC and MCC Credentialing Exam",
       "issuingBody": "ICF Credentials and Standards",
       "url": "https://coachingfederation.org/credentialing/icf-credential-exams/pcc-mcc-exam/",
+      "documentVersion": "Quy chế kỳ thi trắc nghiệm tình huống PCC/MCC",
+      "publicationYear": 2022,
+      "effectiveDate": "Hiện hành (áp dụng đến 31/03/2027 cho cấu hình 78 SJT)",
       "versionEffectiveDate": "Cấu hình hiện hành áp dụng đến 31/03/2027",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
       "scope": "Kỳ thi trắc nghiệm tình huống PCC & MCC hiện tại (78 câu SJT, 180 phút, thang điểm 200–600, điểm đỗ 460)",
       "languageStatus": "Tiếng Anh (có bản dịch chính thức tại Pearson VUE)",
       "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
@@ -117,8 +121,12 @@
       "titleEn": "A Candidate's Guide to the Updated Credentialing Exam",
       "issuingBody": "International Coaching Federation (ICF)",
       "url": "https://coachingfederation.org/blog/candidates-guide-to-updated-credentialing-exam/",
+      "documentVersion": "Thông cáo chuyển đổi kỳ thi 80 câu",
+      "publicationYear": 2026,
+      "effectiveDate": "Bắt đầu áp dụng: 10/11/2026 | Bắt buộc toàn diện: 01/04/2027",
       "versionEffectiveDate": "Công bố: 27/07/2026. Bắt đầu áp dụng: 10/11/2026. Chuyển tiếp đến: 31/03/2027. Bắt buộc từ: 01/04/2027",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
       "scope": "Kỳ thi cập nhật PCC-MCC Exam (80 câu: 36 câu kiến thức + 44 câu tình huống, 150 phút, 4 phần)",
       "languageStatus": "Tiếng Anh",
       "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
@@ -131,8 +139,12 @@
       "titleEn": "ICF Credentialing Exam Sample Questions",
       "issuingBody": "International Coaching Federation (ICF)",
       "url": "https://coachingfederation.org/resource/icf-credentialing-exam-sample-questions/",
+      "documentVersion": "Bộ câu hỏi mẫu công khai",
+      "publicationYear": 2024,
+      "effectiveDate": "11/11/2024",
       "versionEffectiveDate": "Xuất bản: 11/11/2024",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
       "scope": "Câu hỏi mẫu công khai chính thức cho 8 Năng lực Cốt lõi ICF",
       "languageStatus": "Tiếng Anh nguyên bản; Bản dịch tiếng Việt phục vụ học tập",
       "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
@@ -141,17 +153,21 @@
     },
     {
       "id": "src-04",
-      "titleVi": "Bộ Quy Tắc Đạo Đức ICF",
-      "titleEn": "ICF Code of Ethics",
+      "titleVi": "Bộ Quy Tắc Đạo Đức ICF (Bản 2025)",
+      "titleEn": "ICF Code of Ethics (2025 Edition)",
       "issuingBody": "International Coaching Federation (ICF)",
       "url": "https://coachingfederation.org/credentialing/coaching-ethics/icf-code-of-ethics/",
-      "versionEffectiveDate": "Bản thực hành hiện hành có hiệu lực: 01/04/2025. (Kỳ thi hiện hành vẫn sử dụng Bộ Đạo đức 2020 làm chuẩn thi viết)",
-      "lastVerifiedDate": "2026-11-06",
-      "scope": "Chuẩn mực đạo đức nghề nghiệp và nền tảng đề thi",
-      "languageStatus": "Tiếng Anh (có bản dịch nhiều ngôn ngữ)",
+      "documentVersion": "Bản 2025 (Thay thế bản 2020 trong thực hành)",
+      "publicationYear": 2025,
+      "effectiveDate": "01/04/2025",
+      "versionEffectiveDate": "Ngày có hiệu lực thực hành: 01/04/2025. (Kỳ thi viết hiện hành vẫn dùng chuẩn Bộ Đạo đức 2020 đến khi chuyển đổi)",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
+      "scope": "Chuẩn mực đạo đức nghề nghiệp áp dụng cho toàn bộ hệ sinh thái ICF (coach, mentor, supervisor, giảng viên, nhân viên)",
+      "languageStatus": "Tiếng Anh (có bản dịch đa ngôn ngữ)",
       "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
-      "summaryVi": "Gồm 5 phần chính và Phụ lục. Lưu ý then chốt từ ICF: Bộ Đạo đức 2020 đang được dùng trong các bài thi ACC/PCC/MCC hiện tại; Bộ Đạo đức 2025 có hiệu lực thực hành từ 01/04/2025 và áp dụng vào bài thi mới.",
-      "summaryEn": "Comprises 5 main parts and an Appendix. Crucial official note: The 2020 Code of Ethics is currently used in ICF exams, while the 2025 Code of Ethics took effect for practice on April 1, 2025."
+      "summaryVi": "Cấu trúc bản 2025 gồm 5 Phần chính: Mục đích & Phạm vi; 4 Giá trị Cốt lõi (Professionalism, Collaboration, Humanity, Equity); Cam kết toàn hệ sinh thái; 5 Phần Tiêu chuẩn Hành vi với 24 chuẩn mực (bao gồm quy định AI & công nghệ số); Lời cam kết Đạo đức (Pledge of Ethics) và Phụ lục thuật ngữ.",
+      "summaryEn": "2025 Edition structured into 5 core parts: Purpose & Scope; 4 Core Values (Professionalism, Collaboration, Humanity, Equity); Ecosystem Commitments; 5 Standards Sections with 24 ethical standards (integrating AI & digital safeguards); Pledge of Ethics, and Appendix."
     },
     {
       "id": "src-05",
@@ -159,8 +175,12 @@
       "titleEn": "Insights and Considerations for Ethics",
       "issuingBody": "ICF Ethics Community of Practice & Independent Review Board",
       "url": "https://coachingfederation.org/resource/insights-and-considerations-for-ethics/",
+      "documentVersion": "Tài liệu suy ngẫm sống (Living Guidance)",
+      "publicationYear": 2024,
+      "effectiveDate": "Cập nhật liên tục",
       "versionEffectiveDate": "Tài liệu sống (Living Resource), cập nhật định kỳ",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
       "scope": "Tài liệu phân tích và hướng dẫn suy ngẫm cho từng điều khoản đạo đức",
       "languageStatus": "Tiếng Anh",
       "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
@@ -173,8 +193,12 @@
       "titleEn": "Criteria for Assessing Coaching at the PCC Credential Level (PCC Minimum Skills Requirements)",
       "issuingBody": "ICF Credentials and Standards",
       "url": "https://coachingfederation.org/credentialing/performance-evaluations/criteria-for-assessing-pcc/",
+      "documentVersion": "37 Chỉ Báo Hành Vi PCC (Performance Evaluation)",
+      "publicationYear": 2021,
+      "effectiveDate": "Hiện hành",
       "versionEffectiveDate": "Chuẩn đánh giá hiện hành cho Performance Evaluation",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
       "scope": "Đánh giá băng ghi âm phiên khai vấn thực tế (KHÔNG PHẢI đáp án máy móc cho bài thi trắc nghiệm)",
       "languageStatus": "Tiếng Anh (có bản dịch tham khảo)",
       "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
@@ -187,8 +211,12 @@
       "titleEn": "ICF Certification Exams on Pearson VUE",
       "issuingBody": "Pearson VUE & ICF",
       "url": "https://www.pearsonvue.com/us/en/icf.html",
+      "documentVersion": "Cổng khảo thí Pearson VUE",
+      "publicationYear": 2022,
+      "effectiveDate": "Hiện hành",
       "versionEffectiveDate": "Hiện hành",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
       "scope": "Hệ thống thi trắc nghiệm trực tiếp tại Test Center và OnVUE trực tuyến",
       "languageStatus": "Đa ngôn ngữ",
       "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
@@ -204,9 +232,12 @@
       "issuingBody": "International Coaching Federation (ICF Research)",
       "url": "https://coachingfederation.org/resource/referring-a-client-to-therapy/",
       "pdfUrl": "https://coachingfederation.org/wp-content/uploads/2024/12/icf-research-guide-referring-client-to-therapy.pdf",
+      "documentVersion": "White Paper nghiên cứu năm 2018",
+      "effectiveDate": "Hiện hành trong thư viện nghiên cứu ICF (cập nhật web 13/08/2026)",
       "webPublishDate": "13/11/2024",
       "webRevisionDate": "13/08/2026",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
       "contentVersion": "Bản hướng dẫn nghiên cứu xuất bản năm 2018 (Hullinger & DiGirolamo, 2018; cập nhật trang 13/08/2026)",
       "scope": "Chuyên đề chuyên môn về ranh giới giữa coaching và trị liệu, dấu hiệu nhận diện, quy trình trao đổi chuyển gửi không gán nhãn, và xử lý bảo mật/khẩn cấp",
       "languageStatus": "Tiếng Anh (Bản dịch tiếng Việt phục vụ học tập)",
@@ -222,9 +253,13 @@
       "issuingBody": "International Coaching Federation (ICF)",
       "url": "https://coachingfederation.org/resource/client-referral/",
       "pdfUrl": "https://coachingfederation.org/wp-content/uploads/2024/12/icf-research-client-referral-overview.pdf",
+      "publicationYear": 2018,
+      "effectiveDate": "Hiện hành (cập nhật web 19/12/2024)",
+      "documentVersion": "Tài liệu tóm tắt 1 trang",
       "webPublishDate": "13/11/2024",
       "webRevisionDate": "19/12/2024",
-      "lastVerifiedDate": "2026-11-06",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
       "contentVersion": "Bản tóm tắt 1 trang (cập nhật trang 19/12/2024)",
       "scope": "Tóm tắt nhanh quy trình chuyển gửi, trách nhiệm đạo đức và trao đổi cởi mở với khách hàng",
       "languageStatus": "Tiếng Anh (Bản dịch tiếng Việt phục vụ học tập)",
@@ -232,6 +267,44 @@
       "usageRights": "Tài liệu tham khảo mở phi thương mại từ ICF",
       "summaryVi": "Bản cô đọng 1 trang tóm tắt các bước cốt lõi khi coach cần cân nhắc chuyển gửi khách hàng sang chuyên gia trợ giúp khác mà vẫn duy trì sự tôn trọng và đồng thuận của khách hàng.",
       "summaryEn": "One-page executive overview outlining core referral considerations, ethical duties, and supportive dialog with clients."
+    },
+    {
+      "id": "src-10",
+      "titleVi": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+      "titleEn": "ICF Core Competencies (2025 Edition)",
+      "issuingBody": "International Coaching Federation (ICF Credentials & Standards)",
+      "url": "https://coachingfederation.org/coaching-competencies/core-competencies",
+      "pdfUrl": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
+      "publicationYear": 2025,
+      "effectiveDate": "Tháng 09/2025 (Chuẩn mực thực hành nghề nghiệp cập nhật)",
+      "documentVersion": "Bản 2025 (Công bố tháng 09/2025 sau Job Analysis toàn cầu với gần 3,000 coaches)",
+      "versionEffectiveDate": "Công bố: 09/2025. Khung chuẩn thực hành nghề nghiệp mới nhất.",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
+      "scope": "Khung năng lực mới nhất gồm 8 Năng lực cốt lõi thuộc 4 Miền, bổ sung 5 năng lực thành phần mới, 11 năng lực thành phần sửa đổi và phụ lục thuật ngữ chuẩn hóa (Glossary)",
+      "languageStatus": "Tiếng Anh chính thức (Bản dịch tiếng Việt phục vụ học tập)",
+      "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
+      "usageRights": "Tài liệu tiêu chuẩn nghề nghiệp chính thức của ICF",
+      "summaryVi": "Giữ nguyên cấu trúc 4 Miền và 8 Năng lực; cập nhật định nghĩa; bổ sung 5 chỉ dấu năng lực thành phần mới nhấn mạnh vào tính phản tư liên tục, sức khỏe toàn diện (well-being), giám sát/mentor coaching, trách nhiệm công nghệ/AI và bối cảnh hệ thống. Đây là chuẩn thực hành mặc định trong ứng dụng.",
+      "summaryEn": "Maintains 4 Domains and 8 Competencies; updates definitions; introduces 5 new sub-competencies and 11 revisions emphasizing reflective practice, well-being, supervision/mentoring, AI technology, and systemic context."
+    },
+    {
+      "id": "src-11",
+      "titleVi": "Bảng Đối Chiếu Năng Lực Cốt Lõi ICF 2019–2025",
+      "titleEn": "ICF Core Competencies 2019–2025 Comparison Tool",
+      "issuingBody": "International Coaching Federation (ICF)",
+      "url": "https://coachingfederation.org/resource/icf-core-competencies-comparison/",
+      "publicationYear": 2025,
+      "effectiveDate": "Hiện hành phục vụ chuyển tiếp và đối chiếu",
+      "documentVersion": "Bảng đối chiếu song ngữ / song phiên bản",
+      "versionEffectiveDate": "Công bố: 2025",
+      "lastVerifiedDate": "2026-11-07",
+      "appUpdateDate": "2026-11-07",
+      "scope": "Công cụ đối chiếu chi tiết từng dòng thay đổi giữa Khung năng lực 2019 (chuẩn đề thi hiện hành) và Khung năng lực 2025 (chuẩn thực hành mới)",
+      "languageStatus": "Tiếng Anh (Bản tổng hợp song ngữ)",
+      "verificationStatus": "Đã xác minh trực tiếp từ nguồn chính thức",
+      "summaryVi": "Tài liệu đối chiếu song song chỉ rõ các điểm mới, điểm sửa đổi và điểm giữ nguyên giữa 2019 và 2025; giúp học viên vững tâm khi làm bài thi trắc nghiệm Pearson VUE (hiện vẫn chấm theo chuẩn 2019) đồng thời áp dụng chuẩn 2025 trong thực tế.",
+      "summaryEn": "Side-by-side comparison tracking precise revisions and new sub-competencies, bridging candidate preparation between the current written exam and modern practice standards."
     }
   ],
   "examProfiles": [
@@ -2103,95 +2176,733 @@
   ],
   "competencies": [
     {
+      "code": "Năng lực 1.0",
+      "number": "1.0",
       "domainEn": "A. Foundation",
       "domainVi": "A. Nền tảng",
+      "compEn": "Demonstrates Ethical Practice",
+      "compVi": "Thể hiện thực hành đạo đức",
+      "nameEn": "Demonstrates Ethical Practice",
+      "nameVi": "Thể hiện thực hành đạo đức",
+      "titleEn": "Demonstrates Ethical Practice",
+      "titleVi": "Thể hiện thực hành đạo đức",
+      "descEn": "Understands and consistently applies coaching ethics and standards of coaching.",
+      "descVi": "Hiểu và nhất quán áp dụng đạo đức khai vấn và các chuẩn mực của nghề khai vấn.",
+      "definitionEn": "Understands and consistently applies coaching ethics and standards of coaching.",
+      "definitionVi": "Hiểu và nhất quán áp dụng đạo đức khai vấn và các chuẩn mực của nghề khai vấn.",
+      "studyCueEn": "ETHICS FIRST: Integrity • Confidentiality • Scope • Referral",
+      "studyCueVi": "ĐẠO ĐỨC TRƯỚC TIÊN: Chính trực • Bảo mật • Phạm vi • Giới thiệu chuyên gia",
+      "cueEn": "ETHICS FIRST: Integrity • Confidentiality • Scope • Referral",
+      "cueVi": "ĐẠO ĐỨC TRƯỚC TIÊN: Chính trực • Bảo mật • Phạm vi • Giới thiệu chuyên gia",
+      "examTriggerEn": "Ethics • confidentiality • scope • referral • stakeholder respect",
+      "examTriggerVi": "Đạo đức • bảo mật • phạm vi • giới thiệu chuyên gia • tôn trọng bên liên quan",
+      "natureEn": "This competency is really about protecting the integrity of the coaching relationship before any coaching technique is used. The coach must know the limits of the coaching role, honor confidentiality and agreements, recognize conflicts of interest, use technology responsibly, and refer when another form of support is more appropriate. At PCC level, ethics is not a separate “compliance moment”; it is visible in how the coach stays in the role of coach and preserves the client’s informed choice and dignity.",
+      "natureVi": "Năng lực này thực chất là bảo vệ tính chính trực của mối quan hệ khai vấn trước khi áp dụng bất kỳ kỹ thuật coaching nào. Coach cần biết giới hạn của vai trò khai vấn, tôn trọng bảo mật và thỏa thuận, nhận diện xung đột lợi ích, sử dụng công nghệ có trách nhiệm và giới thiệu sang hình thức hỗ trợ khác khi phù hợp hơn. Ở cấp PCC, đạo đức không phải là một “khoảnh khắc tuân thủ” riêng lẻ; nó thể hiện xuyên suốt qua cách coach giữ đúng vai trò và bảo toàn quyền lựa chọn có đầy đủ thông tin cùng phẩm giá của khách hàng.",
+      "naturalInCoachingEn": "In a real conversation, this may sound simple: \n- clarifying what coaching is and is not; \n- checking what may be shared with a sponsor; \n- naming a potential dual-role conflict; \n- asking permission before moving into consulting or mentoring; \n- pausing when a client’s needs move beyond coaching; or \n- discussing privacy before using an AI transcription tool. \nEthical coaching often sounds like clear, calm contracting rather than dramatic rule-enforcement.",
+      "naturalInCoachingVi": "Trong hội thoại thật, năng lực này thường xuất hiện rất tự nhiên: \n- làm rõ coaching là gì và không phải là gì; \n- kiểm tra thông tin nào có thể chia sẻ với sponsor; \n- gọi tên một xung đột do đa vai trò; \n- xin phép trước khi chuyển sang tư vấn hoặc mentoring;\n- dừng lại khi nhu cầu của khách hàng vượt quá phạm vi coaching; \n- hoặc trao đổi về quyền riêng tư trước khi dùng công cụ AI ghi âm/phiên âm. \nCoaching có đạo đức thường nghe giống một cuộc thỏa thuận rõ ràng, bình tĩnh hơn là việc “áp luật” cứng nhắc.",
+      "assessorPerspectiveEn": "Assessors do not listen for the coach to recite the Code of Ethics. They listen for whether the whole conversation remains recognizably coaching: the client retains choice, the coach does not dominate with advice, role boundaries remain clear, and nothing in the interaction violates ethical standards. \n\nICF specifically notes that PCC markers are behavioral indicators used in the context of the Core Competencies, not a checklist. Ethical practice is therefore judged through the integrity of the overall coaching stance.",
+      "assessorPerspectiveVi": "Assessor không chờ coach đọc lại Code of Ethics. Họ lắng nghe xem toàn bộ cuộc trò chuyện có thực sự giữ được bản chất coaching hay không: khách hàng vẫn có quyền lựa chọn, coach không chi phối bằng lời khuyên, ranh giới vai trò rõ ràng và không có hành vi vi phạm chuẩn mực đạo đức. \n\nICF nhấn mạnh rằng PCC markers là các chỉ dấu hành vi được dùng trong bối cảnh tổng thể của Core Competencies, không phải checklist. Vì vậy, thực hành đạo đức được nhìn qua tính chính trực của toàn bộ tư thế khai vấn.",
+      "commonTrapsEn": "Common traps: \n- assuming “the sponsor pays, so the sponsor owns the information”; \n- believing good intentions eliminate a conflict of interest; \n- thinking a coach may never share knowledge;\n- confusing emotional exploration with psychotherapy; \n- or thinking confidentiality is absolute in every circumstance. \n\nIn exam questions, the strongest answer usually makes the ethical issue explicit, returns to the agreement or scope, and preserves informed client choice rather than quietly “handling it” alone.",
+      "commonTrapsVi": "Các bẫy thường gặp: \n- nghĩ rằng “sponsor trả tiền nên sponsor sở hữu thông tin”; \n- cho rằng ý định tốt sẽ loại bỏ xung đột lợi ích; tin rằng coach tuyệt đối không được chia sẻ kiến thức;\n- nhầm việc khám phá cảm xúc với tâm lý trị liệu; hoặc nghĩ bảo mật là tuyệt đối trong mọi hoàn cảnh. \n\nTrong câu hỏi thi, phương án mạnh nhất thường gọi tên vấn đề đạo đức, quay lại thỏa thuận/phạm vi và bảo toàn quyền lựa chọn có đầy đủ thông tin của khách hàng thay vì coach âm thầm tự xử lý.",
+      "trapEn": "Common traps: \n- assuming “the sponsor pays, so the sponsor owns the information”; \n- believing good intentions eliminate a conflict of interest; \n- thinking a coach may never share knowledge;\n- confusing emotional exploration with psychotherapy; \n- or thinking confidentiality is absolute in every circumstance. \n\nIn exam questions, the strongest answer usually makes the ethical issue explicit, returns to the agreement or scope, and preserves informed client choice rather than quietly “handling it” alone.",
+      "trapVi": "Các bẫy thường gặp: \n- nghĩ rằng “sponsor trả tiền nên sponsor sở hữu thông tin”; \n- cho rằng ý định tốt sẽ loại bỏ xung đột lợi ích; tin rằng coach tuyệt đối không được chia sẻ kiến thức;\n- nhầm việc khám phá cảm xúc với tâm lý trị liệu; hoặc nghĩ bảo mật là tuyệt đối trong mọi hoàn cảnh. \n\nTrong câu hỏi thi, phương án mạnh nhất thường gọi tên vấn đề đạo đức, quay lại thỏa thuận/phạm vi và bảo toàn quyền lựa chọn có đầy đủ thông tin của khách hàng thay vì coach âm thầm tự xử lý.",
+      "lensEn": "ETHICS FIRST: Integrity • Confidentiality • Scope • Referral",
+      "lensVi": "ĐẠO ĐỨC TRƯỚC TIÊN: Chính trực • Bảo mật • Phạm vi • Giới thiệu chuyên gia",
+      "changes2025Vi": "Tích hợp quy định bảo vệ quyền riêng tư số và sử dụng công nghệ/AI có trách nhiệm; tăng cường sự nhạy bén liên văn hóa và ranh giới quyền lực.",
+      "changes2025En": "Integrates digital privacy protection and responsible AI technology use; reinforces cross-cultural sensitivity and systemic power boundaries.",
+      "subCompetencies2025": [
+        {
+          "subId": "1.01",
+          "behaviorEn": "Demonstrates personal integrity and honesty in interactions with clients, sponsors and relevant stakeholders",
+          "behaviorVi": "Thể hiện sự chính trực và trung thực trong tương tác với khách hàng, bên tài trợ và các bên liên quan."
+        },
+        {
+          "subId": "1.02",
+          "behaviorEn": "Is sensitive to clients’ identity, environment, experiences, values and beliefs",
+          "behaviorVi": "Nhạy cảm và tôn trọng bản sắc, môi trường, trải nghiệm, giá trị và niềm tin của khách hàng."
+        },
+        {
+          "subId": "1.03",
+          "behaviorEn": "Uses language appropriate and respectful to clients, sponsors and relevant stakeholders",
+          "behaviorVi": "Sử dụng ngôn ngữ phù hợp và tôn trọng đối với khách hàng, bên tài trợ và các bên liên quan."
+        },
+        {
+          "subId": "1.04",
+          "behaviorEn": "Abides by the ICF Code of Ethics and upholds the ICF Core Values",
+          "behaviorVi": "Tuân thủ ICF Code of Ethics và duy trì các Giá trị Cốt lõi của ICF."
+        },
+        {
+          "subId": "1.05",
+          "behaviorEn": "Maintains confidentiality with client information per stakeholder agreements and pertinent laws",
+          "behaviorVi": "Duy trì tính bảo mật của thông tin khách hàng theo thỏa thuận với các bên liên quan và pháp luật áp dụng."
+        },
+        {
+          "subId": "1.06",
+          "behaviorEn": "Maintains the distinctions between coaching, consulting, psychotherapy and other support professions",
+          "behaviorVi": "Duy trì sự phân biệt giữa khai vấn, tư vấn, tâm lý trị liệu và các nghề hỗ trợ khác."
+        },
+        {
+          "subId": "1.07",
+          "behaviorEn": "Refers clients to other support professionals, as appropriate",
+          "behaviorVi": "Giới thiệu khách hàng đến các chuyên gia hỗ trợ khác khi phù hợp."
+        }
+      ],
+      "subCompetencies2019": [
+        {
+          "subId": "1.1",
+          "behaviorEn": "Demonstrates personal integrity and honesty in interactions with clients, sponsors and relevant stakeholders",
+          "behaviorVi": "Thể hiện sự chính trực và trung thực trong tương tác với khách hàng, nhà tài trợ và các bên liên quan."
+        },
+        {
+          "subId": "1.2",
+          "behaviorEn": "Is sensitive to clients’ identity, environment, experiences, values and beliefs",
+          "behaviorVi": "Nhạy cảm và tôn trọng bản sắc, môi trường, trải nghiệm, giá trị và niềm tin của khách hàng."
+        },
+        {
+          "subId": "1.3",
+          "behaviorEn": "Uses language appropriate and respectful to clients, sponsors and relevant stakeholders",
+          "behaviorVi": "Sử dụng ngôn ngữ phù hợp và tôn trọng khách hàng, nhà tài trợ và các bên liên quan."
+        },
+        {
+          "subId": "1.4",
+          "behaviorEn": "Abides by the ICF Code of Ethics and upholds the Core Values",
+          "behaviorVi": "Tuân thủ Bộ Quy tắc Đạo đức ICF và phát huy các Giá trị Cốt lõi."
+        },
+        {
+          "subId": "1.5",
+          "behaviorEn": "Maintains confidentiality with client information per stakeholder agreements and pertinent laws",
+          "behaviorVi": "Duy trì tính bảo mật thông tin khách hàng theo thỏa thuận các bên và luật pháp hiện hành."
+        },
+        {
+          "subId": "1.6",
+          "behaviorEn": "Maintains the distinctions between coaching, consulting, psychotherapy and other support professions",
+          "behaviorVi": "Giữ vững sự phân biệt giữa khai vấn, tư vấn chuyên môn, trị liệu tâm lý và các ngành nghề hỗ trợ khác."
+        },
+        {
+          "subId": "1.7",
+          "behaviorEn": "Refers clients to other support professionals, as appropriate",
+          "behaviorVi": "Chuyển gửi khách hàng sang các chuyên gia trợ giúp khác khi phù hợp."
+        }
+      ]
+    },
+    {
+      "code": "Năng lực 2.0",
       "number": "2.0",
+      "domainEn": "A. Foundation",
+      "domainVi": "A. Nền tảng",
       "compEn": "Embodies a Coaching Mindset",
       "compVi": "Thể hiện tư duy khai vấn",
-      "lensEn": "Am I open, curious, flexible and client-centered — or attached to my preferred outcome?",
-      "lensVi": "Tôi có đang cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm — hay đang bám vào kết quả mình mong muốn?",
-      "cueEn": "COACH YOURSELF FIRST",
-      "cueVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC",
-      "trapEn": "Coach disappointment, bias, agenda or need to be right",
-      "trapVi": "Sự thất vọng, thiên kiến, agenda hoặc nhu cầu phải đúng của coach"
+      "nameEn": "Embodies a Coaching Mindset",
+      "nameVi": "Thể hiện tư duy khai vấn",
+      "titleEn": "Embodies a Coaching Mindset",
+      "titleVi": "Thể hiện tư duy khai vấn",
+      "descEn": "Engages in ongoing personal and professional learning and development as a coach. Works with coaching supervisors or mentor coaches as needed. \n\nDevelops and maintains a mindset that is open, curious, flexible and client-centered.",
+      "descVi": "Liên tục học hỏi và phát triển cá nhân, nghề nghiệp với tư cách coach; làm việc với coach supervisor hoặc mentor coach khi cần; duy trì tư duy cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm.",
+      "definitionEn": "Engages in ongoing personal and professional learning and development as a coach. Works with coaching supervisors or mentor coaches as needed. \n\nDevelops and maintains a mindset that is open, curious, flexible and client-centered.",
+      "definitionVi": "Liên tục học hỏi và phát triển cá nhân, nghề nghiệp với tư cách coach; làm việc với coach supervisor hoặc mentor coach khi cần; duy trì tư duy cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm.",
+      "studyCueEn": "COACH YOURSELF FIRST: Open • Curious • Flexible • Client-centered",
+      "studyCueVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC: Cởi mở • Tò mò • Linh hoạt • Lấy khách hàng làm trung tâm",
+      "cueEn": "COACH YOURSELF FIRST: Open • Curious • Flexible • Client-centered",
+      "cueVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC: Cởi mở • Tò mò • Linh hoạt • Lấy khách hàng làm trung tâm",
+      "examTriggerEn": "Coach reaction • bias • attachment • self-management • curiosity",
+      "examTriggerVi": "Phản ứng của coach • thiên kiến • bám chấp • tự quản trị • tò mò",
+      "natureEn": "This competency is really about the inner discipline that makes client-centered coaching possible. \n\nThe coach manages personal reactions, bias, certainty, emotional activation and the urge to be useful. \n\nThe mindset is open, curious, flexible and reflective, with an explicit belief that clients are responsible for their own choices. \nMuch of this competency develops outside a single session through reflection, supervision, mentor coaching, ongoing learning and personal well-being.",
+      "natureVi": "Năng lực này thực chất là kỷ luật nội tâm giúp coach có thể thực sự lấy khách hàng làm trung tâm. Coach quản trị phản ứng cá nhân, thiên kiến, sự chắc chắn quá mức, cảm xúc của chính mình và thôi thúc phải “giúp ngay”. Tư duy khai vấn cần cởi mở, tò mò, linh hoạt, có phản tư và đặt nền trên niềm tin rằng khách hàng chịu trách nhiệm cho lựa chọn của họ. Phần lớn năng lực này được phát triển ngoài một phiên đơn lẻ thông qua phản tư, supervision, mentor coaching, học tập liên tục và chăm sóc sức khỏe bản thân.",
+      "naturalInCoachingEn": "Naturally, it appears when \n- the coach notices disappointment because a client did not complete an action and does not turn that disappointment into pressure; \n- when the coach catches an assumption and becomes curious instead; \n- when intuition is offered tentatively rather than as truth; or when the coach can say, in effect, “I may be wrong—what fits for you?” \n\nThe conversation feels less like the coach managing the client and more like the coach managing self in service of the client.",
+      "naturalInCoachingVi": "Trong hội thoại tự nhiên, năng lực này xuất hiện khi coach nhận thấy mình thất vọng vì khách hàng không thực hiện hành động nhưng không biến thất vọng đó thành áp lực; khi coach bắt gặp một giả định của chính mình và chuyển sang tò mò; khi trực giác được đưa ra như một khả năng chứ không phải sự thật; hoặc khi coach có thể ngầm truyền đạt: “Tôi có thể sai—điều gì phù hợp với bạn?” \n\nCuộc trò chuyện sẽ ít giống việc coach quản lý khách hàng và nhiều hơn là coach quản trị chính mình để phục vụ khách hàng.",
+      "assessorPerspectiveEn": "ICF notes that this competency cannot be fully captured in one recorded session and is primarily evaluated in the credentialing exam, although parts of it are visible in the conversation. \n\nAssessors infer mindset through integrated behaviors: curiosity, respect for client choice, customized questions, acceptance of the client’s response, non-attachment and responsiveness to the whole person. \n\nThey are not listening for a special “mindset technique”; they are listening for the quality of the coach’s stance across many moments.",
+      "assessorPerspectiveVi": "ICF nêu rõ năng lực này không thể được phản ánh đầy đủ trong một phiên ghi âm và phần lớn được đánh giá qua credentialing exam, dù một số biểu hiện vẫn có thể được nghe thấy trong phiên coaching. Assessor suy ra tư duy khai vấn qua các hành vi tích hợp: sự tò mò, tôn trọng lựa chọn của khách hàng, câu hỏi được cá nhân hóa, chấp nhận phản hồi của khách hàng, không bám chấp và phản hồi với “toàn bộ con người”. Họ không nghe một “kỹ thuật mindset” đặc biệt; họ nghe chất lượng tư thế của coach xuyên suốt nhiều khoảnh khắc.",
+      "commonTrapsEn": "Common traps: \n- treating accountability as compliance; \n- assuming the coach should motivate a reluctant client; \n- interpreting “intuition” as permission to tell the client what is true; \n- believing professional confidence means certainty; or thinking client-centeredness means being passive. \n\nPCC mindset combines self-management with active partnership: the coach can challenge, notice and contribute—without taking ownership of the client’s meaning or choices.",
+      "commonTrapsVi": "Các bẫy thường gặp: đồng nhất accountability với việc tuân thủ; cho rằng coach phải thúc đẩy một khách hàng chưa sẵn sàng; hiểu “trực giác” như giấy phép để nói cho khách hàng biết sự thật; tin rằng tự tin nghề nghiệp đồng nghĩa với chắc chắn; hoặc nghĩ lấy khách hàng làm trung tâm là thụ động. \n\nTư duy PCC kết hợp tự quản trị với partnering chủ động: coach vẫn có thể thách thức, nhận diện và đóng góp—nhưng không chiếm quyền sở hữu ý nghĩa hay lựa chọn của khách hàng.",
+      "trapEn": "Common traps: \n- treating accountability as compliance; \n- assuming the coach should motivate a reluctant client; \n- interpreting “intuition” as permission to tell the client what is true; \n- believing professional confidence means certainty; or thinking client-centeredness means being passive. \n\nPCC mindset combines self-management with active partnership: the coach can challenge, notice and contribute—without taking ownership of the client’s meaning or choices.",
+      "trapVi": "Các bẫy thường gặp: đồng nhất accountability với việc tuân thủ; cho rằng coach phải thúc đẩy một khách hàng chưa sẵn sàng; hiểu “trực giác” như giấy phép để nói cho khách hàng biết sự thật; tin rằng tự tin nghề nghiệp đồng nghĩa với chắc chắn; hoặc nghĩ lấy khách hàng làm trung tâm là thụ động. \n\nTư duy PCC kết hợp tự quản trị với partnering chủ động: coach vẫn có thể thách thức, nhận diện và đóng góp—nhưng không chiếm quyền sở hữu ý nghĩa hay lựa chọn của khách hàng.",
+      "lensEn": "COACH YOURSELF FIRST: Open • Curious • Flexible • Client-centered",
+      "lensVi": "QUẢN TRỊ CHÍNH MÌNH TRƯỚC: Cởi mở • Tò mò • Linh hoạt • Lấy khách hàng làm trung tâm",
+      "changes2025Vi": "Mở rộng định nghĩa tư duy phản tư liên tục, sức khỏe toàn diện của coach (well-being), tìm kiếm sự hỗ trợ qua Coach Supervision / Mentor Coaching và tôn trọng quyền tự quyết của khách hàng trong bối cảnh hệ thống.",
+      "changes2025En": "Expands reflective practice, coach well-being, engaging in coach supervision/mentoring, and honoring client self-determination within systemic contexts.",
+      "subCompetencies2025": [
+        {
+          "subId": "2.01",
+          "behaviorEn": "Acknowledges that clients are responsible for their own choices",
+          "behaviorVi": "Công nhận rằng khách hàng chịu trách nhiệm cho các lựa chọn của chính mình."
+        },
+        {
+          "subId": "2.02",
+          "behaviorEn": "Engages in ongoing learning and development as a coach, including remaining aware of current coaching best practices and use of technology",
+          "behaviorVi": "Liên tục học hỏi và phát triển với tư cách coach, bao gồm cập nhật các thực hành tốt hiện hành và việc sử dụng công nghệ trong coaching."
+        },
+        {
+          "subId": "2.03",
+          "behaviorEn": "Develops an ongoing reflective practice to enhance one’s coaching",
+          "behaviorVi": "Duy trì thực hành tự phản tư thường xuyên để nâng cao năng lực coaching."
+        },
+        {
+          "subId": "2.04",
+          "behaviorEn": "Remains aware of and open to the influence of biases, context and culture on self and others",
+          "behaviorVi": "Nhận thức và cởi mở trước ảnh hưởng của thiên kiến, bối cảnh và văn hóa lên bản thân và người khác."
+        },
+        {
+          "subId": "2.05",
+          "behaviorEn": "Uses awareness of self and one’s intuition to benefit clients",
+          "behaviorVi": "Sử dụng sự tự nhận thức và trực giác của bản thân theo cách có lợi cho khách hàng."
+        },
+        {
+          "subId": "2.06",
+          "behaviorEn": "Develops and maintains the ability to manage one’s emotions",
+          "behaviorVi": "Phát triển và duy trì khả năng quản trị cảm xúc của bản thân."
+        },
+        {
+          "subId": "2.07",
+          "behaviorEn": "Maintains emotional, physical, and mental well-being in preparation for, throughout, and following each session",
+          "behaviorVi": "Duy trì sức khỏe cảm xúc, thể chất và tinh thần trước, trong và sau mỗi phiên khai vấn."
+        },
+        {
+          "subId": "2.08",
+          "behaviorEn": "Seeks help from outside sources when necessary",
+          "behaviorVi": "Tìm kiếm sự hỗ trợ từ nguồn bên ngoài khi cần thiết."
+        },
+        {
+          "subId": "2.09",
+          "behaviorEn": "Nurtures openness and curiosity in oneself, the client, and the coaching process",
+          "behaviorVi": "Nuôi dưỡng sự cởi mở và tò mò ở bản thân, khách hàng và trong quá trình khai vấn."
+        },
+        {
+          "subId": "2.10",
+          "behaviorEn": "Remains aware of the influence of one’s thoughts and behaviors on the client and others",
+          "behaviorVi": "Nhận thức về ảnh hưởng của suy nghĩ và hành vi của bản thân lên khách hàng và người khác."
+        }
+      ],
+      "subCompetencies2019": [
+        {
+          "subId": "2.1",
+          "behaviorEn": "Acknowledges that clients are responsible for their own choices",
+          "behaviorVi": "Công nhận rằng khách hàng chịu trách nhiệm về các lựa chọn của chính họ."
+        },
+        {
+          "subId": "2.2",
+          "behaviorEn": "Engages in ongoing learning and development as a coach",
+          "behaviorVi": "Tham gia vào quá trình học tập và phát triển liên tục với tư cách là coach."
+        },
+        {
+          "subId": "2.3",
+          "behaviorEn": "Develops an ongoing reflective practice to enhance one’s coaching",
+          "behaviorVi": "Phát triển thói quen phản tư liên tục để nâng cao năng lực khai vấn."
+        },
+        {
+          "subId": "2.4",
+          "behaviorEn": "Remains aware of and open to the influence of context and culture on self and others",
+          "behaviorVi": "Nhận thức và cởi mở với ảnh hưởng của bối cảnh và văn hóa lên bản thân và người khác."
+        },
+        {
+          "subId": "2.5",
+          "behaviorEn": "Uses awareness of self and one’s intuition to benefit clients",
+          "behaviorVi": "Sử dụng sự tự nhận thức và trực giác vì lợi ích của khách hàng."
+        },
+        {
+          "subId": "2.6",
+          "behaviorEn": "Develops and maintains the ability to regulate one’s emotions",
+          "behaviorVi": "Phát triển và duy trì khả năng điều tiết cảm xúc của bản thân."
+        },
+        {
+          "subId": "2.7",
+          "behaviorEn": "Mentally and emotionally prepares for sessions",
+          "behaviorVi": "Chuẩn bị tâm trí và cảm xúc trước các phiên khai vấn."
+        },
+        {
+          "subId": "2.8",
+          "behaviorEn": "Seeks help from outside sources when necessary",
+          "behaviorVi": "Tìm kiếm sự trợ giúp từ bên ngoài khi cần thiết."
+        }
+      ]
     },
     {
+      "code": "Năng lực 3.0",
+      "number": "3.0",
       "domainEn": "B. Co-Creating the Relationship",
       "domainVi": "B. Đồng kiến tạo mối quan hệ",
-      "number": "3.0",
       "compEn": "Establishes and Maintains Agreements",
       "compVi": "Thiết lập và duy trì thỏa thuận",
-      "lensEn": "What does the client want from this engagement/session, and how will success be known?",
-      "lensVi": "Khách hàng muốn gì từ quá trình/phiên này, và làm sao biết phiên đó thành công?",
-      "cueEn": "CONTRACT BEFORE CONTENT",
-      "cueVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU",
-      "trapEn": "Coach selects topic or ignores a shift in focus",
-      "trapVi": "Coach chọn chủ đề hoặc bỏ qua sự thay đổi trọng tâm"
+      "nameEn": "Establishes and Maintains Agreements",
+      "nameVi": "Thiết lập và duy trì thỏa thuận",
+      "titleEn": "Establishes and Maintains Agreements",
+      "titleVi": "Thiết lập và duy trì thỏa thuận",
+      "descEn": "Partners with the client and relevant stakeholders to create clear agreements about the coaching relationship, process, plans and goals. Establishes agreements for the overall coaching engagement as well as those for each coaching session.",
+      "descVi": "Đồng hành với khách hàng và các bên liên quan để tạo ra các thỏa thuận rõ ràng về mối quan hệ, quy trình, kế hoạch và mục tiêu khai vấn; thiết lập thỏa thuận cho cả toàn bộ quá trình và từng phiên.",
+      "definitionEn": "Partners with the client and relevant stakeholders to create clear agreements about the coaching relationship, process, plans and goals. Establishes agreements for the overall coaching engagement as well as those for each coaching session.",
+      "definitionVi": "Đồng hành với khách hàng và các bên liên quan để tạo ra các thỏa thuận rõ ràng về mối quan hệ, quy trình, kế hoạch và mục tiêu khai vấn; thiết lập thỏa thuận cho cả toàn bộ quá trình và từng phiên.",
+      "studyCueEn": "CONTRACT BEFORE CONTENT: Outcome • Success • Meaning • Focus",
+      "studyCueVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU: Kết quả • Thành công • Ý nghĩa • Trọng tâm",
+      "cueEn": "CONTRACT BEFORE CONTENT: Outcome • Success • Meaning • Focus",
+      "cueVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU: Kết quả • Thành công • Ý nghĩa • Trọng tâm",
+      "examTriggerEn": "Outcome • success measure • focus • role • time • recontracting",
+      "examTriggerVi": "Kết quả • tiêu chí thành công • trọng tâm • vai trò • thời gian • tái thỏa thuận",
+      "natureEn": "This competency is really about making sure the coaching conversation serves an outcome chosen and understood by the client. \nA strong agreement goes beyond “What do you want to talk about?” \n\nIt includes what the client wants to accomplish, how they will know the session was useful, why it matters, and what they believe needs to be explored. \nThe agreement is dynamic: when new information changes the focus, the coach partners to reconfirm direction rather than mechanically staying with the original topic.",
+      "natureVi": "Năng lực này thực chất là bảo đảm cuộc trò chuyện khai vấn phục vụ một kết quả do chính khách hàng lựa chọn và hiểu rõ. \n\nMột thỏa thuận tốt vượt xa câu “Hôm nay bạn muốn nói về gì?”. Nó bao gồm khách hàng muốn đạt điều gì, làm sao họ biết phiên này hữu ích, vì sao điều đó quan trọng và họ tin rằng cần khám phá điều gì. \n\nThỏa thuận mang tính động: khi thông tin mới làm thay đổi trọng tâm, coach đồng hành để xác nhận lại hướng đi thay vì máy móc bám vào chủ đề ban đầu.",
+      "naturalInCoachingEn": "It shows up in short, conversational moments: \n- “What would make this conversation useful today?” \n- “If we get somewhere valuable, what will be different by the end?” \n- “What feels important about this?” \n- “What do you think we need to look at?” \n\nLater, when the client says “Actually, I think the real issue is trust,” the coach notices the shift and asks whether they want to change the focus. Good contracting feels like partnership, not an intake questionnaire.",
+      "naturalInCoachingVi": "Năng lực này xuất hiện qua những khoảnh khắc hội thoại ngắn: \n- “Điều gì sẽ làm cuộc trò chuyện hôm nay hữu ích với bạn?” \n- “Nếu phiên này thực sự có giá trị, cuối buổi điều gì sẽ khác?” \n- “Điều gì khiến chủ đề này quan trọng?”\n- “Theo bạn chúng ta cần nhìn vào điều gì?” \n\nSau đó, khi khách hàng nói “Thực ra vấn đề chính là tôi không tin đội ngũ,” coach nhận ra sự thay đổi và hỏi họ có muốn chuyển trọng tâm không. Contracting tốt có cảm giác như partnering, không giống một bảng câu hỏi đầu vào.",
+      "assessorPerspectiveEn": "Assessors listen for whether the agreement actually guides the coaching. They expect more than a stated topic: outcome, success measures, meaning/importance and what needs to be addressed should become visible in the session. \n\nThey also listen for continuity—does the coach stay aligned with what the client wants, and does the coach notice and recontract if the conversation moves elsewhere?\n\nIntegration is seen when later listening, questions and actions clearly connect back to the agreed outcome.",
+      "assessorPerspectiveVi": "Assessor lắng nghe xem thỏa thuận có thực sự dẫn dắt phiên coaching hay không. Họ kỳ vọng nhiều hơn một chủ đề được nêu ra: kết quả, tiêu chí thành công, ý nghĩa/tầm quan trọng và điều cần được khám phá cần dần trở nên rõ. Họ cũng nghe tính liên tục—coach có duy trì hướng đi theo điều khách hàng muốn không, và có nhận ra/tái thỏa thuận khi cuộc trò chuyện chuyển hướng không? Sự tích hợp được thể hiện khi việc lắng nghe, đặt câu hỏi và thiết kế hành động về sau đều kết nối lại với kết quả đã thống nhất.",
+      "commonTrapsEn": "Common traps: \n- confusing a topic with an outcome; \n- asking for a goal but not a measure of success;\n- deciding what is most urgent for the client; \n- rigidly holding the original agreement even when the client’s awareness changes; \n- or spending so long contracting that no coaching happens. \nIn exam scenarios, “partner/reconfirm” is often stronger than either “follow the original agenda no matter what” or “change direction because the coach thinks it is better.”",
+      "commonTrapsVi": "Các bẫy thường gặp: \n- nhầm chủ đề với kết quả; \n- hỏi mục tiêu nhưng không làm rõ tiêu chí thành công;\n- coach tự quyết điều gì cấp bách nhất; cứng nhắc giữ thỏa thuận ban đầu khi nhận thức của khách hàng đã thay đổi; \n- hoặc dành quá nhiều thời gian contracting đến mức không còn coaching. \n\nTrong tình huống thi, phương án “đồng hành/xác nhận lại” thường mạnh hơn cả hai cực: “bám agenda ban đầu bằng mọi giá” hoặc “đổi hướng vì coach nghĩ hướng khác tốt hơn.”",
+      "trapEn": "Common traps: \n- confusing a topic with an outcome; \n- asking for a goal but not a measure of success;\n- deciding what is most urgent for the client; \n- rigidly holding the original agreement even when the client’s awareness changes; \n- or spending so long contracting that no coaching happens. \nIn exam scenarios, “partner/reconfirm” is often stronger than either “follow the original agenda no matter what” or “change direction because the coach thinks it is better.”",
+      "trapVi": "Các bẫy thường gặp: \n- nhầm chủ đề với kết quả; \n- hỏi mục tiêu nhưng không làm rõ tiêu chí thành công;\n- coach tự quyết điều gì cấp bách nhất; cứng nhắc giữ thỏa thuận ban đầu khi nhận thức của khách hàng đã thay đổi; \n- hoặc dành quá nhiều thời gian contracting đến mức không còn coaching. \n\nTrong tình huống thi, phương án “đồng hành/xác nhận lại” thường mạnh hơn cả hai cực: “bám agenda ban đầu bằng mọi giá” hoặc “đổi hướng vì coach nghĩ hướng khác tốt hơn.”",
+      "lensEn": "CONTRACT BEFORE CONTENT: Outcome • Success • Meaning • Focus",
+      "lensVi": "THỎA THUẬN TRƯỚC, NỘI DUNG SAU: Kết quả • Thành công • Ý nghĩa • Trọng tâm",
+      "changes2025Vi": "Bổ sung thỏa thuận về bảo mật dữ liệu số, sự đồng thuận khi sử dụng công cụ AI phiên âm/ghi chú, và ranh giới với các bên liên quan (sponsor/stakeholders) trong thỏa thuận nhiều bên.",
+      "changes2025En": "Adds explicit contracting on digital data security, consent for AI transcription/recording, and multi-stakeholder boundary clarity.",
+      "subCompetencies2025": [
+        {
+          "subId": "3.01",
+          "behaviorEn": "Describes one's coaching philosophy and clearly defines what coaching is and is not for potential clients and stakeholders",
+          "behaviorVi": "Mô tả triết lý khai vấn của mình và xác định rõ coaching là gì và không phải là gì đối với khách hàng tiềm năng và các bên liên quan."
+        },
+        {
+          "subId": "3.02",
+          "behaviorEn": "Reaches agreement about what is and is not appropriate in the relationship, what is and is not being offered, and the responsibilities of the client and relevant stakeholders, including commitment to working toward coaching goals",
+          "behaviorVi": "Thống nhất điều gì phù hợp/không phù hợp trong mối quan hệ, điều gì được/không được cung cấp, và trách nhiệm của khách hàng cùng các bên liên quan, bao gồm cam kết hướng tới mục tiêu khai vấn."
+        },
+        {
+          "subId": "3.03",
+          "behaviorEn": "Reaches agreement about the guidelines and specific parameters of the coaching relationship such as logistics, fees, scheduling, duration, termination, confidentiality and inclusion of others",
+          "behaviorVi": "Thống nhất các nguyên tắc và thông số cụ thể của mối quan hệ khai vấn như logistics, phí, lịch, thời lượng, chấm dứt, bảo mật và sự tham gia của người khác."
+        },
+        {
+          "subId": "3.04",
+          "behaviorEn": "Partners with the client and relevant stakeholders to establish an overall coaching plan and goals",
+          "behaviorVi": "Đồng hành với khách hàng và các bên liên quan để thiết lập kế hoạch và mục tiêu khai vấn tổng thể."
+        },
+        {
+          "subId": "3.05",
+          "behaviorEn": "Partners with the client to determine client-coach compatibility",
+          "behaviorVi": "Đồng hành với khách hàng để xác định mức độ phù hợp giữa khách hàng và coach."
+        },
+        {
+          "subId": "3.06",
+          "behaviorEn": "Partners with the client to identify or reconfirm what they want to accomplish in the session",
+          "behaviorVi": "Đồng hành với khách hàng để xác định hoặc xác nhận lại điều họ muốn đạt được trong phiên."
+        },
+        {
+          "subId": "3.07",
+          "behaviorEn": "Partners with the client to define what the client believes they need to address or resolve to achieve what they want to accomplish in the session",
+          "behaviorVi": "Đồng hành với khách hàng để xác định điều mà chính họ tin rằng cần xử lý hoặc làm rõ nhằm đạt được mục tiêu của phiên."
+        },
+        {
+          "subId": "3.08",
+          "behaviorEn": "Partners with the client to define or reconfirm measures of success for what the client wants to accomplish in the coaching engagement or individual session",
+          "behaviorVi": "Đồng hành với khách hàng để xác định hoặc xác nhận lại tiêu chí thành công cho mục tiêu của toàn bộ quá trình hoặc từng phiên."
+        },
+        {
+          "subId": "3.09",
+          "behaviorEn": "Partners with the client to manage the time and focus of the session",
+          "behaviorVi": "Đồng hành với khách hàng để quản lý thời gian và trọng tâm của phiên."
+        },
+        {
+          "subId": "3.10",
+          "behaviorEn": "Continues coaching in the direction of the client’s desired outcome unless the client indicates otherwise",
+          "behaviorVi": "Tiếp tục coaching theo hướng kết quả mà khách hàng mong muốn, trừ khi khách hàng cho biết họ muốn thay đổi."
+        },
+        {
+          "subId": "3.11",
+          "behaviorEn": "Partners with the client to close the coaching relationship in a way that respects the client and the coaching experience",
+          "behaviorVi": "Đồng hành với khách hàng để khép lại mối quan hệ khai vấn theo cách tôn trọng khách hàng và trải nghiệm khai vấn."
+        },
+        {
+          "subId": "3.12",
+          "behaviorEn": "Revisits the coaching agreement when necessary to ensure the coaching approach is meeting the client's needs",
+          "behaviorVi": "Xem lại thỏa thuận khai vấn khi cần để bảo đảm cách tiếp cận đang đáp ứng nhu cầu của khách hàng."
+        }
+      ],
+      "subCompetencies2019": []
     },
     {
+      "code": "Năng lực 4.0",
+      "number": "4.0",
       "domainEn": "B. Co-Creating the Relationship",
       "domainVi": "B. Đồng kiến tạo mối quan hệ",
-      "number": "4.0",
       "compEn": "Cultivates Trust and Safety",
       "compVi": "Nuôi dưỡng niềm tin và sự an toàn",
-      "lensEn": "Am I understanding the client from their context rather than imposing mine?",
-      "lensVi": "Tôi có đang hiểu khách hàng trong bối cảnh của họ thay vì áp bối cảnh của mình lên họ không?",
-      "cueEn": "ENTER THEIR WORLD",
-      "cueVi": "ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG",
-      "trapEn": "Judgment, assumptions, minimizing emotion",
-      "trapVi": "Phán xét, giả định, xem nhẹ cảm xúc"
+      "nameEn": "Cultivates Trust and Safety",
+      "nameVi": "Nuôi dưỡng niềm tin và sự an toàn",
+      "titleEn": "Cultivates Trust and Safety",
+      "titleVi": "Nuôi dưỡng niềm tin và sự an toàn",
+      "descEn": "Partners with the client to create a safe, supportive environment that allows the client to share freely.\n\nMaintains a relationship of mutual respect and trust.",
+      "descVi": "Đồng hành với khách hàng để tạo ra môi trường an toàn, nâng đỡ, cho phép khách hàng chia sẻ tự do; duy trì mối quan hệ dựa trên sự tôn trọng và tin cậy lẫn nhau.",
+      "definitionEn": "Partners with the client to create a safe, supportive environment that allows the client to share freely.\n\nMaintains a relationship of mutual respect and trust.",
+      "definitionVi": "Đồng hành với khách hàng để tạo ra môi trường an toàn, nâng đỡ, cho phép khách hàng chia sẻ tự do; duy trì mối quan hệ dựa trên sự tôn trọng và tin cậy lẫn nhau.",
+      "studyCueEn": "ENTER THEIR WORLD: Context • Respect • Empathy • Psychological safety",
+      "studyCueVi": "ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG: Bối cảnh • Tôn trọng • Thấu cảm • An toàn tâm lý",
+      "cueEn": "ENTER THEIR WORLD: Context • Respect • Empathy • Psychological safety",
+      "cueVi": "ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG: Bối cảnh • Tôn trọng • Thấu cảm • An toàn tâm lý",
+      "examTriggerEn": "Client context • identity • values • feelings • safety • empathy",
+      "examTriggerVi": "Bối cảnh • bản sắc • giá trị • cảm xúc • an toàn • thấu cảm",
+      "natureEn": "This competency is really about creating a relationship in which the client can think, feel and speak freely without needing to protect themselves from the coach. \nTrust grows when the coach respects the client’s identity, context, language, pace, strengths and perceptions; demonstrates empathy; acknowledges the client’s work; and is transparent enough to make the relationship genuinely collaborative. \n\nSafety does not mean avoiding challenge—it means challenge can occur without the client being diminished or overruled.",
+      "natureVi": "Năng lực này thực chất là tạo một mối quan hệ nơi khách hàng có thể suy nghĩ, cảm nhận và chia sẻ tự do mà không cần tự bảo vệ mình khỏi coach. Niềm tin được xây dựng khi coach tôn trọng bản sắc, bối cảnh, ngôn ngữ, nhịp độ, điểm mạnh và nhận thức của khách hàng; thể hiện thấu cảm; ghi nhận nỗ lực của họ; và đủ minh bạch để mối quan hệ thực sự mang tính hợp tác. \nAn toàn không có nghĩa là tránh thách thức—mà là thách thức có thể xảy ra mà khách hàng không bị hạ thấp hoặc lấn át.",
+      "naturalInCoachingEn": "It appears when the coach says, \n- “Take your time,” rather than rushing; \n- acknowledges courage or effort without generic praise; \n- asks what a cultural or identity factor means to this particular client rather than assuming; \n- accepts when the client says an observation does not fit; \n- and supports emotion without trying to remove it. \n\nThe client experiences: “My way of making sense of this is welcome here.”",
+      "naturalInCoachingVi": "Năng lực này thể hiện khi \n- coach nói “Bạn cứ từ từ” thay vì thúc; \n- ghi nhận sự can đảm hoặc nỗ lực một cách cụ thể thay vì khen chung chung; \n- hỏi một yếu tố văn hóa/bản sắc có ý nghĩa gì với chính khách hàng này thay vì giả định; \n- chấp nhận khi khách hàng nói một quan sát của coach không phù hợp; \n- và hỗ trợ cảm xúc mà không cố xóa bỏ nó. \nTrải nghiệm của khách hàng là: “Cách tôi hiểu và cảm nhận vấn đề này được chào đón ở đây.”",
+      "assessorPerspectiveEn": "Assessors listen for the relational climate as much as isolated statements. \n- Does the coach show respect and confidence in the client’s capability? \n- Do acknowledgments land on the client’s actual work and insights? \n- Can the client disagree, correct or redirect the coach without resistance? \n\nTrust and safety integrate with presence, listening and awareness: a powerful question is not strong PCC coaching if it is delivered from judgment, superiority or an imposed interpretation.",
+      "assessorPerspectiveVi": "Assessor lắng nghe “khí hậu quan hệ” chứ không chỉ các câu nói riêng lẻ. \n- Coach có thể hiện sự tôn trọng và niềm tin vào năng lực khách hàng không? \n- Việc ghi nhận có chạm đúng nỗ lực/insight thật của khách hàng không? \n- Khách hàng có thể không đồng ý, sửa lại hoặc chuyển hướng coach mà không gặp sự kháng cự không? \nTrust & Safety tích hợp với Presence, Listening và Awareness: một câu hỏi mạnh không phải coaching PCC tốt nếu nó được đưa ra từ phán xét, ưu thế hoặc diễn giải áp đặt.",
+      "commonTrapsEn": "Common traps: \n- equating safety with being nice; \n- reassuring so quickly that the client’s emotion is minimized; \n- praising the client in a generic or evaluative way;\n- assuming shared identity means shared experience;\n- or avoiding challenge because it might feel uncomfortable. \n\nSafety is not comfort at all costs. It is a respectful partnership in which the client’s dignity, autonomy and unique context remain intact even when the work becomes difficult.",
+      "commonTrapsVi": "Các bẫy thường gặp: \n- đồng nhất an toàn với “dễ chịu”; \n- trấn an quá nhanh khiến cảm xúc của khách hàng bị xem nhẹ; k\n- hen chung chung hoặc mang tính đánh giá; \n- giả định cùng bản sắc thì sẽ có cùng trải nghiệm; \n- hoặc tránh thách thức vì sợ khó chịu. \nAn toàn không phải là thoải mái bằng mọi giá. Đó là partnership tôn trọng, nơi phẩm giá, quyền tự chủ và bối cảnh độc đáo của khách hàng vẫn được giữ nguyên ngay cả khi công việc trở nên khó khăn.",
+      "trapEn": "Common traps: \n- equating safety with being nice; \n- reassuring so quickly that the client’s emotion is minimized; \n- praising the client in a generic or evaluative way;\n- assuming shared identity means shared experience;\n- or avoiding challenge because it might feel uncomfortable. \n\nSafety is not comfort at all costs. It is a respectful partnership in which the client’s dignity, autonomy and unique context remain intact even when the work becomes difficult.",
+      "trapVi": "Các bẫy thường gặp: \n- đồng nhất an toàn với “dễ chịu”; \n- trấn an quá nhanh khiến cảm xúc của khách hàng bị xem nhẹ; k\n- hen chung chung hoặc mang tính đánh giá; \n- giả định cùng bản sắc thì sẽ có cùng trải nghiệm; \n- hoặc tránh thách thức vì sợ khó chịu. \nAn toàn không phải là thoải mái bằng mọi giá. Đó là partnership tôn trọng, nơi phẩm giá, quyền tự chủ và bối cảnh độc đáo của khách hàng vẫn được giữ nguyên ngay cả khi công việc trở nên khó khăn.",
+      "lensEn": "ENTER THEIR WORLD: Context • Respect • Empathy • Psychological safety",
+      "lensVi": "ĐI VÀO THẾ GIỚI CỦA KHÁCH HÀNG: Bối cảnh • Tôn trọng • Thấu cảm • An toàn tâm lý",
+      "changes2025Vi": "Nhấn mạnh việc tạo môi trường an toàn tâm lý toàn diện, tôn trọng tính đa dạng, bình đẳng và hòa nhập (DEI), nhạy bén với tổn thương và thế giới quan (worldview) của khách hàng.",
+      "changes2025En": "Emphasizes comprehensive psychological safety, diversity, equity and inclusion (DEI), trauma sensitivity, and honoring client worldview.",
+      "subCompetencies2025": [
+        {
+          "subId": "4.01",
+          "behaviorEn": "Seeks to understand the client within their context which may include their identity, environment, experiences, values and beliefs",
+          "behaviorVi": "Tìm hiểu khách hàng trong bối cảnh của họ, có thể bao gồm bản sắc, môi trường, trải nghiệm, giá trị và niềm tin."
+        },
+        {
+          "subId": "4.02",
+          "behaviorEn": "Demonstrates respect for the client’s identity, perceptions, style and language and adapts one’s coaching to the client",
+          "behaviorVi": "Thể hiện sự tôn trọng bản sắc, nhận thức, phong cách và ngôn ngữ của khách hàng, đồng thời điều chỉnh cách coaching phù hợp với họ."
+        },
+        {
+          "subId": "4.03",
+          "behaviorEn": "Acknowledges and respects the client’s unique talents, insights and work in the coaching process",
+          "behaviorVi": "Ghi nhận và tôn trọng tài năng, insight và nỗ lực độc đáo của khách hàng trong quá trình khai vấn."
+        },
+        {
+          "subId": "4.04",
+          "behaviorEn": "Shows support, empathy and concern for the client",
+          "behaviorVi": "Thể hiện sự hỗ trợ, thấu cảm và quan tâm dành cho khách hàng."
+        },
+        {
+          "subId": "4.05",
+          "behaviorEn": "Acknowledges and supports the client’s expression of feelings, perceptions, concerns, beliefs and suggestions",
+          "behaviorVi": "Ghi nhận và hỗ trợ khách hàng bày tỏ cảm xúc, nhận thức, mối quan tâm, niềm tin và đề xuất."
+        },
+        {
+          "subId": "4.06",
+          "behaviorEn": "Demonstrates openness and transparency as a way to display vulnerability and build trust with the client",
+          "behaviorVi": "Thể hiện sự cởi mở và minh bạch như một cách cho thấy sự dễ tổn thương và xây dựng niềm tin với khách hàng."
+        }
+      ],
+      "subCompetencies2019": []
     },
     {
+      "code": "Năng lực 5.0",
+      "number": "5.0",
       "domainEn": "B. Co-Creating the Relationship",
       "domainVi": "B. Đồng kiến tạo mối quan hệ",
-      "number": "5.0",
       "compEn": "Maintains Presence",
       "compVi": "Duy trì sự hiện diện",
-      "lensEn": "Can I stay with emotion, silence, uncertainty and what is emerging now?",
-      "lensVi": "Tôi có thể ở cùng cảm xúc, sự im lặng, điều chưa biết và điều đang xuất hiện ngay lúc này không?",
-      "cueEn": "STAY WITH WHAT IS HERE",
-      "cueVi": "Ở LẠI VỚI ĐIỀU ĐANG HIỆN DIỆN",
-      "trapEn": "Fixing, reassuring, rushing to action",
-      "trapVi": "Sửa chữa, trấn an, vội vàng chuyển sang hành động"
+      "nameEn": "Maintains Presence",
+      "nameVi": "Duy trì sự hiện diện",
+      "titleEn": "Maintains Presence",
+      "titleVi": "Duy trì sự hiện diện",
+      "descEn": "Is fully conscious and present with the client, employing a style that is open, flexible, grounded and confident.",
+      "descVi": "Hoàn toàn tỉnh thức và hiện diện với khách hàng, sử dụng phong cách cởi mở, linh hoạt, vững vàng và tự tin.",
+      "definitionEn": "Is fully conscious and present with the client, employing a style that is open, flexible, grounded and confident.",
+      "definitionVi": "Hoàn toàn tỉnh thức và hiện diện với khách hàng, sử dụng phong cách cởi mở, linh hoạt, vững vàng và tự tin.",
+      "studyCueEn": "STAY WITH WHAT IS HERE: Presence • Emotion • Not-knowing • Silence",
+      "studyCueVi": "Ở LẠI VỚI ĐIỀU ĐANG HIỆN DIỆN: Hiện diện • Cảm xúc • Chưa biết • Im lặng",
+      "cueEn": "STAY WITH WHAT IS HERE: Presence • Emotion • Not-knowing • Silence",
+      "cueVi": "Ở LẠI VỚI ĐIỀU ĐANG HIỆN DIỆN: Hiện diện • Cảm xúc • Chưa biết • Im lặng",
+      "examTriggerEn": "Silence • strong emotion • uncertainty • what is emerging now",
+      "examTriggerVi": "Im lặng • cảm xúc mạnh • điều chưa chắc chắn • điều đang xuất hiện lúc này",
+      "natureEn": "This competency is really about the coach’s capacity to stay with the client and with what is emerging, without rushing to control the process. \n\nPresence includes attention, curiosity, emotional steadiness, comfort with not knowing, willingness to work with strong emotion and the ability to let silence do useful work. \n\nA present coach is responsive rather than scripted: the next move grows from what is happening now, not from a preplanned sequence of questions.",
+      "natureVi": "Năng lực này thực chất là khả năng coach ở lại cùng khách hàng và cùng điều đang xuất hiện mà không vội kiểm soát quá trình. \n\nSự hiện diện bao gồm chú tâm, tò mò, ổn định cảm xúc, thoải mái với điều chưa biết, sẵn sàng làm việc với cảm xúc mạnh và khả năng để sự im lặng thực hiện vai trò của nó. \nMột coach hiện diện phản hồi theo thực tại thay vì theo kịch bản: bước tiếp theo nảy sinh từ điều đang xảy ra ngay lúc này, không phải từ chuỗi câu hỏi chuẩn bị sẵn.",
+      "naturalInCoachingEn": "It shows up when the coach \n- notices a long pause and does not immediately fill it; \n- stays grounded when a client cries or becomes angry; \n- changes pace because the client becomes reflective;\n- lets go of a prepared question because something more important has emerged; \n- or simply says, “What is happening for you right now?” \n\nPresence often looks less active from the outside, yet it creates the space in which deeper coaching can happen.",
+      "naturalInCoachingVi": "Năng lực này xuất hiện khi coach \n- nhận thấy một khoảng lặng dài và không lập tức lấp đầy; \n- vẫn vững vàng khi khách hàng khóc hoặc tức giận; \n- thay đổi nhịp độ khi khách hàng trở nên suy tư; \n- bỏ một câu hỏi đã chuẩn bị vì điều quan trọng hơn vừa xuất hiện; \n- hoặc đơn giản hỏi: “Điều gì đang diễn ra với bạn ngay lúc này?” \n\nNhìn từ bên ngoài, Presence đôi khi có vẻ “ít làm” hơn, nhưng chính nó tạo không gian để coaching sâu hơn xảy ra.",
+      "assessorPerspectiveEn": "Assessors listen for responsiveness and space. They notice whether the coach follows both the “who” of the client and the “what” they want to accomplish, \nwhether the client gets to choose what happens, and whether silence or reflection is allowed. \n\nPresence is integrated when the coach’s pacing, questions, observations and partnership adapt to the live conversation. \nRepeated interruption, over-questioning, rigid process or coach anxiety that drives the session all weaken this competency.",
+      "assessorPerspectiveVi": "Assessor lắng nghe tính phản hồi và không gian. \nHọ nhận ra coach có đi cùng cả “who” của khách hàng lẫn “what” mà khách hàng muốn đạt được không, khách hàng có quyền lựa chọn điều diễn ra tiếp theo không, và sự im lặng/suy ngẫm có được cho phép không. \nPresence được tích hợp khi nhịp độ, câu hỏi, quan sát và partnering của coach thích ứng với cuộc hội thoại đang sống. \n\nNgắt lời liên tục, hỏi dồn, quy trình cứng nhắc hoặc sự lo lắng của coach dẫn dắt phiên đều làm suy yếu năng lực này.",
+      "commonTrapsEn": "Common traps: \n- believing silence means the coach is doing nothing; \n- thinking strong emotion must be fixed or calmed; \n- using “powerful questions” back-to-back without processing time; \n- confusing confidence with control; \n- or filling every uncertainty with an intervention. \n\nOn the exam, an option that pauses, notices and invites the client often outranks an option that immediately solves, reassures or redirects.",
+      "commonTrapsVi": "Các bẫy thường gặp: \n- nghĩ im lặng nghĩa là coach không làm gì; \n- cho rằng cảm xúc mạnh phải được sửa hoặc làm dịu ngay; \n- dùng liên tiếp nhiều “powerful questions” mà không có thời gian xử lý; \n- nhầm tự tin với kiểm soát; \n- hoặc lấp mọi điều chưa chắc chắn bằng một can thiệp. \n\nTrong bài thi, phương án biết dừng, nhận diện và mời khách hàng thường mạnh hơn phương án lập tức giải quyết, trấn an hoặc chuyển hướng.",
+      "trapEn": "Common traps: \n- believing silence means the coach is doing nothing; \n- thinking strong emotion must be fixed or calmed; \n- using “powerful questions” back-to-back without processing time; \n- confusing confidence with control; \n- or filling every uncertainty with an intervention. \n\nOn the exam, an option that pauses, notices and invites the client often outranks an option that immediately solves, reassures or redirects.",
+      "trapVi": "Các bẫy thường gặp: \n- nghĩ im lặng nghĩa là coach không làm gì; \n- cho rằng cảm xúc mạnh phải được sửa hoặc làm dịu ngay; \n- dùng liên tiếp nhiều “powerful questions” mà không có thời gian xử lý; \n- nhầm tự tin với kiểm soát; \n- hoặc lấp mọi điều chưa chắc chắn bằng một can thiệp. \n\nTrong bài thi, phương án biết dừng, nhận diện và mời khách hàng thường mạnh hơn phương án lập tức giải quyết, trấn an hoặc chuyển hướng.",
+      "lensEn": "STAY WITH WHAT IS HERE: Presence • Emotion • Not-knowing • Silence",
+      "lensVi": "Ở LẠI VỚI ĐIỀU ĐANG HIỆN DIỆN: Hiện diện • Cảm xúc • Chưa biết • Im lặng",
+      "changes2025Vi": "Làm sâu sắc năng lực hiện diện tĩnh tại, nhạy bén với các phản ứng cảm xúc phức tạp, linh hoạt chuyển hướng theo thân tâm trí của khách hàng mà không vội vàng giải quyết.",
+      "changes2025En": "Deepens grounded presence, agility with complex emotional shifts, following the somatic/cognitive flow without rushing to fix.",
+      "subCompetencies2025": [
+        {
+          "subId": "5.01",
+          "behaviorEn": "Remains focused, observant, empathetic and responsive to the client",
+          "behaviorVi": "Giữ sự tập trung, quan sát, thấu cảm và phản hồi phù hợp với khách hàng."
+        },
+        {
+          "subId": "5.02",
+          "behaviorEn": "Demonstrates curiosity during the coaching process",
+          "behaviorVi": "Thể hiện sự tò mò trong suốt quá trình khai vấn."
+        },
+        {
+          "subId": "5.03",
+          "behaviorEn": "Remains aware of what is emerging for self and client in the present moment",
+          "behaviorVi": "Nhận thức điều đang xuất hiện ở bản thân và khách hàng trong khoảnh khắc hiện tại."
+        },
+        {
+          "subId": "5.04",
+          "behaviorEn": "Manages one’s emotions to stay present with the client",
+          "behaviorVi": "Quản trị cảm xúc của bản thân để duy trì sự hiện diện với khách hàng."
+        },
+        {
+          "subId": "5.05",
+          "behaviorEn": "Demonstrates confidence in working with strong client emotions during the coaching process",
+          "behaviorVi": "Thể hiện sự tự tin khi làm việc với những cảm xúc mạnh của khách hàng trong quá trình khai vấn."
+        },
+        {
+          "subId": "5.06",
+          "behaviorEn": "Is comfortable working in a space of not knowing",
+          "behaviorVi": "Thoải mái làm việc trong không gian chưa biết/chưa có câu trả lời."
+        },
+        {
+          "subId": "5.07",
+          "behaviorEn": "Creates or allows space for silence, pause or reflection",
+          "behaviorVi": "Tạo ra hoặc cho phép không gian cho sự im lặng, khoảng dừng hoặc suy ngẫm."
+        }
+      ],
+      "subCompetencies2019": []
     },
     {
+      "code": "Năng lực 6.0",
+      "number": "6.0",
       "domainEn": "C. Communicating Effectively",
       "domainVi": "C. Giao tiếp hiệu quả",
-      "number": "6.0",
       "compEn": "Listens Actively",
       "compVi": "Lắng nghe chủ động",
-      "lensEn": "What is the client saying — and not saying — through words, tone, emotion, energy and patterns?",
-      "lensVi": "Khách hàng đang nói gì — và chưa nói gì — qua từ ngữ, giọng điệu, cảm xúc, năng lượng và các mô thức?",
-      "cueEn": "HEAR BEYOND WORDS",
-      "cueVi": "NGHE VƯỢT RA NGOÀI CÂU CHỮ",
-      "trapEn": "Listening only for content",
-      "trapVi": "Chỉ nghe nội dung bề mặt"
+      "nameEn": "Listens Actively",
+      "nameVi": "Lắng nghe chủ động",
+      "titleEn": "Listens Actively",
+      "titleVi": "Lắng nghe chủ động",
+      "descEn": "Focuses on what the client is and is not saying to fully understand what is being communicated in the context of the client systems and to support client self-expression.",
+      "descVi": "Tập trung vào điều khách hàng nói và không nói để hiểu đầy đủ điều đang được truyền đạt trong bối cảnh hệ thống của khách hàng và hỗ trợ họ tự biểu đạt.",
+      "definitionEn": "Focuses on what the client is and is not saying to fully understand what is being communicated in the context of the client systems and to support client self-expression.",
+      "definitionVi": "Tập trung vào điều khách hàng nói và không nói để hiểu đầy đủ điều đang được truyền đạt trong bối cảnh hệ thống của khách hàng và hỗ trợ họ tự biểu đạt.",
+      "studyCueEn": "HEAR BEYOND WORDS: Words • Tone • Emotion • Energy • Patterns",
+      "studyCueVi": "NGHE VƯỢT RA NGOÀI CÂU CHỮ: Từ ngữ • Giọng điệu • Cảm xúc • Năng lượng • Mô thức",
+      "cueEn": "HEAR BEYOND WORDS: Words • Tone • Emotion • Energy • Patterns",
+      "cueVi": "NGHE VƯỢT RA NGOÀI CÂU CHỮ: Từ ngữ • Giọng điệu • Cảm xúc • Năng lượng • Mô thức",
+      "examTriggerEn": "Words • tone • energy shift • non-verbal • contradiction • pattern",
+      "examTriggerVi": "Từ ngữ • giọng điệu • thay đổi năng lượng • phi ngôn ngữ • mâu thuẫn • mô thức",
+      "natureEn": "This competency is really about listening for meaning, not merely collecting information.\n\nActive listening integrates the client’s words, tone, emotion, energy, non-verbal cues, context and recurring patterns. \n\nThe coach listens closely enough that questions and observations could only have been asked of this particular client in this particular conversation. The goal is not accurate note-taking; it is helping the client hear themselves more fully.",
+      "natureVi": "Năng lực này thực chất là lắng nghe ý nghĩa, không chỉ thu thập thông tin. Active Listening tích hợp từ ngữ, giọng điệu, cảm xúc, năng lượng, tín hiệu phi ngôn ngữ, bối cảnh và các mô thức lặp lại của khách hàng. \n\nCoach lắng nghe đủ sâu để câu hỏi và quan sát chỉ có thể dành cho chính khách hàng này trong chính cuộc trò chuyện này. Mục tiêu không phải ghi chép chính xác, mà là giúp khách hàng nghe rõ chính mình hơn.",
+      "naturalInCoachingEn": "It appears when the coach:\n-  reuses a client’s exact phrase—“You said ‘trapped’; what does trapped mean here?”\n- notices that the client’s tone changed while the words stayed positive, \n- reflects a contradiction, names an energy shift, \n- summarizes succinctly and checks whether it fits, or links something from earlier in the conversation to the present moment. \nGood listening is visible in the relevance of the coach’s next response.",
+      "naturalInCoachingVi": "Năng lực này xuất hiện khi coach \n- dùng lại chính cụm từ của khách hàng—“Bạn dùng từ ‘mắc kẹt’; ‘mắc kẹt’ ở đây có nghĩa gì với bạn?”\n- nhận ra giọng điệu thay đổi dù lời nói vẫn tích cực, \n- phản chiếu một mâu thuẫn, \n- gọi tên thay đổi năng lượng, \n- tóm tắt ngắn gọn rồi kiểm tra xem có đúng không, hoặc kết nối điều đã xuất hiện trước đó với khoảnh khắc hiện tại. \n\nLắng nghe tốt được nhìn thấy qua độ liên quan của phản hồi tiếp theo của coach.",
+      "assessorPerspectiveEn": "Assessors listen for evidence that the coach is building from client data rather than from a generic coaching toolkit. \n\nQuestions and observations should be customized to the client’s words, emotions, perceptions and context. \n\nThey also listen for the coach allowing the client to complete thoughts, reflecting accurately and using what is heard to deepen the conversation. \n\nActive listening integrates directly with trust, presence and awareness: listening is proven by what the coach does next.",
+      "assessorPerspectiveVi": "Assessor lắng nghe bằng chứng cho thấy coach đang xây dựng cuộc hội thoại từ dữ liệu của khách hàng chứ không từ một “bộ công cụ coaching” chung chung. Câu hỏi và quan sát cần được cá nhân hóa theo từ ngữ, cảm xúc, nhận thức và bối cảnh của khách hàng. Họ cũng nghe xem coach có cho khách hàng hoàn tất suy nghĩ, phản chiếu chính xác và dùng điều đã nghe để đào sâu không. Active Listening tích hợp trực tiếp với Trust, Presence và Awareness: lắng nghe được chứng minh bởi điều coach làm tiếp theo.",
+      "commonTrapsEn": "Common traps: \n- repeating or paraphrasing everything the client says; \n- listening only for facts and problems; \n- asking the next prepared question instead of following a meaningful word or emotion; i\n- nterpreting a cue without checking; \n- or interrupting because the coach already “gets it.” In exam items, “notice + inquire” is usually stronger than “notice + conclude.”",
+      "commonTrapsVi": "Các bẫy thường gặp: \n- lặp lại hoặc paraphrase mọi điều khách hàng nói; \n- chỉ nghe dữ kiện và vấn đề; \n- hỏi câu tiếp theo đã chuẩn bị thay vì theo một từ/cảm xúc có ý nghĩa; \n- diễn giải tín hiệu mà không kiểm tra;\n- hoặc ngắt lời vì coach nghĩ mình đã “hiểu rồi”. \n\nTrong câu hỏi thi, “nhận diện + tìm hiểu” thường mạnh hơn “nhận diện + kết luận.”",
+      "trapEn": "Common traps: \n- repeating or paraphrasing everything the client says; \n- listening only for facts and problems; \n- asking the next prepared question instead of following a meaningful word or emotion; i\n- nterpreting a cue without checking; \n- or interrupting because the coach already “gets it.” In exam items, “notice + inquire” is usually stronger than “notice + conclude.”",
+      "trapVi": "Các bẫy thường gặp: \n- lặp lại hoặc paraphrase mọi điều khách hàng nói; \n- chỉ nghe dữ kiện và vấn đề; \n- hỏi câu tiếp theo đã chuẩn bị thay vì theo một từ/cảm xúc có ý nghĩa; \n- diễn giải tín hiệu mà không kiểm tra;\n- hoặc ngắt lời vì coach nghĩ mình đã “hiểu rồi”. \n\nTrong câu hỏi thi, “nhận diện + tìm hiểu” thường mạnh hơn “nhận diện + kết luận.”",
+      "lensEn": "HEAR BEYOND WORDS: Words • Tone • Emotion • Energy • Patterns",
+      "lensVi": "NGHE VƯỢT RA NGOÀI CÂU CHỮ: Từ ngữ • Giọng điệu • Cảm xúc • Năng lượng • Mô thức",
+      "changes2025Vi": "Lắng nghe đa tầng: ngôn từ, phi ngôn từ, cảm xúc, năng lượng, các khoảng lặng và bối cảnh văn hóa/xã hội bao quanh câu chuyện của khách hàng.",
+      "changes2025En": "Multi-layered listening: words, non-verbal cues, emotions, energy shifts, pauses, and the client's cultural and societal context.",
+      "subCompetencies2025": [
+        {
+          "subId": "6.01",
+          "behaviorEn": "Considers the client’s context, identity, environment, experiences, values and beliefs to enhance understanding of what the client is communicating",
+          "behaviorVi": "Xem xét bối cảnh, bản sắc, môi trường, trải nghiệm, giá trị và niềm tin của khách hàng để hiểu sâu hơn điều họ đang truyền đạt."
+        },
+        {
+          "subId": "6.02",
+          "behaviorEn": "Reflects or summarizes what the client is communicating to ensure clarity and understanding",
+          "behaviorVi": "Phản chiếu hoặc tóm tắt điều khách hàng đang truyền đạt để bảo đảm sự rõ ràng và hiểu đúng."
+        },
+        {
+          "subId": "6.03",
+          "behaviorEn": "Recognizes and inquires when there is more to what the client is communicating",
+          "behaviorVi": "Nhận ra và tìm hiểu khi có điều gì đó sâu hơn phía sau điều khách hàng đang nói."
+        },
+        {
+          "subId": "6.04",
+          "behaviorEn": "Notices, acknowledges and explores the client’s emotions, energy shifts, non-verbal cues or other behaviors",
+          "behaviorVi": "Nhận diện, ghi nhận và khám phá cảm xúc, sự thay đổi năng lượng, tín hiệu phi ngôn ngữ hoặc hành vi khác của khách hàng."
+        },
+        {
+          "subId": "6.05",
+          "behaviorEn": "Integrates the client’s words, tone of voice and body language to determine the full meaning of what the client is communicating",
+          "behaviorVi": "Tích hợp từ ngữ, giọng nói và ngôn ngữ cơ thể của khách hàng để hiểu đầy đủ ý nghĩa điều họ đang truyền đạt."
+        },
+        {
+          "subId": "6.06",
+          "behaviorEn": "Notices trends in the client’s behaviors and emotions across sessions to discern themes and patterns",
+          "behaviorVi": "Nhận ra xu hướng trong hành vi và cảm xúc của khách hàng qua nhiều phiên để nhận diện chủ đề và mô thức."
+        }
+      ],
+      "subCompetencies2019": []
     },
     {
+      "code": "Năng lực 7.0",
+      "number": "7.0",
       "domainEn": "C. Communicating Effectively",
       "domainVi": "C. Giao tiếp hiệu quả",
-      "number": "7.0",
       "compEn": "Evokes Awareness",
       "compVi": "Khơi gợi nhận thức",
-      "lensEn": "What may help the client see, feel or understand something new?",
-      "lensVi": "Điều gì có thể giúp khách hàng nhìn thấy, cảm nhận hoặc hiểu ra điều mới?",
-      "cueEn": "CREATE INSIGHT, NOT ANSWERS",
-      "cueVi": "TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN",
-      "trapEn": "Advice, diagnosis, leading questions, attached observations",
-      "trapVi": "Cho lời khuyên, chẩn đoán, câu hỏi dẫn dắt, nhận định có bám chấp"
+      "nameEn": "Evokes Awareness",
+      "nameVi": "Khơi gợi nhận thức",
+      "titleEn": "Evokes Awareness",
+      "titleVi": "Khơi gợi nhận thức",
+      "descEn": "Facilitates client insight and learning by using tools and techniques such as powerful questioning, silence, metaphor or analogy.",
+      "descVi": "Tạo điều kiện cho insight và học hỏi của khách hàng thông qua các công cụ và kỹ thuật như câu hỏi mạnh, im lặng, ẩn dụ hoặc phép so sánh.",
+      "definitionEn": "Facilitates client insight and learning by using tools and techniques such as powerful questioning, silence, metaphor or analogy.",
+      "definitionVi": "Tạo điều kiện cho insight và học hỏi của khách hàng thông qua các công cụ và kỹ thuật như câu hỏi mạnh, im lặng, ẩn dụ hoặc phép so sánh.",
+      "studyCueEn": "CREATE INSIGHT, NOT ANSWERS: Question • Challenge • Metaphor • Reframe • Observation",
+      "studyCueVi": "TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN: Câu hỏi • Thách thức • Ẩn dụ • Tái định khung • Quan sát",
+      "cueEn": "CREATE INSIGHT, NOT ANSWERS: Question • Challenge • Metaphor • Reframe • Observation",
+      "cueVi": "TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN: Câu hỏi • Thách thức • Ẩn dụ • Tái định khung • Quan sát",
+      "examTriggerEn": "Beliefs • values • patterns • metaphor • challenge • reframe • observation",
+      "examTriggerVi": "Niềm tin • giá trị • mô thức • ẩn dụ • thách thức • tái định khung • quan sát",
+      "natureEn": "This competency is really about helping the client discover something they did not fully see before. \n\nAwareness may emerge through questions, challenge, silence, metaphor, reframing, observations or the coach sharing an intuition without attachment. The point is not to sound insightful; it is to expand the client’s thinking, feeling, perspective or choice. \n\nAt PCC level, the coach goes beyond surface problem-solving and explores the beliefs, values, needs, patterns and meaning shaping the client’s experience.",
+      "natureVi": "Năng lực này thực chất là giúp khách hàng khám phá điều họ chưa nhìn thấy đầy đủ trước đó. \n\nNhận thức có thể xuất hiện qua câu hỏi, thách thức, im lặng, ẩn dụ, tái định khung, quan sát hoặc việc coach chia sẻ trực giác mà không bám chấp. \n\nMục tiêu không phải để coach “nghe có vẻ sâu sắc”; mục tiêu là mở rộng cách khách hàng suy nghĩ, cảm nhận, nhìn nhận hoặc lựa chọn. \n\nỞ cấp PCC, coach vượt khỏi giải quyết vấn đề bề mặt và khám phá niềm tin, giá trị, nhu cầu, mô thức và ý nghĩa đang định hình trải nghiệm của khách hàng.",
+      "naturalInCoachingEn": "Naturally, the coach may ask, \n- “What are you believing about yourself in that moment?” \n- “What does this pattern make possible for you?” \n- “If that metaphor could speak, what would it say?” \n\nThe coach may also offer, “I notice you become more certain when you talk about what others need, and quieter when you talk about what you want. What do you make of that?”—then genuinely allow the client to reject or reshape the observation.",
+      "naturalInCoachingVi": "Trong hội thoại tự nhiên, coach có thể hỏi: \n- “Trong khoảnh khắc đó, bạn đang tin điều gì về chính mình?” \n- “Mô thức này đang tạo ra hoặc bảo vệ điều gì cho bạn?” \n- “Nếu ẩn dụ đó có thể nói, nó sẽ nói gì?” \n\nCoach cũng có thể chia sẻ: “Tôi nhận thấy bạn rất chắc chắn khi nói về điều người khác cần, nhưng im hơn khi nói về điều bạn muốn. Bạn hiểu điều đó thế nào?”—và thực sự cho phép khách hàng bác bỏ hoặc điều chỉnh quan sát.",
+      "assessorPerspectiveEn": "Assessors listen for depth, relevance and non-attachment rather than a high number of “powerful questions.” \n\nThey expect questions and observations to emerge from what has been learned about the client and to help the client move beyond current thinking or feeling. \n\nThey also listen for one clear question at a time, concise language, space to reflect and the client doing most of the meaning-making. \n\nAwareness is integrated when the client—not the coach—arrives at new understanding.",
+      "assessorPerspectiveVi": "Assessor lắng nghe độ sâu, tính liên quan và sự không bám chấp chứ không đếm số lượng “powerful questions.” Họ kỳ vọng câu hỏi và quan sát nảy sinh từ điều coach đã hiểu về khách hàng và giúp khách hàng đi vượt khỏi cách nghĩ/cảm hiện tại.\n\n Họ cũng nghe một câu hỏi rõ ràng mỗi lần, ngôn ngữ súc tích, có không gian suy ngẫm và khách hàng là người thực hiện phần lớn quá trình tạo nghĩa. \n\nAwareness được tích hợp khi chính khách hàng—không phải coach—đi đến hiểu biết mới.",
+      "commonTrapsEn": "Common traps: \n- equating Evokes Awareness with asking clever questions; \n- stacking multiple questions; \n- leading the client toward the coach’s insight; \n- treating challenge as confrontation; \n- sharing an observation as a diagnosis; \n- or jumping to action as soon as an insight appears. \n\nA PCC-level contribution can be direct—even provocative—but it remains an invitation, not a conclusion the client is expected to accept.",
+      "commonTrapsVi": "Các bẫy thường gặp: \n- đồng nhất Evokes Awareness với việc hỏi câu thật “hay”; \n- chồng nhiều câu hỏi cùng lúc; \n- dẫn khách hàng tới insight của coach; \n- hiểu challenge như đối đầu; \n- chia sẻ quan sát như chẩn đoán; \n- hoặc nhảy sang hành động ngay khi insight vừa xuất hiện. \nMột đóng góp ở cấp PCC có thể trực diện—thậm chí gây rung động—nhưng nó vẫn là lời mời khám phá, không phải kết luận mà khách hàng phải chấp nhận.",
+      "trapEn": "Common traps: \n- equating Evokes Awareness with asking clever questions; \n- stacking multiple questions; \n- leading the client toward the coach’s insight; \n- treating challenge as confrontation; \n- sharing an observation as a diagnosis; \n- or jumping to action as soon as an insight appears. \n\nA PCC-level contribution can be direct—even provocative—but it remains an invitation, not a conclusion the client is expected to accept.",
+      "trapVi": "Các bẫy thường gặp: \n- đồng nhất Evokes Awareness với việc hỏi câu thật “hay”; \n- chồng nhiều câu hỏi cùng lúc; \n- dẫn khách hàng tới insight của coach; \n- hiểu challenge như đối đầu; \n- chia sẻ quan sát như chẩn đoán; \n- hoặc nhảy sang hành động ngay khi insight vừa xuất hiện. \nMột đóng góp ở cấp PCC có thể trực diện—thậm chí gây rung động—nhưng nó vẫn là lời mời khám phá, không phải kết luận mà khách hàng phải chấp nhận.",
+      "lensEn": "CREATE INSIGHT, NOT ANSWERS: Question • Challenge • Metaphor • Reframe • Observation",
+      "lensVi": "TẠO NHẬN THỨC, KHÔNG TẠO ĐÁP ÁN: Câu hỏi • Thách thức • Ẩn dụ • Tái định khung • Quan sát",
+      "changes2025Vi": "Khơi gợi nhận thức mang tính biến chuyển (transformational insight): khám phá hệ thống niềm tin cốt lõi, giả định ẩn giấu, ẩn dụ cá nhân và mô thức hành vi xuyên suốt.",
+      "changes2025En": "Evokes transformational awareness: uncovering core belief systems, hidden assumptions, personal metaphors, and recurring behavioral patterns.",
+      "subCompetencies2025": [
+        {
+          "subId": "7.01",
+          "behaviorEn": "Considers client experience when deciding what might be most useful",
+          "behaviorVi": "Cân nhắc trải nghiệm của khách hàng khi quyết định điều gì có thể hữu ích nhất."
+        },
+        {
+          "subId": "7.02",
+          "behaviorEn": "Challenges the client as a way to evoke awareness or insight",
+          "behaviorVi": "Thách thức khách hàng nhằm khơi gợi nhận thức hoặc insight."
+        },
+        {
+          "subId": "7.03",
+          "behaviorEn": "Asks questions about the client, such as their way of thinking, values, needs, wants and beliefs",
+          "behaviorVi": "Đặt câu hỏi về chính khách hàng, như cách họ suy nghĩ, giá trị, nhu cầu, mong muốn và niềm tin."
+        },
+        {
+          "subId": "7.04",
+          "behaviorEn": "Asks questions that help the client explore beyond current thinking",
+          "behaviorVi": "Đặt câu hỏi giúp khách hàng khám phá vượt ra ngoài lối suy nghĩ hiện tại."
+        },
+        {
+          "subId": "7.05",
+          "behaviorEn": "Invites the client to share more about their experience in the moment",
+          "behaviorVi": "Mời khách hàng chia sẻ thêm về trải nghiệm của họ trong khoảnh khắc hiện tại."
+        },
+        {
+          "subId": "7.06",
+          "behaviorEn": "Notices what is working to enhance client progress",
+          "behaviorVi": "Nhận ra điều đang hiệu quả để thúc đẩy tiến bộ của khách hàng."
+        },
+        {
+          "subId": "7.07",
+          "behaviorEn": "Adjusts the coaching approach in response to the client’s needs",
+          "behaviorVi": "Điều chỉnh cách tiếp cận khai vấn để đáp ứng nhu cầu của khách hàng."
+        },
+        {
+          "subId": "7.08",
+          "behaviorEn": "Helps the client identify factors that influence current and future patterns of behavior, thinking or emotion",
+          "behaviorVi": "Hỗ trợ khách hàng nhận diện các yếu tố ảnh hưởng đến mô thức hành vi, suy nghĩ hoặc cảm xúc hiện tại và tương lai."
+        },
+        {
+          "subId": "7.09",
+          "behaviorEn": "Invites the client to generate ideas about how they can move forward and what they are willing or able to do",
+          "behaviorVi": "Mời khách hàng tự tạo ra ý tưởng về cách tiến về phía trước và điều họ sẵn sàng hoặc có khả năng thực hiện."
+        },
+        {
+          "subId": "7.10",
+          "behaviorEn": "Supports the client in reframing perspectives",
+          "behaviorVi": "Hỗ trợ khách hàng tái định khung góc nhìn."
+        },
+        {
+          "subId": "7.11",
+          "behaviorEn": "Shares observations, knowledge, and feelings, without attachment, that have the potential to create new insights for the client",
+          "behaviorVi": "Chia sẻ quan sát, kiến thức và cảm nhận mà không bám chấp, khi những điều đó có tiềm năng tạo ra insight mới cho khách hàng."
+        }
+      ],
+      "subCompetencies2019": []
     },
     {
+      "code": "Năng lực 8.0",
+      "number": "8.0",
       "domainEn": "D. Cultivating Learning and Growth",
       "domainVi": "D. Nuôi dưỡng học hỏi và phát triển",
-      "number": "8.0",
       "compEn": "Facilitates Client Growth",
       "compVi": "Thúc đẩy sự phát triển của khách hàng",
-      "lensEn": "How will the client integrate insight into client-designed action, learning and sustained progress?",
-      "lensVi": "Khách hàng sẽ tích hợp nhận thức thành hành động do chính họ thiết kế, học hỏi và duy trì tiến bộ như thế nào?",
-      "cueEn": "CLIENT OWNS THE ACTION",
-      "cueVi": "KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG",
-      "trapEn": "Coach prescribes action/accountability",
-      "trapVi": "Coach áp đặt hành động/cơ chế chịu trách nhiệm"
+      "nameEn": "Facilitates Client Growth",
+      "nameVi": "Thúc đẩy sự phát triển của khách hàng",
+      "titleEn": "Facilitates Client Growth",
+      "titleVi": "Thúc đẩy sự phát triển của khách hàng",
+      "descEn": "Partners with the client to transform learning and insight into action. Promotes client autonomy in the coaching process.",
+      "descVi": "Đồng hành với khách hàng để chuyển hóa học hỏi và insight thành hành động; thúc đẩy quyền tự chủ của khách hàng trong quá trình khai vấn.",
+      "definitionEn": "Partners with the client to transform learning and insight into action. Promotes client autonomy in the coaching process.",
+      "definitionVi": "Đồng hành với khách hàng để chuyển hóa học hỏi và insight thành hành động; thúc đẩy quyền tự chủ của khách hàng trong quá trình khai vấn.",
+      "studyCueEn": "CLIENT OWNS THE ACTION: Integrate • Choose • Act • Learn • Sustain",
+      "studyCueVi": "KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG: Tích hợp • Lựa chọn • Hành động • Học hỏi • Duy trì",
+      "cueEn": "CLIENT OWNS THE ACTION: Integrate • Choose • Act • Learn • Sustain",
+      "cueVi": "KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG: Tích hợp • Lựa chọn • Hành động • Học hỏi • Duy trì",
+      "examTriggerEn": "Integration • client-generated action • resources • barriers • accountability • close",
+      "examTriggerVi": "Tích hợp • hành động do khách hàng tạo ra • nguồn lực • rào cản • chịu trách nhiệm • khép phiên",
+      "natureEn": "This competency is really about helping the client turn insight into meaningful, self-directed growth. \nThe coach supports integration: \n- what has the client learned about themselves and the situation, \n- how will that learning change choices or behavior, \n- what action do they want to design, \n- what resources or barriers matter, \n- and how will they sustain progress? \n\nThe emphasis is not on producing a homework task; it is on client ownership of learning and forward movement.",
+      "natureVi": "Năng lực này thực chất là giúp khách hàng chuyển insight thành sự phát triển có ý nghĩa và do chính họ định hướng. Coach hỗ trợ quá trình tích hợp: khách hàng đã học được gì về bản thân và tình huống, học hỏi đó sẽ thay đổi lựa chọn/hành vi thế nào, họ muốn thiết kế hành động gì, nguồn lực hoặc rào cản nào quan trọng, và làm sao duy trì tiến bộ? Trọng tâm không phải “tạo ra một bài tập về nhà”, mà là quyền sở hữu của khách hàng đối với việc học và tiến lên phía trước.",
+      "naturalInCoachingEn": "It shows up near turning points and close: \n- “What are you taking away about yourself?” \n- “How does that change the way you want to approach this?” \n- “What do you want to do with this awareness?” \n- “What could get in the way?” \n- “What support would be useful?” \n- “How do you want to hold yourself accountable?” \n\nThe action may be small, experimental or even a deliberate pause. What matters is that it fits the client and grows from the learning.",
+      "naturalInCoachingVi": "Năng lực này xuất hiện ở các điểm chuyển và khi khép phiên: “Bạn đang mang theo điều gì về chính mình?” “Điều đó thay đổi cách bạn muốn tiếp cận vấn đề thế nào?” “Bạn muốn làm gì với nhận thức này?” “Điều gì có thể cản trở?” “Bạn cần nguồn hỗ trợ nào?” “Bạn muốn tự chịu trách nhiệm với mình theo cách nào?” Hành động có thể nhỏ, mang tính thử nghiệm hoặc thậm chí là một khoảng dừng có chủ đích. Điều quan trọng là nó phù hợp với khách hàng và nảy sinh từ học hỏi.",
+      "assessorPerspectiveEn": "Assessors listen for a bridge from awareness to integration and action, not merely an action item at the end. \n\nThe client should have space to:\n- articulate learning about the “who” and the “what,” \n- decide how to use it, \n- and design next steps or accountability. \n\nThey also listen for partnership in closing the session. \n\nThis competency integrates all earlier ones: \n- the quality of the action depends on the agreement, listening, awareness and client autonomy that came before it.",
+      "assessorPerspectiveVi": "Assessor lắng nghe “cây cầu” từ awareness sang integration và action, không chỉ một action item ở cuối phiên. Khách hàng cần có không gian để :\n- nói ra học hỏi về “who” và “what”, \n- quyết định sẽ sử dụng học hỏi đó thế nào, \n- rồi tự thiết kế bước tiếp theo hoặc accountability. \n\nHọ cũng nghe partnering trong cách khép phiên. Năng lực này tích hợp tất cả những phần trước: chất lượng hành động phụ thuộc vào thỏa thuận, lắng nghe, nhận thức và quyền tự chủ đã được xây dựng trước đó.",
+      "commonTrapsEn": "Common traps: \n- ending with “So what will you do?” before learning is integrated; \n- assigning homework; \n- making accountability coach-owned (“report back to me”); \n- assuming every session must end with a concrete action; \n- or praising completion rather than exploring learning. \n\nIn exam questions, the strongest response usually invites the client to design how they will move forward and what support/barriers matter.",
+      "commonTrapsVi": "Các bẫy thường gặp: \n- kết thúc bằng “Vậy bạn sẽ làm gì?” trước khi học hỏi được tích hợp; giao bài tập; \n- biến accountability thành sở hữu của coach (“hãy báo cáo lại cho tôi”); \n- cho rằng mọi phiên đều phải kết thúc bằng một hành động cụ thể; \n- hoặc chỉ khen việc hoàn thành thay vì khám phá học hỏi. \n\nTrong câu hỏi thi, phương án mạnh nhất thường mời khách hàng tự thiết kế cách tiến về phía trước và xem xét nguồn hỗ trợ/rào cản liên quan.",
+      "trapEn": "Common traps: \n- ending with “So what will you do?” before learning is integrated; \n- assigning homework; \n- making accountability coach-owned (“report back to me”); \n- assuming every session must end with a concrete action; \n- or praising completion rather than exploring learning. \n\nIn exam questions, the strongest response usually invites the client to design how they will move forward and what support/barriers matter.",
+      "trapVi": "Các bẫy thường gặp: \n- kết thúc bằng “Vậy bạn sẽ làm gì?” trước khi học hỏi được tích hợp; giao bài tập; \n- biến accountability thành sở hữu của coach (“hãy báo cáo lại cho tôi”); \n- cho rằng mọi phiên đều phải kết thúc bằng một hành động cụ thể; \n- hoặc chỉ khen việc hoàn thành thay vì khám phá học hỏi. \n\nTrong câu hỏi thi, phương án mạnh nhất thường mời khách hàng tự thiết kế cách tiến về phía trước và xem xét nguồn hỗ trợ/rào cản liên quan.",
+      "lensEn": "CLIENT OWNS THE ACTION: Integrate • Choose • Act • Learn • Sustain",
+      "lensVi": "KHÁCH HÀNG SỞ HỮU HÀNH ĐỘNG: Tích hợp • Lựa chọn • Hành động • Học hỏi • Duy trì",
+      "changes2025Vi": "Khách hàng toàn quyền làm chủ việc thiết kế hành động, thiết lập cơ chế trách nhiệm giải trình tự thân (self-accountability) và tích hợp bài học vào đời sống dài hạn.",
+      "changes2025En": "Client fully owns action design, autonomous accountability structures, and sustainable long-term integration of insights.",
+      "subCompetencies2025": [
+        {
+          "subId": "8.01",
+          "behaviorEn": "Works with the client to integrate new awareness, insight or learning into their worldview and behaviors",
+          "behaviorVi": "Làm việc cùng khách hàng để tích hợp nhận thức, insight hoặc học hỏi mới vào thế giới quan và hành vi của họ."
+        },
+        {
+          "subId": "8.02",
+          "behaviorEn": "Partners with the client to design goals, actions and accountability measures that integrate and expand new learning",
+          "behaviorVi": "Đồng hành với khách hàng để thiết kế mục tiêu, hành động và cách thức chịu trách nhiệm nhằm tích hợp và mở rộng học hỏi mới."
+        },
+        {
+          "subId": "8.03",
+          "behaviorEn": "Acknowledges and supports client autonomy in the design of goals, actions and methods of accountability",
+          "behaviorVi": "Ghi nhận và hỗ trợ quyền tự chủ của khách hàng trong việc thiết kế mục tiêu, hành động và phương thức chịu trách nhiệm."
+        },
+        {
+          "subId": "8.04",
+          "behaviorEn": "Supports the client in identifying potential results or learning from identified action steps",
+          "behaviorVi": "Hỗ trợ khách hàng nhận diện kết quả tiềm năng hoặc bài học có thể có từ các bước hành động đã xác định."
+        },
+        {
+          "subId": "8.05",
+          "behaviorEn": "Invites the client to consider how to move forward, including resources, support and potential barriers",
+          "behaviorVi": "Mời khách hàng cân nhắc cách tiến về phía trước, bao gồm nguồn lực, hỗ trợ và các rào cản tiềm ẩn."
+        },
+        {
+          "subId": "8.06",
+          "behaviorEn": "Partners with the client to summarize learning and insight within or between sessions",
+          "behaviorVi": "Đồng hành với khách hàng để tóm tắt học hỏi và insight trong hoặc giữa các phiên."
+        },
+        {
+          "subId": "8.07",
+          "behaviorEn": "Partners with the client to integrate learning and sustain progress throughout the coaching engagement",
+          "behaviorVi": "Đồng hành với khách hàng để tích hợp học hỏi và duy trì tiến bộ trong suốt quá trình khai vấn."
+        },
+        {
+          "subId": "8.08",
+          "behaviorEn": "Acknowledges the client’s progress and successes",
+          "behaviorVi": "Ghi nhận tiến bộ và thành công của khách hàng."
+        },
+        {
+          "subId": "8.09",
+          "behaviorEn": "Partners with the client to close the session",
+          "behaviorVi": "Đồng hành với khách hàng để khép lại phiên khai vấn."
+        }
+      ],
+      "subCompetencies2019": []
     }
   ],
   "theories": [

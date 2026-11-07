@@ -28,6 +28,7 @@ from flashcards_data import generate_flashcards
 from quizzes_data import generate_quizzes
 from sjt_50_data import generate_sjt_50
 from referral_guidelines_data import get_referral_curriculum
+from competencies_2025_data import get_competencies_2025
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_PATH = os.path.join(BASE_DIR, "data", "mentor_data.json")
@@ -38,7 +39,7 @@ with open(DATA_PATH, "r", encoding="utf-8") as f:
     existing = json.load(f)
 
 sections = existing["sections"]
-competencies = existing["competencies"]
+competencies = get_competencies_2025()
 theories = existing["theories"]
 keywords = existing["keywords"]
 mindfulness_messages = existing["mindfulnessMessages"]
@@ -206,8 +207,11 @@ assert "buông bớt quyền kiểm soát" not in raw_json, "Flawed case study l
 print("✅ Verification Passed: Flawed case study projection removed!")
 
 # Check 3: Counts
-assert len(verified_sources) == 9, f"Expected 9 verified sources, got {len(verified_sources)}"
-print(f"✅ Verified Sources count: {len(verified_sources)} (Includes Hullinger & DiGirolamo 2018 White Paper & Summary)")
+assert len(verified_sources) == 11, f"Expected 11 verified sources, got {len(verified_sources)}"
+print(f"✅ Verified Sources count: {len(verified_sources)} (Includes ICF 2025 Competencies, 2019-2025 Comparison, 2025 Code of Ethics, and Hullinger & DiGirolamo 2018)")
+
+assert len(competencies) == 8, f"Expected 8 competencies, got {len(competencies)}"
+print(f"✅ Core Competencies 2025 count: {len(competencies)} (Competencies 1.0 to 8.0 with all 2025 sub-competencies)")
 
 assert len(exam_profiles) == 2, f"Expected 2 exam profiles, got {len(exam_profiles)}"
 print(f"✅ Exam Profiles count: {len(exam_profiles)} (Legacy 78-SJT & Updated 80-Item)")
