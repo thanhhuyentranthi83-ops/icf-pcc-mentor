@@ -18,12 +18,12 @@ def set_page(page_name, section_id=None, module_id=None, lesson_id=None):
         st.session_state.active_lesson_id = lesson_id
 
 def compute_real_lotus_bloomed(progress_dict=None):
-    """Computes genuine lotus bloom count from real study achievements (no fabricated streak)"""
+    """Computes genuine lotus bloom count: 1 completed lesson = 1 lotus (awarded once per lesson, never duplicate)."""
     if progress_dict is None:
         progress_dict = st.session_state.get("curriculum_progress", {})
-    passed_quizzes = sum(1 for p in progress_dict.values() if p.get("status") == "quiz_passed")
-    read_lessons = sum(1 for p in progress_dict.values() if p.get("status") in ["read", "quiz_passed"])
-    return passed_quizzes + (read_lessons // 2)
+    # Each lesson marked completed ('read' or 'quiz_passed') counts as 1 lotus flower
+    completed = sum(1 for p in progress_dict.values() if p.get("status") in ["read", "quiz_passed"])
+    return completed
 
 def update_lesson_progress(lesson_id, status=None, score=None, note=None, needs_review=None):
     if "curriculum_progress" not in st.session_state:
@@ -44,6 +44,10 @@ def update_lesson_progress(lesson_id, status=None, score=None, note=None, needs_
         current["score"] = score
     if note is not None:
         current["note"] = note
+        # Sync to global notes dictionary as well
+        if "notes" not in st.session_state:
+            st.session_state.notes = {}
+        st.session_state.notes[lesson_id] = note
     if needs_review is not None:
         current["needs_review"] = needs_review
 

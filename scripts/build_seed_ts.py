@@ -461,8 +461,8 @@ system_settings = {
         }
     },
     "bannerAnnouncement": {
-        "vi": "Chào mừng bạn đến với Mentor thi ICF PCC. Chúc bạn một hành trình ôn thi an lạc và tự tin!",
-        "en": "Welcome to ICF PCC Mentor. Wishing you a peaceful and confident preparation journey!",
+        "vi": "Chào mừng bạn đến với Học Coaching. Từ nền tảng khai vấn đến luyện thi ICF Credentialing • Cùng Coach Thanh Huyền!",
+        "en": "Welcome to Học Coaching. From Coaching Foundations to ICF Credentialing • With Coach Thanh Huyen!",
         "active": True
     }
 }

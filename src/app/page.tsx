@@ -91,15 +91,21 @@ export default function HomePage() {
         <div className="relative z-10 max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zen-moss/15 text-zen-moss-dark text-xs font-semibold">
             <Sparkles className="w-3.5 h-3.5 text-zen-ochre" />
-            <span>{t("Lời Nhắn Chánh Niệm Trong Ngày", "Daily Mindfulness Reflection")}</span>
+            <span>{t("Học Coaching • Cùng Coach Thanh Huyền", "Học Coaching • With Coach Thanh Huyen")}</span>
           </div>
 
           <h1 className="font-serif text-2xl sm:text-3xl font-bold text-zen-ink leading-tight">
             {t(
-              `Chào mừng bạn, ${user.fullName}. Chúc bạn một ngày học tĩnh tại.`,
-              `Welcome, ${user.fullName}. May your study today be peaceful.`
+              "Học Coaching",
+              "Học Coaching"
             )}
           </h1>
+          <p className="text-sm sm:text-base font-semibold text-zen-wood">
+            {t(
+              "Từ nền tảng khai vấn đến luyện thi ICF Credentialing",
+              "From Coaching Foundations to ICF Credentialing"
+            )}
+          </p>
 
           {dailyMsg && (
             <div className="pt-2">
@@ -266,6 +272,62 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Về Coach Thanh Huyền */}
+      <section className="rounded-3xl border border-zen-border bg-gradient-to-br from-zen-paper via-white to-zen-paper p-6 sm:p-8 shadow-zen-card overflow-hidden relative">
+        <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+          <div className="relative shrink-0">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-zen-moss shadow-zen-floating ring-4 ring-zen-moss/20">
+              <img
+                src="/images/coach_thanh_huyen.jpg"
+                alt="Coach Thanh Huyền - ICF PCC Coach"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="absolute -bottom-1 -right-1 px-2.5 py-0.5 rounded-full bg-zen-moss-dark text-white text-[10px] font-bold shadow-zen-subtle">
+              ICF PCC
+            </div>
+          </div>
+          
+          <div className="space-y-3 text-center md:text-left flex-1">
+            <div className="space-y-1">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zen-moss/15 text-zen-moss-dark text-xs font-semibold">
+                <span>🌱 {t("Người Sáng Lập & Đồng Hành", "Founder & Companion")}</span>
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-zen-ink">
+                Coach Thanh Huyền
+              </h3>
+              <p className="text-xs sm:text-sm font-semibold text-zen-wood">
+                ICF PCC Coach • EQ Trainer 6Seconds
+              </p>
+            </div>
+
+            <blockquote className="font-serif italic text-sm sm:text-base text-zen-ink/90 border-l-0 md:border-l-2 md:border-zen-moss md:pl-4 leading-relaxed">
+              “{t(
+                "Tôi xây dựng Học Coaching để đồng hành cùng bạn từ những bước đầu học khai vấn đến khi vận dụng các năng lực ICF vào tình huống thực tế và chuẩn bị cho kỳ thi ICF Credentialing. Qua mỗi bài học, tôi mong bạn có thêm cơ hội lắng nghe sâu hơn và tự tin hơn khi lựa chọn cách đáp lại khách hàng.",
+                "I created Học Coaching to walk alongside you from the first steps in coaching to applying ICF competencies in real dilemmas and preparing for the ICF Credentialing Exam. Through each lesson, I hope you gain deeper listening presence and clarity in how you respond to clients."
+              )}”
+            </blockquote>
+
+            <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3">
+              <Link
+                href="/curriculum"
+                className="px-5 py-2.5 rounded-xl bg-zen-moss-dark hover:bg-zen-moss-dark/90 text-white text-xs sm:text-sm font-semibold shadow-zen-subtle transition-all"
+              >
+                {overallStats.completedLessons > 0
+                  ? t("Tiếp tục học lộ trình →", "Continue Pathway →")
+                  : t("Bắt đầu học ngay →", "Start Learning Now →")}
+              </Link>
+              <Link
+                href="/mock-exam"
+                className="px-5 py-2.5 rounded-xl border border-zen-border bg-zen-surface hover:bg-zen-border/40 text-zen-ink text-xs sm:text-sm font-semibold transition-all"
+              >
+                {t("Luyện thi ICF Credentialing", "ICF Credentialing Prep")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. Quick Search & Micro-Learning Bar */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Quick Search */}
@@ -326,32 +388,117 @@ export default function HomePage() {
         <LotusGarden garden={garden} streakCount={user.streakCount} />
       </section>
 
-      {/* 5. Full PCC Mock Exam Highlight Card */}
-      <section className="relative overflow-hidden rounded-3xl border-2 border-zen-ochre/40 bg-gradient-to-r from-amber-50/70 via-zen-paper to-amber-50/50 p-6 sm:p-8 shadow-zen-card">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-xl">
-            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-zen-ochre/20 text-zen-ochre-dark text-xs font-bold uppercase tracking-wider">
-              <Mountain className="w-3.5 h-3.5" />
-              <span>{t("Kỳ Thi Mô Phỏng", "Simulation Exam")}</span>
+      {/* 5. KHU VỰC: LUYỆN THI ICF CREDENTIALING */}
+      <section className="space-y-4">
+        <div className="rounded-3xl border-2 border-zen-ochre/40 bg-gradient-to-r from-amber-50/70 via-zen-paper to-amber-50/50 p-6 sm:p-8 shadow-zen-card space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zen-border/60 pb-5">
+            <div className="space-y-1.5 max-w-2xl">
+              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-zen-ochre/20 text-zen-ochre-dark text-xs font-bold uppercase tracking-wider">
+                <Mountain className="w-3.5 h-3.5" />
+                <span>{t("Kỳ Thi ICF Credentialing Exam", "ICF Credentialing Exam")}</span>
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-zen-ink">
+                {t("Luyện thi ICF Credentialing", "ICF Credentialing Exam Prep")}
+              </h3>
+              <p className="text-xs sm:text-sm text-zen-muted leading-relaxed">
+                {t(
+                  "Dành cho cả ứng viên ACC và PCC. Nội dung phản ánh cấu trúc kỳ thi ICF Credentialing Exam hiện hành: Situational Judgment Test (SJT) chọn 1 BEST và 1 WORST, thang điểm 200–600 (ngưỡng đỗ 460).",
+                  "For both ACC and PCC candidates. Fully aligns with current ICF Credentialing Exam standards: SJT 1 BEST & 1 WORST, scaled 200–600 (passing score 460)."
+                )}
+              </p>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-zen-ink">
-              {t("Thi Thử Tổng PCC Chuẩn ICF", "Full Standard ICF PCC Mock Exam")}
-            </h3>
-            <p className="text-xs sm:text-sm text-zen-muted leading-relaxed">
-              {t(
-                "Đề thi chuẩn Situational Judgment Test (SJT): Mỗi câu chọn 1 phản hồi TỐT NHẤT (BEST) và 1 phản hồi TỆ NHẤT (WORST). Có đồng hồ đếm ngược, chấm điểm và đối chiếu chi tiết.",
-                "Authentic SJT exam format: Pick 1 BEST and 1 WORST response per scenario. Features countdown timer, detailed scoring, and rationale breakdown."
-              )}
-            </p>
+            <Link
+              href="/mock-exam"
+              className="shrink-0 px-5 py-3 rounded-2xl bg-zen-ochre hover:bg-zen-ochre-dark text-white font-semibold text-xs sm:text-sm shadow-zen-card hover:shadow-zen-floating transition-all flex items-center justify-center gap-2"
+            >
+              <Compass className="w-4 h-4" />
+              <span>{t("Vào phòng thi thử ngay", "Enter Exam Room")}</span>
+            </Link>
           </div>
 
-          <Link
-            href="/mock-exam"
-            className="shrink-0 px-6 py-3.5 rounded-2xl bg-zen-ochre hover:bg-zen-ochre-dark text-white font-semibold text-xs sm:text-sm shadow-zen-card hover:shadow-zen-floating transition-all flex items-center gap-2"
-          >
-            <Compass className="w-4 h-4" />
-            <span>{t("Bắt đầu thi thử ngay", "Start Mock Exam Now")}</span>
-          </Link>
+          {/* 3 Entry points */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link
+              href="/daily"
+              className="p-5 rounded-2xl bg-white border border-zen-border/80 hover:border-zen-ochre hover:shadow-zen-subtle transition-all flex flex-col justify-between group"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xl">⚡</span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">
+                    {t("Hàng ngày", "Daily")}
+                  </span>
+                </div>
+                <h4 className="font-serif text-base font-bold text-zen-ink group-hover:text-zen-ochre-dark transition-colors">
+                  {t("Luyện 10 câu / ngày", "Daily 10 Drill")}
+                </h4>
+                <p className="text-xs text-zen-muted leading-relaxed">
+                  {t(
+                    "Rèn luyện phán đoán không lặp câu: 10 tình huống Best/Worst hoặc câu hỏi kiến thức có phản hồi tức thì.",
+                    "Non-repeating drill: 10 Best/Worst SJT items or knowledge questions with instant feedback."
+                  )}
+                </p>
+              </div>
+              <div className="pt-3 mt-2 border-t border-zen-border/40 text-xs font-semibold text-zen-ochre-dark flex items-center gap-1">
+                <span>{t("Vào luyện ngay", "Start Drill")}</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </div>
+            </Link>
+
+            <Link
+              href="/official-samples"
+              className="p-5 rounded-2xl bg-white border border-zen-border/80 hover:border-zen-moss hover:shadow-zen-subtle transition-all flex flex-col justify-between group"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xl">📑</span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+                    {t("Đề gốc", "Official")}
+                  </span>
+                </div>
+                <h4 className="font-serif text-base font-bold text-zen-ink group-hover:text-zen-moss-dark transition-colors">
+                  {t("8 câu mẫu ICF", "8 Official Samples")}
+                </h4>
+                <p className="text-xs text-zen-muted leading-relaxed">
+                  {t(
+                    "8 tình huống nguyên bản tiếng Anh có đáp án công bố trên website ICF, song ngữ và phân tích đa chiều.",
+                    "8 authentic English scenarios with official answer key published on the ICF website."
+                  )}
+                </p>
+              </div>
+              <div className="pt-3 mt-2 border-t border-zen-border/40 text-xs font-semibold text-zen-moss-dark flex items-center gap-1">
+                <span>{t("Khảo sát đề gốc", "View Samples")}</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </div>
+            </Link>
+
+            <Link
+              href="/mock-exam"
+              className="p-5 rounded-2xl bg-white border border-zen-border/80 hover:border-zen-ochre hover:shadow-zen-subtle transition-all flex flex-col justify-between group"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xl">⚖️</span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-800">
+                    {t("Mô phỏng", "Simulator")}
+                  </span>
+                </div>
+                <h4 className="font-serif text-base font-bold text-zen-ink group-hover:text-zen-ochre-dark transition-colors">
+                  {t("Thi thử mô phỏng", "Mock Simulator")}
+                </h4>
+                <p className="text-xs text-zen-muted leading-relaxed">
+                  {t(
+                    "Mô phỏng sát thực tế: Cấu hình 78 SJT (180p) hoặc 80 câu 4 phần (150p). Chấm 4 mức điểm quy đổi 200–600.",
+                    "Authentic simulation: 78 SJT (180m) or 80 items (150m). Timed, 4-tier grading scaled 200–600."
+                  )}
+                </p>
+              </div>
+              <div className="pt-3 mt-2 border-t border-zen-border/40 text-xs font-semibold text-zen-ochre-dark flex items-center gap-1">
+                <span>{t("Vào thi thử", "Enter Simulator")}</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 

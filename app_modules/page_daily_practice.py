@@ -87,29 +87,60 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
         is_bm = qid in st.session_state.bookmarked_qids
         ad_info = format_ad_analysis(q, lang=st.session_state.lang)
 
-        st.markdown(f"""
-        <div class="zen-card" style="border-left: 4px solid #8BA888; margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap;">
+        # Header with Question Number and Star Bookmark Button
+        col_q_head1, col_q_head2 = st.columns([4, 1])
+        with col_q_head1:
+            st.markdown(f"""
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
                 <span class="zen-badge zen-badge-primary">Câu {idx + 1} / {len(target_questions)} ({qid})</span>
                 <span class="zen-badge zen-badge-gold">{q.get('primaryCompetency', q.get('domain', 'ICF Standard'))}</span>
             </div>
-            <div style="font-size: 1.02rem; font-weight: 600; color: #2F3E34; line-height: 1.6; margin: 10px 0;">
+            """, unsafe_allow_html=True)
+        with col_q_head2:
+            bm_label = "★ " + t("Đã lưu", "Saved") if is_bm else "☆ " + t("Lưu câu", "Save")
+            if st.button(bm_label, key=f"btn_daily_bm_head_{qid}_{idx}", use_container_width=True):
+                if is_bm:
+                    st.session_state.bookmarked_qids.remove(qid)
+                    st.toast(t("Đã bỏ lưu câu hỏi!", "Removed from bookmarks!"))
+                else:
+                    st.session_state.bookmarked_qids.append(qid)
+                    st.toast(t("Đã lưu vào Sổ Học Tập → Câu hỏi đã lưu!", "Saved to Learning Journal!"))
+                st.rerun()
+
+        st.markdown(f"""
+        <div class="zen-card" style="border-left: 4px solid #8BA888; margin: 8px 0 16px 0;">
+            <div style="font-size: 1.02rem; font-weight: 600; color: #2F3E34; line-height: 1.6;">
                 {q['questionVi'] if st.session_state.lang == 'vi' else q['questionEn']}
             </div>
         </div>
         """, unsafe_allow_html=True)
 
         options = q["options"]
-        opt_dict = {opt["key"]: f"[{opt['key']}] {opt['textVi'] if st.session_state.lang == 'vi' else opt['textEn']}" for opt in options}
+
+        # 1. RENDER FULL WRAPPED OPTION CARDS (A, B, C, D)
+        st.markdown(f"<div style='font-size: 0.88rem; font-weight: 600; color: #5F6F65; margin-bottom: 6px;'>{t('Danh sách các phương án (Options):', 'Available Options:')}</div>", unsafe_allow_html=True)
+        for opt in options:
+            st.markdown(f"""
+            <div style="background: #FFFFFF; border: 1px solid #EADBCC; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; line-height: 1.5; white-space: normal; word-break: break-word;">
+                <b style="color: #2F3E34; font-size: 0.95rem;">[{opt['key']}]</b> 
+                <span style="font-size: 0.92rem; color: #333;">{opt['textVi'] if st.session_state.lang == 'vi' else opt['textEn']}</span>
+                <div style="font-size: 0.82rem; color: #777; margin-top: 4px; font-style: italic;">{opt['textEn'] if st.session_state.lang == 'vi' else opt['textVi']}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        opt_keys = [opt["key"] for opt in options]
 
         # Knowledge Question Single Select
         if is_knowledge:
+            cur_k = st.session_state.daily_answers.get(qid, {}).get("pick")
+            k_idx = opt_keys.index(cur_k) if cur_k in opt_keys else None
             user_k = st.radio(
                 t(f"Chọn 1 đáp án đúng ({qid}):", f"Select single correct answer ({qid}):"),
-                options=list(opt_dict.keys()),
-                format_func=lambda k: opt_dict[k],
+                options=opt_keys,
+                format_func=lambda k: f"Phương án [{k}]",
+                horizontal=True,
                 key=f"daily_k_{qid}",
-                index=None
+                index=k_idx
             )
             st.session_state.daily_answers[qid] = {"pick": user_k}
 
@@ -125,25 +156,36 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
                 </div>
                 """, unsafe_allow_html=True)
         else:
-            # Situational Judgment Question (Best and Worst)
+            # Situational Judgment Question (Best and Worst with identical A-D order)
             col_b, col_w = st.columns(2)
+            cur_b = st.session_state.daily_answers.get(qid, {}).get("best")
+            cur_w = st.session_state.daily_answers.get(qid, {}).get("worst")
+            b_idx = opt_keys.index(cur_b) if cur_b in opt_keys else None
+            w_idx = opt_keys.index(cur_w) if cur_w in opt_keys else None
+
             with col_b:
-                user_best = st.selectbox(
-                    f"🌟 {t('Chọn BEST (TỐT NHẤT)', 'Select BEST')} ({qid}):",
-                    options=["-- Chưa chọn --"] + list(opt_dict.keys()),
-                    format_func=lambda k: opt_dict.get(k, k),
-                    key=f"daily_best_{qid}"
+                st.markdown(f"🌟 <b>{t('Chọn BEST (TỐT NHẤT):', 'Select BEST:')}</b>", unsafe_allow_html=True)
+                chosen_b = st.radio(
+                    label=f"BEST_{qid}",
+                    options=opt_keys,
+                    format_func=lambda k: f"Phương án [{k}]",
+                    horizontal=True,
+                    key=f"daily_best_{qid}",
+                    index=b_idx,
+                    label_visibility="collapsed"
                 )
             with col_w:
-                user_worst = st.selectbox(
-                    f"⚠️ {t('Chọn WORST (TỆ NHẤT)', 'Select WORST')} ({qid}):",
-                    options=["-- Chưa chọn --"] + list(opt_dict.keys()),
-                    format_func=lambda k: opt_dict.get(k, k),
-                    key=f"daily_worst_{qid}"
+                st.markdown(f"⚠️ <b>{t('Chọn WORST (TỆ NHẤT):', 'Select WORST:')}</b>", unsafe_allow_html=True)
+                chosen_w = st.radio(
+                    label=f"WORST_{qid}",
+                    options=opt_keys,
+                    format_func=lambda k: f"Phương án [{k}]",
+                    horizontal=True,
+                    key=f"daily_worst_{qid}",
+                    index=w_idx,
+                    label_visibility="collapsed"
                 )
 
-            chosen_b = None if user_best == "-- Chưa chọn --" else user_best
-            chosen_w = None if user_worst == "-- Chưa chọn --" else user_worst
             st.session_state.daily_answers[qid] = {"best": chosen_b, "worst": chosen_w}
 
             if chosen_b and chosen_w and chosen_b == chosen_w:
@@ -192,7 +234,7 @@ def render_daily_practice_page(PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, t):
         col_act1, col_act2 = st.columns([4, 1])
         with col_act2:
             bm_label = "★ " + t("Đã Lưu", "Saved") if is_bm else "☆ " + t("Đánh Dấu", "Bookmark")
-            if st.button(bm_label, key=f"btn_daily_bm_{qid}", use_container_width=True):
+            if st.button(bm_label, key=f"btn_daily_bm_foot_{qid}_{idx}", use_container_width=True):
                 if is_bm:
                     st.session_state.bookmarked_qids.remove(qid)
                 else:

@@ -2,8 +2,9 @@
 // DO NOT EDIT DIRECTLY. Run `python3 scripts/compile_all_curriculum.py` to regenerate.
 
 export const APP_INFO = {
-  name: "Mentor Thi",
-  subtitle: "Hiểu chuẩn — Luyện phán đoán — Phát triển năng lực coaching.",
+  name: "Học Coaching",
+  subtitle: "Từ nền tảng khai vấn đến luyện thi ICF Credentialing",
+  brandSubtitle: "Cùng Coach Thanh Huyền",
   motto: "Vì ước mơ đưa Coaching thành lối sống",
   disclaimer: "Ứng dụng độc lập phục vụ học tập; không tự nhận được ICF bảo trợ, chứng nhận hoặc phê duyệt. Không sử dụng logo ICF nếu chưa được phép."
 };
@@ -10668,10 +10669,12 @@ export const SYSTEM_SETTINGS = {
     "en": "Welcome to ICF PCC Mentor. Wishing you a peaceful and confident preparation journey!",
     "active": true
   },
-  "appName": "Mentor Thi",
-  "appSubtitle": "Hiểu chuẩn — Luyện phán đoán — Phát triển năng lực coaching.",
+  "appName": "Học Coaching",
+  "appSubtitle": "Từ nền tảng khai vấn đến luyện thi ICF Credentialing",
   "disclaimer": "Ứng dụng độc lập phục vụ học tập; không tự nhận được ICF bảo trợ, chứng nhận hoặc phê duyệt. Không sử dụng logo ICF nếu chưa được phép.",
-  "motto": "Vì ước mơ đưa Coaching thành lối sống"
+  "motto": "Vì ước mơ đưa Coaching thành lối sống",
+  "brandSubtitle": "Cùng Coach Thanh Huyền",
+  "coachTitle": "ICF PCC Coach | EQ Trainer 6Seconds"
 };
 
 export const DISCOUNT_CODES = [

@@ -1,7 +1,7 @@
 {
-  "name": "Mentor thi ICF PCC",
-  "short_name": "ICF PCC",
-  "description": "Ứng dụng luyện thi chứng chỉ ICF PCC song ngữ Anh - Việt phong cách Zen",
+  "name": "Học Coaching",
+  "short_name": "Học Coaching",
+  "description": "Học Coaching cùng Coach Thanh Huyền - Từ nền tảng khai vấn đến luyện thi ICF Credentialing",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F7F3EA",

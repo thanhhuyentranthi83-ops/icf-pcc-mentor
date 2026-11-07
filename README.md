@@ -1,6 +1,7 @@
-# Mentor Thi ICF PCC — Zen Edition 🪷
+# Học Coaching — Cùng Coach Thanh Huyền 🪷
+*Từ nền tảng khai vấn đến luyện thi ICF Credentialing*
 
-Ứng dụng ôn thi chứng chỉ quốc tế **ICF PCC (Professional Certified Coach)** song ngữ Anh – Việt, thiết kế Mobile-First dạng Progressive Web App (PWA) theo phong cách thẩm mỹ **Zen chánh niệm** (lấy cảm hứng từ không gian tĩnh lặng, an yên Làng Mai).
+Ứng dụng học tập và luyện thi chứng chỉ quốc tế **ICF Credentialing (ACC / PCC)** song ngữ Anh – Việt, thiết kế Mobile-First dạng Progressive Web App (PWA) theo phong cách thẩm mỹ **Zen chánh niệm**.
 
 ---
 

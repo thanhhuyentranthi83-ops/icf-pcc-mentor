@@ -71,6 +71,7 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
     # IF ALREADY SUBMITTED: RENDER SCORE REPORT WITH FULL A-D ANALYSIS
     if st.session_state.sjt_submitted and st.session_state.sjt_last_result:
         res = st.session_state.sjt_last_result
+        # System Recommendations After Test
         st.markdown(f"""
         <div class="zen-card" style="border: 2px solid {'#8BA888' if res['passed'] else '#D4A373'}; text-align: center; padding: 24px;">
             <span class="zen-badge {'zen-badge-primary' if res['passed'] else 'zen-badge-gold'}" style="font-size: 1rem; padding: 6px 16px;">
@@ -81,10 +82,10 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
                 <b>{t('Điểm thô:', 'Raw Score:')}</b> {res['totalPts']} / {res['maxPts']} ({res['percentage']}%) &nbsp;|&nbsp;
                 <b>{t('Ngưỡng chuẩn đỗ:', 'Passing Benchmark:')}</b> 460 / 600
             </div>
-            <p style="font-size: 0.9rem; color: #666; max-width: 600px; margin: 0 auto;">
-                {t('Điểm số đã được lưu vào Sổ Học Tập. Hãy xem lại kỹ lưỡng phân tích chi tiết từng lựa chọn A, B, C, D và nguồn chuẩn bên dưới.',
-                   'Score saved to Learning Journal. Carefully review the full A-D analysis and verified citations below.')}
-            </p>
+            <div style="background: #EBF3FA; border: 1px solid #B8D5E5; border-radius: 8px; padding: 10px 16px; margin: 12px auto; max-width: 620px; font-size: 0.88rem; color: #1E4E79; text-align: left;">
+                ⚖️ <b>{t('Lưu ý chuẩn mực ICF:', 'ICF Standard Note:')}</b> {t('Ngưỡng đạt chuẩn bắt buộc của kỳ thi ICF Credentialing Exam là <b>460 / 600</b>. Kết quả này đã được tự động lưu vào Sổ Học Tập để theo dõi tiến trình chuyển hóa của bạn.',
+                   'Official passing benchmark is strictly <b>460 / 600</b>. This result is automatically recorded in your Learning Journal.')}
+            </div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -93,6 +94,7 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
             qid = item["id"]
             user_ans = st.session_state.sjt_answers.get(qid, {})
             is_k = (item.get("type") != "icf_sjt" and "correctAnswer" in item)
+            is_bm = qid in st.session_state.bookmarked_qids
             ad_info = format_ad_analysis(item, lang=st.session_state.lang)
 
             if is_k:
@@ -103,7 +105,7 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
 
                 st.markdown(f"""
                 <div class="zen-card" style="padding: 18px; margin-bottom: 16px; border-left: 4px solid {'#8BA888' if q_ok else '#C62828'};">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap;">
                         <b>Câu {idx + 1} ({qid}) — Kiến thức chuẩn mực:</b>
                         <span class="zen-badge {'zen-badge-primary' if q_ok else 'zen-badge-pink'}">{pts_q}/1 Điểm</span>
                     </div>
@@ -133,7 +135,7 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
 
                 st.markdown(f"""
                 <div class="zen-card" style="padding: 18px; margin-bottom: 16px; border-left: 4px solid {'#8BA888' if pts_q == 2 else ('#EADBCC' if pts_q == 1 else '#C62828')};">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap;">
                         <b>Câu {idx + 1} ({qid}) — Tình huống phán đoán:</b>
                         <span class="zen-badge {badge_cls}">{pts_q}/2 Điểm</span>
                     </div>
@@ -151,7 +153,7 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
 
                 for opt_block in ad_info["options"]:
                     st.markdown(f"""
-                    <div style="margin: 6px 0; padding: 8px 12px; border-radius: 8px; background: #FFFFFF; border: 1px solid #EADBCC; font-size: 0.88rem; line-height: 1.5;">
+                    <div style="margin: 6px 0; padding: 8px 12px; border-radius: 8px; background: #FFFFFF; border: 1px solid #EADBCC; font-size: 0.88rem; line-height: 1.5; white-space: normal; word-break: break-word;">
                         <b style="color: {opt_block['tagColor']};">{opt_block['tag']} Phương án [{opt_block['key']}]:</b> {opt_block['text']}<br/>
                         <span style="color: #555;">👉 <b>{t('Lý giải:', 'Why:')}</b> {opt_block['why']}</span>
                     </div>
@@ -163,6 +165,18 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
+
+            # Long-term bookmark button on review screen
+            bm_btn_label = "★ " + t("Đã lưu vào Sổ Học Tập", "Saved in Journal") if is_bm else "☆ " + t("Lưu câu hỏi vào Sổ Học Tập", "Save to Learning Journal")
+            if st.button(bm_btn_label, key=f"btn_review_bm_{qid}", use_container_width=True):
+                if is_bm:
+                    st.session_state.bookmarked_qids.remove(qid)
+                    st.toast(t("Đã bỏ lưu câu hỏi!", "Removed from bookmarks!"))
+                else:
+                    st.session_state.bookmarked_qids.append(qid)
+                    st.toast(t("Đã lưu vào Sổ Học Tập → Câu hỏi đã lưu!", "Saved to Learning Journal!"))
+                st.rerun()
+
         return
 
     # EXAM IN PROGRESS
@@ -196,15 +210,28 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
         """, unsafe_allow_html=True)
 
         options = item["options"]
-        opt_dict = {opt["key"]: f"[{opt['key']}] {opt['textVi'] if st.session_state.lang == 'vi' else opt['textEn']}" for opt in options}
+
+        # 1. RENDER FULL WRAPPED OPTION CARDS (A, B, C, D)
+        st.markdown(f"<div style='font-size: 0.88rem; font-weight: 600; color: #5F6F65; margin-bottom: 6px;'>{t('Danh sách các phương án (Options):', 'Available Options:')}</div>", unsafe_allow_html=True)
+        for opt in options:
+            st.markdown(f"""
+            <div style="background: #FFFFFF; border: 1px solid #EADBCC; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; line-height: 1.5; white-space: normal; word-break: break-word;">
+                <b style="color: #2F3E34; font-size: 0.95rem;">[{opt['key']}]</b> 
+                <span style="font-size: 0.92rem; color: #333;">{opt['textVi'] if st.session_state.lang == 'vi' else opt['textEn']}</span>
+                <div style="font-size: 0.82rem; color: #777; margin-top: 4px; font-style: italic;">{opt['textEn'] if st.session_state.lang == 'vi' else opt['textVi']}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        opt_keys = [opt["key"] for opt in options]
 
         if is_k:
             cur_pick = st.session_state.sjt_answers.get(qid, {}).get("pick")
-            pick_idx = list(opt_dict.keys()).index(cur_pick) if cur_pick in opt_dict else None
+            pick_idx = opt_keys.index(cur_pick) if cur_pick in opt_keys else None
             chosen_k = st.radio(
                 t(f"Chọn 1 đáp án đúng ({qid}):", f"Select single correct answer ({qid}):"),
-                options=list(opt_dict.keys()),
-                format_func=lambda k: opt_dict[k],
+                options=opt_keys,
+                format_func=lambda k: f"Phương án [{k}]",
+                horizontal=True,
                 key=f"sjt_k_radio_{qid}_{idx}",
                 index=pick_idx
             )
@@ -213,29 +240,35 @@ def render_sjt_page(EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTIONS, OFFI
             col_b, col_w = st.columns(2)
             cur_b = st.session_state.sjt_answers.get(qid, {}).get("best")
             cur_w = st.session_state.sjt_answers.get(qid, {}).get("worst")
+            b_idx = opt_keys.index(cur_b) if cur_b in opt_keys else None
+            w_idx = opt_keys.index(cur_w) if cur_w in opt_keys else None
 
             with col_b:
-                user_best = st.selectbox(
-                    f"🌟 {t('Chọn BEST (TỐT NHẤT)', 'Select BEST')} ({qid}):",
-                    options=["-- Chưa chọn --"] + list(opt_dict.keys()),
-                    format_func=lambda k: opt_dict.get(k, k),
-                    key=f"sjt_best_sel_{qid}_{idx}",
-                    index=(list(opt_dict.keys()).index(cur_b) + 1) if cur_b in opt_dict else 0
+                st.markdown(f"🌟 <b>{t('Chọn BEST (TỐT NHẤT):', 'Select BEST:')}</b>", unsafe_allow_html=True)
+                user_best = st.radio(
+                    label=f"BEST_{qid}_{idx}",
+                    options=opt_keys,
+                    format_func=lambda k: f"Phương án [{k}]",
+                    horizontal=True,
+                    key=f"sjt_best_radio_{qid}_{idx}",
+                    index=b_idx,
+                    label_visibility="collapsed"
                 )
             with col_w:
-                user_worst = st.selectbox(
-                    f"⚠️ {t('Chọn WORST (TỆ NHẤT)', 'Select WORST')} ({qid}):",
-                    options=["-- Chưa chọn --"] + list(opt_dict.keys()),
-                    format_func=lambda k: opt_dict.get(k, k),
-                    key=f"sjt_worst_sel_{qid}_{idx}",
-                    index=(list(opt_dict.keys()).index(cur_w) + 1) if cur_w in opt_dict else 0
+                st.markdown(f"⚠️ <b>{t('Chọn WORST (TỆ NHẤT):', 'Select WORST:')}</b>", unsafe_allow_html=True)
+                user_worst = st.radio(
+                    label=f"WORST_{qid}_{idx}",
+                    options=opt_keys,
+                    format_func=lambda k: f"Phương án [{k}]",
+                    horizontal=True,
+                    key=f"sjt_worst_radio_{qid}_{idx}",
+                    index=w_idx,
+                    label_visibility="collapsed"
                 )
 
-            b_val = None if user_best == "-- Chưa chọn --" else user_best
-            w_val = None if user_worst == "-- Chưa chọn --" else user_worst
-            st.session_state.sjt_answers[qid] = {"best": b_val, "worst": w_val}
+            st.session_state.sjt_answers[qid] = {"best": user_best, "worst": user_worst}
 
-            if b_val and w_val and b_val == w_val:
+            if user_best and user_worst and user_best == user_worst:
                 st.warning(t("⚠️ Best và Worst không được trùng nhau! Vui lòng chọn 2 phương án khác nhau.",
                              "⚠️ Best and Worst cannot be identical! Please select two distinct options."))
 

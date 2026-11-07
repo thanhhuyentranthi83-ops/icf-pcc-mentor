@@ -13,8 +13,8 @@ export default function MobileNav() {
   const navItems = [
     { href: "/", label: t("Trang chủ", "Home"), icon: Home },
     { href: "/curriculum", label: t("Lộ trình", "Curriculum"), icon: GraduationCap },
-    { href: "/mock-exam", label: t("Thi thử", "Exam"), icon: BookOpen },
-    { href: "/search", label: t("Tra cứu", "Search"), icon: Search },
+    { href: "/mock-exam", label: t("Luyện thi", "Exam"), icon: BookOpen },
+    { href: "/journal", label: t("Sổ học tập", "Journal"), icon: Sparkles },
     { href: "/profile", label: t("Tài khoản", "Account"), icon: User }
   ];
 

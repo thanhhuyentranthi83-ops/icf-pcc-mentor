@@ -27,13 +27,13 @@ export default function Header() {
           </div>
           <div>
             <span className="font-serif font-semibold text-lg text-zen-ink tracking-tight flex items-center gap-1.5">
-              Mentor thi ICF PCC
+              Học Coaching
               <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-zen-moss/20 text-zen-moss-dark font-sans font-medium">
                 Zen Edition
               </span>
             </span>
             <p className="text-[11px] text-zen-muted -mt-0.5">
-              {t("Luyện thi chứng chỉ quốc tế", "Credentialing Exam Prep")}
+              {t("Từ nền tảng khai vấn đến luyện thi ICF Credentialing", "From Coaching Foundations to ICF Credentialing")} • {t("Cùng Coach Thanh Huyền", "With Coach Thanh Huyen")}
             </p>
           </div>
         </Link>
@@ -62,7 +62,15 @@ export default function Header() {
               pathname === "/mock-exam" ? "text-zen-moss-dark font-semibold" : ""
             }`}
           >
-            {t("Thi thử tổng PCC", "PCC Mock Exam")}
+            {t("Luyện thi ICF Credentialing", "ICF Exam Prep")}
+          </Link>
+          <Link
+            href="/journal"
+            className={`hover:text-zen-moss-dark transition-colors ${
+              pathname === "/journal" ? "text-zen-moss-dark font-semibold" : ""
+            }`}
+          >
+            {t("Sổ học tập", "Journal")}
           </Link>
           <Link
             href="/search"

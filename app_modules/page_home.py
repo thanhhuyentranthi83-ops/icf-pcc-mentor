@@ -16,10 +16,10 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
     # 1. WELCOME HEADER
     st.markdown(f"""
     <div style="text-align: center; max-width: 860px; margin: 0 auto 12px auto;">
-        <span class="zen-badge zen-badge-primary">🌱 {t('Tự Học Tỉnh Thức — Chuẩn Hóa Phán Đoán', 'Mindful Mastery — Verifiable Standards')}</span>
-        <h1 style="font-size: 2.3rem; margin: 8px 0; color: #2F3E34;">🪷 Mentor Thi</h1>
-        <div style="font-size: 1.12rem; color: #8C6D53; font-weight: 500; margin-bottom: 4px;">
-            {t('Hiểu chuẩn — Luyện phán đoán — Phát triển năng lực coaching', 'Master Standards — Hone Judgment — Elevate Coaching Mastery')}
+        <span class="zen-badge zen-badge-primary">🌱 {t('Học Coaching • Cùng Coach Thanh Huyền', 'Học Coaching • With Coach Thanh Huyen')}</span>
+        <h1 style="font-size: 2.3rem; margin: 8px 0; color: #2F3E34;">🪷 Học Coaching</h1>
+        <div style="font-size: 1.15rem; color: #8C6D53; font-weight: 600; margin-bottom: 4px;">
+            {t('Từ nền tảng khai vấn đến luyện thi ICF Credentialing', 'From Coaching Foundations to ICF Credentialing')}
         </div>
         <div style="font-size: 0.92rem; color: #5F6F65; font-style: italic; margin-bottom: 10px;">
             "{t('Vì ước mơ đưa Coaching thành lối sống', 'Making Coaching a Way of Life')}"
@@ -132,6 +132,40 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
                 set_page("curriculum", module_id=mod["id"], lesson_id=first_les)
                 st.rerun()
 
+    # VỀ COACH THANH HUYỀN
+    st.markdown("<hr style='border: none; border-top: 1px solid #EADBCC; margin: 24px 0 20px 0;'/>", unsafe_allow_html=True)
+    c_coach_img, c_coach_bio = st.columns([1, 3])
+    with c_coach_img:
+        import os
+        coach_img_path = "public/images/coach_thanh_huyen.jpg"
+        if os.path.exists(coach_img_path):
+            st.image(coach_img_path, caption="Coach Thanh Huyền (ICF PCC)", use_container_width=True)
+        else:
+            st.markdown("<div style='font-size: 3rem; text-align: center;'>👩‍🏫</div>", unsafe_allow_html=True)
+    with c_coach_bio:
+        st.markdown(f"""
+        <div class="zen-card" style="border-left: 4px solid #8BA888; padding: 18px 22px;">
+            <span class="zen-badge zen-badge-primary">🌱 {t('Người Sáng Lập & Đồng Hành', 'Founder & Companion')}</span>
+            <span class="zen-badge zen-badge-gold">ICF PCC Coach • EQ Trainer 6Seconds</span>
+            <h3 style="margin: 8px 0 4px 0; color: #2F3E34; font-size: 1.4rem;">Coach Thanh Huyền</h3>
+            <blockquote style="font-family: serif; font-style: italic; color: #2F3E34; border-left: 2px solid #8BA888; padding-left: 14px; margin: 10px 0; font-size: 0.95rem; line-height: 1.6;">
+                “{t(
+                    'Tôi xây dựng Học Coaching để đồng hành cùng bạn từ những bước đầu học khai vấn đến khi vận dụng các năng lực ICF vào tình huống thực tế và chuẩn bị cho kỳ thi ICF Credentialing. Qua mỗi bài học, tôi mong bạn có thêm cơ hội lắng nghe sâu hơn và tự tin hơn khi lựa chọn cách đáp lại khách hàng.',
+                    'I created Học Coaching to walk alongside you from the first steps in coaching to applying ICF competencies in real dilemmas and preparing for the ICF Credentialing Exam. Through each lesson, I hope you gain deeper listening presence and clarity in how you respond to clients.'
+                )}”
+            </blockquote>
+        </div>
+        """, unsafe_allow_html=True)
+        c_cbtn1, c_cbtn2 = st.columns(2)
+        with c_cbtn1:
+            if st.button("👉 " + t("Tiếp Tục Học Lộ Trình", "Continue Pathway"), key="btn_coach_resume", type="primary", use_container_width=True):
+                set_page("curriculum", module_id=cur_mod_id, lesson_id=cur_les_obj["id"] if cur_les_obj else None)
+                st.rerun()
+        with c_cbtn2:
+            if st.button("⚖️ " + t("Luyện Thi ICF Credentialing", "ICF Credentialing Prep"), key="btn_coach_exam", use_container_width=True):
+                set_page("sjt")
+                st.rerun()
+
     # 3. MOTIVATION & MINDFULNESS SECTION: VƯỜN SEN & MỘT TÁCH TRÀ HỌC
     st.markdown("<hr style='border: none; border-top: 1px solid #EADBCC; margin: 16px 0 20px 0;'/>", unsafe_allow_html=True)
     c_mind1, c_mind2 = st.columns([1, 1])
@@ -179,9 +213,23 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
             set_page("curriculum", module_id=tea["moduleId"], lesson_id=tea["lessonId"])
             st.rerun()
 
-    # 4. ACTIVE EXAM PROFILE & PRACTICE MODES
+    # 4. KHU VỰC: LUYỆN THI ICF CREDENTIALING
     st.markdown("<hr style='border: none; border-top: 1px solid #EADBCC; margin: 16px 0 20px 0;'/>", unsafe_allow_html=True)
     
+    st.markdown(f"""
+    <div style="margin-bottom: 12px;">
+        <span class="zen-badge zen-badge-gold">🎯 {t('Luyện Thi ICF Credentialing', 'ICF Credentialing Exam Prep')}</span>
+        <span class="zen-badge zen-badge-primary">{t('Dành cho cả ứng viên ACC & PCC', 'For both ACC & PCC Candidates')}</span>
+        <h3 style="margin: 6px 0 4px 0; color: #2F3E34; font-size: 1.35rem;">
+            {t('Luyện Thi ICF Credentialing (Situational Judgment Test)', 'ICF Credentialing Exam Prep')}
+        </h3>
+        <p style="font-size: 0.9rem; color: #5F6F65; line-height: 1.5; margin-bottom: 8px;">
+            {t('Cập nhật cấu trúc kỳ thi ICF Credentialing Exam hiện hành. Rèn luyện năng lực phán đoán tình huống: Chọn 1 BEST và 1 WORST, thang điểm 200–600 (ngưỡng đỗ 460).',
+               'Reflects current ICF Credentialing Exam structure. Practice SJT dilemma judgment: Pick 1 BEST and 1 WORST, scaled 200–600 (passing benchmark 460).')}
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
     col_prof1, col_prof2 = st.columns([3, 1])
     with col_prof1:
         st.markdown(f"""

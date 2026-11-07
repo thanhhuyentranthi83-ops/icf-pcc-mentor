@@ -8,10 +8,16 @@ import Footer from "@/components/Footer";
 import MobileNav from "@/components/MobileNav";
 
 export const metadata: Metadata = {
-  title: "Mentor thi ICF PCC - Luyện thi chứng chỉ ICF chuẩn quốc tế",
+  title: "Học Coaching - Từ nền tảng khai vấn đến luyện thi ICF Credentialing",
   description:
-    "Ứng dụng luyện thi chứng chỉ ICF PCC song ngữ Anh - Việt, phong cách Zen chánh niệm tĩnh lặng, đầy đủ lý thuyết, từ khóa, flashcard, case study, quiz và đề thi thử phán đoán tình huống.",
-  manifest: "/manifest.json"
+    "Học Coaching cùng Coach Thanh Huyền - Nền tảng học khai vấn và luyện thi ICF Credentialing (ACC/PCC) chuẩn quốc tế 2025, phong cách Zen chánh niệm tĩnh tại.",
+  manifest: "/manifest.json",
+  openGraph: {
+    title: "Học Coaching — Cùng Coach Thanh Huyền",
+    description: "Từ nền tảng khai vấn đến luyện thi ICF Credentialing. Hiểu sâu chuẩn mực — Vững vàng phán đoán — Phát triển năng lực coaching.",
+    type: "website",
+    locale: "vi_VN"
+  }
 };
 
 export const viewport: Viewport = {

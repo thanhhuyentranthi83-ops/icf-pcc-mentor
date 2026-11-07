@@ -41,7 +41,7 @@ from app_modules.page_pricing import render_pricing_page
 # 1. STREAMLIT PAGE CONFIG & ZEN CSS
 # ==========================================
 st.set_page_config(
-    page_title="Mentor Thi 🪷",
+    page_title="Học Coaching 🪷",
     page_icon="🪷",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -92,9 +92,10 @@ init_session_state(DATA)
 # 4. SIDEBAR (PLUM VILLAGE ZEN)
 # ==========================================
 with st.sidebar:
-    st.markdown("<h2 style='text-align: center; margin-bottom: 2px;'>🪷 Mentor Thi</h2>", unsafe_allow_html=True)
-    st.markdown(f"<p style='text-align: center; color: #8C6D53; font-size: 0.85rem; margin-top: 0; font-weight: 500;'>{t('Hiểu chuẩn — Luyện phán đoán — Phát triển năng lực coaching', 'Master Standards — Hone Judgment — Elevate Coaching')}</p>", unsafe_allow_html=True)
-    st.markdown(f"<p style='text-align: center; color: #5F6F65; font-size: 0.8rem; margin-top: -6px;'>{t('Vì ước mơ đưa Coaching thành lối sống', 'Making Coaching a Way of Life')}</p>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; margin-bottom: 2px;'>🪷 Học Coaching</h2>", unsafe_allow_html=True)
+    st.markdown(f"<p style='text-align: center; color: #8C6D53; font-size: 0.85rem; margin-top: 0; font-weight: 600;'>{t('Từ nền tảng khai vấn đến luyện thi ICF Credentialing', 'From Coaching Foundations to ICF Credentialing')}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='text-align: center; color: #2F3E34; font-size: 0.82rem; margin-top: -6px; font-weight: 500;'>{t('Cùng Coach Thanh Huyền', 'With Coach Thanh Huyen')}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='text-align: center; color: #5F6F65; font-size: 0.78rem; margin-top: -6px; font-style: italic;'>{t('Vì ước mơ đưa Coaching thành lối sống', 'Making Coaching a Way of Life')}</p>", unsafe_allow_html=True)
     st.markdown("---")
 
     # Language Switcher
@@ -184,7 +185,7 @@ with r2_c1:
         set_page("daily_practice")
         st.rerun()
 with r2_c2:
-    if st.button("⚖️ " + t("Thi Thử Mô Phỏng", "Mock Simulator"), use_container_width=True, type="primary" if st.session_state.page == "sjt" else "secondary"):
+    if st.button("⚖️ " + t("Luyện Thi ICF Credentialing", "ICF Exam Prep"), use_container_width=True, type="primary" if st.session_state.page == "sjt" else "secondary"):
         set_page("sjt")
         st.rerun()
 with r2_c3:

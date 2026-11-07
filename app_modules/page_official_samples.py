@@ -44,13 +44,28 @@ def render_official_samples_page(OFFICIAL_SAMPLES, t):
         if reveal_key not in st.session_state:
             st.session_state[reveal_key] = False
 
-        st.markdown(f"""
-        <div class="zen-card" style="border-left: 4px solid #8BA888; margin-bottom: 24px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap;">
+        # Header with Question Number and Star Bookmark Button
+        col_q_head1, col_q_head2 = st.columns([4, 1])
+        with col_q_head1:
+            st.markdown(f"""
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
                 <span class="zen-badge zen-badge-primary">Câu {idx + 1} ({qid})</span>
                 <span class="zen-badge zen-badge-gold">{q.get('primaryCompetency', '')}</span>
             </div>
-            <div style="background: #FAF7F2; padding: 16px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #EADBCC;">
+            """, unsafe_allow_html=True)
+        with col_q_head2:
+            bm_label = "★ " + t("Đã lưu", "Saved") if is_bm else "☆ " + t("Lưu câu", "Save")
+            if st.button(bm_label, key=f"btn_official_bm_head_{qid}", use_container_width=True):
+                if is_bm:
+                    st.session_state.bookmarked_qids.remove(qid)
+                    st.toast(t("Đã bỏ lưu câu hỏi!", "Removed from bookmarks!"))
+                else:
+                    st.session_state.bookmarked_qids.append(qid)
+                    st.toast(t("Đã lưu vào Sổ Học Tập → Câu hỏi đã lưu!", "Saved to Learning Journal!"))
+                st.rerun()
+
+        st.markdown(f"""
+            <div style="background: #FAF7F2; padding: 16px; border-radius: 12px; margin: 10px 0 16px 0; border: 1px solid #EADBCC;">
                 <div style="font-size: 0.82rem; color: #8C6D53; font-weight: 600; margin-bottom: 4px;">🇬🇧 ORIGINAL ICF VERBATIM SCENARIO:</div>
                 <div style="font-size: 0.96rem; color: #2C3E50; line-height: 1.6; font-style: italic;">
                     "{q['scenarioEn']}"
@@ -70,22 +85,21 @@ def render_official_samples_page(OFFICIAL_SAMPLES, t):
             </div>
         """, unsafe_allow_html=True)
 
-        # Options Display
+        # Options Display with complete text wrapping
         st.markdown(f"**{t('Các phương án lựa chọn (Options):', 'Available Options:')}**")
         for opt in q["options"]:
             st.markdown(f"""
-            <div style="background: #FAF7F2; border: 1px solid #EADBCC; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px;">
-                <b>[{opt['key']}]</b> <b>EN:</b> {opt['textEn']}<br/>
+            <div style="background: #FAF7F2; border: 1px solid #EADBCC; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; line-height: 1.5; white-space: normal; word-break: break-word;">
+                <b style="color: #2F3E34; font-size: 0.95rem;">[{opt['key']}]</b> <b>EN:</b> {opt['textEn']}<br/>
                 <span style="color: #555; font-size: 0.9rem;"><b>VI:</b> {opt['textVi']}</span>
             </div>
             """, unsafe_allow_html=True)
 
         st.markdown("<br/>", unsafe_allow_html=True)
 
-        # Separate BEST and WORST Blocks
+        # Separate BEST and WORST Blocks with identical A-D options
         col_b, col_w = st.columns(2)
         opt_keys = [opt["key"] for opt in q["options"]]
-        opt_labels = {opt["key"]: f"[{opt['key']}] {opt['textEn'][:45]}..." for opt in q["options"]}
 
         with col_b:
             st.markdown(f"**🌟 {t('CHỌN 1 HÀNH ĐỘNG TỐT NHẤT (BEST)', 'SELECT 1 BEST ACTION')}**")
@@ -94,7 +108,8 @@ def render_official_samples_page(OFFICIAL_SAMPLES, t):
             chosen_best = st.radio(
                 t(f"Lựa chọn Best cho {qid}:", f"Best selection for {qid}:"),
                 options=opt_keys,
-                format_func=lambda k: opt_labels[k],
+                format_func=lambda k: f"Phương án [{k}]",
+                horizontal=True,
                 key=f"radio_best_{qid}",
                 index=best_idx,
                 label_visibility="collapsed"
@@ -108,7 +123,8 @@ def render_official_samples_page(OFFICIAL_SAMPLES, t):
             chosen_worst = st.radio(
                 t(f"Lựa chọn Worst cho {qid}:", f"Worst selection for {qid}:"),
                 options=opt_keys,
-                format_func=lambda k: opt_labels[k],
+                format_func=lambda k: f"Phương án [{k}]",
+                horizontal=True,
                 key=f"radio_worst_{qid}",
                 index=worst_idx,
                 label_visibility="collapsed"

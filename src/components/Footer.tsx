@@ -48,7 +48,10 @@ export default function Footer() {
             {t("Trang chủ", "Home")}
           </Link>
           <Link href="/mock-exam" className="hover:text-zen-moss-dark transition-colors">
-            {t("Thi thử PCC", "PCC Mock")}
+            {t("Luyện thi ICF Credentialing", "ICF Exam Prep")}
+          </Link>
+          <Link href="/journal" className="hover:text-zen-moss-dark transition-colors">
+            {t("Sổ học tập", "Journal")}
           </Link>
           <Link href="/pricing" className="hover:text-zen-moss-dark transition-colors">
             {t("Bảng giá & VietQR", "Pricing & VietQR")}
@@ -62,7 +65,7 @@ export default function Footer() {
         </div>
 
         <p className="text-[11px] text-zen-muted/80">
-          © {new Date().getFullYear()} Mentor thi ICF PCC • {t("Vì ước mơ đưa Coaching thành lối sống.", "Making Coaching a Way of Life.")}
+          © {new Date().getFullYear()} Học Coaching • {t("Cùng Coach Thanh Huyền", "With Coach Thanh Huyen")} • {t("Vì ước mơ đưa Coaching thành lối sống.", "Making Coaching a Way of Life.")}
         </p>
       </div>
     </footer>
