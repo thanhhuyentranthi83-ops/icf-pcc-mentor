@@ -13,28 +13,7 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
     all_modules = get_icf_7_modules()
     tea_lessons = get_tea_micro_lessons()
 
-    # 1. WELCOME HEADER
-    st.markdown(f"""
-    <div style="text-align: center; max-width: 860px; margin: 0 auto 12px auto;">
-        <span class="zen-badge zen-badge-primary">🌱 {t('Học Coaching • Cùng Coach Thanh Huyền', 'Học Coaching • With Coach Thanh Huyen')}</span>
-        <h1 style="font-size: 2.3rem; margin: 8px 0; color: #2F3E34;">🪷 Học Coaching</h1>
-        <div style="font-size: 1.15rem; color: #8C6D53; font-weight: 600; margin-bottom: 4px;">
-            {t('Từ nền tảng khai vấn đến luyện thi ICF Credentialing', 'From Coaching Foundations to ICF Credentialing')}
-        </div>
-        <div style="font-size: 0.92rem; color: #5F6F65; font-style: italic; margin-bottom: 10px;">
-            "{t('Vì ước mơ đưa Coaching thành lối sống', 'Making Coaching a Way of Life')}"
-        </div>
-        <p style="font-size: 0.92rem; color: #5F6F65; line-height: 1.6; margin-bottom: 0;">
-            {t('Môi trường tự học và rèn luyện phán đoán tình huống độc lập, bồi đắp toàn diện 7 nhóm tài liệu chuẩn mực đã được kiểm chứng trực tiếp từ ICF.',
-               'An independent self-study sanctuary grounded in the 7 verified official ICF documentation groups.')}
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Disclaimer banner
-    render_disclaimer_banner(t)
-
-    # 2. PROMINENT SECTION: LỘ TRÌNH HỌC TÀI LIỆU ICF (PLACED DIRECTLY BELOW WELCOME)
+    # 1. WELCOME HEADER & HERO SECTION
     cur_mod_id = st.session_state.get("active_module_id", "mod-1")
     cur_les_id = st.session_state.get("active_lesson_id", "mod1-les1")
     cur_mod_obj = next((m for m in all_modules if m["id"] == cur_mod_id), all_modules[0])
@@ -48,6 +27,37 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
     completed_lessons = sum(1 for p in progress.values() if p.get("status") in ["read", "quiz_passed"])
     passed_quizzes = sum(1 for p in progress.values() if p.get("status") == "quiz_passed")
     overall_pct = int((completed_lessons / max(total_lessons, 1)) * 100)
+    has_started = completed_lessons > 0
+
+    st.markdown(f"""
+    <div style="text-align: center; max-width: 860px; margin: 0 auto 16px auto;">
+        <span class="zen-badge zen-badge-primary">🌱 {t('Học Coaching', 'Học Coaching')}</span>
+        <h1 style="font-size: 2.35rem; margin: 10px 0 6px 0; color: #2F3E34; font-family: serif; font-weight: 700;">
+            {t('Đưa coaching trở thành lối sống', 'Making coaching a way of life')}
+        </h1>
+        <p style="font-size: 1.05rem; color: #8C6D53; line-height: 1.6; margin: 0 auto 14px auto; max-width: 780px;">
+            {t('Cùng Coach Thanh Huyền học cách lắng nghe sâu hơn, đặt câu hỏi với sự tò mò và mang tinh thần khai vấn vào công việc, gia đình và những cuộc trò chuyện mỗi ngày.',
+               'With Coach Thanh Huyen, learn to listen deeper, ask questions with curiosity, and bring the coaching spirit into work, family, and daily conversations.')}
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # 2 Action Buttons
+    c_hbtn1, c_hbtn2 = st.columns([1, 1])
+    with c_hbtn1:
+        hero_btn_label = "👉 " + t("Tiếp Tục Học", "Continue Learning") if has_started else "🌱 " + t("Khám Phá Lộ Trình Học", "Explore Curriculum Pathway")
+        if st.button(hero_btn_label, type="primary", use_container_width=True, key="btn_hero_curriculum"):
+            set_page("curriculum", module_id=cur_mod_id, lesson_id=cur_les_obj["id"] if cur_les_obj else None)
+            st.rerun()
+    with c_hbtn2:
+        if st.button("⚖️ " + t("Luyện Thi ICF Credentialing", "ICF Credentialing Prep"), use_container_width=True, key="btn_hero_exam"):
+            set_page("sjt")
+            st.rerun()
+
+    # Disclaimer banner
+    render_disclaimer_banner(t)
+
+    # 2. PROMINENT SECTION: LỘ TRÌNH HỌC TÀI LIỆU ICF (PLACED DIRECTLY BELOW WELCOME)
 
     st.markdown(f"""
     <div class="zen-card" style="border: 2px solid #8BA888; background: #FAFDF9; margin-bottom: 20px; padding: 20px;">
@@ -134,24 +144,24 @@ def render_home_page(DATA, EXAM_PROFILES, PRACTICE_QUESTIONS, KNOWLEDGE_QUESTION
 
     # VỀ COACH THANH HUYỀN
     st.markdown("<hr style='border: none; border-top: 1px solid #EADBCC; margin: 24px 0 20px 0;'/>", unsafe_allow_html=True)
-    c_coach_img, c_coach_bio = st.columns([1, 3])
+    c_coach_img, c_coach_bio = st.columns([1, 2.5])
     with c_coach_img:
         import os
         coach_img_path = "public/images/coach_thanh_huyen.jpg"
         if os.path.exists(coach_img_path):
-            st.image(coach_img_path, caption="Coach Thanh Huyền (ICF PCC)", use_container_width=True)
+            st.image(coach_img_path, caption="Coach Thanh Huyền (ICF PCC | EQ Trainer)", use_container_width=True)
         else:
             st.markdown("<div style='font-size: 3rem; text-align: center;'>👩‍🏫</div>", unsafe_allow_html=True)
     with c_coach_bio:
         st.markdown(f"""
         <div class="zen-card" style="border-left: 4px solid #8BA888; padding: 18px 22px;">
             <span class="zen-badge zen-badge-primary">🌱 {t('Người Sáng Lập & Đồng Hành', 'Founder & Companion')}</span>
-            <span class="zen-badge zen-badge-gold">ICF PCC Coach • EQ Trainer 6Seconds</span>
+            <span class="zen-badge zen-badge-gold">ICF PCC Coach | EQ Trainer</span>
             <h3 style="margin: 8px 0 4px 0; color: #2F3E34; font-size: 1.4rem;">Coach Thanh Huyền</h3>
             <blockquote style="font-family: serif; font-style: italic; color: #2F3E34; border-left: 2px solid #8BA888; padding-left: 14px; margin: 10px 0; font-size: 0.95rem; line-height: 1.6;">
                 “{t(
-                    'Tôi xây dựng Học Coaching để đồng hành cùng bạn từ những bước đầu học khai vấn đến khi vận dụng các năng lực ICF vào tình huống thực tế và chuẩn bị cho kỳ thi ICF Credentialing. Qua mỗi bài học, tôi mong bạn có thêm cơ hội lắng nghe sâu hơn và tự tin hơn khi lựa chọn cách đáp lại khách hàng.',
-                    'I created Học Coaching to walk alongside you from the first steps in coaching to applying ICF competencies in real dilemmas and preparing for the ICF Credentialing Exam. Through each lesson, I hope you gain deeper listening presence and clarity in how you respond to clients.'
+                    'Tôi tạo Học Coaching vì muốn đưa coaching vào những cuộc trò chuyện hằng ngày. Khi biết dừng lại để lắng nghe, hỏi thêm trước khi vội kết luận và dành cho người đối diện khoảng trống để tự suy nghĩ, chúng ta có thể hiểu mình và hiểu nhau hơn. Tôi mong những gì bạn học ở đây sẽ theo bạn ra ngoài phiên khai vấn, vào công việc và những mối quan hệ quan trọng với bạn.',
+                    'I created Học Coaching to bring coaching into everyday conversations. When we pause to listen, ask with curiosity before jumping to conclusions, and give others the space to think for themselves, we understand ourselves and one another more deeply. I hope what you learn here stays with you beyond coaching sessions, into your work and meaningful relationships.'
                 )}”
             </blockquote>
         </div>

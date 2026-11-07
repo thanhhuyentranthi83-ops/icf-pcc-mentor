@@ -86,30 +86,51 @@ export default function HomePage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8 space-y-8">
-      {/* 1. Zen Welcome & Daily Mindfulness Card */}
-      <section className="relative overflow-hidden rounded-3xl border border-zen-border bg-zen-paper p-6 sm:p-8 shadow-zen-card transition-all">
-        <div className="relative z-10 max-w-3xl space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zen-moss/15 text-zen-moss-dark text-xs font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-zen-ochre" />
-            <span>{t("Học Coaching • Cùng Coach Thanh Huyền", "Học Coaching • With Coach Thanh Huyen")}</span>
+      {/* 1. Zen Welcome & Hero Section */}
+      <section className="relative overflow-hidden rounded-3xl border border-zen-border bg-zen-paper p-6 sm:p-10 shadow-zen-card transition-all">
+        <div className="relative z-10 max-w-3xl space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zen-moss/15 text-zen-moss-dark text-xs sm:text-sm font-semibold">
+            <Sparkles className="w-4 h-4 text-zen-ochre" />
+            <span>{t("Học Coaching", "Học Coaching")}</span>
           </div>
 
-          <h1 className="font-serif text-2xl sm:text-3xl font-bold text-zen-ink leading-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-zen-ink leading-tight">
             {t(
-              "Học Coaching",
-              "Học Coaching"
+              "Đưa coaching trở thành lối sống",
+              "Making coaching a way of life"
             )}
           </h1>
-          <p className="text-sm sm:text-base font-semibold text-zen-wood">
+
+          <p className="text-base sm:text-lg text-zen-wood leading-relaxed font-sans">
             {t(
-              "Từ nền tảng khai vấn đến luyện thi ICF Credentialing",
-              "From Coaching Foundations to ICF Credentialing"
+              "Cùng Coach Thanh Huyền học cách lắng nghe sâu hơn, đặt câu hỏi với sự tò mò và mang tinh thần khai vấn vào công việc, gia đình và những cuộc trò chuyện mỗi ngày.",
+              "With Coach Thanh Huyen, learn to listen deeper, ask questions with curiosity, and bring the coaching spirit into work, family, and daily conversations."
             )}
           </p>
 
+          {/* Action Buttons */}
+          <div className="pt-2 flex flex-wrap items-center gap-3">
+            <a
+              href="#curriculum-pathway"
+              className="px-6 py-3 rounded-xl bg-zen-moss-dark hover:bg-zen-moss-dark/90 text-white text-sm sm:text-base font-semibold shadow-zen-subtle transition-all flex items-center gap-2"
+            >
+              <span>
+                {overallStats.completedLessons > 0
+                  ? t("Tiếp tục học →", "Continue Learning →")
+                  : t("Khám phá lộ trình học →", "Explore Curriculum Pathway →")}
+              </span>
+            </a>
+            <a
+              href="#exam-section"
+              className="px-6 py-3 rounded-xl border border-zen-border bg-zen-surface hover:bg-zen-border/40 text-zen-ink text-sm sm:text-base font-semibold transition-all flex items-center gap-2"
+            >
+              <span>{t("Luyện thi ICF Credentialing", "ICF Credentialing Prep")}</span>
+            </a>
+          </div>
+
           {dailyMsg && (
-            <div className="pt-2">
-              <blockquote className="font-serif italic text-base sm:text-lg text-zen-ink/90 pl-4 border-l-2 border-zen-moss leading-relaxed">
+            <div className="pt-3 border-t border-zen-border/50 mt-4">
+              <blockquote className="font-serif italic text-sm sm:text-base text-zen-ink/85 pl-4 border-l-2 border-zen-moss leading-relaxed">
                 “{t(dailyMsg.textVi, dailyMsg.textEn)}”
               </blockquote>
               <div className="flex items-center gap-3 mt-2 text-xs text-zen-muted pl-4">
@@ -133,7 +154,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. KHỐI LỘ TRÌNH HỌC TÀI LIỆU ICF (7 HỌC PHẦN THEO ĐÚNG THỨ TỰ) */}
-      <section className="space-y-4">
+      <section id="curriculum-pathway" className="space-y-4">
         <div className="rounded-3xl border border-zen-border bg-zen-paper p-6 sm:p-8 shadow-zen-card space-y-6">
           {/* Header & Overall Progress */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-zen-border/60 pb-6">
@@ -274,21 +295,18 @@ export default function HomePage() {
 
       {/* Về Coach Thanh Huyền */}
       <section className="rounded-3xl border border-zen-border bg-gradient-to-br from-zen-paper via-white to-zen-paper p-6 sm:p-8 shadow-zen-card overflow-hidden relative">
-        <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
-          <div className="relative shrink-0">
-            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-zen-moss shadow-zen-floating ring-4 ring-zen-moss/20">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
+          <div className="relative shrink-0 w-full md:w-auto flex justify-center md:justify-start">
+            <div className="w-full max-w-[320px] sm:max-w-[360px] md:w-[320px] lg:w-[350px] aspect-[1024/814] rounded-2xl overflow-hidden border-2 border-zen-moss/40 shadow-zen-card bg-zen-surface">
               <img
                 src="/images/coach_thanh_huyen.jpg"
-                alt="Coach Thanh Huyền - ICF PCC Coach"
-                className="w-full h-full object-cover object-top"
+                alt="Coach Thanh Huyền - ICF PCC Coach | EQ Trainer"
+                className="w-full h-full object-cover object-center"
               />
-            </div>
-            <div className="absolute -bottom-1 -right-1 px-2.5 py-0.5 rounded-full bg-zen-moss-dark text-white text-[10px] font-bold shadow-zen-subtle">
-              ICF PCC
             </div>
           </div>
           
-          <div className="space-y-3 text-center md:text-left flex-1">
+          <div className="space-y-3.5 text-center md:text-left flex-1">
             <div className="space-y-1">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zen-moss/15 text-zen-moss-dark text-xs font-semibold">
                 <span>🌱 {t("Người Sáng Lập & Đồng Hành", "Founder & Companion")}</span>
@@ -297,14 +315,14 @@ export default function HomePage() {
                 Coach Thanh Huyền
               </h3>
               <p className="text-xs sm:text-sm font-semibold text-zen-wood">
-                ICF PCC Coach • EQ Trainer 6Seconds
+                ICF PCC Coach | EQ Trainer
               </p>
             </div>
 
             <blockquote className="font-serif italic text-sm sm:text-base text-zen-ink/90 border-l-0 md:border-l-2 md:border-zen-moss md:pl-4 leading-relaxed">
               “{t(
-                "Tôi xây dựng Học Coaching để đồng hành cùng bạn từ những bước đầu học khai vấn đến khi vận dụng các năng lực ICF vào tình huống thực tế và chuẩn bị cho kỳ thi ICF Credentialing. Qua mỗi bài học, tôi mong bạn có thêm cơ hội lắng nghe sâu hơn và tự tin hơn khi lựa chọn cách đáp lại khách hàng.",
-                "I created Học Coaching to walk alongside you from the first steps in coaching to applying ICF competencies in real dilemmas and preparing for the ICF Credentialing Exam. Through each lesson, I hope you gain deeper listening presence and clarity in how you respond to clients."
+                "Tôi tạo Học Coaching vì muốn đưa coaching vào những cuộc trò chuyện hằng ngày. Khi biết dừng lại để lắng nghe, hỏi thêm trước khi vội kết luận và dành cho người đối diện khoảng trống để tự suy nghĩ, chúng ta có thể hiểu mình và hiểu nhau hơn. Tôi mong những gì bạn học ở đây sẽ theo bạn ra ngoài phiên khai vấn, vào công việc và những mối quan hệ quan trọng với bạn.",
+                "I created Học Coaching to bring coaching into everyday conversations. When we pause to listen, ask with curiosity before jumping to conclusions, and give others the space to think for themselves, we understand ourselves and one another more deeply. I hope what you learn here stays with you beyond coaching sessions, into your work and meaningful relationships."
               )}”
             </blockquote>
 
@@ -389,7 +407,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. KHU VỰC: LUYỆN THI ICF CREDENTIALING */}
-      <section className="space-y-4">
+      <section id="exam-section" className="space-y-4">
         <div className="rounded-3xl border-2 border-zen-ochre/40 bg-gradient-to-r from-amber-50/70 via-zen-paper to-amber-50/50 p-6 sm:p-8 shadow-zen-card space-y-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zen-border/60 pb-5">
             <div className="space-y-1.5 max-w-2xl">
