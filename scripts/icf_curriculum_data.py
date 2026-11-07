@@ -1410,7 +1410,7 @@ ALL_ICF_MODULES = [
     {
         "id": "mod-4",
         "number": 4,
-        "titleVi": "Học Phần 4: White Paper Chuyển Gửi Khách Hàng",
+        "titleVi": "Học Phần 4: Giới thiệu Khách Hàng",
         "titleEn": "Module 4: Referring a Client to Therapy Guidelines",
         "icon": "🚪",
         "sourceDoc": "Referring a Client to Therapy: Guidelines for Coaches (Hullinger & DiGirolamo, 2018)",

@@ -45,7 +45,7 @@ async function verify() {
       "Năng Lực Cốt Lõi",
       "Tiêu Chuẩn Đạo Đức",
       "PCC Markers",
-      "Chuyển Gửi Khách Hàng",
+      "Giới thiệu Khách Hàng",
       "Case Study",
       "Câu Hỏi Thường Gặp",
       "Thuật Ngữ"

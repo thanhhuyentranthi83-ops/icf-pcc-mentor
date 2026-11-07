@@ -68,9 +68,15 @@ def render_library_page(DATA, VERIFIED_SOURCES, COMPETENCIES, t):
                 </h4>
                 {f'<div style="font-size: 0.85rem; color: #7A5C43; margin-bottom: 4px;"><b>{t("Tác giả:", "Authors:")}</b> {authors} ({pub_year})</div>' if authors else ''}
                 {f'<div style="font-size: 0.82rem; color: #888; margin-bottom: 6px;"><b>{t("Thời gian trang web:", "Web Metadata:")}</b> Đăng: {web_pub} | Sửa đổi trên web: {web_rev} <i>({t("Lưu ý: Ngày sửa đổi trên web không suy diễn nội dung nghiên cứu 2018 bị thay đổi", "Web revision date does not imply modification of the 2018 research text")})</i></div>' if web_rev else ''}
-                <div style="font-size: 0.88rem; color: #555; line-height: 1.5; margin-bottom: 6px;">
-                    <b>{t('Phạm vi & Ý nghĩa:', 'Scope & Significance:')}</b> {scope_desc}<br/>
-                    <b>{t('Nội dung cốt lõi:', 'Core Summary:')}</b> {summary}
+                <div style="font-size: 0.88rem; color: #444; line-height: 1.6; margin: 10px 0; background: #FAFDF9; padding: 12px 14px; border-radius: 8px; border: 1px solid #EADBCC;">
+                    <div style="margin-bottom: 8px;">
+                        <span style="color: #2F3E34; font-weight: 600;">📌 {t('Phạm vi & Ý nghĩa:', 'Scope & Significance:')}</span>
+                        <div style="margin-top: 3px; color: #4A4A4A; padding-left: 12px; border-left: 3px solid #8BA888;">{scope_desc}</div>
+                    </div>
+                    <div>
+                        <span style="color: #2F3E34; font-weight: 600;">📝 {t('Nội dung cốt lõi:', 'Core Summary:')}</span>
+                        <div style="margin-top: 3px; color: #4A4A4A; padding-left: 12px; border-left: 3px solid #D4A373;">{summary}</div>
+                    </div>
                 </div>
                 {f'<div style="font-size: 0.8rem; color: #666; background: #FAF7F2; padding: 4px 8px; border-radius: 4px; margin-bottom: 6px;"><b>Quyền sử dụng:</b> {usage_rights}</div>' if usage_rights else ''}
                 <div style="font-size: 0.82rem; color: #777; background: #FAF7F2; padding: 6px 10px; border-radius: 6px; word-break: break-all;">

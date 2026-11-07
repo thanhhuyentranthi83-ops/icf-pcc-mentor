@@ -18,6 +18,38 @@ from scripts.icf_curriculum_data import (
     search_glossary,
     remove_accents
 )
+import re
+
+def format_lesson_content(text: str) -> str:
+    """
+    Formats continuous text into cleanly spaced, legible bulleted items with line breaks.
+    """
+    if not text:
+        return ""
+    lines = text.strip().splitlines()
+    formatted_lines = []
+    for line in lines:
+        l = line.strip()
+        if not l:
+            continue
+        # 1. Beginning of string: Definition, Standard, Marker, Pillar, Core Value
+        l = re.sub(r"^(Định nghĩa:|Definition:)\s*", r"<b>\1</b> ", l)
+        l = re.sub(r"^(Tiêu chuẩn \d+:|Standard \d+:)\s*", r"• <b>\1</b> ", l)
+        l = re.sub(r"^(Marker \d+\.\d+:?)\s*", r"• <b>\1</b> ", l)
+        l = re.sub(r"^(Trụ cột \d+:|Pillar \d+:)\s*", r"• <b>\1</b> ", l)
+        l = re.sub(r"^(Giá trị \d+:|Core Value \d+:)\s*", r"• <b>\1</b> ", l)
+
+        # 2. In-sentence markers
+        l = re.sub(r"\s+(Marker \d+\.\d+:?)\s*", r"<br/><br/>• <b>\1</b> ", l)
+        l = re.sub(r"\s+(Tiêu chuẩn \d+:|Standard \d+:)\s*", r"<br/><br/>• <b>\1</b> ", l)
+        l = re.sub(r"\s+([1-8]\.[1-9])\s+", r"<br/><br/>• <b>\1</b> ", l)
+        l = re.sub(r"\s+(Trụ cột \d+:|Pillar \d+:)\s*", r"<br/><br/>• <b>\1</b> ", l)
+        l = re.sub(r"\s+(Giá trị \d+:|Core Value \d+:)\s*", r"<br/><br/>• <b>\1</b> ", l)
+
+        # 3. Clean up markdown bold **text** -> <b>text</b>
+        l = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", l)
+        formatted_lines.append(l)
+    return "<br/><br/>".join(formatted_lines)
 
 def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS, CASE_STUDIES, QUIZZES, t_func):
     all_modules = get_icf_7_modules()
@@ -194,21 +226,23 @@ def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS,
 
         # 3 & 4. NỘI DUNG GỐC & BẢN DỊCH TIẾNG VIỆT TRUNG THÀNH
         if lang_mode in ["en", "bilingual"] and active_les.get("originalExcerptEn"):
+            formatted_en = format_lesson_content(active_les['originalExcerptEn'])
             st.markdown(f"""
             <div class="zen-card" style="background: #FFFFFF; border-left: 3px solid #1E4E79; margin-bottom: 12px;">
                 <span class="zen-badge zen-badge-blue">🇬🇧 Original ICF Language (Authoritative Reference)</span>
-                <div style="font-size: 0.92rem; line-height: 1.65; color: #1E3A5F; margin-top: 6px; font-family: Georgia, serif;">
-                    {active_les['originalExcerptEn']}
+                <div style="font-size: 0.92rem; line-height: 1.8; color: #1E3A5F; margin-top: 10px; font-family: Georgia, serif;">
+                    {formatted_en}
                 </div>
             </div>
             """, unsafe_allow_html=True)
 
         if lang_mode in ["vi", "bilingual"] and active_les.get("translationVi"):
+            formatted_vi = format_lesson_content(active_les['translationVi'])
             st.markdown(f"""
             <div class="zen-card" style="background: #FFFFFF; border-left: 3px solid #8BA888; margin-bottom: 14px;">
                 <span class="zen-badge zen-badge-primary">🇻🇳 {t('Bản Dịch / Tóm Tắt Tiếng Việt Phục Vụ Học Tập', 'Faithful Vietnamese Translation')}</span>
-                <div style="font-size: 0.95rem; line-height: 1.7; color: #2C3E50; margin-top: 6px;">
-                    {active_les['translationVi']}
+                <div style="font-size: 0.95rem; line-height: 1.85; color: #2C3E50; margin-top: 10px;">
+                    {formatted_vi}
                 </div>
             </div>
             """, unsafe_allow_html=True)

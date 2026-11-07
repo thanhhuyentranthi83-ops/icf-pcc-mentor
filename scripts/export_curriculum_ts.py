@@ -33,12 +33,15 @@ export interface QuizOption {{
 }}
 
 export interface LessonQuiz {{
+  id?: string;
+  sectionId?: string;
   questionVi: string;
   questionEn: string;
   options: QuizOption[];
   correctAnswer: string;
   explanationVi: string;
   explanationEn?: string;
+  [key: string]: any;
 }}
 
 export interface CaseWorkflow {{

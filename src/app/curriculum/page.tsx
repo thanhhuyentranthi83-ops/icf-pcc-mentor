@@ -53,6 +53,30 @@ export default function CurriculumPage() {
   );
 }
 
+function formatLessonStructured(text: string): string {
+  if (!text) return "";
+  const lines = text.trim().split("\n");
+  const formattedLines: string[] = [];
+  for (const line of lines) {
+    let l = line.trim();
+    if (!l) continue;
+    l = l.replace(/^(Định nghĩa:|Definition:)\s*/i, "<b>$1</b> ");
+    l = l.replace(/^(Tiêu chuẩn \d+:|Standard \d+:)\s*/i, "• <b>$1</b> ");
+    l = l.replace(/^(Marker \d+\.\d+:?)\s*/i, "• <b>$1</b> ");
+    l = l.replace(/^(Trụ cột \d+:|Pillar \d+:)\s*/i, "• <b>$1</b> ");
+    l = l.replace(/^(Giá trị \d+:|Core Value \d+:)\s*/i, "• <b>$1</b> ");
+
+    l = l.replace(/\s+(Marker \d+\.\d+:?)\s*/gi, "<br/><br/>• <b>$1</b> ");
+    l = l.replace(/\s+(Tiêu chuẩn \d+:|Standard \d+:)\s*/gi, "<br/><br/>• <b>$1</b> ");
+    l = l.replace(/\s+([1-8]\.[1-9])\s+/g, "<br/><br/>• <b>$1</b> ");
+    l = l.replace(/\s+(Trụ cột \d+:|Pillar \d+:)\s*/gi, "<br/><br/>• <b>$1</b> ");
+    l = l.replace(/\s+(Giá trị \d+:|Core Value \d+:)\s*/gi, "<br/><br/>• <b>$1</b> ");
+    l = l.replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+    formattedLines.push(l);
+  }
+  return formattedLines.join("<br/><br/>");
+}
+
 function CurriculumContent() {
   const searchParams = useSearchParams();
   const initialModId = searchParams.get("module") || "mod-1";
@@ -788,7 +812,10 @@ function CurriculumContent() {
                       <span className="text-[10px] uppercase font-sans font-bold text-zen-muted block not-italic">
                         Original English Standard:
                       </span>
-                      <p>{activeLesson.originalExcerptEn}</p>
+                      <div
+                        className="leading-relaxed whitespace-pre-line space-y-2 font-serif text-[13px]"
+                        dangerouslySetInnerHTML={{ __html: formatLessonStructured(activeLesson.originalExcerptEn) }}
+                      />
                     </div>
                   )}
 
@@ -797,7 +824,10 @@ function CurriculumContent() {
                       <span className="text-[10px] uppercase font-bold text-zen-wood block">
                         Bản Dịch Tiếng Việt Trung Thành:
                       </span>
-                      <p>{activeLesson.translationVi}</p>
+                      <div
+                        className="leading-relaxed whitespace-pre-line space-y-2 text-[13px]"
+                        dangerouslySetInnerHTML={{ __html: formatLessonStructured(activeLesson.translationVi) }}
+                      />
                     </div>
                   )}
                 </div>

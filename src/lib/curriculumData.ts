@@ -29,7 +29,6 @@ export interface CaseWorkflow {
   step4_sourceAnalysisVi: string;
   step4_sourceAnalysisEn: string;
   step5_takeawaysVi: string;
-  [key: string]: any;
 }
 
 export interface FaqItem {
@@ -41,7 +40,6 @@ export interface FaqItem {
   answerEn: string;
   relatedStandard?: string;
   verifiedDate: string;
-  [key: string]: any;
 }
 
 export interface Lesson {
@@ -66,7 +64,6 @@ export interface Lesson {
   quiz?: LessonQuiz;
   caseWorkflow?: CaseWorkflow;
   faqs?: FaqItem[];
-  [key: string]: any;
 }
 
 export interface GlossaryTerm {
@@ -81,7 +78,6 @@ export interface GlossaryTerm {
   version: string;
   isOfficial: boolean;
   nearSynonyms?: string[];
-  [key: string]: any;
 }
 
 export interface GlossaryExercise {
@@ -92,7 +88,6 @@ export interface GlossaryExercise {
   options: QuizOption[];
   correctAnswer: string;
   explanationVi: string;
-  [key: string]: any;
 }
 
 export interface CurriculumModule {
@@ -109,7 +104,6 @@ export interface CurriculumModule {
   glossaryTerms?: GlossaryTerm[];
   glossaryExercises?: GlossaryExercise[];
   wrapUpQuiz?: any;
-  [key: string]: any;
 }
 
 export interface TeaMicroLesson {
@@ -1306,7 +1300,7 @@ export const ICF_7_MODULES: CurriculumModule[] = [
   {
     "id": "mod-4",
     "number": 4,
-    "titleVi": "Học Phần 4: White Paper Chuyển Gửi Khách Hàng",
+    "titleVi": "Học Phần 4: Giới thiệu Khách Hàng",
     "titleEn": "Module 4: Referring a Client to Therapy Guidelines",
     "icon": "🚪",
     "sourceDoc": "Referring a Client to Therapy: Guidelines for Coaches (Hullinger & DiGirolamo, 2018)",
