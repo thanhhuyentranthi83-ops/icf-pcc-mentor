@@ -65,10 +65,11 @@ function formatLessonStructured(text: string): string {
     l = l.replace(/^(Marker \d+\.\d+:?)\s*/i, "• <b>$1</b> ");
     l = l.replace(/^(Trụ cột \d+:|Pillar \d+:)\s*/i, "• <b>$1</b> ");
     l = l.replace(/^(Giá trị \d+:|Core Value \d+:)\s*/i, "• <b>$1</b> ");
+    l = l.replace(/^([1-8]\.\d{1,2}\.?)\s*/i, "• <b>$1</b> ");
 
     l = l.replace(/\s+(Marker \d+\.\d+:?)\s*/gi, "<br/><br/>• <b>$1</b> ");
     l = l.replace(/\s+(Tiêu chuẩn \d+:|Standard \d+:)\s*/gi, "<br/><br/>• <b>$1</b> ");
-    l = l.replace(/\s+([1-8]\.[1-9])\s+/g, "<br/><br/>• <b>$1</b> ");
+    l = l.replace(/(?:\s+|^)([1-8]\.\d{1,2}\.?)\s+/g, "<br/><br/>• <b>$1</b> ");
     l = l.replace(/\s+(Trụ cột \d+:|Pillar \d+:)\s*/gi, "<br/><br/>• <b>$1</b> ");
     l = l.replace(/\s+(Giá trị \d+:|Core Value \d+:)\s*/gi, "<br/><br/>• <b>$1</b> ");
     l = l.replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
@@ -801,33 +802,77 @@ function CurriculumContent() {
               )}
 
               {/* 3 & 4. Excerpt & Faithful Translation */}
-              {(activeLesson.originalExcerptEn || activeLesson.translationVi) && (
-                <div className="space-y-3">
+              {(activeLesson.originalExcerptEn || activeLesson.translationVi || activeLesson.definitionEn || activeLesson.definitionVi) && (
+                <div className="space-y-4">
                   <h3 className="text-xs font-bold text-zen-moss-dark uppercase tracking-wider">
                     📖 {t("Văn Bản Chuẩn Mực & Bản Dịch Học Tập", "Official Excerpt & Faithful Translation")}
                   </h3>
 
-                  {(displayMode === "en" || displayMode === "bilingual") && activeLesson.originalExcerptEn && (
-                    <div className="p-4 rounded-2xl bg-white border border-zen-border text-xs text-zen-ink/90 font-serif leading-relaxed italic space-y-1">
-                      <span className="text-[10px] uppercase font-sans font-bold text-zen-muted block not-italic">
-                        Original English Standard:
+                  {(displayMode === "en" || displayMode === "bilingual") && (activeLesson.originalExcerptEn || activeLesson.definitionEn) && (
+                    <div className="p-5 rounded-2xl bg-white border border-zen-border text-xs text-zen-ink/90 font-serif leading-relaxed space-y-3">
+                      <span className="text-[11px] uppercase font-sans font-bold text-blue-900 block not-italic tracking-wider">
+                        🇬🇧 Original ICF Language (Authoritative Reference)
                       </span>
-                      <div
-                        className="leading-relaxed whitespace-pre-line space-y-2 font-serif text-[13px]"
-                        dangerouslySetInnerHTML={{ __html: formatLessonStructured(activeLesson.originalExcerptEn) }}
-                      />
+                      {activeLesson.definitionEn && activeLesson.subCompetencies && activeLesson.subCompetencies.length > 0 ? (
+                        <div className="space-y-3 not-italic">
+                          <div className="p-3.5 bg-blue-50/60 rounded-xl border border-blue-100 text-[13px] leading-relaxed">
+                            <span className="font-sans font-bold text-blue-950 block mb-1">Definition:</span>
+                            <p className="font-serif italic text-blue-950/90">{activeLesson.definitionEn}</p>
+                          </div>
+                          <div className="space-y-2 mt-3 pt-1">
+                            <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-zen-muted block">
+                              Core Sub-Competencies ({activeLesson.subCompetencies.length} items):
+                            </span>
+                            {activeLesson.subCompetencies.map((sub) => (
+                              <div key={sub.code} className="p-2.5 rounded-lg bg-slate-50/80 border border-slate-200/60 font-sans text-[12.5px] leading-relaxed flex items-start gap-2.5">
+                                <span className="font-bold text-blue-900 bg-blue-100/80 px-2 py-0.5 rounded text-[11px] shrink-0 font-mono">
+                                  {sub.code}
+                                </span>
+                                <span className="text-slate-800 font-serif">{sub.textEn}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <div
+                          className="leading-relaxed whitespace-pre-line space-y-2 font-serif text-[13px]"
+                          dangerouslySetInnerHTML={{ __html: formatLessonStructured(activeLesson.originalExcerptEn || "") }}
+                        />
+                      )}
                     </div>
                   )}
 
-                  {(displayMode === "vi" || displayMode === "bilingual") && activeLesson.translationVi && (
-                    <div className="p-4 rounded-2xl bg-zen-surface/60 border border-zen-border text-xs text-zen-ink leading-relaxed space-y-1">
-                      <span className="text-[10px] uppercase font-bold text-zen-wood block">
-                        Bản Dịch Tiếng Việt Trung Thành:
+                  {(displayMode === "vi" || displayMode === "bilingual") && (activeLesson.translationVi || activeLesson.definitionVi) && (
+                    <div className="p-5 rounded-2xl bg-zen-surface/60 border border-zen-border text-xs text-zen-ink leading-relaxed space-y-3">
+                      <span className="text-[11px] uppercase font-sans font-bold text-zen-wood block tracking-wider">
+                        🇻🇳 Bản Dịch Đầy Đủ Phục Vụ Học Tập (Faithful Vietnamese Translation)
                       </span>
-                      <div
-                        className="leading-relaxed whitespace-pre-line space-y-2 text-[13px]"
-                        dangerouslySetInnerHTML={{ __html: formatLessonStructured(activeLesson.translationVi) }}
-                      />
+                      {activeLesson.definitionVi && activeLesson.subCompetencies && activeLesson.subCompetencies.length > 0 ? (
+                        <div className="space-y-3">
+                          <div className="p-3.5 bg-emerald-50/60 rounded-xl border border-emerald-100 text-[13px] leading-relaxed">
+                            <span className="font-bold text-emerald-950 block mb-1">Định nghĩa:</span>
+                            <p className="text-emerald-950/90 leading-relaxed">{activeLesson.definitionVi}</p>
+                          </div>
+                          <div className="space-y-2 mt-3 pt-1">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-zen-muted block">
+                              Các Năng Lực Thành Phần ({activeLesson.subCompetencies.length} mục):
+                            </span>
+                            {activeLesson.subCompetencies.map((sub) => (
+                              <div key={sub.code} className="p-2.5 rounded-lg bg-white/90 border border-emerald-200/60 text-[12.5px] leading-relaxed flex items-start gap-2.5">
+                                <span className="font-bold text-emerald-900 bg-emerald-100/80 px-2 py-0.5 rounded text-[11px] shrink-0 font-mono">
+                                  {sub.code}
+                                </span>
+                                <span className="text-emerald-950">{sub.textVi}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <div
+                          className="leading-relaxed whitespace-pre-line space-y-2 text-[13px]"
+                          dangerouslySetInnerHTML={{ __html: formatLessonStructured(activeLesson.translationVi || "") }}
+                        />
+                      )}
                     </div>
                   )}
                 </div>

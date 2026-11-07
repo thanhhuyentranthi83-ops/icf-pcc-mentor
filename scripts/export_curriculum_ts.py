@@ -67,6 +67,12 @@ export interface FaqItem {{
   verifiedDate: string;
 }}
 
+export interface SubCompetencyItem {{
+  code: string;
+  textEn: string;
+  textVi: string;
+}}
+
 export interface Lesson {{
   id: string;
   moduleId: string;
@@ -79,6 +85,10 @@ export interface Lesson {{
   sourceDocument?: string;
   sourceVersion?: string;
   sourceLink?: string;
+  pdfLink?: string;
+  definitionEn?: string;
+  definitionVi?: string;
+  subCompetencies?: SubCompetencyItem[];
   originalExcerptEn?: string;
   translationVi?: string;
   commentaryVi?: string;
@@ -86,7 +96,6 @@ export interface Lesson {{
   exampleType?: string;
   exampleContentVi?: string;
   exampleContentEn?: string;
-  pdfLink?: string;
   comparison2019Vi?: string;
   comparison2019En?: string;
   quiz?: LessonQuiz;

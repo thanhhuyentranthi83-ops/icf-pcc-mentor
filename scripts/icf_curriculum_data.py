@@ -35,12 +35,12 @@ MODULE_1_LESSONS = [
             "Identify 7 core behaviors (1.01–1.07): integrity, identity sensitivity, respectful language, confidentiality, and referral boundaries.",
             "Distinguish current practice standard (2025) from the written exam baseline (2019)."
         ],
-        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025) & Bộ Quy Tắc Đạo Đức",
+        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025), Trang 3",
         "sourceVersion": "Bản 2025 (Công bố tháng 09/2025; Khung chuẩn thực hành mới nhất)",
         "sourceLink": "https://coachingfederation.org/coaching-competencies/core-competencies",
         "pdfLink": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
-        "originalExcerptEn": "Definition: Understands and consistently applies coaching ethics and standards of coaching. 1.01 Demonstrates personal integrity and honesty in interactions with clients, sponsors and relevant stakeholders. 1.02 Is sensitive to clients' identity, environment, experiences, values and beliefs. 1.03 Uses language appropriate and respectful to clients, sponsors and relevant stakeholders. 1.04 Abides by the ICF Code of Ethics and upholds the Core Values. 1.05 Maintains confidentiality with client information per stakeholder agreements and pertinent laws. 1.06 Maintains the distinctions between coaching, consulting, psychotherapy and other support professions. 1.07 Refers clients to other support professionals, as appropriate.",
-        "translationVi": "Định nghĩa: Hiểu và nhất quán áp dụng các chuẩn mực đạo đức và tiêu chuẩn khai vấn của ICF. 1.01 Thể hiện sự chính trực và trung thực cá nhân khi tương tác với khách hàng, nhà tài trợ và các bên liên quan. 1.02 Nhạy bén với bản sắc, môi trường, trải nghiệm, giá trị và niềm tin của khách hàng. 1.03 Sử dụng ngôn ngữ phù hợp và tôn trọng khách hàng, nhà tài trợ và các bên liên quan. 1.04 Tuân thủ Bộ Quy tắc Đạo đức ICF và phát huy các Giá trị Cốt lõi. 1.05 Duy trì tính bảo mật thông tin khách hàng theo thỏa thuận các bên và luật pháp hiện hành. 1.06 Giữ vững sự phân biệt giữa khai vấn, tư vấn chuyên gia, trị liệu tâm lý và các nghề trợ giúp khác. 1.07 Chuyển gửi khách hàng sang các chuyên gia trợ giúp khác khi phù hợp.",
+        "originalExcerptEn": "Definition: Understands and consistently applies coaching ethics and standards of coaching.\n\n\n1.01. Demonstrates personal integrity and honesty in interactions with clients, sponsors and relevant stakeholders\n\n1.02. Is sensitive to clients’ identity, environment, experiences, values and beliefs\n\n1.03. Uses language appropriate and respectful to clients, sponsors and relevant stakeholders\n\n1.04. Abides by the ICF Code of Ethics and upholds the ICF Core Values\n\n1.05. Maintains confidentiality with client information per stakeholder agreements and pertinent laws\n\n1.06. Maintains the distinctions between coaching, consulting, psychotherapy and other support professions\n\n1.07. Refers clients to other support professionals, as appropriate",
+        "translationVi": "Định nghĩa: Hiểu và nhất quán áp dụng đạo đức khai vấn và các chuẩn mực của nghề khai vấn.\n\n\n1.01. Thể hiện sự chính trực và trung thực trong tương tác với khách hàng, bên tài trợ và các bên liên quan.\n\n1.02. Nhạy cảm và tôn trọng bản sắc, môi trường, trải nghiệm, giá trị và niềm tin của khách hàng.\n\n1.03. Sử dụng ngôn ngữ phù hợp và tôn trọng đối với khách hàng, bên tài trợ và các bên liên quan.\n\n1.04. Tuân thủ ICF Code of Ethics và duy trì các Giá trị Cốt lõi của ICF.\n\n1.05. Duy trì tính bảo mật của thông tin khách hàng theo thỏa thuận với các bên liên quan và pháp luật áp dụng.\n\n1.06. Duy trì sự phân biệt giữa khai vấn, tư vấn, tâm lý trị liệu và các nghề hỗ trợ khác.\n\n1.07. Giới thiệu khách hàng đến các chuyên gia hỗ trợ khác khi phù hợp.",
         "comparison2019Vi": "So sánh 2019–2025: Bản 2025 tăng cường các quy định về bảo vệ quyền riêng tư kỹ thuật số, an toàn dữ liệu số khi sử dụng công cụ AI, và nhấn mạnh sâu sắc hơn về tính nhạy cảm liên văn hóa cũng như ranh giới quyền lực trong thỏa thuận ba bên.",
         "comparison2019En": "2019 vs 2025 Comparison: The 2025 update reinforces digital privacy safeguards, responsible use of AI tools, and deepens cross-cultural sensitivity and systemic power boundaries.",
         "commentaryVi": "Năng lực 1 là nền móng của toàn bộ ngôi nhà năng lực ICF. Điểm mấu chốt trong các tình huống thi viết SJT: Coach phải luôn bảo vệ tính bảo mật, minh bạch với nhà tài trợ về giới hạn báo cáo, không bao giờ tự ý chẩn đoán tâm lý và luôn tôn trọng sự tự quyết của khách hàng khi đề xuất chuyển gửi.",
@@ -52,15 +52,70 @@ MODULE_1_LESSONS = [
             "questionVi": "Khi nhà tài trợ (Sponsor) yêu cầu coach chia sẻ chi tiết nguyên nhân khiến khách hàng mất động lực trong các phiên gần đây, hành động chuẩn mực nhất theo Năng lực 1 là gì?",
             "questionEn": "When a corporate sponsor asks the coach to disclose specific personal reasons behind the client's recent demotivation, what is the most ethical action under Competency 1?",
             "options": [
-                {"key": "A", "textVi": "Báo cáo đầy đủ mọi điều khách hàng đã nói vì nhà tài trợ là bên chi trả toàn bộ phí coaching.", "textEn": "Report everything disclosed since the sponsor pays all coaching fees."},
-                {"key": "B", "textVi": "Từ chối thẳng thừng và lập tức chấm dứt hợp đồng với doanh nghiệp mà không cần giải thích.", "textEn": "Abruptly refuse and terminate the corporate engagement without explanation."},
-                {"key": "C", "textVi": "Nhắc lại thỏa thuận bảo mật đã ký, giải thích rằng nội dung phiên là bí mật và chỉ chia sẻ tiến độ mục tiêu đã có sự đồng thuận của khách hàng.", "textEn": "Reiterate the signed confidentiality agreement, explaining session details are confidential and only agreed progress goals are shared."},
-                {"key": "D", "textVi": "Khuyên nhà tài trợ tự bí mật theo dõi máy tính của khách hàng để biết nguyên nhân.", "textEn": "Advise the sponsor to secretly monitor the client's laptop to uncover reasons."}
+                {
+                    "key": "A",
+                    "textVi": "Báo cáo đầy đủ mọi điều khách hàng đã nói vì nhà tài trợ là bên chi trả toàn bộ phí coaching.",
+                    "textEn": "Report everything disclosed since the sponsor pays all coaching fees."
+                },
+                {
+                    "key": "B",
+                    "textVi": "Từ chối thẳng thừng và lập tức chấm dứt hợp đồng với doanh nghiệp mà không cần giải thích.",
+                    "textEn": "Abruptly refuse and terminate the corporate engagement without explanation."
+                },
+                {
+                    "key": "C",
+                    "textVi": "Nhắc lại thỏa thuận bảo mật đã ký, giải thích rằng nội dung phiên là bí mật và chỉ chia sẻ tiến độ mục tiêu đã có sự đồng thuận của khách hàng.",
+                    "textEn": "Reiterate the signed confidentiality agreement, explaining session details are confidential and only agreed progress goals are shared."
+                },
+                {
+                    "key": "D",
+                    "textVi": "Khuyên nhà tài trợ tự bí mật theo dõi máy tính của khách hàng để biết nguyên nhân.",
+                    "textEn": "Advise the sponsor to secretly monitor the client's laptop to uncover reasons."
+                }
             ],
             "correctAnswer": "C",
             "explanationVi": "Phương án C là chuẩn mực đạo đức cao nhất: Coach bảo vệ thỏa thuận bảo mật, tôn trọng khách hàng và hành xử chuyên nghiệp với nhà tài trợ.",
             "explanationEn": "Option C is exemplary: The coach upholds confidentiality, respects client trust, and maintains professionalism with the sponsor."
-        }
+        },
+        "definitionEn": "Understands and consistently applies coaching ethics and standards of coaching.",
+        "definitionVi": "Hiểu và nhất quán áp dụng đạo đức khai vấn và các chuẩn mực của nghề khai vấn.",
+        "subCompetencies": [
+            {
+                "code": "1.01",
+                "textEn": "Demonstrates personal integrity and honesty in interactions with clients, sponsors and relevant stakeholders",
+                "textVi": "Thể hiện sự chính trực và trung thực trong tương tác với khách hàng, bên tài trợ và các bên liên quan."
+            },
+            {
+                "code": "1.02",
+                "textEn": "Is sensitive to clients’ identity, environment, experiences, values and beliefs",
+                "textVi": "Nhạy cảm và tôn trọng bản sắc, môi trường, trải nghiệm, giá trị và niềm tin của khách hàng."
+            },
+            {
+                "code": "1.03",
+                "textEn": "Uses language appropriate and respectful to clients, sponsors and relevant stakeholders",
+                "textVi": "Sử dụng ngôn ngữ phù hợp và tôn trọng đối với khách hàng, bên tài trợ và các bên liên quan."
+            },
+            {
+                "code": "1.04",
+                "textEn": "Abides by the ICF Code of Ethics and upholds the ICF Core Values",
+                "textVi": "Tuân thủ ICF Code of Ethics và duy trì các Giá trị Cốt lõi của ICF."
+            },
+            {
+                "code": "1.05",
+                "textEn": "Maintains confidentiality with client information per stakeholder agreements and pertinent laws",
+                "textVi": "Duy trì tính bảo mật của thông tin khách hàng theo thỏa thuận với các bên liên quan và pháp luật áp dụng."
+            },
+            {
+                "code": "1.06",
+                "textEn": "Maintains the distinctions between coaching, consulting, psychotherapy and other support professions",
+                "textVi": "Duy trì sự phân biệt giữa khai vấn, tư vấn, tâm lý trị liệu và các nghề hỗ trợ khác."
+            },
+            {
+                "code": "1.07",
+                "textEn": "Refers clients to other support professionals, as appropriate",
+                "textVi": "Giới thiệu khách hàng đến các chuyên gia hỗ trợ khác khi phù hợp."
+            }
+        ]
     },
     {
         "id": "mod1-les2",
@@ -79,12 +134,12 @@ MODULE_1_LESSONS = [
             "Master the 10 behavioral indicators (2.01–2.10), including 2 new indicators on reflective practice and coach well-being.",
             "Learn proactive engagement with coach supervision and mentor coaching."
         ],
-        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025), Trang 4",
         "sourceVersion": "Bản 2025 (Công bố tháng 09/2025; Khung chuẩn thực hành mới nhất)",
         "sourceLink": "https://coachingfederation.org/coaching-competencies/core-competencies",
         "pdfLink": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
-        "originalExcerptEn": "Definition: Develops and maintains a mindset that is open, curious, flexible and client-centered. 2.01 Acknowledges that clients are responsible for their own choices. 2.02 Engages in ongoing learning and development as a coach. 2.03 Develops an ongoing reflective practice to enhance one's coaching. 2.04 Remains aware of and open to the influence of context and culture on self and others. 2.05 Uses awareness of self and one's intuition to benefit clients. 2.06 Develops and maintains the ability to regulate one's emotions. 2.07 Mentally and emotionally prepares for sessions. 2.08 Actively manages one's well-being to sustain high coaching quality. 2.09 Uses support from coaching supervisors, mentor coaches, or peers as needed. 2.10 Acknowledges that clients are autonomous within their systemic context.",
-        "translationVi": "Định nghĩa: Phát triển và duy trì tư duy cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm. 2.01 Công nhận rằng khách hàng chịu trách nhiệm về các lựa chọn của chính họ. 2.02 Tham gia vào quá trình học tập và phát triển liên tục với tư cách là coach. 2.03 Phát triển thói quen phản tư liên tục để nâng cao năng lực khai vấn. 2.04 Luôn nhận thức và cởi mở với ảnh hưởng của bối cảnh và văn hóa lên bản thân và người khác. 2.05 Sử dụng sự tự nhận thức và trực giác vì lợi ích của khách hàng. 2.06 Phát triển và duy trì khả năng điều tiết cảm xúc của bản thân. 2.07 Chuẩn bị tâm trí và cảm xúc trước các phiên khai vấn. 2.08 Chủ động quản lý sức khỏe toàn diện (well-being) để duy trì chất lượng khai vấn. 2.09 Tìm kiếm sự trợ giúp từ chuyên gia giám sát khai vấn (supervisor), mentor coach hoặc đồng nghiệp khi cần thiết. 2.10 Tôn trọng tính tự chủ của khách hàng trong bối cảnh hệ sinh thái của họ.",
+        "originalExcerptEn": "Definition: Engages in ongoing personal and professional learning and development as a coach. Works with coaching supervisors or mentor coaches as needed. \n\nDevelops and maintains a mindset that is open, curious, flexible and client-centered.\n\n\n2.01. Acknowledges that clients are responsible for their own choices\n\n2.02. Engages in ongoing learning and development as a coach, including remaining aware of current coaching best practices and use of technology\n\n2.03. Develops an ongoing reflective practice to enhance one’s coaching\n\n2.04. Remains aware of and open to the influence of biases, context and culture on self and others\n\n2.05. Uses awareness of self and one’s intuition to benefit clients\n\n2.06. Develops and maintains the ability to manage one’s emotions\n\n2.07. Maintains emotional, physical, and mental well-being in preparation for, throughout, and following each session\n\n2.08. Seeks help from outside sources when necessary\n\n2.09. Nurtures openness and curiosity in oneself, the client, and the coaching process\n\n2.10. Remains aware of the influence of one’s thoughts and behaviors on the client and others",
+        "translationVi": "Định nghĩa: Liên tục học hỏi và phát triển cá nhân, nghề nghiệp với tư cách coach; làm việc với coach supervisor hoặc mentor coach khi cần; duy trì tư duy cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm.\n\n\n2.01. Công nhận rằng khách hàng chịu trách nhiệm cho các lựa chọn của chính mình.\n\n2.02. Liên tục học hỏi và phát triển với tư cách coach, bao gồm cập nhật các thực hành tốt hiện hành và việc sử dụng công nghệ trong coaching.\n\n2.03. Duy trì thực hành tự phản tư thường xuyên để nâng cao năng lực coaching.\n\n2.04. Nhận thức và cởi mở trước ảnh hưởng của thiên kiến, bối cảnh và văn hóa lên bản thân và người khác.\n\n2.05. Sử dụng sự tự nhận thức và trực giác của bản thân theo cách có lợi cho khách hàng.\n\n2.06. Phát triển và duy trì khả năng quản trị cảm xúc của bản thân.\n\n2.07. Duy trì sức khỏe cảm xúc, thể chất và tinh thần trước, trong và sau mỗi phiên khai vấn.\n\n2.08. Tìm kiếm sự hỗ trợ từ nguồn bên ngoài khi cần thiết.\n\n2.09. Nuôi dưỡng sự cởi mở và tò mò ở bản thân, khách hàng và trong quá trình khai vấn.\n\n2.10. Nhận thức về ảnh hưởng của suy nghĩ và hành vi của bản thân lên khách hàng và người khác.",
         "comparison2019Vi": "So sánh 2019–2025: Bản 2019 có 8 chỉ dấu (2.1–2.8). Bản 2025 bổ sung cụ thể việc chăm sóc sức khỏe toàn diện của coach (well-being, 2.08) và chính thức hóa việc tìm kiếm hỗ trợ từ Coaching Supervision/Mentor (2.09), đồng thời nhấn mạnh tính tự chủ trong bối cảnh hệ thống (systemic context, 2.10).",
         "comparison2019En": "2019 vs 2025 Comparison: The 2019 framework had 8 sub-competencies. The 2025 update expands this to 10 by explicitly integrating coach well-being (2.08), formal coach supervision/mentoring (2.09), and systemic autonomy (2.10).",
         "commentaryVi": "Tư duy khai vấn thể hiện ở việc coach không áp đặt 'đáp án mẫu' của mình lên khách hàng, mà tin tưởng sâu sắc vào năng lực tự tìm giải pháp của khách hàng. Coach dành thời gian tĩnh tâm trước phiên (Centering) và thường xuyên thực hành phản tư sau phiên.",
@@ -96,15 +151,85 @@ MODULE_1_LESSONS = [
             "questionVi": "Hành vi nào sau đây thể hiện rõ nét nhất điểm bổ sung mới của Năng lực 2 trong Khung năng lực ICF 2025?",
             "questionEn": "Which behavior best exemplifies the newly updated focus of Competency 2 under the 2025 ICF framework?",
             "options": [
-                {"key": "A", "textVi": "Coach soạn sẵn giáo án 10 buổi và bắt khách hàng tuân thủ lịch trình.", "textEn": "Prepare 10 syllabi beforehand and force client compliance."},
-                {"key": "B", "textVi": "Coach chủ động chăm sóc sức khỏe thể chất, tinh thần (well-being) và định kỳ phản tư cùng Coach Supervisor để giữ chất lượng phiên coach.", "textEn": "Actively manage personal well-being and regularly engage in reflective practice with a Coach Supervisor."},
-                {"key": "C", "textVi": "Coach tự nhận mình đã hoàn hảo và không cần học thêm bất kỳ điều gì mới.", "textEn": "Claim personal perfection and cease all professional development."},
-                {"key": "D", "textVi": "Coach đưa ra lời khuyên tài chính cá nhân cho khách hàng.", "textEn": "Offer unsolicited personal financial advice to clients."}
+                {
+                    "key": "A",
+                    "textVi": "Coach soạn sẵn giáo án 10 buổi và bắt khách hàng tuân thủ lịch trình.",
+                    "textEn": "Prepare 10 syllabi beforehand and force client compliance."
+                },
+                {
+                    "key": "B",
+                    "textVi": "Coach chủ động chăm sóc sức khỏe thể chất, tinh thần (well-being) và định kỳ phản tư cùng Coach Supervisor để giữ chất lượng phiên coach.",
+                    "textEn": "Actively manage personal well-being and regularly engage in reflective practice with a Coach Supervisor."
+                },
+                {
+                    "key": "C",
+                    "textVi": "Coach tự nhận mình đã hoàn hảo và không cần học thêm bất kỳ điều gì mới.",
+                    "textEn": "Claim personal perfection and cease all professional development."
+                },
+                {
+                    "key": "D",
+                    "textVi": "Coach đưa ra lời khuyên tài chính cá nhân cho khách hàng.",
+                    "textEn": "Offer unsolicited personal financial advice to clients."
+                }
             ],
             "correctAnswer": "B",
             "explanationVi": "Phương án B phản ánh chính xác điểm mới của Bản 2025 (Chỉ dấu 2.08 và 2.09): Quản lý well-being của bản thân và sử dụng hỗ trợ từ Coach Supervision.",
             "explanationEn": "Option B accurately mirrors 2025 updates (2.08 & 2.09): Coach well-being management and engaging coach supervision."
-        }
+        },
+        "definitionEn": "Engages in ongoing personal and professional learning and development as a coach. Works with coaching supervisors or mentor coaches as needed. \n\nDevelops and maintains a mindset that is open, curious, flexible and client-centered.",
+        "definitionVi": "Liên tục học hỏi và phát triển cá nhân, nghề nghiệp với tư cách coach; làm việc với coach supervisor hoặc mentor coach khi cần; duy trì tư duy cởi mở, tò mò, linh hoạt và lấy khách hàng làm trung tâm.",
+        "subCompetencies": [
+            {
+                "code": "2.01",
+                "textEn": "Acknowledges that clients are responsible for their own choices",
+                "textVi": "Công nhận rằng khách hàng chịu trách nhiệm cho các lựa chọn của chính mình."
+            },
+            {
+                "code": "2.02",
+                "textEn": "Engages in ongoing learning and development as a coach, including remaining aware of current coaching best practices and use of technology",
+                "textVi": "Liên tục học hỏi và phát triển với tư cách coach, bao gồm cập nhật các thực hành tốt hiện hành và việc sử dụng công nghệ trong coaching."
+            },
+            {
+                "code": "2.03",
+                "textEn": "Develops an ongoing reflective practice to enhance one’s coaching",
+                "textVi": "Duy trì thực hành tự phản tư thường xuyên để nâng cao năng lực coaching."
+            },
+            {
+                "code": "2.04",
+                "textEn": "Remains aware of and open to the influence of biases, context and culture on self and others",
+                "textVi": "Nhận thức và cởi mở trước ảnh hưởng của thiên kiến, bối cảnh và văn hóa lên bản thân và người khác."
+            },
+            {
+                "code": "2.05",
+                "textEn": "Uses awareness of self and one’s intuition to benefit clients",
+                "textVi": "Sử dụng sự tự nhận thức và trực giác của bản thân theo cách có lợi cho khách hàng."
+            },
+            {
+                "code": "2.06",
+                "textEn": "Develops and maintains the ability to manage one’s emotions",
+                "textVi": "Phát triển và duy trì khả năng quản trị cảm xúc của bản thân."
+            },
+            {
+                "code": "2.07",
+                "textEn": "Maintains emotional, physical, and mental well-being in preparation for, throughout, and following each session",
+                "textVi": "Duy trì sức khỏe cảm xúc, thể chất và tinh thần trước, trong và sau mỗi phiên khai vấn."
+            },
+            {
+                "code": "2.08",
+                "textEn": "Seeks help from outside sources when necessary",
+                "textVi": "Tìm kiếm sự hỗ trợ từ nguồn bên ngoài khi cần thiết."
+            },
+            {
+                "code": "2.09",
+                "textEn": "Nurtures openness and curiosity in oneself, the client, and the coaching process",
+                "textVi": "Nuôi dưỡng sự cởi mở và tò mò ở bản thân, khách hàng và trong quá trình khai vấn."
+            },
+            {
+                "code": "2.10",
+                "textEn": "Remains aware of the influence of one’s thoughts and behaviors on the client and others",
+                "textVi": "Nhận thức về ảnh hưởng của suy nghĩ và hành vi của bản thân lên khách hàng và người khác."
+            }
+        ]
     },
     {
         "id": "mod1-les3",
@@ -123,12 +248,12 @@ MODULE_1_LESSONS = [
             "Master 2025 expanded indicators: digital agreements, AI privacy consent, and sponsor/stakeholder boundaries.",
             "Master the 4 core session contracting elements: Topic, Outcome, Measures of Success, and Meaning."
         ],
-        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025), Trang 5",
         "sourceVersion": "Bản 2025 (Công bố tháng 09/2025; Khung chuẩn thực hành mới nhất)",
         "sourceLink": "https://coachingfederation.org/coaching-competencies/core-competencies",
         "pdfLink": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
-        "originalExcerptEn": "Definition: Partners with the client and relevant stakeholders to create clear agreements about the coaching relationship, process, plans and goals. Establishes agreements for the overall coaching engagement as well as those for each coaching session. Highlights: Explicit agreements on technology, tools, confidentiality, session outcomes, measures of success, and recontracting as needs evolve.",
-        "translationVi": "Định nghĩa: Hợp tác với khách hàng và các bên liên quan để thiết lập các thỏa thuận rõ ràng về mối quan hệ, quy trình, kế hoạch và mục tiêu khai vấn. Thiết lập thỏa thuận cho toàn bộ hành trình cũng như cho từng phiên khai vấn cụ thể. Điểm nhấn: Thỏa thuận rõ ràng về công nghệ, bảo mật dữ liệu, kết quả phiên, thước đo thành công và linh hoạt tái thỏa thuận.",
+        "originalExcerptEn": "Definition: Partners with the client and relevant stakeholders to create clear agreements about the coaching relationship, process, plans and goals. Establishes agreements for the overall coaching engagement as well as those for each coaching session.\n\n\n3.01. Describes one's coaching philosophy and clearly defines what coaching is and is not for potential clients and stakeholders\n\n3.02. Reaches agreement about what is and is not appropriate in the relationship, what is and is not being offered, and the responsibilities of the client and relevant stakeholders, including commitment to working toward coaching goals\n\n3.03. Reaches agreement about the guidelines and specific parameters of the coaching relationship such as logistics, fees, scheduling, duration, termination, confidentiality and inclusion of others\n\n3.04. Partners with the client and relevant stakeholders to establish an overall coaching plan and goals\n\n3.05. Partners with the client to determine client-coach compatibility\n\n3.06. Partners with the client to identify or reconfirm what they want to accomplish in the session\n\n3.07. Partners with the client to define what the client believes they need to address or resolve to achieve what they want to accomplish in the session\n\n3.08. Partners with the client to define or reconfirm measures of success for what the client wants to accomplish in the coaching engagement or individual session\n\n3.09. Partners with the client to manage the time and focus of the session\n\n3.10. Continues coaching in the direction of the client’s desired outcome unless the client indicates otherwise\n\n3.11. Partners with the client to close the coaching relationship in a way that respects the client and the coaching experience\n\n3.12. Revisits the coaching agreement when necessary to ensure the coaching approach is meeting the client's needs",
+        "translationVi": "Định nghĩa: Đồng hành với khách hàng và các bên liên quan để tạo ra các thỏa thuận rõ ràng về mối quan hệ, quy trình, kế hoạch và mục tiêu khai vấn; thiết lập thỏa thuận cho cả toàn bộ quá trình và từng phiên.\n\n\n3.01. Mô tả triết lý khai vấn của mình và xác định rõ coaching là gì và không phải là gì đối với khách hàng tiềm năng và các bên liên quan.\n\n3.02. Thống nhất điều gì phù hợp/không phù hợp trong mối quan hệ, điều gì được/không được cung cấp, và trách nhiệm của khách hàng cùng các bên liên quan, bao gồm cam kết hướng tới mục tiêu khai vấn.\n\n3.03. Thống nhất các nguyên tắc và thông số cụ thể của mối quan hệ khai vấn như logistics, phí, lịch, thời lượng, chấm dứt, bảo mật và sự tham gia của người khác.\n\n3.04. Đồng hành với khách hàng và các bên liên quan để thiết lập kế hoạch và mục tiêu khai vấn tổng thể.\n\n3.05. Đồng hành với khách hàng để xác định mức độ phù hợp giữa khách hàng và coach.\n\n3.06. Đồng hành với khách hàng để xác định hoặc xác nhận lại điều họ muốn đạt được trong phiên.\n\n3.07. Đồng hành với khách hàng để xác định điều mà chính họ tin rằng cần xử lý hoặc làm rõ nhằm đạt được mục tiêu của phiên.\n\n3.08. Đồng hành với khách hàng để xác định hoặc xác nhận lại tiêu chí thành công cho mục tiêu của toàn bộ quá trình hoặc từng phiên.\n\n3.09. Đồng hành với khách hàng để quản lý thời gian và trọng tâm của phiên.\n\n3.10. Tiếp tục coaching theo hướng kết quả mà khách hàng mong muốn, trừ khi khách hàng cho biết họ muốn thay đổi.\n\n3.11. Đồng hành với khách hàng để khép lại mối quan hệ khai vấn theo cách tôn trọng khách hàng và trải nghiệm khai vấn.\n\n3.12. Xem lại thỏa thuận khai vấn khi cần để bảo đảm cách tiếp cận đang đáp ứng nhu cầu của khách hàng.",
         "comparison2019Vi": "So sánh 2019–2025: Bản 2025 chuẩn hóa ngôn ngữ hợp tác bình đẳng (partnering), làm rõ thỏa thuận đa bên (multi-stakeholder contracting) và bổ sung thỏa thuận minh bạch về việc sử dụng công nghệ số/AI hỗ trợ phiên coach.",
         "comparison2019En": "2019 vs 2025 Comparison: Refines partnering language, clarifies multi-stakeholder contracting, and introduces transparent agreement protocols for AI tools.",
         "commentaryVi": "Ở cấp độ PCC, thỏa thuận phiên không chỉ là 'Hôm nay muốn nói chuyện gì?', mà phải làm rõ 4 tầng: (1) Bạn muốn đạt kết quả cụ thể nào khi kết thúc phiên này? (2) Làm sao bạn biết mình đã đạt được kết quả đó? (3) Điều này quan trọng thế nào với bạn lúc này? (4) Chúng ta cần khám phá điều gì trước tiên để đạt được mục tiêu đó?",
@@ -140,15 +265,95 @@ MODULE_1_LESSONS = [
             "questionVi": "Khách hàng bước vào phiên với sự bức xúc và kể rất nhiều câu chuyện vụn vặt. Sau 15 phút, khách hàng vẫn chưa xác định được mục tiêu phiên. Hành động nào của Coach thể hiện đúng Năng lực 3 nhất?",
             "questionEn": "Client speaks rapidly about fragmented frustrations. After 15 minutes, no clear outcome is established. Which coach action best reflects Competency 3?",
             "options": [
-                {"key": "A", "textVi": "Để khách hàng kể tiếp cho hết giờ vì ngắt lời là mất lịch sự.", "textEn": "Let the client talk uninterrupted until time runs out."},
-                {"key": "B", "textVi": "Tự ý chọn một chủ đề mà coach thấy quan trọng và bắt khách hàng tập trung vào đó.", "textEn": "Unilaterally pick an important topic and force client focus."},
-                {"key": "C", "textVi": "Nhẹ nhàng xin phép tạm dừng, phản chiếu những điều khách hàng vừa chia sẻ và hỏi: 'Trong tất cả những khía cạnh này, điều gì là quan trọng nhất bạn muốn chúng ta cùng giải quyết hôm nay?'", "textEn": "Gently pause, reflect what was shared, and ask: 'Among all these aspects, what is most essential for us to resolve today?'"},
-                {"key": "D", "textVi": "Dừng phiên và trừ tiền vì khách hàng không có sự chuẩn bị mục tiêu trước.", "textEn": "Terminate the session and fine the client for lack of preparation."}
+                {
+                    "key": "A",
+                    "textVi": "Để khách hàng kể tiếp cho hết giờ vì ngắt lời là mất lịch sự.",
+                    "textEn": "Let the client talk uninterrupted until time runs out."
+                },
+                {
+                    "key": "B",
+                    "textVi": "Tự ý chọn một chủ đề mà coach thấy quan trọng và bắt khách hàng tập trung vào đó.",
+                    "textEn": "Unilaterally pick an important topic and force client focus."
+                },
+                {
+                    "key": "C",
+                    "textVi": "Nhẹ nhàng xin phép tạm dừng, phản chiếu những điều khách hàng vừa chia sẻ và hỏi: 'Trong tất cả những khía cạnh này, điều gì là quan trọng nhất bạn muốn chúng ta cùng giải quyết hôm nay?'",
+                    "textEn": "Gently pause, reflect what was shared, and ask: 'Among all these aspects, what is most essential for us to resolve today?'"
+                },
+                {
+                    "key": "D",
+                    "textVi": "Dừng phiên và trừ tiền vì khách hàng không có sự chuẩn bị mục tiêu trước.",
+                    "textEn": "Terminate the session and fine the client for lack of preparation."
+                }
             ],
             "correctAnswer": "C",
             "explanationVi": "Phương án C thể hiện sự đồng hành bình đẳng (Partnering), giúp khách hàng cô đọng trọng tâm mà không áp đặt.",
             "explanationEn": "Option C demonstrates equal partnering, helping the client distill focus without coach imposition."
-        }
+        },
+        "definitionEn": "Partners with the client and relevant stakeholders to create clear agreements about the coaching relationship, process, plans and goals. Establishes agreements for the overall coaching engagement as well as those for each coaching session.",
+        "definitionVi": "Đồng hành với khách hàng và các bên liên quan để tạo ra các thỏa thuận rõ ràng về mối quan hệ, quy trình, kế hoạch và mục tiêu khai vấn; thiết lập thỏa thuận cho cả toàn bộ quá trình và từng phiên.",
+        "subCompetencies": [
+            {
+                "code": "3.01",
+                "textEn": "Describes one's coaching philosophy and clearly defines what coaching is and is not for potential clients and stakeholders",
+                "textVi": "Mô tả triết lý khai vấn của mình và xác định rõ coaching là gì và không phải là gì đối với khách hàng tiềm năng và các bên liên quan."
+            },
+            {
+                "code": "3.02",
+                "textEn": "Reaches agreement about what is and is not appropriate in the relationship, what is and is not being offered, and the responsibilities of the client and relevant stakeholders, including commitment to working toward coaching goals",
+                "textVi": "Thống nhất điều gì phù hợp/không phù hợp trong mối quan hệ, điều gì được/không được cung cấp, và trách nhiệm của khách hàng cùng các bên liên quan, bao gồm cam kết hướng tới mục tiêu khai vấn."
+            },
+            {
+                "code": "3.03",
+                "textEn": "Reaches agreement about the guidelines and specific parameters of the coaching relationship such as logistics, fees, scheduling, duration, termination, confidentiality and inclusion of others",
+                "textVi": "Thống nhất các nguyên tắc và thông số cụ thể của mối quan hệ khai vấn như logistics, phí, lịch, thời lượng, chấm dứt, bảo mật và sự tham gia của người khác."
+            },
+            {
+                "code": "3.04",
+                "textEn": "Partners with the client and relevant stakeholders to establish an overall coaching plan and goals",
+                "textVi": "Đồng hành với khách hàng và các bên liên quan để thiết lập kế hoạch và mục tiêu khai vấn tổng thể."
+            },
+            {
+                "code": "3.05",
+                "textEn": "Partners with the client to determine client-coach compatibility",
+                "textVi": "Đồng hành với khách hàng để xác định mức độ phù hợp giữa khách hàng và coach."
+            },
+            {
+                "code": "3.06",
+                "textEn": "Partners with the client to identify or reconfirm what they want to accomplish in the session",
+                "textVi": "Đồng hành với khách hàng để xác định hoặc xác nhận lại điều họ muốn đạt được trong phiên."
+            },
+            {
+                "code": "3.07",
+                "textEn": "Partners with the client to define what the client believes they need to address or resolve to achieve what they want to accomplish in the session",
+                "textVi": "Đồng hành với khách hàng để xác định điều mà chính họ tin rằng cần xử lý hoặc làm rõ nhằm đạt được mục tiêu của phiên."
+            },
+            {
+                "code": "3.08",
+                "textEn": "Partners with the client to define or reconfirm measures of success for what the client wants to accomplish in the coaching engagement or individual session",
+                "textVi": "Đồng hành với khách hàng để xác định hoặc xác nhận lại tiêu chí thành công cho mục tiêu của toàn bộ quá trình hoặc từng phiên."
+            },
+            {
+                "code": "3.09",
+                "textEn": "Partners with the client to manage the time and focus of the session",
+                "textVi": "Đồng hành với khách hàng để quản lý thời gian và trọng tâm của phiên."
+            },
+            {
+                "code": "3.10",
+                "textEn": "Continues coaching in the direction of the client’s desired outcome unless the client indicates otherwise",
+                "textVi": "Tiếp tục coaching theo hướng kết quả mà khách hàng mong muốn, trừ khi khách hàng cho biết họ muốn thay đổi."
+            },
+            {
+                "code": "3.11",
+                "textEn": "Partners with the client to close the coaching relationship in a way that respects the client and the coaching experience",
+                "textVi": "Đồng hành với khách hàng để khép lại mối quan hệ khai vấn theo cách tôn trọng khách hàng và trải nghiệm khai vấn."
+            },
+            {
+                "code": "3.12",
+                "textEn": "Revisits the coaching agreement when necessary to ensure the coaching approach is meeting the client's needs",
+                "textVi": "Xem lại thỏa thuận khai vấn khi cần để bảo đảm cách tiếp cận đang đáp ứng nhu cầu của khách hàng."
+            }
+        ]
     },
     {
         "id": "mod1-les4",
@@ -167,12 +372,12 @@ MODULE_1_LESSONS = [
             "Master 2025 focus: honoring client worldview, cultural identity, lived experience, and personal boundaries.",
             "Practice non-judgmental presence when clients express divergent viewpoints or raw emotions."
         ],
-        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025), Trang 6",
         "sourceVersion": "Bản 2025 (Công bố tháng 09/2025; Khung chuẩn thực hành mới nhất)",
         "sourceLink": "https://coachingfederation.org/coaching-competencies/core-competencies",
         "pdfLink": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
-        "originalExcerptEn": "Definition: Partners with the client to create a safe, supportive environment that allows the client to share freely. Maintains a relationship of mutual respect and trust. Seeks to understand the client within their context which may include their identity, environment, experiences, values and beliefs.",
-        "translationVi": "Định nghĩa: Hợp tác với khách hàng để tạo ra môi trường an toàn, hỗ trợ, cho phép khách hàng tự do chia sẻ. Duy trì mối quan hệ tôn trọng và tin cậy lẫn nhau. Tìm kiếm sự thấu hiểu khách hàng trong toàn bộ bối cảnh của họ, bao gồm bản sắc, môi trường sống, trải nghiệm, giá trị và niềm tin.",
+        "originalExcerptEn": "Definition: Partners with the client to create a safe, supportive environment that allows the client to share freely.\n\nMaintains a relationship of mutual respect and trust.\n\n\n4.01. Seeks to understand the client within their context which may include their identity, environment, experiences, values and beliefs\n\n4.02. Demonstrates respect for the client’s identity, perceptions, style and language and adapts one’s coaching to the client\n\n4.03. Acknowledges and respects the client’s unique talents, insights and work in the coaching process\n\n4.04. Shows support, empathy and concern for the client\n\n4.05. Acknowledges and supports the client’s expression of feelings, perceptions, concerns, beliefs and suggestions\n\n4.06. Demonstrates openness and transparency as a way to display vulnerability and build trust with the client",
+        "translationVi": "Định nghĩa: Đồng hành với khách hàng để tạo ra môi trường an toàn, nâng đỡ, cho phép khách hàng chia sẻ tự do; duy trì mối quan hệ dựa trên sự tôn trọng và tin cậy lẫn nhau.\n\n\n4.01. Tìm hiểu khách hàng trong bối cảnh của họ, có thể bao gồm bản sắc, môi trường, trải nghiệm, giá trị và niềm tin.\n\n4.02. Thể hiện sự tôn trọng bản sắc, nhận thức, phong cách và ngôn ngữ của khách hàng, đồng thời điều chỉnh cách coaching phù hợp với họ.\n\n4.03. Ghi nhận và tôn trọng tài năng, insight và nỗ lực độc đáo của khách hàng trong quá trình khai vấn.\n\n4.04. Thể hiện sự hỗ trợ, thấu cảm và quan tâm dành cho khách hàng.\n\n4.05. Ghi nhận và hỗ trợ khách hàng bày tỏ cảm xúc, nhận thức, mối quan tâm, niềm tin và đề xuất.\n\n4.06. Thể hiện sự cởi mở và minh bạch như một cách cho thấy sự dễ tổn thương và xây dựng niềm tin với khách hàng.",
         "comparison2019Vi": "So sánh 2019–2025: Bản 2025 nhấn mạnh sâu sắc thuật ngữ 'Thế giới quan' (Worldview) trong Phụ lục thuật ngữ và đưa sự nhạy bén văn hóa, an toàn chấn thương (trauma-sensitive) vào trọng tâm của việc xây dựng niềm tin.",
         "comparison2019En": "2019 vs 2025 Comparison: Integrates 'Worldview' terminology from the new glossary and deepens trauma-sensitive, inclusive cross-cultural safety.",
         "commentaryVi": "Niềm tin không đến từ những lời khen sáo rỗng hay trấn an vội vã. Niềm tin được xây dựng khi coach chứng thực (validate) cảm xúc của khách hàng, tôn trọng thế giới quan riêng biệt và giữ trọn vẹn bảo mật.",
@@ -184,15 +389,65 @@ MODULE_1_LESSONS = [
             "questionVi": "Khách hàng chia sẻ một quan điểm tôn giáo hoặc chính trị hoàn toàn đối lập với niềm tin cá nhân của Coach. Hành động nào của Coach thể hiện đúng Năng lực 4?",
             "questionEn": "Client shares a religious or political belief contradicting the coach's personal values. Which action best reflects Competency 4?",
             "options": [
-                {"key": "A", "textVi": "Tranh luận để chứng minh khách hàng đang có cái nhìn sai lệch.", "textEn": "Debate to prove the client's perspective is flawed."},
-                {"key": "B", "textVi": "Tôn trọng thế giới quan của khách hàng, gác lại niềm tin cá nhân và tìm hiểu xem niềm tin đó đang hỗ trợ hoặc thách thức mục tiêu của khách hàng như thế nào.", "textEn": "Honor the client's worldview, suspend personal biases, and explore how that belief serves or challenges the client's goal."},
-                {"key": "C", "textVi": "Giả vờ đồng ý nhiệt tình để lấy lòng khách hàng.", "textEn": "Pretend passionate agreement to please the client."},
-                {"key": "D", "textVi": "Lập tức hủy phiên và từ chối làm việc với những người có quan điểm khác mình.", "textEn": "Immediately cancel the engagement due to differing views."}
+                {
+                    "key": "A",
+                    "textVi": "Tranh luận để chứng minh khách hàng đang có cái nhìn sai lệch.",
+                    "textEn": "Debate to prove the client's perspective is flawed."
+                },
+                {
+                    "key": "B",
+                    "textVi": "Tôn trọng thế giới quan của khách hàng, gác lại niềm tin cá nhân và tìm hiểu xem niềm tin đó đang hỗ trợ hoặc thách thức mục tiêu của khách hàng như thế nào.",
+                    "textEn": "Honor the client's worldview, suspend personal biases, and explore how that belief serves or challenges the client's goal."
+                },
+                {
+                    "key": "C",
+                    "textVi": "Giả vờ đồng ý nhiệt tình để lấy lòng khách hàng.",
+                    "textEn": "Pretend passionate agreement to please the client."
+                },
+                {
+                    "key": "D",
+                    "textVi": "Lập tức hủy phiên và từ chối làm việc với những người có quan điểm khác mình.",
+                    "textEn": "Immediately cancel the engagement due to differing views."
+                }
             ],
             "correctAnswer": "B",
             "explanationVi": "Tôn trọng bản sắc và thế giới quan của khách hàng (Worldview) là cốt lõi của Năng lực 4.",
             "explanationEn": "Honoring the client's identity and worldview without bias is the core of Competency 4."
-        }
+        },
+        "definitionEn": "Partners with the client to create a safe, supportive environment that allows the client to share freely.\n\nMaintains a relationship of mutual respect and trust.",
+        "definitionVi": "Đồng hành với khách hàng để tạo ra môi trường an toàn, nâng đỡ, cho phép khách hàng chia sẻ tự do; duy trì mối quan hệ dựa trên sự tôn trọng và tin cậy lẫn nhau.",
+        "subCompetencies": [
+            {
+                "code": "4.01",
+                "textEn": "Seeks to understand the client within their context which may include their identity, environment, experiences, values and beliefs",
+                "textVi": "Tìm hiểu khách hàng trong bối cảnh của họ, có thể bao gồm bản sắc, môi trường, trải nghiệm, giá trị và niềm tin."
+            },
+            {
+                "code": "4.02",
+                "textEn": "Demonstrates respect for the client’s identity, perceptions, style and language and adapts one’s coaching to the client",
+                "textVi": "Thể hiện sự tôn trọng bản sắc, nhận thức, phong cách và ngôn ngữ của khách hàng, đồng thời điều chỉnh cách coaching phù hợp với họ."
+            },
+            {
+                "code": "4.03",
+                "textEn": "Acknowledges and respects the client’s unique talents, insights and work in the coaching process",
+                "textVi": "Ghi nhận và tôn trọng tài năng, insight và nỗ lực độc đáo của khách hàng trong quá trình khai vấn."
+            },
+            {
+                "code": "4.04",
+                "textEn": "Shows support, empathy and concern for the client",
+                "textVi": "Thể hiện sự hỗ trợ, thấu cảm và quan tâm dành cho khách hàng."
+            },
+            {
+                "code": "4.05",
+                "textEn": "Acknowledges and supports the client’s expression of feelings, perceptions, concerns, beliefs and suggestions",
+                "textVi": "Ghi nhận và hỗ trợ khách hàng bày tỏ cảm xúc, nhận thức, mối quan tâm, niềm tin và đề xuất."
+            },
+            {
+                "code": "4.06",
+                "textEn": "Demonstrates openness and transparency as a way to display vulnerability and build trust with the client",
+                "textVi": "Thể hiện sự cởi mở và minh bạch như một cách cho thấy sự dễ tổn thương và xây dựng niềm tin với khách hàng."
+            }
+        ]
     },
     {
         "id": "mod1-les5",
@@ -211,12 +466,12 @@ MODULE_1_LESSONS = [
             "Master working with silence, intense emotions, and holding space for ambiguity.",
             "Practice self-regulation to avoid interrupting or rushing to fix."
         ],
-        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025), Trang 7",
         "sourceVersion": "Bản 2025 (Công bố tháng 09/2025; Khung chuẩn thực hành mới nhất)",
         "sourceLink": "https://coachingfederation.org/coaching-competencies/core-competencies",
         "pdfLink": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
-        "originalExcerptEn": "Definition: Is fully conscious and present with the client, employing a style that is open, flexible, grounded and confident. Remains focused, observant, empathetic and responsive to the client. Demonstrates curiosity and manages one's emotions to stay present.",
-        "translationVi": "Định nghĩa: Hoàn toàn tỉnh thức và hiện diện cùng khách hàng, sử dụng phong cách cởi mở, linh hoạt, vững vàng và tự tin. Luôn tập trung, quan sát, thấu cảm và phản hồi khách hàng. Thể hiện sự tò mò và kiểm soát cảm xúc bản thân để duy trì sự hiện diện.",
+        "originalExcerptEn": "Definition: Is fully conscious and present with the client, employing a style that is open, flexible, grounded and confident.\n\n\n5.01. Remains focused, observant, empathetic and responsive to the client\n\n5.02. Demonstrates curiosity during the coaching process\n\n5.03. Remains aware of what is emerging for self and client in the present moment\n\n5.04. Manages one’s emotions to stay present with the client\n\n5.05. Demonstrates confidence in working with strong client emotions during the coaching process\n\n5.06. Is comfortable working in a space of not knowing\n\n5.07. Creates or allows space for silence, pause or reflection",
+        "translationVi": "Định nghĩa: Hoàn toàn tỉnh thức và hiện diện với khách hàng, sử dụng phong cách cởi mở, linh hoạt, vững vàng và tự tin.\n\n\n5.01. Giữ sự tập trung, quan sát, thấu cảm và phản hồi phù hợp với khách hàng.\n\n5.02. Thể hiện sự tò mò trong suốt quá trình khai vấn.\n\n5.03. Nhận thức điều đang xuất hiện ở bản thân và khách hàng trong khoảnh khắc hiện tại.\n\n5.04. Quản trị cảm xúc của bản thân để duy trì sự hiện diện với khách hàng.\n\n5.05. Thể hiện sự tự tin khi làm việc với những cảm xúc mạnh của khách hàng trong quá trình khai vấn.\n\n5.06. Thoải mái làm việc trong không gian chưa biết/chưa có câu trả lời.\n\n5.07. Tạo ra hoặc cho phép không gian cho sự im lặng, khoảng dừng hoặc suy ngẫm.",
         "comparison2019Vi": "So sánh 2019–2025: Bản 2025 làm sâu sắc hơn năng lực hiện diện tĩnh tại (grounded presence) và khả năng thích ứng linh hoạt trước sự bất định cũng như các thay đổi cảm xúc phức tạp của khách hàng.",
         "comparison2019En": "2019 vs 2025 Comparison: Deepens grounded presence and relational agility when navigating ambiguity and complex emotional shifts.",
         "commentaryVi": "Hiện diện ở cấp độ PCC là không vội vã lấp đầy khoảng lặng. Khi khách hàng im lặng sau một câu hỏi sâu sắc, đó là lúc não bộ họ đang tái tổ chức các khớp thần kinh để sinh ra nhận thức mới. Coach chen ngang lúc này là phá hủy khoảnh khắc chuyển hóa.",
@@ -228,15 +483,70 @@ MODULE_1_LESSONS = [
             "questionVi": "Khi khách hàng chìm vào khoảng lặng sâu sắc kéo dài hơn 30 giây sau một câu hỏi mạnh, hành động nào của Coach thể hiện sự Hiện diện (Năng lực 5) cao nhất?",
             "questionEn": "When client enters a 30-second reflective silence after a powerful question, which coach action demonstrates highest Presence (Competency 5)?",
             "options": [
-                {"key": "A", "textVi": "Hỏi ngay câu hỏi khác vì sợ khách hàng cảm thấy ngượng ngùng.", "textEn": "Quickly ask another question to ease perceived awkwardness."},
-                {"key": "B", "textVi": "Gợi ý luôn câu trả lời mẫu để giúp khách hàng đỡ phải suy nghĩ nhiều.", "textEn": "Suggest ready-made answers to save client mental energy."},
-                {"key": "C", "textVi": "Giữ vững sự tĩnh lặng bình an, duy trì sự chú tâm hoàn toàn vào khách hàng và tôn trọng tiến trình tư duy của họ.", "textEn": "Hold peaceful silence, maintain full attentiveness, and honor the client's internal thinking process."},
-                {"key": "D", "textVi": "Tranh thủ mở điện thoại kiểm tra tin nhắn vì khách hàng đang không nói chuyện.", "textEn": "Check phone messages while the client is quiet."}
+                {
+                    "key": "A",
+                    "textVi": "Hỏi ngay câu hỏi khác vì sợ khách hàng cảm thấy ngượng ngùng.",
+                    "textEn": "Quickly ask another question to ease perceived awkwardness."
+                },
+                {
+                    "key": "B",
+                    "textVi": "Gợi ý luôn câu trả lời mẫu để giúp khách hàng đỡ phải suy nghĩ nhiều.",
+                    "textEn": "Suggest ready-made answers to save client mental energy."
+                },
+                {
+                    "key": "C",
+                    "textVi": "Giữ vững sự tĩnh lặng bình an, duy trì sự chú tâm hoàn toàn vào khách hàng và tôn trọng tiến trình tư duy của họ.",
+                    "textEn": "Hold peaceful silence, maintain full attentiveness, and honor the client's internal thinking process."
+                },
+                {
+                    "key": "D",
+                    "textVi": "Tranh thủ mở điện thoại kiểm tra tin nhắn vì khách hàng đang không nói chuyện.",
+                    "textEn": "Check phone messages while the client is quiet."
+                }
             ],
             "correctAnswer": "C",
             "explanationVi": "Tôn trọng và đồng hành cùng khoảng lặng là biểu hiện bậc thầy của Năng lực 5.",
             "explanationEn": "Holding and honoring silence is a masterful demonstration of Competency 5."
-        }
+        },
+        "definitionEn": "Is fully conscious and present with the client, employing a style that is open, flexible, grounded and confident.",
+        "definitionVi": "Hoàn toàn tỉnh thức và hiện diện với khách hàng, sử dụng phong cách cởi mở, linh hoạt, vững vàng và tự tin.",
+        "subCompetencies": [
+            {
+                "code": "5.01",
+                "textEn": "Remains focused, observant, empathetic and responsive to the client",
+                "textVi": "Giữ sự tập trung, quan sát, thấu cảm và phản hồi phù hợp với khách hàng."
+            },
+            {
+                "code": "5.02",
+                "textEn": "Demonstrates curiosity during the coaching process",
+                "textVi": "Thể hiện sự tò mò trong suốt quá trình khai vấn."
+            },
+            {
+                "code": "5.03",
+                "textEn": "Remains aware of what is emerging for self and client in the present moment",
+                "textVi": "Nhận thức điều đang xuất hiện ở bản thân và khách hàng trong khoảnh khắc hiện tại."
+            },
+            {
+                "code": "5.04",
+                "textEn": "Manages one’s emotions to stay present with the client",
+                "textVi": "Quản trị cảm xúc của bản thân để duy trì sự hiện diện với khách hàng."
+            },
+            {
+                "code": "5.05",
+                "textEn": "Demonstrates confidence in working with strong client emotions during the coaching process",
+                "textVi": "Thể hiện sự tự tin khi làm việc với những cảm xúc mạnh của khách hàng trong quá trình khai vấn."
+            },
+            {
+                "code": "5.06",
+                "textEn": "Is comfortable working in a space of not knowing",
+                "textVi": "Thoải mái làm việc trong không gian chưa biết/chưa có câu trả lời."
+            },
+            {
+                "code": "5.07",
+                "textEn": "Creates or allows space for silence, pause or reflection",
+                "textVi": "Tạo ra hoặc cho phép không gian cho sự im lặng, khoảng dừng hoặc suy ngẫm."
+            }
+        ]
     },
     {
         "id": "mod1-les6",
@@ -255,12 +565,12 @@ MODULE_1_LESSONS = [
             "Master 2025 focus: listening within systemic context, client worldview, and cultural nuance.",
             "Practice succinct reflections and integrating recurring behavioral patterns."
         ],
-        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025), Trang 8",
         "sourceVersion": "Bản 2025 (Công bố tháng 09/2025; Khung chuẩn thực hành mới nhất)",
         "sourceLink": "https://coachingfederation.org/coaching-competencies/core-competencies",
         "pdfLink": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
-        "originalExcerptEn": "Definition: Focuses on what the client is and is not saying to fully understand what is being communicated in the context of the client systems and to support client self-expression. Considers the client's context, identity, environment, experiences, values and beliefs to enhance understanding.",
-        "translationVi": "Định nghĩa: Tập trung vào những gì khách hàng đang nói và không nói để hiểu đầy đủ thông điệp trong bối cảnh hệ sinh thái của khách hàng và hỗ trợ khách hàng tự thể hiện. Xem xét bối cảnh, bản sắc, môi trường, trải nghiệm, giá trị và niềm tin để nâng cao sự thấu hiểu.",
+        "originalExcerptEn": "Definition: Focuses on what the client is and is not saying to fully understand what is being communicated in the context of the client systems and to support client self-expression.\n\n\n6.01. Considers the client’s context, identity, environment, experiences, values and beliefs to enhance understanding of what the client is communicating\n\n6.02. Reflects or summarizes what the client is communicating to ensure clarity and understanding\n\n6.03. Recognizes and inquires when there is more to what the client is communicating\n\n6.04. Notices, acknowledges and explores the client’s emotions, energy shifts, non-verbal cues or other behaviors\n\n6.05. Integrates the client’s words, tone of voice and body language to determine the full meaning of what the client is communicating\n\n6.06. Notices trends in the client’s behaviors and emotions across sessions to discern themes and patterns",
+        "translationVi": "Định nghĩa: Tập trung vào điều khách hàng nói và không nói để hiểu đầy đủ điều đang được truyền đạt trong bối cảnh hệ thống của khách hàng và hỗ trợ họ tự biểu đạt.\n\n\n6.01. Xem xét bối cảnh, bản sắc, môi trường, trải nghiệm, giá trị và niềm tin của khách hàng để hiểu sâu hơn điều họ đang truyền đạt.\n\n6.02. Phản chiếu hoặc tóm tắt điều khách hàng đang truyền đạt để bảo đảm sự rõ ràng và hiểu đúng.\n\n6.03. Nhận ra và tìm hiểu khi có điều gì đó sâu hơn phía sau điều khách hàng đang nói.\n\n6.04. Nhận diện, ghi nhận và khám phá cảm xúc, sự thay đổi năng lượng, tín hiệu phi ngôn ngữ hoặc hành vi khác của khách hàng.\n\n6.05. Tích hợp từ ngữ, giọng nói và ngôn ngữ cơ thể của khách hàng để hiểu đầy đủ ý nghĩa điều họ đang truyền đạt.\n\n6.06. Nhận ra xu hướng trong hành vi và cảm xúc của khách hàng qua nhiều phiên để nhận diện chủ đề và mô thức.",
         "comparison2019Vi": "So sánh 2019–2025: Bản 2025 tích hợp rõ nét hơn việc lắng nghe trong 'bối cảnh hệ thống' (client systems) và bối cảnh văn hóa, vượt ra ngoài việc chỉ nghe nội dung câu từ của cá nhân.",
         "comparison2019En": "2019 vs 2025 Comparison: Elevates listening to encompass 'client systems' and cultural frameworks, transcending isolated verbal content.",
         "commentaryVi": "Lắng nghe chủ động ở cấp độ PCC là nghe để hiểu Con Người (WHO), chứ không chỉ nghe Sự Việc (WHAT). Coach lắng nghe năng lượng thay đổi, tông giọng hạ thấp, sự ngập ngừng, và dùng chính ngôn từ của khách hàng (Client's custom language) để phản chiếu thay vì diễn giải lại bằng lời của coach.",
@@ -272,15 +582,65 @@ MODULE_1_LESSONS = [
             "questionVi": "Hành vi nào sau đây là lỗi vi phạm nghiêm trọng Năng lực Lắng nghe Chủ động (Competency 6)?",
             "questionEn": "Which behavior represents a critical violation of Active Listening (Competency 6)?",
             "options": [
-                {"key": "A", "textVi": "Ghi nhận từ ngữ ẩn dụ độc đáo mà khách hàng vừa sử dụng.", "textEn": "Acknowledging the unique metaphor used by the client."},
-                {"key": "B", "textVi": "Nghe được 2 phút thì ngắt lời khách hàng để kể về một kinh nghiệm tương tự của chính bản thân Coach.", "textEn": "Interrupting after 2 minutes to share the coach's personal experience."},
-                {"key": "C", "textVi": "Chú ý đến sự thay đổi tông giọng và tốc độ nói của khách hàng.", "textEn": "Noticing vocal pitch and tempo changes."},
-                {"key": "D", "textVi": "Tóm tắt ngắn gọn các ý chính bằng chính ngôn từ của khách hàng.", "textEn": "Succinctly summarizing using the client's exact words."}
+                {
+                    "key": "A",
+                    "textVi": "Ghi nhận từ ngữ ẩn dụ độc đáo mà khách hàng vừa sử dụng.",
+                    "textEn": "Acknowledging the unique metaphor used by the client."
+                },
+                {
+                    "key": "B",
+                    "textVi": "Nghe được 2 phút thì ngắt lời khách hàng để kể về một kinh nghiệm tương tự của chính bản thân Coach.",
+                    "textEn": "Interrupting after 2 minutes to share the coach's personal experience."
+                },
+                {
+                    "key": "C",
+                    "textVi": "Chú ý đến sự thay đổi tông giọng và tốc độ nói của khách hàng.",
+                    "textEn": "Noticing vocal pitch and tempo changes."
+                },
+                {
+                    "key": "D",
+                    "textVi": "Tóm tắt ngắn gọn các ý chính bằng chính ngôn từ của khách hàng.",
+                    "textEn": "Succinctly summarizing using the client's exact words."
+                }
             ],
             "correctAnswer": "B",
             "explanationVi": "Ngắt lời để kể chuyện bản thân là lỗi mất tập trung vào khách hàng và áp đặt cái tôi của Coach.",
             "explanationEn": "Interrupting to share coach stories violates client focus and imposes coach ego."
-        }
+        },
+        "definitionEn": "Focuses on what the client is and is not saying to fully understand what is being communicated in the context of the client systems and to support client self-expression.",
+        "definitionVi": "Tập trung vào điều khách hàng nói và không nói để hiểu đầy đủ điều đang được truyền đạt trong bối cảnh hệ thống của khách hàng và hỗ trợ họ tự biểu đạt.",
+        "subCompetencies": [
+            {
+                "code": "6.01",
+                "textEn": "Considers the client’s context, identity, environment, experiences, values and beliefs to enhance understanding of what the client is communicating",
+                "textVi": "Xem xét bối cảnh, bản sắc, môi trường, trải nghiệm, giá trị và niềm tin của khách hàng để hiểu sâu hơn điều họ đang truyền đạt."
+            },
+            {
+                "code": "6.02",
+                "textEn": "Reflects or summarizes what the client is communicating to ensure clarity and understanding",
+                "textVi": "Phản chiếu hoặc tóm tắt điều khách hàng đang truyền đạt để bảo đảm sự rõ ràng và hiểu đúng."
+            },
+            {
+                "code": "6.03",
+                "textEn": "Recognizes and inquires when there is more to what the client is communicating",
+                "textVi": "Nhận ra và tìm hiểu khi có điều gì đó sâu hơn phía sau điều khách hàng đang nói."
+            },
+            {
+                "code": "6.04",
+                "textEn": "Notices, acknowledges and explores the client’s emotions, energy shifts, non-verbal cues or other behaviors",
+                "textVi": "Nhận diện, ghi nhận và khám phá cảm xúc, sự thay đổi năng lượng, tín hiệu phi ngôn ngữ hoặc hành vi khác của khách hàng."
+            },
+            {
+                "code": "6.05",
+                "textEn": "Integrates the client’s words, tone of voice and body language to determine the full meaning of what the client is communicating",
+                "textVi": "Tích hợp từ ngữ, giọng nói và ngôn ngữ cơ thể của khách hàng để hiểu đầy đủ ý nghĩa điều họ đang truyền đạt."
+            },
+            {
+                "code": "6.06",
+                "textEn": "Notices trends in the client’s behaviors and emotions across sessions to discern themes and patterns",
+                "textVi": "Nhận ra xu hướng trong hành vi và cảm xúc của khách hàng qua nhiều phiên để nhận diện chủ đề và mô thức."
+            }
+        ]
     },
     {
         "id": "mod1-les7",
@@ -299,12 +659,12 @@ MODULE_1_LESSONS = [
             "Master 11 indicators: open-ended inquiry, examining core beliefs, inviting new perspectives, exploring metaphors.",
             "Strictly avoid leading questions or veiled advice."
         ],
-        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025), Trang 9",
         "sourceVersion": "Bản 2025 (Công bố tháng 09/2025; Khung chuẩn thực hành mới nhất)",
         "sourceLink": "https://coachingfederation.org/coaching-competencies/core-competencies",
         "pdfLink": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
-        "originalExcerptEn": "Definition: Facilitates client insight and learning by using tools and techniques such as powerful questioning, silence, metaphor or analogy. Asks questions to help the client explore beyond current thinking and see new possibilities.",
-        "translationVi": "Định nghĩa: Thúc đẩy nhận thức và sự học hỏi của khách hàng bằng cách sử dụng các công cụ như câu hỏi gợi mở, khoảng lặng, ẩn dụ hoặc tương đồng. Đặt câu hỏi giúp khách hàng khám phá vượt ra ngoài lối mòn tư duy hiện tại và nhìn thấy các khả năng mới.",
+        "originalExcerptEn": "Definition: Facilitates client insight and learning by using tools and techniques such as powerful questioning, silence, metaphor or analogy.\n\n\n7.01. Considers client experience when deciding what might be most useful\n\n7.02. Challenges the client as a way to evoke awareness or insight\n\n7.03. Asks questions about the client, such as their way of thinking, values, needs, wants and beliefs\n\n7.04. Asks questions that help the client explore beyond current thinking\n\n7.05. Invites the client to share more about their experience in the moment\n\n7.06. Notices what is working to enhance client progress\n\n7.07. Adjusts the coaching approach in response to the client’s needs\n\n7.08. Helps the client identify factors that influence current and future patterns of behavior, thinking or emotion\n\n7.09. Invites the client to generate ideas about how they can move forward and what they are willing or able to do\n\n7.10. Supports the client in reframing perspectives\n\n7.11. Shares observations, knowledge, and feelings, without attachment, that have the potential to create new insights for the client",
+        "translationVi": "Định nghĩa: Tạo điều kiện cho insight và học hỏi của khách hàng thông qua các công cụ và kỹ thuật như câu hỏi mạnh, im lặng, ẩn dụ hoặc phép so sánh.\n\n\n7.01. Cân nhắc trải nghiệm của khách hàng khi quyết định điều gì có thể hữu ích nhất.\n\n7.02. Thách thức khách hàng nhằm khơi gợi nhận thức hoặc insight.\n\n7.03. Đặt câu hỏi về chính khách hàng, như cách họ suy nghĩ, giá trị, nhu cầu, mong muốn và niềm tin.\n\n7.04. Đặt câu hỏi giúp khách hàng khám phá vượt ra ngoài lối suy nghĩ hiện tại.\n\n7.05. Mời khách hàng chia sẻ thêm về trải nghiệm của họ trong khoảnh khắc hiện tại.\n\n7.06. Nhận ra điều đang hiệu quả để thúc đẩy tiến bộ của khách hàng.\n\n7.07. Điều chỉnh cách tiếp cận khai vấn để đáp ứng nhu cầu của khách hàng.\n\n7.08. Hỗ trợ khách hàng nhận diện các yếu tố ảnh hưởng đến mô thức hành vi, suy nghĩ hoặc cảm xúc hiện tại và tương lai.\n\n7.09. Mời khách hàng tự tạo ra ý tưởng về cách tiến về phía trước và điều họ sẵn sàng hoặc có khả năng thực hiện.\n\n7.10. Hỗ trợ khách hàng tái định khung góc nhìn.\n\n7.11. Chia sẻ quan sát, kiến thức và cảm nhận mà không bám chấp, khi những điều đó có tiềm năng tạo ra insight mới cho khách hàng.",
         "comparison2019Vi": "So sánh 2019–2025: Bản 2025 nhấn mạnh nhận thức mang tính hệ thống (systemic awareness) và việc khám phá các giả định văn hóa/xã hội ẩn ngầm tạo nên góc nhìn hiện tại của khách hàng.",
         "comparison2019En": "2019 vs 2025 Comparison: Highlights systemic awareness and surfacing invisible cultural/societal assumptions shaping the client's current lens.",
         "commentaryVi": "Câu hỏi khơi gợi nhận thức thuần khiết là câu hỏi ngắn, mở, không có đáp án định sẵn trong đầu coach. Câu hỏi xuất sắc ở cấp độ PCC thường nhắm vào Căn Tính (Identity): 'Điều này nói lên điều gì về con người mà bạn muốn trở thành?' thay vì 'Bạn sẽ làm gì tiếp theo?'",
@@ -316,15 +676,90 @@ MODULE_1_LESSONS = [
             "questionVi": "Câu hỏi nào sau đây là câu hỏi DẪN DỤ (Leading Question) vi phạm nguyên tắc Khơi gợi Nhận thức (Năng lực 7)?",
             "questionEn": "Which question is a LEADING QUESTION violating Evoking Awareness (Competency 7)?",
             "options": [
-                {"key": "A", "textVi": "'Điều gì quan trọng nhất với bạn trong tình huống này?'", "textEn": "'What is most meaningful to you in this situation?'"},
-                {"key": "B", "textVi": "'Có phải việc nói chuyện thẳng thắn với sếp sẽ giải quyết được vấn đề này không?'", "textEn": "'Wouldn't having a direct talk with your boss solve this issue?'"},
-                {"key": "C", "textVi": "'Bạn nhìn thấy cơ hội phát triển nào cho bản thân từ thách thức này?'", "textEn": "'What growth opportunity do you see for yourself in this challenge?'"},
-                {"key": "D", "textVi": "'Góc nhìn nào khác mà bạn chưa từng nghĩ tới trước đây?'", "textEn": "'What other perspective haven't you considered yet?'"}
+                {
+                    "key": "A",
+                    "textVi": "'Điều gì quan trọng nhất với bạn trong tình huống này?'",
+                    "textEn": "'What is most meaningful to you in this situation?'"
+                },
+                {
+                    "key": "B",
+                    "textVi": "'Có phải việc nói chuyện thẳng thắn với sếp sẽ giải quyết được vấn đề này không?'",
+                    "textEn": "'Wouldn't having a direct talk with your boss solve this issue?'"
+                },
+                {
+                    "key": "C",
+                    "textVi": "'Bạn nhìn thấy cơ hội phát triển nào cho bản thân từ thách thức này?'",
+                    "textEn": "'What growth opportunity do you see for yourself in this challenge?'"
+                },
+                {
+                    "key": "D",
+                    "textVi": "'Góc nhìn nào khác mà bạn chưa từng nghĩ tới trước đây?'",
+                    "textEn": "'What other perspective haven't you considered yet?'"
+                }
             ],
             "correctAnswer": "B",
             "explanationVi": "Phương án B là câu hỏi Yes/No cài cắm sẵn giải pháp của Coach ('nói chuyện với sếp'), tước đoạt quyền tự suy ngẫm của khách hàng.",
             "explanationEn": "Option B is a leading Yes/No question embedding the coach's preconceived solution."
-        }
+        },
+        "definitionEn": "Facilitates client insight and learning by using tools and techniques such as powerful questioning, silence, metaphor or analogy.",
+        "definitionVi": "Tạo điều kiện cho insight và học hỏi của khách hàng thông qua các công cụ và kỹ thuật như câu hỏi mạnh, im lặng, ẩn dụ hoặc phép so sánh.",
+        "subCompetencies": [
+            {
+                "code": "7.01",
+                "textEn": "Considers client experience when deciding what might be most useful",
+                "textVi": "Cân nhắc trải nghiệm của khách hàng khi quyết định điều gì có thể hữu ích nhất."
+            },
+            {
+                "code": "7.02",
+                "textEn": "Challenges the client as a way to evoke awareness or insight",
+                "textVi": "Thách thức khách hàng nhằm khơi gợi nhận thức hoặc insight."
+            },
+            {
+                "code": "7.03",
+                "textEn": "Asks questions about the client, such as their way of thinking, values, needs, wants and beliefs",
+                "textVi": "Đặt câu hỏi về chính khách hàng, như cách họ suy nghĩ, giá trị, nhu cầu, mong muốn và niềm tin."
+            },
+            {
+                "code": "7.04",
+                "textEn": "Asks questions that help the client explore beyond current thinking",
+                "textVi": "Đặt câu hỏi giúp khách hàng khám phá vượt ra ngoài lối suy nghĩ hiện tại."
+            },
+            {
+                "code": "7.05",
+                "textEn": "Invites the client to share more about their experience in the moment",
+                "textVi": "Mời khách hàng chia sẻ thêm về trải nghiệm của họ trong khoảnh khắc hiện tại."
+            },
+            {
+                "code": "7.06",
+                "textEn": "Notices what is working to enhance client progress",
+                "textVi": "Nhận ra điều đang hiệu quả để thúc đẩy tiến bộ của khách hàng."
+            },
+            {
+                "code": "7.07",
+                "textEn": "Adjusts the coaching approach in response to the client’s needs",
+                "textVi": "Điều chỉnh cách tiếp cận khai vấn để đáp ứng nhu cầu của khách hàng."
+            },
+            {
+                "code": "7.08",
+                "textEn": "Helps the client identify factors that influence current and future patterns of behavior, thinking or emotion",
+                "textVi": "Hỗ trợ khách hàng nhận diện các yếu tố ảnh hưởng đến mô thức hành vi, suy nghĩ hoặc cảm xúc hiện tại và tương lai."
+            },
+            {
+                "code": "7.09",
+                "textEn": "Invites the client to generate ideas about how they can move forward and what they are willing or able to do",
+                "textVi": "Mời khách hàng tự tạo ra ý tưởng về cách tiến về phía trước và điều họ sẵn sàng hoặc có khả năng thực hiện."
+            },
+            {
+                "code": "7.10",
+                "textEn": "Supports the client in reframing perspectives",
+                "textVi": "Hỗ trợ khách hàng tái định khung góc nhìn."
+            },
+            {
+                "code": "7.11",
+                "textEn": "Shares observations, knowledge, and feelings, without attachment, that have the potential to create new insights for the client",
+                "textVi": "Chia sẻ quan sát, kiến thức và cảm nhận mà không bám chấp, khi những điều đó có tiềm năng tạo ra insight mới cho khách hàng."
+            }
+        ]
     },
     {
         "id": "mod1-les8",
@@ -343,12 +778,12 @@ MODULE_1_LESSONS = [
             "Master 2025 focus: client ownership of action design, self-accountability structures, and celebrating progress.",
             "Never assign homework or act as a policing accountability warden."
         ],
-        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+        "sourceDocument": "Khung Năng Lực Cốt Lõi ICF (Bản 2025), Trang 10",
         "sourceVersion": "Bản 2025 (Công bố tháng 09/2025; Khung chuẩn thực hành mới nhất)",
         "sourceLink": "https://coachingfederation.org/coaching-competencies/core-competencies",
         "pdfLink": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
-        "originalExcerptEn": "Definition: Partners with the client to transform learning and insight into action. Promotes client autonomy in the coaching process. Highlights: Client-led action design, autonomous accountability, acknowledging progress, and integrating insights into daily life.",
-        "translationVi": "Định nghĩa: Hợp tác với khách hàng để chuyển hóa sự học hỏi và nhận thức thành hành động. Thúc đẩy tính tự chủ của khách hàng trong tiến trình khai vấn. Điểm nhấn: Thiết kế hành động do khách hàng làm chủ, trách nhiệm giải trình tự thân, ghi nhận sự tiến bộ và tích hợp hiểu biết vào cuộc sống.",
+        "originalExcerptEn": "Definition: Partners with the client to transform learning and insight into action. Promotes client autonomy in the coaching process.\n\n\n8.01. Works with the client to integrate new awareness, insight or learning into their worldview and behaviors\n\n8.02. Partners with the client to design goals, actions and accountability measures that integrate and expand new learning\n\n8.03. Acknowledges and supports client autonomy in the design of goals, actions and methods of accountability\n\n8.04. Supports the client in identifying potential results or learning from identified action steps\n\n8.05. Invites the client to consider how to move forward, including resources, support and potential barriers\n\n8.06. Partners with the client to summarize learning and insight within or between sessions\n\n8.07. Partners with the client to integrate learning and sustain progress throughout the coaching engagement\n\n8.08. Acknowledges the client’s progress and successes\n\n8.09. Partners with the client to close the session",
+        "translationVi": "Định nghĩa: Đồng hành với khách hàng để chuyển hóa học hỏi và insight thành hành động; thúc đẩy quyền tự chủ của khách hàng trong quá trình khai vấn.\n\n\n8.01. Làm việc cùng khách hàng để tích hợp nhận thức, insight hoặc học hỏi mới vào thế giới quan và hành vi của họ.\n\n8.02. Đồng hành với khách hàng để thiết kế mục tiêu, hành động và cách thức chịu trách nhiệm nhằm tích hợp và mở rộng học hỏi mới.\n\n8.03. Ghi nhận và hỗ trợ quyền tự chủ của khách hàng trong việc thiết kế mục tiêu, hành động và phương thức chịu trách nhiệm.\n\n8.04. Hỗ trợ khách hàng nhận diện kết quả tiềm năng hoặc bài học có thể có từ các bước hành động đã xác định.\n\n8.05. Mời khách hàng cân nhắc cách tiến về phía trước, bao gồm nguồn lực, hỗ trợ và các rào cản tiềm ẩn.\n\n8.06. Đồng hành với khách hàng để tóm tắt học hỏi và insight trong hoặc giữa các phiên.\n\n8.07. Đồng hành với khách hàng để tích hợp học hỏi và duy trì tiến bộ trong suốt quá trình khai vấn.\n\n8.08. Ghi nhận tiến bộ và thành công của khách hàng.\n\n8.09. Đồng hành với khách hàng để khép lại phiên khai vấn.",
         "comparison2019Vi": "So sánh 2019–2025: Bản 2025 tinh chỉnh mạnh mẽ ngôn ngữ về 'Trách nhiệm giải trình tự thân' (Autonomous Self-Accountability) trong Phụ lục thuật ngữ, khẳng định coach đồng hành chứ không kiểm soát hay bắt bí khách hàng.",
         "comparison2019En": "2019 vs 2025 Comparison: Refines 'Autonomous Self-Accountability' terminology, reinforcing partnering support rather than supervisory policing.",
         "commentaryVi": "Bẫy lớn nhất trong đề thi SJT của Năng lực 8 là Coach tự thiết kế kế hoạch hành động rồi 'yêu cầu khách hàng báo cáo hàng tuần'. Hành động chuẩn PCC luôn luôn là: 'Làm thế nào bạn muốn giữ cam kết này với chính mình?' — khách hàng là người quyết định phương thức theo dõi.",
@@ -360,15 +795,80 @@ MODULE_1_LESSONS = [
             "questionVi": "Khi kết thúc phiên khai vấn, hành động nào của Coach thể hiện chuẩn mực cao nhất của Năng lực 8 (Thúc đẩy Phát triển)?",
             "questionEn": "At session close, which coach action reflects the highest standard of Competency 8 (Facilitating Growth)?",
             "options": [
-                {"key": "A", "textVi": "Giao cho khách hàng bản danh sách 5 bài tập về nhà và dọa phạt nếu không hoàn thành.", "textEn": "Assign a 5-item homework list and threaten penalties for non-completion."},
-                {"key": "B", "textVi": "Mời khách hàng tổng kết điều họ đã học được về bản thân và cùng khách hàng thiết kế hành động do chính họ làm chủ.", "textEn": "Invite the client to summarize what they learned about themselves and partner to design client-owned actions."},
-                {"key": "C", "textVi": "Yêu cầu khách hàng nhắn tin báo cáo coach mỗi sáng vào lúc 6h00.", "textEn": "Order the client to text the coach daily at 6:00 AM."},
-                {"key": "D", "textVi": "Kết thúc phiên mà không cần quan tâm khách hàng có áp dụng được gì vào thực tế hay không.", "textEn": "End the session without exploring any real-world application."}
+                {
+                    "key": "A",
+                    "textVi": "Giao cho khách hàng bản danh sách 5 bài tập về nhà và dọa phạt nếu không hoàn thành.",
+                    "textEn": "Assign a 5-item homework list and threaten penalties for non-completion."
+                },
+                {
+                    "key": "B",
+                    "textVi": "Mời khách hàng tổng kết điều họ đã học được về bản thân và cùng khách hàng thiết kế hành động do chính họ làm chủ.",
+                    "textEn": "Invite the client to summarize what they learned about themselves and partner to design client-owned actions."
+                },
+                {
+                    "key": "C",
+                    "textVi": "Yêu cầu khách hàng nhắn tin báo cáo coach mỗi sáng vào lúc 6h00.",
+                    "textEn": "Order the client to text the coach daily at 6:00 AM."
+                },
+                {
+                    "key": "D",
+                    "textVi": "Kết thúc phiên mà không cần quan tâm khách hàng có áp dụng được gì vào thực tế hay không.",
+                    "textEn": "End the session without exploring any real-world application."
+                }
             ],
             "correctAnswer": "B",
             "explanationVi": "Phương án B tôn trọng quyền tự chủ của khách hàng, giúp khách hàng tự đúc kết nhận thức và tự chịu trách nhiệm với hành động của mình.",
             "explanationEn": "Option B honors client autonomy, enabling client-led reflection and self-accountability."
-        }
+        },
+        "definitionEn": "Partners with the client to transform learning and insight into action. Promotes client autonomy in the coaching process.",
+        "definitionVi": "Đồng hành với khách hàng để chuyển hóa học hỏi và insight thành hành động; thúc đẩy quyền tự chủ của khách hàng trong quá trình khai vấn.",
+        "subCompetencies": [
+            {
+                "code": "8.01",
+                "textEn": "Works with the client to integrate new awareness, insight or learning into their worldview and behaviors",
+                "textVi": "Làm việc cùng khách hàng để tích hợp nhận thức, insight hoặc học hỏi mới vào thế giới quan và hành vi của họ."
+            },
+            {
+                "code": "8.02",
+                "textEn": "Partners with the client to design goals, actions and accountability measures that integrate and expand new learning",
+                "textVi": "Đồng hành với khách hàng để thiết kế mục tiêu, hành động và cách thức chịu trách nhiệm nhằm tích hợp và mở rộng học hỏi mới."
+            },
+            {
+                "code": "8.03",
+                "textEn": "Acknowledges and supports client autonomy in the design of goals, actions and methods of accountability",
+                "textVi": "Ghi nhận và hỗ trợ quyền tự chủ của khách hàng trong việc thiết kế mục tiêu, hành động và phương thức chịu trách nhiệm."
+            },
+            {
+                "code": "8.04",
+                "textEn": "Supports the client in identifying potential results or learning from identified action steps",
+                "textVi": "Hỗ trợ khách hàng nhận diện kết quả tiềm năng hoặc bài học có thể có từ các bước hành động đã xác định."
+            },
+            {
+                "code": "8.05",
+                "textEn": "Invites the client to consider how to move forward, including resources, support and potential barriers",
+                "textVi": "Mời khách hàng cân nhắc cách tiến về phía trước, bao gồm nguồn lực, hỗ trợ và các rào cản tiềm ẩn."
+            },
+            {
+                "code": "8.06",
+                "textEn": "Partners with the client to summarize learning and insight within or between sessions",
+                "textVi": "Đồng hành với khách hàng để tóm tắt học hỏi và insight trong hoặc giữa các phiên."
+            },
+            {
+                "code": "8.07",
+                "textEn": "Partners with the client to integrate learning and sustain progress throughout the coaching engagement",
+                "textVi": "Đồng hành với khách hàng để tích hợp học hỏi và duy trì tiến bộ trong suốt quá trình khai vấn."
+            },
+            {
+                "code": "8.08",
+                "textEn": "Acknowledges the client’s progress and successes",
+                "textVi": "Ghi nhận tiến bộ và thành công của khách hàng."
+            },
+            {
+                "code": "8.09",
+                "textEn": "Partners with the client to close the session",
+                "textVi": "Đồng hành với khách hàng để khép lại phiên khai vấn."
+            }
+        ]
     },
     {
         "id": "mod1-les9",
@@ -404,10 +904,26 @@ MODULE_1_LESSONS = [
             "questionVi": "Trong một phiên coach, khách hàng bất ngờ khám phá ra niềm tin giới hạn của bản thân và muốn chuyển sang thảo luận một mục tiêu hoàn toàn mới chưa từng thỏa thuận ở đầu phiên. Coach nên phối hợp Năng lực 3 và Năng lực 7 như thế nào?",
             "questionEn": "Client has a breakthrough and wishes to pivot to a completely new topic not agreed upon at session start. How should the coach orchestrate Competencies 3 and 7?",
             "options": [
-                {"key": "A", "textVi": "Bắt buộc khách hàng quay lại mục tiêu ban đầu để không làm hỏng thỏa thuận Năng lực 3.", "textEn": "Force the client back to original goals to avoid breaching Competency 3."},
-                {"key": "B", "textVi": "Ghi nhận nhận thức mới quý giá của khách hàng (Comp 7), đồng thời linh hoạt tái thỏa thuận (Recontracting - Comp 3): 'Nhận thức mới này có vẻ rất ý nghĩa với bạn. Với thời gian còn lại, bạn muốn chúng ta tiếp tục khám phá điều này hay quay lại mục tiêu ban đầu?'", "textEn": "Honor the breakthrough (Comp 7) while flexibly recontracting (Comp 3): 'This new awareness seems profound. With our remaining time, how do you wish to spend our focus?'"},
-                {"key": "C", "textVi": "Lập tức đóng phiên và tính phí gấp đôi vì có hai mục tiêu.", "textEn": "Immediately close the session and double the invoice."},
-                {"key": "D", "textVi": "Tự ý xóa bỏ hoàn toàn thỏa thuận mà không cần hỏi ý kiến khách hàng.", "textEn": "Disregard the contract entirely without consulting the client."}
+                {
+                    "key": "A",
+                    "textVi": "Bắt buộc khách hàng quay lại mục tiêu ban đầu để không làm hỏng thỏa thuận Năng lực 3.",
+                    "textEn": "Force the client back to original goals to avoid breaching Competency 3."
+                },
+                {
+                    "key": "B",
+                    "textVi": "Ghi nhận nhận thức mới quý giá của khách hàng (Comp 7), đồng thời linh hoạt tái thỏa thuận (Recontracting - Comp 3): 'Nhận thức mới này có vẻ rất ý nghĩa với bạn. Với thời gian còn lại, bạn muốn chúng ta tiếp tục khám phá điều này hay quay lại mục tiêu ban đầu?'",
+                    "textEn": "Honor the breakthrough (Comp 7) while flexibly recontracting (Comp 3): 'This new awareness seems profound. With our remaining time, how do you wish to spend our focus?'"
+                },
+                {
+                    "key": "C",
+                    "textVi": "Lập tức đóng phiên và tính phí gấp đôi vì có hai mục tiêu.",
+                    "textEn": "Immediately close the session and double the invoice."
+                },
+                {
+                    "key": "D",
+                    "textVi": "Tự ý xóa bỏ hoàn toàn thỏa thuận mà không cần hỏi ý kiến khách hàng.",
+                    "textEn": "Disregard the contract entirely without consulting the client."
+                }
             ],
             "correctAnswer": "B",
             "explanationVi": "Phương án B là minh chứng sống động của sự kết hợp tinh tế giữa Khơi gợi nhận thức (Comp 7) và Tái thỏa thuận nhịp nhàng theo quyền tự quyết của khách hàng (Comp 3).",
@@ -1411,8 +1927,8 @@ ALL_ICF_MODULES = [
         "titleVi": "Học Phần 1: Năng Lực Cốt Lõi ICF",
         "titleEn": "Module 1: ICF Core Competencies",
         "icon": "🎯",
-        "sourceDoc": "ICF Updated Core Competencies (2019)",
-        "sourceUrl": "https://coachingfederation.org/credentialing/core-competencies",
+        "sourceDoc": "Khung Năng Lực Cốt Lõi ICF (Bản 2025)",
+        "sourceUrl": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
         "summaryVi": "8 Năng lực cốt lõi chia thành 4 trụ cột: Nền tảng, Cùng tạo dựng mối quan hệ, Giao tiếp hiệu quả và Thúc đẩy phát triển. Mỗi năng lực có định nghĩa, phân tích chỉ dấu hành vi và bài tập trắc nghiệm.",
         "summaryEn": "8 Core Competencies across 4 domains: Foundation, Co-Creating Relationship, Communicating Effectively, Cultivating Growth. Includes definitions, behavioral indicators, and tests.",
         "lessons": MODULE_1_LESSONS,
@@ -1490,7 +2006,7 @@ ALL_ICF_MODULES = [
         "titleEn": "Module 7: Glossary & Definitions",
         "icon": "📖",
         "sourceDoc": "ICF Official Definitions, Code Glossary & Research Lexicon",
-        "sourceUrl": "https://coachingfederation.org/credentialing/core-competencies",
+        "sourceUrl": "https://coachingfederation.org/wp-content/uploads/2025/09/icf-cs-core-competencies-2025.pdf",
         "summaryVi": "Từ điển thuật ngữ chính thức từ Code of Ethics, Năng lực cốt lõi và White Paper; tìm kiếm không dấu EN/VI; flashcard và bài tập phân biệt từ gần nghĩa.",
         "summaryEn": "Official terminology dictionary from ICF Code, Competencies and White Paper; accent-folding search; flashcards and disambiguation exercises.",
         "lessons": [],

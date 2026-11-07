@@ -38,11 +38,12 @@ def format_lesson_content(text: str) -> str:
         l = re.sub(r"^(Marker \d+\.\d+:?)\s*", r"• <b>\1</b> ", l)
         l = re.sub(r"^(Trụ cột \d+:|Pillar \d+:)\s*", r"• <b>\1</b> ", l)
         l = re.sub(r"^(Giá trị \d+:|Core Value \d+:)\s*", r"• <b>\1</b> ", l)
+        l = re.sub(r"^([1-8]\.\d{1,2}\.?)\s*", r"• <b>\1</b> ", l)
 
         # 2. In-sentence markers
         l = re.sub(r"\s+(Marker \d+\.\d+:?)\s*", r"<br/><br/>• <b>\1</b> ", l)
         l = re.sub(r"\s+(Tiêu chuẩn \d+:|Standard \d+:)\s*", r"<br/><br/>• <b>\1</b> ", l)
-        l = re.sub(r"\s+([1-8]\.[1-9])\s+", r"<br/><br/>• <b>\1</b> ", l)
+        l = re.sub(r"(?:\s+|^)([1-8]\.\d{1,2}\.?)\s+", r"<br/><br/>• <b>\1</b> ", l)
         l = re.sub(r"\s+(Trụ cột \d+:|Pillar \d+:)\s*", r"<br/><br/>• <b>\1</b> ", l)
         l = re.sub(r"\s+(Giá trị \d+:|Core Value \d+:)\s*", r"<br/><br/>• <b>\1</b> ", l)
 
@@ -224,26 +225,68 @@ def render_curriculum_page(DATA, STUDY_SECTIONS, THEORIES, KEYWORDS, FLASHCARDS,
         </div>
         """, unsafe_allow_html=True)
 
-        # 3 & 4. NỘI DUNG GỐC & BẢN DỊCH TIẾNG VIỆT TRUNG THÀNH
-        if lang_mode in ["en", "bilingual"] and active_les.get("originalExcerptEn"):
-            formatted_en = format_lesson_content(active_les['originalExcerptEn'])
-            st.markdown(f"""
-            <div class="zen-card" style="background: #FFFFFF; border-left: 3px solid #1E4E79; margin-bottom: 12px;">
-                <span class="zen-badge zen-badge-blue">🇬🇧 Original ICF Language (Authoritative Reference)</span>
-                <div style="font-size: 0.92rem; line-height: 1.8; color: #1E3A5F; margin-top: 10px; font-family: Georgia, serif;">
-                    {formatted_en}
+        # 3 & 4. NỘI DUNG GỐC & BẢN DỊCH TIẾNG VIỆT ĐẦY ĐỦ
+        subs = active_les.get("subCompetencies", [])
+        def_en = active_les.get("definitionEn")
+        def_vi = active_les.get("definitionVi")
+
+        if lang_mode in ["en", "bilingual"] and (active_les.get("originalExcerptEn") or def_en):
+            if def_en and subs:
+                sub_items_html = "".join([
+                    f'<div style="margin-bottom: 8px; padding: 10px 14px; background: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0; display: flex; align-items: flex-start; gap: 12px;">'
+                    f'<span style="font-weight: 700; color: #1E4E79; font-family: monospace; background: #E0EBF5; padding: 2px 8px; border-radius: 4px; font-size: 0.88rem; flex-shrink: 0;">{s["code"]}</span>'
+                    f'<span style="color: #1E3A5F; font-size: 0.92rem; line-height: 1.6; font-family: Georgia, serif;">{s["textEn"]}</span>'
+                    f'</div>'
+                    for s in subs
+                ])
+                body_en = f"""
+                <div style="background: #F0F4F8; padding: 14px 16px; border-radius: 8px; border-left: 4px solid #1E4E79; margin-bottom: 14px; margin-top: 10px;">
+                    <b style="color: #1E4E79; font-size: 0.95rem;">Definition:</b>
+                    <div style="color: #1E3A5F; font-size: 0.94rem; margin-top: 4px; font-style: italic; line-height: 1.6; font-family: Georgia, serif;">{def_en}</div>
                 </div>
+                <div style="margin-top: 12px;">
+                    <div style="font-size: 0.82rem; font-weight: 700; color: #555; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px;">Core Sub-Competencies ({len(subs)} items):</div>
+                    {sub_items_html}
+                </div>
+                """
+            else:
+                formatted_en = format_lesson_content(active_les.get('originalExcerptEn', ''))
+                body_en = f'<div style="font-size: 0.92rem; line-height: 1.8; color: #1E3A5F; margin-top: 10px; font-family: Georgia, serif;">{formatted_en}</div>'
+
+            st.markdown(f"""
+            <div class="zen-card" style="background: #FFFFFF; border-left: 4px solid #1E4E79; margin-bottom: 14px;">
+                <span class="zen-badge zen-badge-blue">🇬🇧 Original ICF Language (Authoritative Reference)</span>
+                {body_en}
             </div>
             """, unsafe_allow_html=True)
 
-        if lang_mode in ["vi", "bilingual"] and active_les.get("translationVi"):
-            formatted_vi = format_lesson_content(active_les['translationVi'])
-            st.markdown(f"""
-            <div class="zen-card" style="background: #FFFFFF; border-left: 3px solid #8BA888; margin-bottom: 14px;">
-                <span class="zen-badge zen-badge-primary">🇻🇳 {t('Bản Dịch / Tóm Tắt Tiếng Việt Phục Vụ Học Tập', 'Faithful Vietnamese Translation')}</span>
-                <div style="font-size: 0.95rem; line-height: 1.85; color: #2C3E50; margin-top: 10px;">
-                    {formatted_vi}
+        if lang_mode in ["vi", "bilingual"] and (active_les.get("translationVi") or def_vi):
+            if def_vi and subs:
+                sub_items_html = "".join([
+                    f'<div style="margin-bottom: 8px; padding: 10px 14px; background: #FAFDF9; border-radius: 8px; border: 1px solid #E6ECE3; display: flex; align-items: flex-start; gap: 12px;">'
+                    f'<span style="font-weight: 700; color: #2E5A36; font-family: monospace; background: #E4EFE2; padding: 2px 8px; border-radius: 4px; font-size: 0.88rem; flex-shrink: 0;">{s["code"]}</span>'
+                    f'<span style="color: #2F3E34; font-size: 0.94rem; line-height: 1.65;">{s["textVi"]}</span>'
+                    f'</div>'
+                    for s in subs
+                ])
+                body_vi = f"""
+                <div style="background: #F4F7F2; padding: 14px 16px; border-radius: 8px; border-left: 4px solid #8BA888; margin-bottom: 14px; margin-top: 10px;">
+                    <b style="color: #2F3E34; font-size: 0.95rem;">Định nghĩa:</b>
+                    <div style="color: #2F3E34; font-size: 0.94rem; margin-top: 4px; line-height: 1.65;">{def_vi}</div>
                 </div>
+                <div style="margin-top: 12px;">
+                    <div style="font-size: 0.82rem; font-weight: 700; color: #555; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px;">Các Năng Lực Thành Phần ({len(subs)} mục):</div>
+                    {sub_items_html}
+                </div>
+                """
+            else:
+                formatted_vi = format_lesson_content(active_les.get('translationVi', ''))
+                body_vi = f'<div style="font-size: 0.95rem; line-height: 1.85; color: #2C3E50; margin-top: 10px;">{formatted_vi}</div>'
+
+            st.markdown(f"""
+            <div class="zen-card" style="background: #FFFFFF; border-left: 4px solid #8BA888; margin-bottom: 14px;">
+                <span class="zen-badge zen-badge-primary">🇻🇳 {t('Bản Dịch Đầy Đủ Phục Vụ Học Tập', 'Faithful Vietnamese Translation')}</span>
+                {body_vi}
             </div>
             """, unsafe_allow_html=True)
 
