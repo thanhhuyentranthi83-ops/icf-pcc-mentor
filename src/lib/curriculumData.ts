@@ -3247,6 +3247,44 @@ export function getCurriculumProgress(): Record<string, UserLessonProgress> {
   }
 }
 
+export async function fetchServerProgress(): Promise<{
+  success: boolean;
+  progress: Record<string, UserLessonProgress>;
+  lotusBloomed: number;
+  notes: Record<string, string>;
+  flaggedLessons: string[];
+}> {
+  if (typeof window === "undefined") {
+    return { success: false, progress: {}, lotusBloomed: 0, notes: {}, flaggedLessons: [] };
+  }
+  try {
+    const res = await fetch("/api/progress", { cache: "no-store" });
+    if (!res.ok) {
+      return { success: false, progress: getCurriculumProgress(), lotusBloomed: 0, notes: {}, flaggedLessons: [] };
+    }
+    const data = await res.json();
+    if (data.success && data.progress) {
+      // Cache locally for offline/fast read
+      try {
+        localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(data.progress));
+      } catch {
+        // ignore
+      }
+      return {
+        success: true,
+        progress: data.progress,
+        lotusBloomed: data.lotusBloomed || 0,
+        notes: data.notes || {},
+        flaggedLessons: data.flaggedLessons || []
+      };
+    }
+    return { success: false, progress: getCurriculumProgress(), lotusBloomed: 0, notes: {}, flaggedLessons: [] };
+  } catch (err) {
+    console.warn("fetchServerProgress error:", err);
+    return { success: false, progress: getCurriculumProgress(), lotusBloomed: 0, notes: {}, flaggedLessons: [] };
+  }
+}
+
 export function saveLessonProgress(
   lessonId: string,
   update: Partial<UserLessonProgress>
@@ -3262,17 +3300,67 @@ export function saveLessonProgress(
       nextStatus = "quiz_passed";
     }
 
-    cur[lessonId] = {
+    const updatedItem = {
       ...existing,
       ...update,
       status: nextStatus,
       updatedAt: new Date().toISOString()
     };
 
+    cur[lessonId] = updatedItem;
     localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(cur));
+
+    // Async sync to server API
+    fetch("/api/progress", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        lessonId,
+        status: updatedItem.status,
+        score: updatedItem.score,
+        note: updatedItem.note,
+        needsReview: updatedItem.needsReview
+      })
+    }).catch(err => console.warn("Background progress sync failed:", err));
+
     return cur;
   } catch {
     return {};
+  }
+}
+
+export function getGuestProgressSummary(): { count: number; lotuses: number; progress: Record<string, UserLessonProgress> } {
+  const p = getCurriculumProgress();
+  const completed = Object.values(p).filter(item => item.status === "read" || item.status === "quiz_passed").length;
+  return {
+    count: completed,
+    lotuses: completed,
+    progress: p
+  };
+}
+
+export async function mergeGuestProgressToServer(): Promise<{ success: boolean; mergedCount?: number }> {
+  try {
+    const guestData = getCurriculumProgress();
+    if (!guestData || Object.keys(guestData).length === 0) {
+      return { success: true, mergedCount: 0 };
+    }
+    const res = await fetch("/api/progress/merge", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ guestProgress: guestData })
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (data.progress) {
+        localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(data.progress));
+      }
+      return { success: true, mergedCount: data.mergedCount || 0 };
+    }
+    return { success: false };
+  } catch (err) {
+    console.error("mergeGuestProgressToServer error:", err);
+    return { success: false };
   }
 }
 

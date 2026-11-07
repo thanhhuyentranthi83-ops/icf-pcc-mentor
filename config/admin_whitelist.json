@@ -1,0 +1,11 @@
+{
+  "adminEmails": [
+    "admin@pcc.vn",
+    "admin@hoccoaching.vn",
+    "thanhhuyen.coach@gmail.com",
+    "thanhhuyentranthi83@gmail.com",
+    "coachthanhhuyen@gmail.com",
+    "thanhhuyen@hoccoaching.vn"
+  ],
+  "instructions": "Thêm email của bạn vào danh sách trên hoặc cấu hình biến môi trường ADMIN_EMAILS trong .env.local để tự động nhận quyền Quản trị viên khi đăng nhập."
+}

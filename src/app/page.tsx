@@ -15,7 +15,8 @@ import {
   getCurriculumProgress,
   computeModuleProgress,
   computeOverallProgress,
-  UserLessonProgress
+  UserLessonProgress,
+  fetchServerProgress
 } from "@/lib/curriculumData";
 import { Section, MindfulnessMessage } from "@/types";
 import LotusGarden from "@/components/LotusGarden";
@@ -37,7 +38,7 @@ import {
 export default function HomePage() {
   const { t } = useLanguage();
   const { ringBell } = useSound();
-  const { user, canAccessSection } = useAuth();
+  const { user, isAuthenticated, loading, canAccessSection } = useAuth();
 
   const [sections, setSections] = useState<Section[]>([]);
   const [dailyMsg, setDailyMsg] = useState<MindfulnessMessage | null>(null);
@@ -55,23 +56,34 @@ export default function HomePage() {
     setSections(getSections());
     setDailyMsg(getDailyMindfulnessMessage());
     
-    // Load real curriculum progress
-    const cProg = getCurriculumProgress();
-    setCurriculumProg(cProg);
+    if (isAuthenticated && user?.id && user.id !== "guest") {
+      fetchServerProgress().then((res) => {
+        if (res.success) {
+          setCurriculumProg(res.progress);
+          const readLessons = Object.values(res.progress).filter((p) => p.status === "read" || p.status === "quiz_passed").length;
+          const realBloomed = res.lotusBloomed;
 
-    // Compute genuine lotus blooms from real study progress (Zero fake streaks / numbers)
-    const passedQuizzes = Object.values(cProg).filter((p) => p.status === "quiz_passed").length;
-    const readLessons = Object.values(cProg).filter((p) => p.status === "read" || p.status === "quiz_passed").length;
-    const realBloomed = passedQuizzes + Math.floor(readLessons / 2);
-
-    setGarden({
-      seedsPlanted: Math.max(0, 26 - readLessons),
-      sproutsGrown: readLessons,
-      lotusesBloomed: realBloomed,
-      butterfliesUnlocked: Math.floor(realBloomed / 2),
-      dragonfliesUnlocked: Math.floor(realBloomed / 4)
-    });
-  }, [user.id]);
+          setGarden({
+            seedsPlanted: Math.max(0, 26 - readLessons),
+            sproutsGrown: readLessons,
+            lotusesBloomed: realBloomed,
+            butterfliesUnlocked: Math.floor(realBloomed / 2),
+            dragonfliesUnlocked: Math.floor(realBloomed / 4)
+          });
+        }
+      });
+    } else {
+      // Guest state: Clean 0 lotus, clean progress
+      setCurriculumProg({});
+      setGarden({
+        seedsPlanted: 26,
+        sproutsGrown: 0,
+        lotusesBloomed: 0,
+        butterfliesUnlocked: 0,
+        dragonfliesUnlocked: 0
+      });
+    }
+  }, [user.id, isAuthenticated]);
 
   // Overall stats for 7 ICF modules
   const overallStats = useMemo(() => computeOverallProgress(curriculumProg), [curriculumProg]);
@@ -279,7 +291,7 @@ export default function HomePage() {
 
                   <div className="pt-4 mt-2">
                     <Link
-                      href={`/curriculum?module=${mod.id}`}
+                      href={isAuthenticated ? `/curriculum?module=${mod.id}` : `/login?returnUrl=${encodeURIComponent(`/curriculum?module=${mod.id}`)}`}
                       className="w-full py-2 px-3 rounded-xl border border-zen-border bg-zen-surface/60 hover:bg-zen-moss-dark hover:text-white hover:border-zen-moss-dark text-zen-ink text-xs font-semibold flex items-center justify-center gap-1.5 transition-all shadow-zen-subtle"
                     >
                       <span>{hasStarted ? t("Tiếp tục học", "Continue") : t("Bắt đầu học", "Start Learning")}</span>
@@ -328,7 +340,7 @@ export default function HomePage() {
 
             <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3">
               <Link
-                href="/curriculum"
+                href={isAuthenticated ? "/curriculum" : "/login?returnUrl=/curriculum"}
                 className="px-5 py-2.5 rounded-xl bg-zen-moss-dark hover:bg-zen-moss-dark/90 text-white text-xs sm:text-sm font-semibold shadow-zen-subtle transition-all"
               >
                 {overallStats.completedLessons > 0

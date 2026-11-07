@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { useAuth } from "@/context/AuthContext";
 import {
   ICF_7_MODULES,
   getCurriculumProgress,
   saveLessonProgress,
+  fetchServerProgress,
   UserLessonProgress
 } from "@/lib/curriculumData";
 import {
@@ -26,27 +28,52 @@ import {
 } from "lucide-react";
 
 export default function JournalPage() {
+  const router = useRouter();
   const { t } = useLanguage();
-  const { user } = useAuth();
+  const { user, isAuthenticated, loading: authLoading } = useAuth();
 
   const [curriculumProg, setCurriculumProg] = useState<Record<string, UserLessonProgress>>({});
+  const [loadingProgress, setLoadingProgress] = useState(true);
   const [activeTab, setActiveTab] = useState<"garden" | "notes" | "flagged" | "bookmarks">("garden");
   const [searchQuery, setSearchQuery] = useState("");
   const [editedNotes, setEditedNotes] = useState<Record<string, string>>({});
   const [saveSuccessId, setSaveSuccessId] = useState<string | null>(null);
 
-  // Load progress on mount
+  // Auth gate & load progress on mount
   useEffect(() => {
-    const prog = getCurriculumProgress();
-    setCurriculumProg(prog);
-    
-    // Initialize edited notes
-    const initialNotes: Record<string, string> = {};
-    Object.entries(prog).forEach(([k, v]) => {
-      if (v.note) initialNotes[k] = v.note;
-    });
-    setEditedNotes(initialNotes);
-  }, [user.id]);
+    if (authLoading) return;
+    if (!isAuthenticated) {
+      router.push(`/login?returnUrl=${encodeURIComponent("/journal")}`);
+      return;
+    }
+
+    const loadData = async () => {
+      setLoadingProgress(true);
+      try {
+        const res = await fetchServerProgress();
+        if (res.success) {
+          setCurriculumProg(res.progress);
+          const initialNotes: Record<string, string> = {};
+          Object.entries(res.progress).forEach(([k, v]) => {
+            if (v.note) initialNotes[k] = v.note;
+          });
+          setEditedNotes(initialNotes);
+        } else {
+          const prog = getCurriculumProgress();
+          setCurriculumProg(prog);
+          const initialNotes: Record<string, string> = {};
+          Object.entries(prog).forEach(([k, v]) => {
+            if (v.note) initialNotes[k] = v.note;
+          });
+          setEditedNotes(initialNotes);
+        }
+      } finally {
+        setLoadingProgress(false);
+      }
+    };
+
+    loadData();
+  }, [isAuthenticated, authLoading, router]);
 
   // Compute lotus count: 1 completed lesson = 1 lotus (awarded once per lesson)
   const lotusCount = useMemo(() => {
@@ -104,22 +131,49 @@ export default function JournalPage() {
   }, [curriculumProg, lessonLookup]);
 
   // Save updated note
-  const handleSaveNote = (lessonId: string) => {
+  const handleSaveNote = async (lessonId: string) => {
     const newNote = editedNotes[lessonId] || "";
     saveLessonProgress(lessonId, { note: newNote });
-    const updated = getCurriculumProgress();
-    setCurriculumProg(updated);
+    setCurriculumProg(prev => ({
+      ...prev,
+      [lessonId]: {
+        ...(prev[lessonId] || { status: "unread", score: 0 }),
+        note: newNote,
+        updatedAt: new Date().toISOString()
+      }
+    }));
     setSaveSuccessId(lessonId);
     setTimeout(() => setSaveSuccessId(null), 2500);
   };
 
   // Toggle review flag
-  const handleToggleFlag = (lessonId: string) => {
+  const handleToggleFlag = async (lessonId: string) => {
     const current = curriculumProg[lessonId];
     const nextFlag = !current?.needsReview;
     saveLessonProgress(lessonId, { needsReview: nextFlag });
-    setCurriculumProg(getCurriculumProgress());
+    setCurriculumProg(prev => ({
+      ...prev,
+      [lessonId]: {
+        ...(prev[lessonId] || { status: "unread", score: 0 }),
+        needsReview: nextFlag,
+        updatedAt: new Date().toISOString()
+      }
+    }));
   };
+
+  if (authLoading || (isAuthenticated && loadingProgress)) {
+    return (
+      <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4 px-4 text-center">
+        <div className="w-10 h-10 rounded-full border-2 border-zen-moss/30 border-t-zen-moss animate-spin" />
+        <h2 className="font-serif text-lg font-medium text-zen-ink">
+          🌱 {t("Đang mở Sổ học tập...", "Opening your Learning Journal...")}
+        </h2>
+        <p className="text-xs text-zen-muted max-w-sm">
+          {t("Tải hoa sen và ghi chú chánh niệm từ máy chủ...", "Loading lotuses and notes from server...")}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 sm:py-8 space-y-8">

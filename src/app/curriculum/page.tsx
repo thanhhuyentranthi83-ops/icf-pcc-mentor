@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { useSound } from "@/context/SoundContext";
 import { useAuth } from "@/context/AuthContext";
@@ -19,7 +19,10 @@ import {
   saveLessonProgress,
   computeModuleProgress,
   computeOverallProgress,
-  UserLessonProgress
+  UserLessonProgress,
+  fetchServerProgress,
+  getGuestProgressSummary,
+  mergeGuestProgressToServer
 } from "@/lib/curriculumData";
 import { removeVietnameseAccents } from "@/lib/unaccent";
 import {
@@ -79,19 +82,24 @@ function formatLessonStructured(text: string): string {
 }
 
 function CurriculumContent() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const initialModId = searchParams.get("module") || "mod-1";
   const initialLesId = searchParams.get("lesson") || "";
 
   const { lang, t } = useLanguage();
   const { ringBell } = useSound();
-  const { user } = useAuth();
+  const { user, isAuthenticated, loading: authLoading } = useAuth();
 
   // Active state
   const [activeModuleId, setActiveModuleId] = useState<string>(initialModId);
   const [activeLessonId, setActiveLessonId] = useState<string>(initialLesId);
   const [displayMode, setDisplayMode] = useState<"vi" | "en" | "bilingual">("bilingual");
   const [progress, setProgress] = useState<Record<string, UserLessonProgress>>({});
+  const [loadingProgress, setLoadingProgress] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+  const [guestMergePrompt, setGuestMergePrompt] = useState<{ count: number; lotuses: number } | null>(null);
+  const [merging, setMerging] = useState(false);
 
   // Quiz state for active lesson
   const [selectedQuizOption, setSelectedQuizOption] = useState<string | null>(null);
@@ -114,11 +122,57 @@ function CurriculumContent() {
   const [personalNote, setPersonalNote] = useState("");
   const [noteSaved, setNoteSaved] = useState(false);
 
-  // Load progress on mount
+  const loadData = async () => {
+    setLoadingProgress(true);
+    setLoadError(false);
+    try {
+      const res = await fetchServerProgress();
+      if (res.success) {
+        setProgress(res.progress);
+        // Check for guest data
+        const guestSummary = getGuestProgressSummary();
+        const unmerged = Object.keys(guestSummary.progress).some(
+          id => !res.progress[id] || (guestSummary.progress[id].status === "quiz_passed" && res.progress[id].status !== "quiz_passed")
+        );
+        if (guestSummary.count > 0 && unmerged) {
+          setGuestMergePrompt({ count: guestSummary.count, lotuses: guestSummary.lotuses });
+        }
+      } else {
+        setLoadError(true);
+      }
+    } catch {
+      setLoadError(true);
+    } finally {
+      setLoadingProgress(false);
+    }
+  };
+
+  const handleMergeGuest = async () => {
+    setMerging(true);
+    try {
+      const res = await mergeGuestProgressToServer();
+      if (res.success) {
+        setGuestMergePrompt(null);
+        const updated = await fetchServerProgress();
+        if (updated.success) setProgress(updated.progress);
+      }
+    } finally {
+      setMerging(false);
+    }
+  };
+
+  // Auth gate & load progress on mount
   useEffect(() => {
-    const curProgress = getCurriculumProgress();
-    setProgress(curProgress);
-  }, []);
+    if (authLoading) return;
+    if (!isAuthenticated) {
+      const curQuery = searchParams.toString();
+      const target = `/curriculum${curQuery ? `?${curQuery}` : ""}`;
+      router.push(`/login?returnUrl=${encodeURIComponent(target)}`);
+      return;
+    }
+
+    loadData();
+  }, [isAuthenticated, authLoading]);
 
   // Sync with search params if changed
   useEffect(() => {
@@ -257,8 +311,77 @@ function CurriculumContent() {
   const overallStats = useMemo(() => computeOverallProgress(progress), [progress]);
   const activeModuleStats = useMemo(() => computeModuleProgress(activeModule.id, progress), [activeModule.id, progress]);
 
+  if (authLoading || (isAuthenticated && loadingProgress)) {
+    return (
+      <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4 px-4 text-center">
+        <div className="w-10 h-10 rounded-full border-2 border-zen-moss/30 border-t-zen-moss animate-spin" />
+        <h2 className="font-serif text-lg font-medium text-zen-ink">
+          🌱 {t("Đang tải tiến độ học tập...", "Loading your learning progress...")}
+        </h2>
+        <p className="text-xs text-zen-muted max-w-sm">
+          {t("Đồng bộ an toàn với máy chủ Học Coaching.", "Securely syncing with Học Coaching server.")}
+        </p>
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4 px-4 text-center">
+        <div className="text-3xl">⚠️</div>
+        <h2 className="font-serif text-lg font-medium text-zen-ink">
+          {t("Không thể tải tiến độ học tập", "Unable to load learning progress")}
+        </h2>
+        <p className="text-xs text-zen-muted max-w-sm">
+          {t("Đã xảy ra sự cố kết nối máy chủ. Vui lòng bấm thử lại để tiếp tục học.", "A connection issue occurred. Please retry to continue.")}
+        </p>
+        <button
+          onClick={loadData}
+          className="px-5 py-2 rounded-2xl bg-zen-moss text-white text-xs font-semibold shadow hover:bg-zen-moss-dark transition-all"
+        >
+          {t("Thử lại", "Retry")}
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8 space-y-6">
+      {/* Guest Merge Banner */}
+      {guestMergePrompt && (
+        <div className="rounded-2xl border border-amber-300 bg-amber-50/95 p-4 text-amber-900 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-zen-card">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🌱</span>
+            <div>
+              <p className="font-semibold text-xs sm:text-sm">
+                {t("Tìm thấy tiến độ học tập từ phiên duyệt khách!", "Found previous learning progress from guest session!")}
+              </p>
+              <p className="text-[11px] sm:text-xs text-amber-800">
+                {t(
+                  `Hệ thống nhận diện bạn có ${guestMergePrompt.count} bài học và ${guestMergePrompt.lotuses} đóa sen đã tích lũy trước đó. Bạn có muốn đồng bộ vào tài khoản này không?`,
+                  `Found ${guestMergePrompt.count} lessons and ${guestMergePrompt.lotuses} lotuses from guest mode. Would you like to merge into your account?`
+                )}
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={handleMergeGuest}
+              disabled={merging}
+              className="px-3.5 py-1.5 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-medium text-xs shadow-sm transition-all disabled:opacity-50"
+            >
+              {merging ? t("Đang đồng bộ...", "Merging...") : t("Đồng bộ vào tài khoản", "Merge to Account")}
+            </button>
+            <button
+              onClick={() => setGuestMergePrompt(null)}
+              className="px-3 py-1.5 rounded-xl bg-white hover:bg-stone-50 text-xs text-stone-600 border border-amber-200 transition-all"
+            >
+              {t("Bỏ qua", "Dismiss")}
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* 1. Header Banner & Mindful Context */}
       <div className="rounded-3xl border border-zen-border bg-zen-paper p-6 sm:p-8 shadow-zen-card">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zen-border/60 pb-6">

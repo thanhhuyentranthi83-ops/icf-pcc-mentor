@@ -1,9 +1,38 @@
-# -*- coding: utf-8 -*-
-"""
-Session State Management & Multi-language helpers
-Includes verified real tracking of curriculum progress, tea-cup micro lessons, and genuine lotus blossoms.
-"""
+import json
+import os
 import streamlit as st
+
+DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "app_database.json")
+
+def load_persisted_progress(user_id="usr-free"):
+    try:
+        if os.path.exists(DB_PATH):
+            with open(DB_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return data.get("progress", {}).get(user_id, {})
+    except Exception:
+        pass
+    return {}
+
+def save_persisted_progress(progress_dict, user_id="usr-free"):
+    try:
+        os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+        data = {}
+        if os.path.exists(DB_PATH):
+            with open(DB_PATH, "r", encoding="utf-8") as f:
+                try:
+                    data = json.load(f)
+                except Exception:
+                    data = {}
+        if "progress" not in data:
+            data["progress"] = {}
+        data["progress"][user_id] = progress_dict
+        tmp = f"{DB_PATH}.py.tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        os.replace(tmp, DB_PATH)
+    except Exception:
+        pass
 
 def t(vi_text, en_text):
     return vi_text if st.session_state.get("lang", "vi") == "vi" else en_text
@@ -53,6 +82,7 @@ def update_lesson_progress(lesson_id, status=None, score=None, note=None, needs_
 
     st.session_state.curriculum_progress[lesson_id] = current
     st.session_state.lotus_bloomed = compute_real_lotus_bloomed()
+    save_persisted_progress(st.session_state.curriculum_progress, st.session_state.get("current_user_id", "usr-free"))
 
 def init_session_state(DATA):
     if "lang" not in st.session_state:
@@ -75,14 +105,15 @@ def init_session_state(DATA):
         st.session_state.active_tea_lesson_id = "tea-01"
 
     if "curriculum_progress" not in st.session_state:
-        # Real progress dictionary: {lesson_id: {"status": "unread"|"read"|"quiz_passed", "score": 0, "note": "", "needs_review": False}}
-        st.session_state.curriculum_progress = {}
+        # Real progress dictionary loaded from persisted disk database
+        persisted = load_persisted_progress(st.session_state.get("current_user_id", "usr-free"))
+        st.session_state.curriculum_progress = persisted if persisted else {}
 
     if "curriculum_lang_mode" not in st.session_state:
         st.session_state.curriculum_lang_mode = "bilingual" # "vi", "en", "bilingual"
 
     if "lotus_bloomed" not in st.session_state:
-        st.session_state.lotus_bloomed = compute_real_lotus_bloomed()
+        st.session_state.lotus_bloomed = compute_real_lotus_bloomed(st.session_state.curriculum_progress)
 
     theories = {th["sectionId"]: th for th in DATA.get("theories", [])}
     if "current_section" not in st.session_state or st.session_state.current_section not in theories:

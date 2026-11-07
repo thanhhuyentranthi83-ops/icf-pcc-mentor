@@ -21,11 +21,54 @@ import {
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const { t } = useLanguage();
-  const { user, isSuperAdmin, isEditor, isBilling, switchUser } = useAuth();
+  const { user, isSuperAdmin, isEditor, isBilling, switchUser, isAuthenticated, isGuest, loading } = useAuth();
 
   // If on admin/login, do not wrap with sidebar
   if (pathname === "/admin/login") {
     return <>{children}</>;
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-[50vh] flex flex-col items-center justify-center space-y-3 py-16 text-center">
+        <div className="w-8 h-8 rounded-full border-2 border-amber-800/30 border-t-amber-800 animate-spin" />
+        <p className="text-xs text-zen-muted font-medium">
+          {t("Đang kiểm tra quyền quản trị viên...", "Checking administrator privileges...")}
+        </p>
+      </div>
+    );
+  }
+
+  // Guard: if guest or unauthenticated
+  if (!isAuthenticated || isGuest) {
+    return (
+      <div className="max-w-md mx-auto my-16 p-8 rounded-3xl border border-amber-300 bg-amber-50 text-center space-y-4">
+        <ShieldAlert className="w-12 h-12 text-amber-700 mx-auto" />
+        <h2 className="font-serif text-xl font-bold text-amber-900">
+          {t("Yêu Cầu Đăng Nhập Quản Trị", "Admin Login Required")}
+        </h2>
+        <p className="text-xs text-amber-800 leading-relaxed">
+          {t(
+            "Vui lòng đăng nhập bằng tài khoản email được cấp quyền quản trị để truy cập khu vực này.",
+            "Please sign in with an authorized administrator email to access this area."
+          )}
+        </p>
+        <div className="pt-2 flex flex-col gap-2">
+          <Link
+            href={`/login?returnUrl=${encodeURIComponent(pathname)}`}
+            className="w-full py-2.5 rounded-2xl bg-amber-900 text-white text-xs font-semibold hover:bg-amber-950 transition-colors shadow-sm"
+          >
+            {t("Đăng nhập tài khoản quản trị", "Sign In to Admin Account")}
+          </Link>
+          <Link
+            href="/"
+            className="w-full py-2 rounded-2xl border border-amber-300 bg-white text-amber-900 text-xs font-semibold hover:bg-amber-100/50 transition-colors"
+          >
+            {t("Về Trang Chủ Học Viên", "Back to Student Portal")}
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   // Guard: if user is student
@@ -38,17 +81,17 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </h2>
         <p className="text-xs text-amber-800 leading-relaxed">
           {t(
-            "Tài khoản hiện tại của bạn là Học viên (Student) nên không có quyền truy cập trang quản trị. Bạn có thể chuyển sang vai trò Super Admin demo để kiểm thử.",
-            "You are currently logged in as a Student. Switch to Super Admin to test the portal."
+            "Tài khoản hiện tại của bạn là Học viên (Student) nên không có quyền truy cập trang quản trị. Để truy cập, vui lòng đăng nhập bằng email quản trị viên đã được phân quyền.",
+            "You are currently logged in as a Student. Access to the admin portal is restricted. Please sign in with an authorized administrator account."
           )}
         </p>
         <div className="pt-2 flex flex-col gap-2">
-          <button
-            onClick={() => switchUser("usr-admin")}
-            className="w-full py-2.5 rounded-2xl bg-amber-900 text-white text-xs font-semibold hover:bg-amber-950 transition-colors"
+          <Link
+            href={`/login?returnUrl=${encodeURIComponent(pathname)}`}
+            className="w-full py-2.5 rounded-2xl bg-amber-900 text-white text-xs font-semibold hover:bg-amber-950 transition-colors shadow-sm"
           >
-            {t("Chuyển sang Super Admin (Tâm An)", "Switch to Super Admin")}
-          </button>
+            {t("Đổi sang tài khoản Quản trị viên", "Switch to Administrator Account")}
+          </Link>
           <Link
             href="/"
             className="w-full py-2 rounded-2xl border border-amber-300 bg-white text-amber-900 text-xs font-semibold hover:bg-amber-100/50 transition-colors"
