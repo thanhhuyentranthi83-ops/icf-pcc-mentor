@@ -85,7 +85,7 @@
       "tier": "12_months",
       "tierExpiresAt": "2027-12-31T23:59:59Z",
       "streakCount": 1,
-      "lastActiveDate": "2026-11-07",
+      "lastActiveDate": "2026-11-08",
       "createdAt": "2026-11-07T12:42:38.347Z"
     },
     {
@@ -109,6 +109,50 @@
       "streakCount": 1,
       "lastActiveDate": "2026-11-07",
       "createdAt": "2026-11-07T12:52:00.063Z"
+    },
+    {
+      "id": "usr-f4f6566d",
+      "email": "student_test_1794145539370@example.com",
+      "fullName": "Học Viên Thử Nghiệm",
+      "role": "student",
+      "tier": "free",
+      "tierExpiresAt": null,
+      "streakCount": 1,
+      "lastActiveDate": "2026-11-08",
+      "createdAt": "2026-11-08T13:45:39.374Z"
+    },
+    {
+      "id": "usr-8f97140b",
+      "email": "admin.coach@pcc.edu.vn",
+      "fullName": "Super Admin",
+      "role": "student",
+      "tier": "free",
+      "tierExpiresAt": null,
+      "streakCount": 1,
+      "lastActiveDate": "2026-11-08",
+      "createdAt": "2026-11-08T13:45:39.387Z"
+    },
+    {
+      "id": "usr-0c86c193",
+      "email": "student_test_1794145660835@example.com",
+      "fullName": "Học Viên Thử Nghiệm",
+      "role": "student",
+      "tier": "free",
+      "tierExpiresAt": null,
+      "streakCount": 1,
+      "lastActiveDate": "2026-11-08",
+      "createdAt": "2026-11-08T13:47:40.841Z"
+    },
+    {
+      "id": "usr-admin-98e05c24",
+      "email": "admin@hoccoaching.vn",
+      "fullName": "Super Admin",
+      "role": "super_admin",
+      "tier": "12_months",
+      "tierExpiresAt": "2027-12-31T23:59:59Z",
+      "streakCount": 1,
+      "lastActiveDate": "2026-11-08",
+      "createdAt": "2026-11-08T13:47:40.855Z"
     }
   ],
   "progress": {
@@ -136,6 +180,14 @@
         "updatedAt": "2026-11-07T12:52:00.056Z",
         "note": "Ghi chú bảo mật cá nhân: Cần chú ý Marker 1.2 về tính trung thực.",
         "needsReview": true
+      }
+    },
+    "usr-0c86c193": {
+      "mod2-les1": {
+        "status": "quiz_passed",
+        "updatedAt": "2026-11-08T13:47:40.883Z",
+        "score": 100,
+        "note": "Ghi chú bảo mật riêng tư của học viên về thỏa thuận khai vấn"
       }
     }
   },
@@ -189,6 +241,259 @@
     "0c1856cb251d5e2da5f03782e17225480aa42b2a0b77ca934958239ac1ba1e07": {
       "userId": "usr-91e012b2",
       "expiresAt": "2026-12-07T13:02:13.366Z"
+    },
+    "250430a91924e3ab9ffae7dd78eab3c203f533c2572ac2c5c92100eb0e2f3ca6": {
+      "userId": "usr-f4f6566d",
+      "expiresAt": "2026-12-08T13:45:39.376Z"
+    },
+    "ce0f6a529a09ce109f3581a4b4558c6e949d5447d2e32d8894f0c01d04f889f3": {
+      "userId": "usr-8f97140b",
+      "expiresAt": "2026-12-08T13:45:39.388Z"
+    },
+    "eedb4153026fed31db71a82d149df5640be9d57dca585f2e06af93507151b12b": {
+      "userId": "usr-0c86c193",
+      "expiresAt": "2026-12-08T13:47:40.841Z"
+    },
+    "0d69328171f54e7342cfd7faf1608506d6687edf5d39798b2a63785cc0d417af": {
+      "userId": "usr-admin-98e05c24",
+      "expiresAt": "2026-12-08T13:47:40.856Z"
+    },
+    "3d7b0936ddb865843669acd786c3224e65437e0a342275ffc6d1a1aa10cdefb4": {
+      "userId": "usr-admin-a15d7b7d",
+      "expiresAt": "2026-12-08T13:49:53.756Z"
     }
-  }
+  },
+  "courses": [
+    {
+      "id": "crs-foundation",
+      "titleVi": "Nền Tảng Khai Vấn Chuẩn Quốc Tế ICF",
+      "titleEn": "ICF Professional Coaching Foundations",
+      "descriptionVi": "Làm chủ 8 Năng lực cốt lõi, Quy tắc đạo đức 2025 và tiêu chuẩn chuyển gửi khách hàng.",
+      "descriptionEn": "Master the 8 ICF Core Competencies, 2025 Code of Ethics, and client referral guidelines.",
+      "moduleIds": [
+        "mod-1",
+        "mod-2",
+        "mod-4",
+        "mod-7"
+      ],
+      "previewLessonIds": [
+        "mod1-les1"
+      ],
+      "isPublished": true,
+      "orderIndex": 1,
+      "badgeText": "Nền tảng vững chắc"
+    },
+    {
+      "id": "crs-exam-prep",
+      "titleVi": "Luyện Thi ICF Credentialing (ACC/PCC Exam Prep)",
+      "titleEn": "ICF Credentialing Exam Preparation",
+      "descriptionVi": "Rèn luyện phản xạ tình huống phán đoán (SJT), tiêu chí thực hành PCC Markers và đề thi mô phỏng 78/80 câu.",
+      "descriptionEn": "Master Situational Judgment Tests (SJT), PCC Markers, and comprehensive 78/80 scenario mock exams.",
+      "moduleIds": [
+        "mod-3",
+        "mod-5",
+        "mod-6"
+      ],
+      "previewLessonIds": [
+        "mod6-les1"
+      ],
+      "isPublished": true,
+      "orderIndex": 2,
+      "badgeText": "Luyện thi thực chiến"
+    },
+    {
+      "id": "crs-all-in-one",
+      "titleVi": "Học Coaching Toàn Diện: Nền Tảng & Luyện Thi ICF PCC",
+      "titleEn": "Comprehensive Coaching Mastery & ICF PCC Exam",
+      "descriptionVi": "Trọn bộ 7 học phần chính thức, luyện tập 10 câu mỗi ngày, thư viện thuật ngữ và phòng thi mô phỏng không giới hạn.",
+      "descriptionEn": "Complete access to all 7 modules, daily 10 SJT drills, terminology library, and unlimited mock exams.",
+      "moduleIds": [
+        "mod-1",
+        "mod-2",
+        "mod-3",
+        "mod-4",
+        "mod-5",
+        "mod-6",
+        "mod-7"
+      ],
+      "previewLessonIds": [
+        "mod1-les1",
+        "mod6-les1"
+      ],
+      "isPublished": true,
+      "orderIndex": 3,
+      "badgeText": "Khuyên Dùng (All-in-One)"
+    }
+  ],
+  "packages": [
+    {
+      "id": "pkg-trial",
+      "nameVi": "Gói Học Thử Trải Nghiệm (Free Trial)",
+      "nameEn": "Free Trial Experience",
+      "descriptionVi": "Trải nghiệm miễn phí các bài học mẫu, 8 câu hỏi tình huống ICF và Sổ học tập chánh niệm.",
+      "descriptionEn": "Free access to trial lessons, 8 official sample questions, and personal learning journal.",
+      "price": 0,
+      "durationDays": 0,
+      "isRegistrationOpen": true,
+      "allowedCourseIds": [
+        "crs-foundation",
+        "crs-exam-prep"
+      ],
+      "allowedFeatures": [
+        "curriculum",
+        "glossary_search",
+        "tea_micro"
+      ],
+      "badge": "Miễn phí",
+      "isDefaultTrial": true
+    },
+    {
+      "id": "pkg-foundation",
+      "nameVi": "Gói Nền Tảng Khai Vấn (Foundation)",
+      "nameEn": "Coaching Foundations Tier",
+      "descriptionVi": "Mở khóa trọn bộ Lộ trình 7 học phần chuẩn hóa ICF, lý thuyết chuyên sâu và tra cứu thuật ngữ.",
+      "descriptionEn": "Full access to 7 official ICF modules, in-depth competencies, and glossary library.",
+      "price": 299000,
+      "durationDays": 30,
+      "isRegistrationOpen": true,
+      "allowedCourseIds": [
+        "crs-foundation"
+      ],
+      "allowedFeatures": [
+        "curriculum",
+        "glossary_search",
+        "tea_micro",
+        "resource_download"
+      ],
+      "badge": "Khởi đầu"
+    },
+    {
+      "id": "pkg-exam-prep",
+      "nameVi": "Gói Luyện Thi ICF Credentialing (Exam Prep)",
+      "nameEn": "ICF Exam Prep Tier",
+      "descriptionVi": "Mở khóa chế độ Luyện 10 câu/ngày, Đề thi mô phỏng toàn diện 78/80 câu SJT và phân tích Best/Worst.",
+      "descriptionEn": "Unlock Daily 10 SJT drills, full 78/80 question mock exams, and Best/Worst rationale.",
+      "price": 1190000,
+      "durationDays": 180,
+      "isRegistrationOpen": true,
+      "allowedCourseIds": [
+        "crs-exam-prep"
+      ],
+      "allowedFeatures": [
+        "daily_sjt_10",
+        "mock_exam_sjt",
+        "glossary_search",
+        "resource_download"
+      ],
+      "badge": "Mục tiêu đỗ PCC"
+    },
+    {
+      "id": "pkg-pcc-master",
+      "nameVi": "Gói Đồng Hành Toàn Diện (PCC Master Pass)",
+      "nameEn": "PCC Master Comprehensive Pass",
+      "descriptionVi": "Quyền truy cập cao nhất vào tất cả các khóa học, đề thi thử, tính năng hiện tại và các bản cập nhật mới trong 12 tháng.",
+      "descriptionEn": "Unrestricted access to all courses, modules, mock exams, and future updates for 12 months.",
+      "price": 1990000,
+      "durationDays": 365,
+      "isRegistrationOpen": true,
+      "allowedCourseIds": [
+        "*"
+      ],
+      "allowedFeatures": [
+        "curriculum",
+        "daily_sjt_10",
+        "mock_exam_sjt",
+        "glossary_search",
+        "tea_micro",
+        "resource_download"
+      ],
+      "badge": "Toàn diện nhất"
+    }
+  ],
+  "enrollments": {
+    "usr-0c86c193": [
+      {
+        "id": "enr-1794145660873-r15z",
+        "userId": "usr-0c86c193",
+        "userEmail": "student_test_1794145660835@example.com",
+        "packageId": "pkg-foundation",
+        "packageName": "Gói Nền Tảng Khai Vấn (Foundation)",
+        "status": "active",
+        "startsAt": "2026-11-08T13:47:40.873Z",
+        "expiresAt": "2027-01-07T13:47:40.873Z",
+        "grantedBy": "admin@hoccoaching.vn",
+        "grantedAt": "2026-11-08T13:47:40.873Z",
+        "note": "Thu hồi: Thử nghiệm hết hạn gói; Gia hạn thêm 30 ngày cho học viên"
+      }
+    ]
+  },
+  "enrollmentHistory": [
+    {
+      "id": "hist-1794145660873-8hni",
+      "userId": "usr-0c86c193",
+      "userEmail": "student_test_1794145660835@example.com",
+      "packageId": "pkg-foundation",
+      "packageName": "Gói Nền Tảng Khai Vấn (Foundation)",
+      "action": "grant",
+      "actorEmail": "admin@hoccoaching.vn",
+      "previousExpiresAt": null,
+      "newExpiresAt": "2026-12-08T13:47:40.873Z",
+      "timestamp": "2026-11-08T13:47:40.873Z",
+      "note": "Đã xác nhận thanh toán VietQR thành công"
+    },
+    {
+      "id": "hist-1794145660887-5ixz",
+      "userId": "usr-0c86c193",
+      "userEmail": "student_test_1794145660835@example.com",
+      "packageId": "pkg-foundation",
+      "packageName": "Gói Nền Tảng Khai Vấn (Foundation)",
+      "action": "revoke",
+      "actorEmail": "admin@hoccoaching.vn",
+      "previousExpiresAt": "2026-12-08T13:47:40.873Z",
+      "newExpiresAt": null,
+      "timestamp": "2026-11-08T13:47:40.887Z",
+      "note": "Thử nghiệm hết hạn gói"
+    },
+    {
+      "id": "hist-1794145660895-1poz",
+      "userId": "usr-0c86c193",
+      "userEmail": "student_test_1794145660835@example.com",
+      "packageId": "pkg-foundation",
+      "packageName": "Gói Nền Tảng Khai Vấn (Foundation)",
+      "action": "renew",
+      "actorEmail": "admin@hoccoaching.vn",
+      "previousExpiresAt": "2026-12-08T13:47:40.873Z",
+      "newExpiresAt": "2027-01-07T13:47:40.873Z",
+      "timestamp": "2026-11-08T13:47:40.895Z",
+      "note": "Gia hạn thêm 30 ngày cho học viên"
+    }
+  ],
+  "enrollmentRequests": [
+    {
+      "id": "req-1794145539384-gfez",
+      "userId": "usr-f4f6566d",
+      "userEmail": "student_test_1794145539370@example.com",
+      "userName": "Học Viên Thử Nghiệm",
+      "packageId": "pkg-foundation",
+      "packageName": "Gói Nền Tảng Khai Vấn (Foundation)",
+      "type": "register",
+      "status": "pending",
+      "requestedAt": "2026-11-08T13:45:39.384Z",
+      "userNote": "Em đã chuyển khoản 490k qua VietQR"
+    },
+    {
+      "id": "req-1794145660850-owt7",
+      "userId": "usr-0c86c193",
+      "userEmail": "student_test_1794145660835@example.com",
+      "userName": "Học Viên Thử Nghiệm",
+      "packageId": "pkg-foundation",
+      "packageName": "Gói Nền Tảng Khai Vấn (Foundation)",
+      "type": "register",
+      "status": "approved",
+      "requestedAt": "2026-11-08T13:47:40.850Z",
+      "userNote": "Em đã chuyển khoản 490k qua VietQR",
+      "processedBy": "admin@hoccoaching.vn",
+      "processedAt": "2026-11-08T13:47:40.873Z"
+    }
+  ]
 }

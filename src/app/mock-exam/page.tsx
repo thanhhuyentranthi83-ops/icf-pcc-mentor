@@ -8,11 +8,12 @@ import { getFullMockExam } from "@/lib/db";
 import { QuizQuestion } from "@/types";
 import SjtExamRunner from "@/components/SjtExamRunner";
 import BreathingModal from "@/components/BreathingModal";
+import ZenPaywallCard from "@/components/ZenPaywallCard";
 import { Mountain, Sparkles, Lock, ArrowLeft, PlayCircle, ShieldCheck } from "lucide-react";
 
 export default function MockExamPage() {
   const { t } = useLanguage();
-  const { user, canAccessPaidContent } = useAuth();
+  const { user, checkEntitlement, userEnrollments } = useAuth();
 
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [showBreathing, setShowBreathing] = useState(false);
@@ -22,7 +23,8 @@ export default function MockExamPage() {
     setQuestions(getFullMockExam());
   }, []);
 
-  const hasAccess = canAccessPaidContent();
+  const examEntitlement = checkEntitlement({ feature: "mock_exam_sjt" });
+  const hasAccess = examEntitlement.granted;
 
   const handleStartExamFlow = () => {
     setShowBreathing(true);
@@ -104,20 +106,11 @@ export default function MockExamPage() {
 
           {/* Action Button */}
           {!hasAccess ? (
-            <div className="space-y-3 pt-2">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold">
-                <Lock className="w-3.5 h-3.5" />
-                <span>{t("Thi thử tổng PCC dành cho học viên gói trả phí", "Full mock exam reserved for paid tiers")}</span>
-              </div>
-              <div>
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-zen-ochre hover:bg-zen-ochre-dark text-white font-semibold text-sm shadow-zen-card transition-all"
-                >
-                  <Sparkles className="w-4 h-4" />
-                  <span>{t("Nâng cấp gói để vào thi ngay", "Upgrade to take exam")}</span>
-                </Link>
-              </div>
+            <div className="pt-2">
+              <ZenPaywallCard
+                status={examEntitlement}
+                targetTitle={t("Đề Thi Thử Tổng Hợp PCC 16 Tình Huống SJT", "16-Scenario PCC Mock Exam")}
+              />
             </div>
           ) : (
             <div className="pt-2">

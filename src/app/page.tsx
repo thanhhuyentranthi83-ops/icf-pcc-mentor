@@ -305,6 +305,177 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CÁC GÓI HỌC VIÊN & QUYỀN TRUY CẬP */}
+      <section className="space-y-6">
+        <div className="rounded-3xl border border-zen-border bg-zen-paper p-6 sm:p-8 shadow-zen-card space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4 border-b border-zen-border/70">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-semibold mb-2">
+                <span>🎓 {t("Cấp Độ Gói Học Viên", "Student Package Tiers")}</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-zen-ink">
+                {t("Các Gói Học & Quyền Truy Cập Nội Dung", "Packages & Course Access")}
+              </h2>
+              <p className="text-xs sm:text-sm text-zen-muted mt-1 leading-relaxed max-w-2xl">
+                {t(
+                  "Chọn gói học phù hợp với mục tiêu của bạn: từ học thử trải nghiệm, nắm vững nền tảng 8 năng lực ICF, đến rèn luyện phản xạ đề thi thực tế.",
+                  "Choose the package that aligns with your coaching journey: trial exploration, foundational mastery, or intensive credentialing exam prep."
+                )}
+              </p>
+            </div>
+
+            <Link
+              href="/pricing"
+              className="text-xs font-semibold text-amber-900 hover:text-amber-950 underline shrink-0"
+            >
+              {t("Xem bảng giá chi tiết & VietQR →", "View pricing details & VietQR →")}
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Gói Học Thử */}
+            <div className="p-5 rounded-3xl border border-zen-border bg-white flex flex-col justify-between space-y-4 hover:shadow-zen-floating transition-all">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                    Miễn Phí
+                  </span>
+                  <span className="text-xs text-zen-muted font-medium">7 ngày</span>
+                </div>
+                <div>
+                  <h3 className="font-serif font-bold text-base text-zen-ink">Gói Học Thử</h3>
+                  <p className="text-xs text-zen-muted mt-1 leading-relaxed">
+                    Trải nghiệm bài giảng mẫu Module 1 và Module 6, tra cứu thuật ngữ cơ bản.
+                  </p>
+                </div>
+                <div className="space-y-1 text-[11px] text-zen-ink pt-2 border-t border-zen-border/50">
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Bài học thử Module 1 & 6
+                  </span>
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Ghi chú trong Sổ học tập
+                  </span>
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Tích lũy đóa sen nở
+                  </span>
+                </div>
+              </div>
+              <Link
+                href="/curriculum?module=mod-1&lesson=mod1-les1"
+                className="w-full py-2.5 rounded-xl border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-semibold text-xs text-center transition-colors"
+              >
+                Học Thử Ngay →
+              </Link>
+            </div>
+
+            {/* Gói Nền Tảng Khai Vấn */}
+            <div className="p-5 rounded-3xl border border-zen-border bg-white flex flex-col justify-between space-y-4 hover:shadow-zen-floating transition-all">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">
+                    Nền Tảng
+                  </span>
+                  <span className="text-xs text-zen-muted font-medium">30 ngày</span>
+                </div>
+                <div>
+                  <h3 className="font-serif font-bold text-base text-zen-ink">Nền Tảng Khai Vấn</h3>
+                  <p className="text-xs text-zen-muted mt-1 leading-relaxed">
+                    Toàn bộ 7 học phần và 26 bài học cốt lõi ICF chuẩn 2025, phản xạ đạo đức.
+                  </p>
+                </div>
+                <div className="space-y-1 text-[11px] text-zen-ink pt-2 border-t border-zen-border/50">
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Toàn bộ 26 bài học 7 học phần
+                  </span>
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ 26 Mini-quiz có giải thích
+                  </span>
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Tra cứu thuật ngữ Anh-Việt
+                  </span>
+                </div>
+              </div>
+              <Link
+                href={isAuthenticated ? "/profile" : "/login?returnUrl=/profile"}
+                className="w-full py-2.5 rounded-xl bg-amber-900 hover:bg-amber-950 text-white font-semibold text-xs text-center transition-colors shadow-2xs"
+              >
+                Đăng Ký Gói Này
+              </Link>
+            </div>
+
+            {/* Gói Luyện Thi ICF Credentialing */}
+            <div className="p-5 rounded-3xl border-2 border-amber-700/60 bg-amber-50/30 flex flex-col justify-between space-y-4 hover:shadow-zen-floating transition-all relative">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-semibold text-amber-900 bg-amber-100 px-2 py-0.5 rounded-full border border-amber-300">
+                    Khuyên Dùng
+                  </span>
+                  <span className="text-xs text-zen-muted font-medium">90 ngày</span>
+                </div>
+                <div>
+                  <h3 className="font-serif font-bold text-base text-zen-ink">Luyện Thi ICF Credentialing</h3>
+                  <p className="text-xs text-zen-muted mt-1 leading-relaxed">
+                    Chuyên sâu luyện đề phán đoán tình huống SJT, phân tích Best & Worst chuẩn Pearson VUE.
+                  </p>
+                </div>
+                <div className="space-y-1 text-[11px] text-zen-ink pt-2 border-t border-zen-border/50">
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Luyện 10 câu SJT mỗi ngày
+                  </span>
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Phòng thi mô phỏng có tính giờ
+                  </span>
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Phân tích logic chọn Best/Worst
+                  </span>
+                </div>
+              </div>
+              <Link
+                href={isAuthenticated ? "/profile" : "/login?returnUrl=/profile"}
+                className="w-full py-2.5 rounded-xl bg-amber-900 hover:bg-amber-950 text-white font-semibold text-xs text-center transition-colors shadow-2xs"
+              >
+                Đăng Ký Gói Này
+              </Link>
+            </div>
+
+            {/* Gói Đồng Hành Toàn Diện */}
+            <div className="p-5 rounded-3xl border border-zen-border bg-white flex flex-col justify-between space-y-4 hover:shadow-zen-floating transition-all">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-semibold text-purple-800 bg-purple-50 px-2 py-0.5 rounded-full border border-purple-200">
+                    VIP Master
+                  </span>
+                  <span className="text-xs text-zen-muted font-medium">365 ngày</span>
+                </div>
+                <div>
+                  <h3 className="font-serif font-bold text-base text-zen-ink">Đồng Hành Toàn Diện</h3>
+                  <p className="text-xs text-zen-muted mt-1 leading-relaxed">
+                    Mở trọn bộ tất cả khóa học, kho tình huống thực chiến, góc trà đàm và cập nhật tài liệu mới.
+                  </p>
+                </div>
+                <div className="space-y-1 text-[11px] text-zen-ink pt-2 border-t border-zen-border/50">
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Mở 100% khóa học và tính năng
+                  </span>
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Không giới hạn lượt thi thử
+                  </span>
+                  <span className="flex items-center gap-1.5 text-emerald-800 font-medium">
+                    ✓ Hỗ trợ giải đáp chuyên sâu 1-1
+                  </span>
+                </div>
+              </div>
+              <Link
+                href={isAuthenticated ? "/profile" : "/login?returnUrl=/profile"}
+                className="w-full py-2.5 rounded-xl bg-amber-900 hover:bg-amber-950 text-white font-semibold text-xs text-center transition-colors shadow-2xs"
+              >
+                Đăng Ký Gói Này
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Về Coach Thanh Huyền */}
       <section className="rounded-3xl border border-zen-border bg-gradient-to-br from-zen-paper via-white to-zen-paper p-6 sm:p-8 shadow-zen-card overflow-hidden relative">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">

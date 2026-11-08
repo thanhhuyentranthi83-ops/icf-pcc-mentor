@@ -15,7 +15,9 @@ import {
   FileText,
   ShieldAlert,
   ArrowLeft,
-  ShieldCheck
+  ShieldCheck,
+  BookOpen,
+  Package
 } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -110,6 +112,20 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       labelEn: "Dashboard",
       icon: LayoutDashboard,
       allowed: true
+    },
+    {
+      href: "/admin/courses",
+      labelVi: "Khóa Học & Học Phần",
+      labelEn: "Courses & Modules",
+      icon: BookOpen,
+      allowed: isEditor || isSuperAdmin
+    },
+    {
+      href: "/admin/packages",
+      labelVi: "Gói Học & Phân Quyền",
+      labelEn: "Packages & Tiers",
+      icon: Package,
+      allowed: isSuperAdmin || isBilling
     },
     {
       href: "/admin/sections",

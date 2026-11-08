@@ -25,6 +25,7 @@ import {
   mergeGuestProgressToServer
 } from "@/lib/curriculumData";
 import { removeVietnameseAccents } from "@/lib/unaccent";
+import ZenPaywallCard from "@/components/ZenPaywallCard";
 import {
   GraduationCap,
   BookOpen,
@@ -89,7 +90,7 @@ function CurriculumContent() {
 
   const { lang, t } = useLanguage();
   const { ringBell } = useSound();
-  const { user, isAuthenticated, loading: authLoading } = useAuth();
+  const { user, isAuthenticated, loading: authLoading, checkEntitlement, userEnrollments } = useAuth();
 
   // Active state
   const [activeModuleId, setActiveModuleId] = useState<string>(initialModId);
@@ -165,9 +166,8 @@ function CurriculumContent() {
   useEffect(() => {
     if (authLoading) return;
     if (!isAuthenticated) {
-      const curQuery = searchParams.toString();
-      const target = `/curriculum${curQuery ? `?${curQuery}` : ""}`;
-      router.push(`/login?returnUrl=${encodeURIComponent(target)}`);
+      setProgress(getCurriculumProgress());
+      setLoadingProgress(false);
       return;
     }
 
@@ -200,6 +200,23 @@ function CurriculumContent() {
     }
     return activeModule.lessons[0];
   }, [activeModule, activeLessonId]);
+
+  // Entitlement check for current lesson
+  const lessonEntitlement = useMemo(() => {
+    if (!activeLesson) return { granted: true };
+    return checkEntitlement({
+      moduleId: activeModule.id,
+      lessonId: activeLesson.id,
+      feature: "curriculum"
+    });
+  }, [activeLesson, activeModule.id, checkEntitlement, userEnrollments, user]);
+
+  const glossaryEntitlement = useMemo(() => {
+    return checkEntitlement({
+      moduleId: "mod-7",
+      feature: "glossary_search"
+    });
+  }, [checkEntitlement, userEnrollments, user]);
 
   // Ensure activeLessonId is synchronized
   useEffect(() => {
@@ -494,6 +511,14 @@ function CurriculumContent() {
                 const isRead = lesProg?.status === "read" || isQuizPassed;
                 const hasFlag = lesProg?.needsReview;
 
+                const isPreview = les.id === "mod1-les1" || les.id === "mod6-les1";
+                const lesEnt = checkEntitlement({
+                  moduleId: activeModule.id,
+                  lessonId: les.id,
+                  feature: "curriculum"
+                });
+                const isLocked = !lesEnt.granted && !isPreview;
+
                 return (
                   <button
                     key={les.id}
@@ -501,11 +526,15 @@ function CurriculumContent() {
                     className={`w-full text-left p-3 rounded-2xl text-xs transition-all flex items-start gap-2.5 border ${
                       isSelected
                         ? "bg-zen-moss/15 border-zen-moss-dark font-semibold text-zen-moss-dark shadow-zen-subtle"
+                        : isLocked
+                        ? "bg-white/40 hover:bg-white text-stone-500 border-transparent hover:border-zen-border"
                         : "bg-white/70 hover:bg-white text-zen-ink/90 border-transparent hover:border-zen-border"
                     }`}
                   >
                     <div className="mt-0.5 shrink-0">
-                      {isQuizPassed ? (
+                      {isLocked ? (
+                        <Lock className="w-4 h-4 text-stone-400" />
+                      ) : isQuizPassed ? (
                         <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                       ) : isRead ? (
                         <BookOpen className="w-4 h-4 text-zen-wood" />
@@ -518,9 +547,19 @@ function CurriculumContent() {
                         <span className="text-[11px] text-zen-muted font-normal block truncate">
                           {t(`Bài ${les.lessonNumber}`, `Lesson ${les.lessonNumber}`)} • {les.estimatedMinutes}p
                         </span>
-                        {hasFlag && <span className="text-[10px] text-amber-600">🚩</span>}
+                        <div className="flex items-center gap-1">
+                          {isPreview && (
+                            <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded-md border border-emerald-200">
+                              🌱 Thử
+                            </span>
+                          )}
+                          {isLocked && (
+                            <span className="text-[10px] text-stone-400">🔒</span>
+                          )}
+                          {hasFlag && <span className="text-[10px] text-amber-600">🚩</span>}
+                        </div>
                       </div>
-                      <p className="text-xs leading-snug truncate mt-0.5">
+                      <p className={`text-xs leading-snug truncate mt-0.5 ${isLocked ? "text-stone-600" : ""}`}>
                         {t(les.titleVi, les.titleEn)}
                       </p>
                     </div>
@@ -558,6 +597,14 @@ function CurriculumContent() {
         <div className="lg:col-span-8 space-y-6">
           {/* SPECIAL VIEW FOR MODULE 7: GLOSSARY EXPLORER */}
           {activeModule.id === "mod-7" ? (
+            !glossaryEntitlement.granted ? (
+              <div className="py-8">
+                <ZenPaywallCard
+                  status={glossaryEntitlement}
+                  targetTitle="Tra Cứu Thuật Ngữ & Bài Tập Phản Xạ Song Ngữ"
+                />
+              </div>
+            ) : (
             <div className="space-y-6">
               {/* Glossary Search & Filters */}
               <div className="rounded-3xl border border-zen-border bg-zen-paper p-6 shadow-zen-card space-y-4">
@@ -835,7 +882,16 @@ function CurriculumContent() {
                 })}
               </div>
             </div>
+            )
           ) : activeLesson ? (
+            !lessonEntitlement.granted ? (
+              <div className="py-8">
+                <ZenPaywallCard
+                  status={lessonEntitlement}
+                  targetTitle={displayMode === "en" ? activeLesson.titleEn : activeLesson.titleVi}
+                />
+              </div>
+            ) : (
             /* STANDARD 10-POINT LESSON VIEWER (MODULES 1–6) */
             <div className="rounded-3xl border border-zen-border bg-zen-paper p-6 sm:p-8 shadow-zen-card space-y-6">
               {/* Top Bar: Language Mode Switcher & Lesson Meta */}
@@ -844,6 +900,12 @@ function CurriculumContent() {
                   <span className="text-xs font-bold text-zen-moss-dark px-2.5 py-1 rounded-xl bg-zen-moss/15">
                     {t(`Bài ${activeLesson.lessonNumber}`, `Lesson ${activeLesson.lessonNumber}`)}
                   </span>
+                  {(activeLesson.id === "mod1-les1" || activeLesson.id === "mod6-les1") && (
+                    <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-lg border border-emerald-200 flex items-center gap-1">
+                      <Sparkles className="w-3 h-3 text-emerald-600" />
+                      <span>{t("Học thử miễn phí", "Free Preview")}</span>
+                    </span>
+                  )}
                   <span className="text-xs text-zen-muted flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5" /> {activeLesson.estimatedMinutes} {t("phút học", "min read")}
                   </span>
@@ -1357,6 +1419,7 @@ function CurriculumContent() {
                 )}
               </div>
             </div>
+            )
           ) : (
             <div className="p-8 text-center text-zen-muted text-xs">
               {t("Vui lòng chọn một bài học từ mục lục bên trái.", "Please select a lesson from the directory on the left.")}

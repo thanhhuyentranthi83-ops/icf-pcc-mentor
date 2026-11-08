@@ -163,3 +163,78 @@ export interface AuditLog {
   details: string;
   createdAt: string;
 }
+
+export type FeatureKey = "curriculum" | "daily_sjt_10" | "mock_exam_sjt" | "glossary_search" | "tea_micro" | "resource_download";
+
+export interface CourseRecord {
+  id: string; // ví dụ: "crs-foundation", "crs-exam-prep", "crs-all-in-one"
+  titleVi: string;
+  titleEn: string;
+  descriptionVi: string;
+  descriptionEn: string;
+  moduleIds: string[]; // ví dụ: ["mod-1", "mod-2", "mod-4", "mod-7"]
+  previewLessonIds: string[]; // Các bài cho phép xem thử, ví dụ: ["mod1-les1"]
+  isPublished: boolean; // Bật/tắt hiển thị trong danh mục
+  orderIndex: number;
+  badgeText?: string; // ví dụ: "Nền tảng", "Trọng tâm", "Khuyên dùng"
+  badge?: string;
+}
+
+export interface PackageRecord {
+  id: string; // ví dụ: "pkg-trial", "pkg-foundation", "pkg-exam-prep", "pkg-pcc-master"
+  nameVi: string;
+  nameEn: string;
+  descriptionVi: string;
+  descriptionEn: string;
+  price: number; // VNĐ (0 = Miễn phí)
+  durationDays: number; // Số ngày (7, 30, 180, 365, hoặc 0 = vĩnh viễn)
+  isRegistrationOpen: boolean; // Đang mở đăng ký hay đã ngừng
+  allowedCourseIds: string[]; // Các khóa được mở (["*"] nếu mở tất cả)
+  allowedFeatures: FeatureKey[]; // Các tính năng được mở
+  badge?: string;
+  isDefaultTrial?: boolean;
+}
+
+export interface EnrollmentRecord {
+  id: string;
+  userId: string;
+  userEmail: string;
+  packageId: string;
+  packageName: string;
+  status: "active" | "expired" | "revoked" | "pending";
+  startsAt: string; // ISO string
+  expiresAt: string | null; // ISO string, null = vĩnh viễn
+  grantedBy: string; // Email admin
+  grantedAt: string;
+  note?: string;
+}
+
+export interface EnrollmentHistoryRecord {
+  id: string;
+  userId: string;
+  userEmail: string;
+  packageId: string;
+  packageName: string;
+  action: "grant" | "renew" | "revoke" | "expire";
+  actorEmail: string;
+  previousExpiresAt: string | null;
+  newExpiresAt: string | null;
+  timestamp: string;
+  note: string;
+}
+
+export interface EnrollmentRequestRecord {
+  id: string;
+  userId: string;
+  userEmail: string;
+  userName: string;
+  packageId: string;
+  packageName: string;
+  type: "register" | "renew";
+  status: "pending" | "approved" | "rejected";
+  requestedAt: string;
+  userNote?: string;
+  processedBy?: string;
+  processedAt?: string;
+}
+
