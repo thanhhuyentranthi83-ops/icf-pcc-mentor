@@ -8,7 +8,7 @@
       "tier": "12_months",
       "tierExpiresAt": "2027-12-31T23:59:59Z",
       "streakCount": 28,
-      "lastActiveDate": "2026-11-07",
+      "lastActiveDate": "2026-11-08",
       "createdAt": "2026-11-01T00:00:00Z"
     },
     {
@@ -261,6 +261,10 @@
     "3d7b0936ddb865843669acd786c3224e65437e0a342275ffc6d1a1aa10cdefb4": {
       "userId": "usr-admin-a15d7b7d",
       "expiresAt": "2026-12-08T13:49:53.756Z"
+    },
+    "2f248430fef09beeb8b8323adb6abe4d875541589ed05af76a091e7d2d3fe73a": {
+      "userId": "usr-admin",
+      "expiresAt": "2026-12-08T13:55:25.536Z"
     }
   },
   "courses": [
