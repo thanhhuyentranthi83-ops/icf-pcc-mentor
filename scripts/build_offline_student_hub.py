@@ -992,6 +992,8 @@ html_template = f"""<!DOCTYPE html>
             }}
         }}
     </style>
+    <!-- Supabase JS Client v2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -1007,6 +1009,10 @@ html_template = f"""<!DOCTYPE html>
         </div>
 
         <div class="header-stats">
+            <div class="stat-chip" id="supabaseStatusChip" title="Đã kết nối cơ sở dữ liệu Supabase">
+                <span>☁️</span>
+                <span id="supabaseStatusText">Supabase Connected</span>
+            </div>
             <div class="stat-chip lotus-chip">
                 <span>🪷</span>
                 <span id="lotusCount">0</span> Đóa sen
@@ -1220,6 +1226,27 @@ const GLOSSARY_TERMS = {json_glossary};
 const TEA_LESSONS = {json_tea};
 const SJT_QUESTIONS = {json_sjt};
 const COMPETENCY_GROUPS = {json_competency_groups};
+
+// =========================================================================
+// KHỞI TẠO KẾT NỐI SUPABASE CLOUD (SUPABASE CLIENT INITIALIZATION)
+// =========================================================================
+const SUPABASE_PROJECT_URL = "https://ebfmbqgzttjcivcoyncb.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_JEbnW3h1PCT58KWt5eT5yg_Z-RAuq74";
+
+// Alias tương thích các chuẩn gọi cấu hình
+const SUPABASE_URL = SUPABASE_PROJECT_URL;
+const SUPABASE_ANON_KEY = SUPABASE_PUBLISHABLE_KEY;
+
+// Khởi tạo Supabase Client
+let supabase = null;
+try {{
+    if (typeof window !== "undefined" && window.supabase && window.supabase.createClient) {{
+        supabase = window.supabase.createClient(SUPABASE_PROJECT_URL, SUPABASE_PUBLISHABLE_KEY);
+        console.log("🌿 Supabase client đã sẵn sàng kết nối:", SUPABASE_PROJECT_URL);
+    }}
+}} catch (err) {{
+    console.warn("⚠️ Không thể khởi tạo Supabase client:", err);
+}}
 
 // LocalStorage Persistence Keys
 const STORE_KEY_PROGRESS = "hoc_coaching_offline_progress_v1";
@@ -2029,8 +2056,12 @@ window.addEventListener("DOMContentLoaded", () => {{
 
 out_paths = [
     os.path.join(BASE_DIR, 'public/Hoc_Coaching_Cam_Nang_Hoc_Tap_Toan_Dien.html'),
+    os.path.join(BASE_DIR, 'public/index.html'),
     '/Users/admin/Downloads/Hoc_Coaching_Cam_Nang_Hoc_Tap_Toan_Dien.html',
-    '/Users/admin/Downloads/Ôn thi PCC - Vì ước mơ 500 PCC tại Việt Nam _3/Hoc_Coaching_Cam_Nang_Hoc_Tap_Toan_Dien.html'
+    '/Users/admin/Downloads/index.html',
+    '/Users/admin/Downloads/AI/Hoc_Coaching_Cam_Nang_Hoc_Tap_Toan_Dien.html',
+    '/Users/admin/Downloads/Ôn thi PCC - Vì ước mơ 500 PCC tại Việt Nam _3/Hoc_Coaching_Cam_Nang_Hoc_Tap_Toan_Dien.html',
+    '/Users/admin/Downloads/Ôn thi PCC - Vì ước mơ 500 PCC tại Việt Nam _3/index.html'
 ]
 
 for p in out_paths:
