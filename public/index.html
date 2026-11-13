@@ -1146,11 +1146,12 @@ const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_JEbnW3h1PCT58KWt5eT5yg_Z-RAuq74
 const SUPABASE_URL = SUPABASE_PROJECT_URL;
 const SUPABASE_ANON_KEY = SUPABASE_PUBLISHABLE_KEY;
 
-// Khởi tạo Supabase Client
-let supabase = null;
+// Khởi tạo Supabase Client (dùng var supabaseClient để tránh xung đột SyntaxError với identifier của thư viện CDN)
+var supabaseClient = null;
 try {
-    if (typeof window !== "undefined" && window.supabase && window.supabase.createClient) {
-        supabase = window.supabase.createClient(SUPABASE_PROJECT_URL, SUPABASE_PUBLISHABLE_KEY);
+    if (typeof window !== "undefined" && window.supabase && typeof window.supabase.createClient === "function") {
+        supabaseClient = window.supabase.createClient(SUPABASE_PROJECT_URL, SUPABASE_PUBLISHABLE_KEY);
+        window.supabaseClient = supabaseClient;
         console.log("🌿 Supabase client đã sẵn sàng kết nối:", SUPABASE_PROJECT_URL);
     }
 } catch (err) {
